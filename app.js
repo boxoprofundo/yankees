@@ -601,14 +601,20 @@
 
       const sectionCell =
         `<td><span class="badge lvl-${r.level.replace(/\s/g, "")}">${r.level}</span>` +
-        (r.location ? ` <span class="badge loc-${r.location}">${r.location}</span>` : "") +
         ` ${r.display}` +
         (r.cls.obstructed ? ' <span class="obstructed">obstructed</span>' : "") +
         `</td>`;
 
+      // Own column so it can be sorted; abbreviated IF/OF, full word as tooltip.
+      const locCell = r.location
+        ? `<td><span class="badge loc-${r.location}" title="${r.location}">` +
+          `${r.location === "Infield" ? "IF" : "OF"}</span></td>`
+        : `<td class="na">—</td>`;
+
       if (r.price == null) {
         tr.innerHTML =
           sectionCell +
+          locCell +
           `<td class="na noblock" colspan="7">No block of ${state.lastQty} found in scope</td>` +
           stubCell;
       } else {
@@ -624,6 +630,7 @@
         const pctText = r.pctFace != null ? Math.round(r.pctFace) + "%" : "—";
         tr.innerHTML =
           sectionCell +
+          locCell +
           `<td>${fmtMoney(r.total)}</td>` +
           `<td class="${priceCls}">${arrow}${fmtMoney(r.price)}</td>` +
           `<td>${r.face != null ? fmtMoney(r.face) : "—"}</td>` +
