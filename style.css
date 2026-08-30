@@ -1,0 +1,294 @@
+:root {
+  --navy: #0c2340;
+  --navy-soft: #1c3a5e;
+  --accent: #c4ced3;
+  --bg: #f5f6f8;
+  --card: #ffffff;
+  --border: #dfe3e8;
+  --text: #1b2733;
+  --muted: #5b6b7b;
+  --green: #1a7f4b;
+  --red: #b3132a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+header {
+  background: var(--navy);
+  color: #fff;
+  padding: 1.4rem 1.25rem;
+  text-align: center;
+}
+header h1 { margin: 0; font-size: 1.7rem; }
+.tagline { margin: .4rem auto 0; color: var(--accent); max-width: 48rem; font-size: .9rem; }
+
+/* ------------------------------- tabs -------------------------------- */
+.tabs {
+  display: flex;
+  gap: .25rem;
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  background: var(--navy);
+}
+.tab {
+  appearance: none;
+  border: 0;
+  background: var(--navy-soft);
+  color: #d8e0ea;
+  font-size: .98rem;
+  font-weight: 600;
+  padding: .7rem 1.15rem;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+}
+.tab:hover { color: #fff; }
+.tab.active { background: var(--bg); color: var(--navy); }
+.nav-map {
+  margin-left: auto;
+  align-self: center;
+  color: #d8e0ea;
+  text-decoration: none;
+  font-size: .9rem;
+  font-weight: 600;
+  padding: .4rem .3rem;
+  white-space: nowrap;
+}
+.nav-map:hover { color: #fff; text-decoration: underline; }
+
+/* ------------------------------ panels ------------------------------- */
+.panel {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 1.1rem 1rem 0;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  align-items: center;
+  padding: 1rem 1.1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.controls label { font-weight: 600; }
+.controls .qty {
+  width: 4.5rem;
+  padding: .5rem;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.controls button {
+  padding: .55rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 0;
+  border-radius: 6px;
+  background: var(--navy);
+  color: #fff;
+  cursor: pointer;
+}
+.controls button:hover { background: var(--navy-soft); }
+.controls button:disabled { opacity: .55; cursor: default; }
+.controls button.secondary {
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid var(--border);
+  font-weight: 500;
+}
+
+/* --------------------------- game picker ----------------------------- */
+.game-picker {
+  margin-top: .9rem;
+  padding: 1rem 1.1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.picker-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .6rem;
+}
+.select-all {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.game-list {
+  display: grid;
+  /* Fill top-to-bottom down each column, then wrap to the next column.
+     The row count is set inline by JS so there are always ~5 columns. */
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(9rem, 1fr);
+  gap: .3rem .7rem;
+}
+.game-opt {
+  display: flex;
+  align-items: flex-start;
+  gap: .45rem;
+  padding: .3rem .4rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.game-opt:hover { background: #f2f6fb; }
+.game-opt input { margin-top: .2rem; }
+.g-meta { display: flex; flex-direction: column; line-height: 1.25; }
+.g-date { font-weight: 600; font-size: .82rem; white-space: nowrap; }
+.g-opp { font-weight: 400; color: var(--muted); font-size: .86rem; }
+
+/* ----------------------------- settings ------------------------------ */
+.settings { padding: 1.1rem 1.1rem 0; }
+.settings h2 { margin-top: 0; }
+.settings .field { margin: .9rem 0; }
+.settings label { display: block; font-weight: 600; }
+.settings label small { font-weight: 400; color: var(--muted); }
+.settings input:not([type="checkbox"]) {
+  width: 100%;
+  margin-top: .3rem;
+  padding: .5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: .95rem;
+}
+.settings > button {
+  padding: .5rem 1.3rem;
+  background: var(--navy);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.saved-note { margin-left: .6rem; color: var(--green); font-weight: 700; }
+
+/* ------------------------------ status ------------------------------- */
+.status {
+  max-width: 76rem;
+  margin: 1rem auto 0;
+  padding: .7rem 1rem;
+  border-radius: 8px;
+  background: #fff8e6;
+  border: 1px solid #eadfae;
+}
+.status.error { background: #fdecec; border-color: #f0b9b9; }
+
+/* ------------------------------ tables ------------------------------- */
+main { max-width: 76rem; margin: 0 auto; padding: 0 1rem 2rem; }
+main h2 { margin: 1.6rem 0 .6rem; display: flex; align-items: center; gap: .8rem; flex-wrap: wrap; }
+.sub { font-size: .85rem; color: var(--muted); font-weight: 400; }
+.map-link { font-size: .85rem; color: var(--navy-soft); text-decoration: none; font-weight: 600; }
+.map-link:hover { text-decoration: underline; }
+
+.table-wrap { overflow-x: auto; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+th, td { padding: .55rem .8rem; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
+th { background: #eef1f5; position: sticky; top: 0; }
+
+/* Compact the section table so all columns fit without horizontal scroll. */
+#section-table { font-size: .84rem; }
+#section-table th, #section-table td { padding: .4rem .5rem; }
+/* The money columns (block total, price, face, % of face) are narrow and
+   read better right-aligned; keep them tight to match the section column. */
+#section-table td:nth-child(2), #section-table th:nth-child(2),
+#section-table td:nth-child(3), #section-table th:nth-child(3),
+#section-table td:nth-child(4), #section-table th:nth-child(4),
+#section-table td:nth-child(5), #section-table th:nth-child(5) {
+  text-align: right;
+  width: 5.5rem;
+}
+#section-table td:first-child, #section-table th:first-child { width: 8.5rem; }
+/* Empty "no block found" rows use a colspan; keep that message and the
+   StubHub link left-aligned and full-width instead of inheriting the
+   right-aligned fixed-width money-column rules by cell position. */
+#section-table td.noblock { text-align: left; width: auto; }
+#section-table td.stub-cell { text-align: left; width: auto; white-space: nowrap; }
+th[data-sort] { cursor: pointer; }
+th[data-sort]:hover { text-decoration: underline; }
+tbody tr:hover { background: #f2f6fb; }
+td.price { font-weight: 700; color: var(--green); }
+td.price.flat { color: var(--text); }   /* unchanged since last run: black */
+td.price.down { color: var(--green); }   /* dropped: green */
+td.price.up { color: var(--red); }       /* rose: red */
+td.na { color: var(--muted); }
+.trend { margin-right: .25rem; font-size: .8rem; }
+.trend.down { color: var(--green); }
+.trend.up { color: var(--red); }
+.obstructed { font-size: .72rem; color: var(--muted); font-style: italic; }
+
+.badge {
+  display: inline-block;
+  padding: .05rem .35rem;
+  border-radius: 999px;
+  font-size: .66rem;
+  font-weight: 600;
+  background: #e8edf4;
+  color: var(--navy);
+}
+.badge.lvl-Legends    { background: #f6d9dd; color: #8f1020; }
+.badge.lvl-Field      { background: #d7e0ee; color: #0c2340; }
+.badge.lvl-Main       { background: #d6ecdd; color: #145c30; }
+.badge.lvl-Bleachers  { background: #f0e6c6; color: #6b530f; }
+.badge.lvl-Terrace    { background: #e4dcf1; color: #452b6b; }
+.badge.lvl-Grandstand { background: #d3e8ef; color: #0f4a5e; }
+.badge.lvl-AudiClub   { background: #e2e2e2; color: #333; }
+.badge.lvl-StandingRoom { background: #eae0d4; color: #6b4f28; }
+
+/* ------------------------------ modal -------------------------------- */
+.modal {
+  position: fixed; inset: 0;
+  background: rgba(12,35,64,.55);
+  display: flex; align-items: center; justify-content: center;
+  padding: 1rem; z-index: 50;
+}
+.modal[hidden] { display: none; }
+.modal-box {
+  position: relative;
+  background: var(--card);
+  border-radius: 12px;
+  max-width: 44rem; width: 100%;
+  max-height: 92vh; overflow: auto;
+  padding: 1.25rem 1.35rem 1.5rem;
+  box-shadow: 0 12px 40px rgba(0,0,0,.3);
+}
+.modal-box h3 { margin: 0 2rem .8rem 0; }
+.modal-close {
+  position: absolute; top: .6rem; right: .6rem;
+  border: 0; background: transparent; font-size: 1.2rem;
+  cursor: pointer; color: var(--muted); line-height: 1;
+}
+.map-img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.map-note { font-size: .85rem; color: var(--muted); margin: .8rem 0 0; }
+
+/* Settings checkbox row: checkbox on the left, label + hint stacked at right.
+   Scoped under .settings to beat the `.settings label { display:block }` rule. */
+.settings label.check-field { display: flex; align-items: flex-start; gap: .5rem; cursor: pointer; font-weight: 400; }
+.check-field input { margin-top: .3rem; flex: 0 0 auto; width: auto; }
+.cf-text { font-weight: 600; }
+.check-field small { display: block; font-weight: 400; color: var(--muted); margin-top: .15rem; }
+
+footer {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 2.5rem;
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+@media (max-width: 640px) {
+  header h1 { font-size: 1.3rem; }
+  th, td { padding: .45rem .55rem; }
+  .tab { padding: .6rem .8rem; font-size: .88rem; }
+}

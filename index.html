@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NYY Ticket Aggregator</title>
+<link rel="stylesheet" href="style.css?v=20260827b">
+</head>
+<body>
+<header>
+  <h1>⚾ NYY Ticket Aggregator</h1>
+  <p class="tagline">Ticketmaster · SeatGeek · StubHub · XP · Vivid Seats · TickPick · Gametime</p>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button class="tab active" data-tab="all">Search all games</button>
+  <button class="tab" data-tab="specific">Search specific games</button>
+  <button class="tab" data-tab="settings">Settings</button>
+  <a href="#" id="open-map" class="nav-map">🗺 View stadium map</a>
+</nav>
+
+<!-- ── Search all games ─────────────────────────────────────────── -->
+<section class="panel" id="panel-all">
+  <div class="controls">
+    <label for="qty-all">Number of tickets</label>
+    <input id="qty-all" class="qty" type="number" min="1" max="12" value="2">
+    <button class="search-btn" data-scope="all">Search</button>
+    <button class="refresh-btn secondary" data-scope="all" type="button">↻ Refresh prices</button>
+  </div>
+</section>
+
+<!-- ── Search specific games ────────────────────────────────────── -->
+<section class="panel" id="panel-specific" hidden>
+  <div class="controls">
+    <label for="qty-specific">Number of tickets</label>
+    <input id="qty-specific" class="qty" type="number" min="1" max="12" value="2">
+    <button class="search-btn" data-scope="specific">Search</button>
+    <button class="refresh-btn secondary" data-scope="specific" type="button">↻ Refresh prices</button>
+  </div>
+  <div class="game-picker">
+    <div class="picker-head">
+      <strong>Choose games</strong>
+      <label class="select-all"><input type="checkbox" id="pick-all-cb" checked>
+        Select all</label>
+    </div>
+    <div id="game-list" class="game-list">Loading remaining home games…</div>
+  </div>
+</section>
+
+<!-- ── Settings ─────────────────────────────────────────────────── -->
+<section class="panel" id="panel-settings" hidden>
+  <div class="settings">
+    <h2>Settings</h2>
+    <p>Everything here is stored only in this browser (localStorage) and is
+    optional — the site works without any of it.</p>
+
+    <div class="field">
+      <label for="tm-key">Ticketmaster API key
+        <small>(free Consumer Key from
+        <a href="https://developer.ticketmaster.com/" target="_blank" rel="noopener">developer.ticketmaster.com</a>
+        — enables Ticketmaster prices &amp; face-value estimates)</small></label>
+      <input id="tm-key" type="text" autocomplete="off" placeholder="Consumer Key">
+    </div>
+    <div class="field">
+      <label for="sg-key">SeatGeek client ID
+        <small>(free from
+        <a href="https://seatgeek.com/account/develop" target="_blank" rel="noopener">seatgeek.com/account/develop</a>
+        — enables lowest SeatGeek price per game)</small></label>
+      <input id="sg-key" type="text" autocomplete="off" placeholder="client_id">
+    </div>
+    <div class="field">
+      <label for="gh-token">Access key for the Refresh button
+        <small>(one-time: lets this page run the price scraper and read its results.
+        <a href="https://github.com/settings/tokens/new?scopes=repo,workflow&amp;description=Yankees%20ticket%20refresh%20button"
+           target="_blank" rel="noopener">Open this pre-filled page</a>, choose
+        <em>No expiration</em>, Generate, copy the code, paste below, Save. Once per device.)</small></label>
+      <input id="gh-token" type="password" autocomplete="off" placeholder="ghp_…">
+    </div>
+    <div class="field">
+      <label class="check-field">
+        <input id="home-runner" type="checkbox">
+        <span class="cf-text">Run scrapes on my home computer
+        <small>Your computer scrapes Ticketmaster (over your clean home
+        connection, where it works) while the cloud does the other sites.
+        Needs the one-time home-runner setup, and the computer powered on.</small>
+        </span>
+      </label>
+    </div>
+    <button id="save-settings">Save</button>
+    <span id="settings-saved" class="saved-note" hidden>Saved ✓</span>
+  </div>
+</section>
+
+<div id="status" class="status" hidden></div>
+
+<main>
+  <section id="section-results" hidden>
+    <h2>
+      Cheapest block by section <span id="section-sub" class="sub"></span>
+    </h2>
+    <div class="table-wrap">
+      <table id="section-table">
+        <thead>
+          <tr>
+            <th data-sort="section">Section</th>
+            <th data-sort="total">Block total</th>
+            <th data-sort="price">Price / ticket</th>
+            <th data-sort="face">Face value</th>
+            <th data-sort="pctFace">% of face</th>
+            <th data-sort="date">Game date &amp; time</th>
+            <th data-sort="opponent">Opponent</th>
+            <th>Site</th>
+            <th>Check StubHub</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="game-results" hidden>
+    <h2>Best price per game <span class="sub">(event-level, all sections)</span></h2>
+    <div class="table-wrap">
+      <table id="game-table">
+        <thead><tr id="game-head"></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<!-- ── Stadium map modal ────────────────────────────────────────── -->
+<div id="map-modal" class="modal" hidden>
+  <div class="modal-box">
+    <button class="modal-close" id="map-close" aria-label="Close">✕</button>
+    <h3>Yankee Stadium — seating chart</h3>
+    <div id="map-holder"></div>
+    <p class="map-note">For an interactive, seat-by-seat chart, open the
+    <a href="https://www.rateyourseats.com/yankee-stadium/seating/seating-chart"
+       target="_blank" rel="noopener">interactive seating map ↗</a>.</p>
+  </div>
+</div>
+
+<footer>
+  <p><a href="https://boxoprofundo.github.io/">← boxoprofundo.github.io</a></p>
+</footer>
+
+<script src="providers.js?v=20260827b"></script>
+<script src="sections.js?v=20260827b"></script>
+<script src="stubhub-events.js?v=20260827b"></script>
+<script src="app.js?v=20260827b"></script>
+</body>
+</html>

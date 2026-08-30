@@ -1,0 +1,16 @@
+{
+  "fetchedAt": "2026-08-29T17:46:46.576Z",
+  "eid": "17691551",
+  "apiUrl": "https://seatgeek.com/api/event_listings_v2?_include_seats=1&client_id=MTY2MnwxMzgzMzIwMTU4&event_page_view_id=8c1c19d1-ab0e-47ac-9425-b9890a779339&id=17691551&quantity=2&sixpack_client_id=8cbb9edf-47e5-413a-b880-81422b28ee71",
+  "sections": 81,
+  "cap_urls": [
+    "https://seatgeek.com/ff/v1/flag-config/v1/config",
+    "https://seatgeek.com/api/event_listings_v2",
+    "/api/promotion/event_omnibox",
+    "/api/payment_methods",
+    "/api/preferences/tracked_ids",
+    "https://www.google.com/ccm/collect",
+    "https://ad.doubleclick.net/ccm/s/collect",
+    "/api/listings"
+  ]
+}
