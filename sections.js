@@ -35,6 +35,15 @@
     Other: 9,
   };
 
+  // Infield vs Outfield from the section's position within its level: the last
+  // two digits 15–25 sit around the infield / behind the plate; everything else
+  // is down the lines toward the outfield. Applies to any numbered section.
+  function locationFor(num) {
+    if (num == null) return null;
+    const d = num % 100;
+    return (d >= 15 && d <= 25) ? "Infield" : "Outfield";
+  }
+
   function levelFor(num, code) {
     if (num != null) {
       if (num >= 11 && num <= 30) return "Legends";     // 011–029 behind the plate
@@ -74,6 +83,7 @@
     }
 
     const level = levelFor(num, code);
+    const location = locationFor(num);
 
     // Display code: Legends sections are labelled with a leading zero at the
     // stadium (011–029), so show them padded to three digits. `code` stays the
@@ -87,7 +97,7 @@
     let label = display ? level + " " + display : level;
     if (obstructed) label += " (obstructed)";
 
-    return { code, display, level, label, num, obstructed };
+    return { code, display, level, location, label, num, obstructed };
   }
 
   // Comparator for two classified sections: by level, then numeric, then code.

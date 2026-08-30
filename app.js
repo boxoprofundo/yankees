@@ -529,6 +529,7 @@
         display: cls.display || cls.code,
         cls,
         level: cls.level,
+        location: cls.location,
         label: cls.label,
         num: cls.num,
         price,
@@ -599,7 +600,9 @@
         `Check §${r.display} ↗</a></td>`;
 
       const sectionCell =
-        `<td><span class="badge lvl-${r.level.replace(/\s/g, "")}">${r.level}</span> ${r.display}` +
+        `<td><span class="badge lvl-${r.level.replace(/\s/g, "")}">${r.level}</span>` +
+        (r.location ? ` <span class="badge loc-${r.location}">${r.location}</span>` : "") +
+        ` ${r.display}` +
         (r.cls.obstructed ? ' <span class="obstructed">obstructed</span>' : "") +
         `</td>`;
 

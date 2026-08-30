@@ -245,6 +245,9 @@ td.na { color: var(--muted); }
 .badge.lvl-Grandstand { background: #d3e8ef; color: #0f4a5e; }
 .badge.lvl-AudiClub   { background: #e2e2e2; color: #333; }
 .badge.lvl-StandingRoom { background: #eae0d4; color: #6b4f28; }
+/* Infield / Outfield location, shown next to the level badge. */
+.badge.loc-Infield   { background: #fbe6c9; color: #7a4a12; }
+.badge.loc-Outfield  { background: #d8ece0; color: #1e5b3a; }
 
 /* ------------------------------ modal -------------------------------- */
 .modal {
