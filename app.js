@@ -578,6 +578,13 @@
       const c = window.Sections.compare(a.cls, b.cls);
       return asc ? c : -c;
     }
+    if (key === "level") {
+      // Order by deck (Legends→Grandstand), not alphabetically.
+      const wa = window.Sections.LEVEL_ORDER[a.level] ?? 99;
+      const wb = window.Sections.LEVEL_ORDER[b.level] ?? 99;
+      const c = wa < wb ? -1 : wa > wb ? 1 : 0;
+      return asc ? c : -c;
+    }
     const va = a[key], vb = b[key];
     if (va == null && vb == null) return 0;
     if (va == null) return 1;
@@ -620,10 +627,13 @@
         `Check §${r.display} ↗</a></td>`;
 
       const sectionCell =
-        `<td><span class="badge lvl-${r.level.replace(/\s/g, "")}">${r.level}</span>` +
-        ` ${r.display}` +
+        `<td>${r.display}` +
         (r.cls.obstructed ? ' <span class="obstructed">obstructed</span>' : "") +
         `</td>`;
+
+      // Level badge in its own sortable column.
+      const levelCell =
+        `<td><span class="badge lvl-${r.level.replace(/\s/g, "")}">${r.level}</span></td>`;
 
       // Own column so it can be sorted; abbreviated IF/OF, full word as tooltip.
       const locCell = r.location
@@ -634,6 +644,7 @@
       if (r.price == null) {
         tr.innerHTML =
           sectionCell +
+          levelCell +
           locCell +
           `<td class="na noblock" colspan="6">No block of ${state.lastQty} found in scope</td>` +
           stubCell;
@@ -651,6 +662,7 @@
         const pctText = r.pctFace != null ? Math.round(r.pctFace) + "%" : "—";
         tr.innerHTML =
           sectionCell +
+          levelCell +
           locCell +
           `<td class="price">${arrow}<span${priceStyle}>${fmtMoney(r.price)}</span></td>` +
           `<td>${r.face != null ? fmtMoney(r.face) : "—"}</td>` +

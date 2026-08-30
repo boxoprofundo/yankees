@@ -201,15 +201,16 @@ th { background: #eef1f5; position: sticky; top: 0; }
 #section-table { font-size: .84rem; }
 #section-table th, #section-table td { padding: .4rem .5rem; }
 /* The money columns (price, face, % of face) are narrow and read better
-   right-aligned; keep them tight to match the section column. Column 2 is the
-   IF/OF badge, which stays left-aligned. */
-#section-table td:nth-child(3), #section-table th:nth-child(3),
+   right-aligned; keep them tight. Columns 2 (Level) and 3 (IF/OF) are badges
+   and stay left-aligned. */
 #section-table td:nth-child(4), #section-table th:nth-child(4),
-#section-table td:nth-child(5), #section-table th:nth-child(5) {
+#section-table td:nth-child(5), #section-table th:nth-child(5),
+#section-table td:nth-child(6), #section-table th:nth-child(6) {
   text-align: right;
   width: 5.5rem;
 }
-#section-table td:first-child, #section-table th:first-child { width: 8.5rem; }
+/* Section is now just the code; keep it compact. */
+#section-table td:first-child, #section-table th:first-child { width: 5rem; }
 /* Empty "no block found" rows use a colspan; keep that message and the
    StubHub link left-aligned and full-width instead of inheriting the
    right-aligned fixed-width money-column rules by cell position. */
