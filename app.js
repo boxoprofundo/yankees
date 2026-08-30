@@ -25,8 +25,11 @@
     games: null,          // all remaining home games
     picked: null,         // Set of gamePk chosen in the specific-games picker
     sectionRows: [],
-    sortKey: "section",
-    sortAsc: true,
+    // Ordered list of sort criteria, most-significant first. Clicking a header
+    // makes that column primary and pushes the previous keys down as
+    // tiebreakers, so an earlier sort is retained when you sort on a second
+    // column. Index 0 is the primary sort.
+    sortKeys: [{ key: "section", asc: true }],
     lastQty: 2,
   };
 
@@ -558,36 +561,53 @@
     wrap.hidden = false;
   }
 
-  // Map a % of face value to a green→red gradient across the visible range.
-  function pctColor(pct, lo, hi) {
-    if (pct == null) return "";
-    let t = hi > lo ? (pct - lo) / (hi - lo) : 0;
+  // Map a value to a green→red gradient across the visible [lo, hi] range:
+  // low = green (cheapest / best), high = red (priciest / worst).
+  function gradColor(v, lo, hi) {
+    if (v == null) return "";
+    let t = hi > lo ? (v - lo) / (hi - lo) : 0;
     t = Math.max(0, Math.min(1, t));
     const hue = 120 - 120 * t; // 120 green → 0 red
     return `hsl(${hue}, 70%, 38%)`;
   }
 
+  // Compare two rows on one sort key, honouring direction. Nulls always sink
+  // to the bottom regardless of direction so blank rows don't interleave.
+  function cmpKey(a, b, key, asc) {
+    if (key === "section") {
+      const c = window.Sections.compare(a.cls, b.cls);
+      return asc ? c : -c;
+    }
+    const va = a[key], vb = b[key];
+    if (va == null && vb == null) return 0;
+    if (va == null) return 1;
+    if (vb == null) return -1;
+    const c = va < vb ? -1 : va > vb ? 1 : 0;
+    return asc ? c : -c;
+  }
+
   function sortAndPaintSections() {
-    const { sortKey, sortAsc } = state;
     const rows = [...state.sectionRows];
 
+    // Walk the sort keys most-significant first; the first that separates the
+    // two rows wins, so earlier sorts act as tiebreakers for later ones.
     rows.sort((a, b) => {
-      if (sortKey === "section") {
-        const c = window.Sections.compare(a.cls, b.cls);
-        return sortAsc ? c : -c;
+      for (const s of state.sortKeys) {
+        const c = cmpKey(a, b, s.key, s.asc);
+        if (c) return c;
       }
-      let va = a[sortKey], vb = b[sortKey];
-      if (va == null && vb == null) return 0;
-      if (va == null) return 1;  // nulls sink regardless of direction
-      if (vb == null) return -1;
-      const c = va < vb ? -1 : va > vb ? 1 : 0;
-      return sortAsc ? c : -c;
+      return 0;
     });
 
     // % of face gradient bounds across rows that have a value.
     const pcts = rows.map((r) => r.pctFace).filter((v) => v != null);
     const lo = pcts.length ? Math.min(...pcts) : 0;
     const hi = pcts.length ? Math.max(...pcts) : 1;
+
+    // Price-per-ticket gradient bounds across rows that have a price.
+    const prices = rows.map((r) => r.price).filter((v) => v != null);
+    const plo = prices.length ? Math.min(...prices) : 0;
+    const phi = prices.length ? Math.max(...prices) : 1;
 
     const tbody = $("#section-table tbody");
     tbody.innerHTML = "";
@@ -615,24 +635,24 @@
         tr.innerHTML =
           sectionCell +
           locCell +
-          `<td class="na noblock" colspan="7">No block of ${state.lastQty} found in scope</td>` +
+          `<td class="na noblock" colspan="6">No block of ${state.lastQty} found in scope</td>` +
           stubCell;
       } else {
+        // The arrow alone carries the up/down colour; the price value itself is
+        // painted on a green→red gradient (cheapest green, priciest red).
         const arrow =
           r.trend < 0 ? '<span class="trend down">▼</span>'
           : r.trend > 0 ? '<span class="trend up">▲</span>'
           : "";
-        const priceCls =
-          r.trend < 0 ? "price down" : r.trend > 0 ? "price up" : "price flat";
+        const priceStyle = ` style="color:${gradColor(r.price, plo, phi)}"`;
         const pctStyle = r.pctFace != null
-          ? ` style="color:${pctColor(r.pctFace, lo, hi)};font-weight:700"`
+          ? ` style="color:${gradColor(r.pctFace, lo, hi)};font-weight:700"`
           : "";
         const pctText = r.pctFace != null ? Math.round(r.pctFace) + "%" : "—";
         tr.innerHTML =
           sectionCell +
           locCell +
-          `<td>${fmtMoney(r.total)}</td>` +
-          `<td class="${priceCls}">${arrow}${fmtMoney(r.price)}</td>` +
+          `<td class="price">${arrow}<span${priceStyle}>${fmtMoney(r.price)}</span></td>` +
           `<td>${r.face != null ? fmtMoney(r.face) : "—"}</td>` +
           `<td${pctStyle}>${pctText}</td>` +
           `<td>${r.dateLabel}</td>` +
@@ -815,8 +835,18 @@
     $$("#section-table th[data-sort]").forEach((th) => {
       th.addEventListener("click", () => {
         const key = th.dataset.sort;
-        if (state.sortKey === key) state.sortAsc = !state.sortAsc;
-        else { state.sortKey = key; state.sortAsc = true; }
+        const primary = state.sortKeys[0];
+        if (primary && primary.key === key) {
+          // Re-clicking the primary column just flips its direction.
+          primary.asc = !primary.asc;
+        } else {
+          // Make this column primary; keep the others as tiebreakers below it
+          // (dropping any stale copy of this key) so the previous sort holds.
+          state.sortKeys = [
+            { key, asc: true },
+            ...state.sortKeys.filter((s) => s.key !== key),
+          ];
+        }
         if (state.sectionRows.length) sortAndPaintSections();
       });
     });

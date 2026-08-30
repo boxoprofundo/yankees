@@ -200,9 +200,9 @@ th { background: #eef1f5; position: sticky; top: 0; }
 /* Compact the section table so all columns fit without horizontal scroll. */
 #section-table { font-size: .84rem; }
 #section-table th, #section-table td { padding: .4rem .5rem; }
-/* The money columns (block total, price, face, % of face) are narrow and
-   read better right-aligned; keep them tight to match the section column. */
-#section-table td:nth-child(2), #section-table th:nth-child(2),
+/* The money columns (price, face, % of face) are narrow and read better
+   right-aligned; keep them tight to match the section column. Column 2 is the
+   IF/OF badge, which stays left-aligned. */
 #section-table td:nth-child(3), #section-table th:nth-child(3),
 #section-table td:nth-child(4), #section-table th:nth-child(4),
 #section-table td:nth-child(5), #section-table th:nth-child(5) {
