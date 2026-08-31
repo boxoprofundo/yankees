@@ -21,7 +21,17 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
-  background: var(--bg);
+  /* Washed-out Yankee Stadium photo behind the page: a near-opaque white wash
+     over the image keeps it faint so content stays readable. Fixed so it holds
+     still as the page scrolls; the gray stays as a fallback if the image fails. */
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(245, 246, 248, 0.86), rgba(245, 246, 248, 0.86)),
+    url("https://images.ctfassets.net/1aemqu6a6t65/7nlIahpo7pyw1BRlS3YejM/d9461e2af18f81aa50808521f72f9b42/tour-7_3000x2000-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--text);
   line-height: 1.5;
 }
@@ -208,13 +218,17 @@ header h1 { margin: 0; font-size: 1.7rem; }
 main { max-width: 76rem; margin: 0 auto; padding: 0 1rem 2rem; }
 main h2 { margin: 1.6rem 0 .6rem; display: flex; align-items: center; gap: .8rem; flex-wrap: wrap; }
 .sub { font-size: .85rem; color: var(--muted); font-weight: 400; }
+p#section-sub.sub { margin: -.2rem 0 .5rem; }
 .map-link { font-size: .85rem; color: var(--navy-soft); text-decoration: none; font-weight: 600; }
 .map-link:hover { text-decoration: underline; }
 
-.table-wrap { overflow-x: auto; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
+/* The wrapper is the scroll region (both axes) with a capped height, so the
+   sticky header below pins to its top as you scroll a long table, and wide
+   tables scroll horizontally without ever scrolling the page body sideways. */
+.table-wrap { overflow: auto; max-height: 82vh; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
 table { border-collapse: collapse; width: 100%; font-size: .92rem; }
 th, td { padding: .55rem .8rem; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
-th { background: #eef1f5; position: sticky; top: 0; }
+th { background: #eef1f5; position: sticky; top: 0; z-index: 2; }
 
 /* Match the per-game table's row font size and height. On a wide screen the
    table fills the container (width:100% stretches the columns, no trailing
