@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         NYY Aggregator — SeatGeek + StubHub collector
+// @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.0.0
-// @description  Scrapes SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. Both sites block automated browsers, so this is the only way to get their per-section prices.
+// @version      3.1.0
+// @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
 // @downloadURL  https://yankees.mikeboxer.com/collector.user.js
@@ -11,6 +11,7 @@
 // @match        https://www.stubhub.com/*
 // @match        https://seatgeek.com/*
 // @match        https://www.seatgeek.com/*
+// @match        https://www.ticketmaster.com/*
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_deleteValue
@@ -19,6 +20,7 @@
 // @grant        GM_registerMenuCommand
 // @grant        unsafeWindow
 // @connect      api.github.com
+// @connect      app.ticketmaster.com
 // @run-at       document-start
 // ==/UserScript==
 
@@ -69,6 +71,22 @@
     const m = url.match(/event\/(\d+)/);
     if (m) SH_ID_TO_GAME[m[1]] = Number(pk);
   }
+
+  /* ── date → gamePk(s), reused from the StubHub slugs (M-D-YYYY → YYYY-MM-DD).
+   * Ticketmaster's Discovery API gives each event a localDate; matching it here
+   * maps a TM event to the right gamePk. A date with two gamePks is a
+   * doubleheader — resolved by start time when needed. */
+  const DATE_TO_PKS = {};
+  for (const [pk, url] of Object.entries(STUBHUB_EVENTS)) {
+    const m = url.match(/tickets-(\d{1,2})-(\d{1,2})-(\d{4})\//);
+    if (!m) continue;
+    const iso = `${m[3]}-${m[1].padStart(2, "0")}-${m[2].padStart(2, "0")}`;
+    (DATE_TO_PKS[iso] = DATE_TO_PKS[iso] || []).push(Number(pk));
+  }
+
+  // Per-tab captures of Ticketmaster's seat-map (ISM DS / quickpicks) JSON.
+  const TM_CAPTURES = [];   // { url, body }
+  const TM_CAP_URLS = [];   // every services.ticketmaster.com URL seen
 
   /* ── SeatGeek event map ──────────────────────────────────────────────
    * SeatGeek doesn't expose gamePk, so each event page's real date+time is
@@ -202,8 +220,143 @@
   const host = location.host;
   const onStubHub = host.includes("stubhub.com");
   const onSeatGeek = host.includes("seatgeek.com");
+  const onTicketmaster = host.includes("ticketmaster.com");
   const onAggregator = host.includes("boxoprofundo.github.io") || host.includes("mikeboxer.com");
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+  /* ════════════════════════ Ticketmaster worker ══════════════════════════ */
+  if (onTicketmaster) {
+    installTMNetHook();  // capture the page's own seat-map API responses
+    const m = location.href.match(/\/event\/([A-Za-z0-9]+)/);
+    const eid = m ? m[1] : null;
+    const job = GM_getValue("yk_tm_job", null);
+    if (eid && job && job.active && (Date.now() - job.startedAt) < JOB_TTL) {
+      ticketmasterWorker(eid).catch((e) => console.error("[collector/TM]", e));
+    }
+    return;
+  }
+
+  // Hook fetch/XHR so we keep the page's own services.ticketmaster.com JSON
+  // (ISM DS facets / quickpicks) — that's where per-section primary price and,
+  // if present, faceValue live. Must install at document-start.
+  function installTMNetHook() {
+    let w;
+    try { w = (typeof unsafeWindow !== "undefined") ? unsafeWindow : window; }
+    catch (e) { w = window; }
+    if (!w || w.__ykTMHooked) return;
+    const sink = (url, text) => {
+      try {
+        const u = String(url || "");
+        if (!/services\.ticketmaster\.com/.test(u)) return;
+        TM_CAP_URLS.push(u.split("?")[0]);
+        if (!text || text.length < 40) return;
+        if (!/ismds|quickpicks|facets|"price|faceValue|listPrice|offer/i.test(u + text)) return;
+        TM_CAPTURES.push({ url: u, body: text.slice(0, 4000000) });
+      } catch (e) {}
+    };
+    try {
+      w.__ykTMHooked = 1;
+      const of = w.fetch;
+      if (of) {
+        w.fetch = function () {
+          const a = arguments;
+          return of.apply(this, a).then((r) => {
+            try { r.clone().text().then((t) => sink(r.url || a[0], t)); } catch (e) {}
+            return r;
+          });
+        };
+      }
+      const XP = w.XMLHttpRequest && w.XMLHttpRequest.prototype;
+      if (XP) {
+        const XO = XP.open, XS = XP.send;
+        XP.open = function (m, u) { this.__ykUrl = u; return XO.apply(this, arguments); };
+        XP.send = function () {
+          const x = this;
+          this.addEventListener("load", function () {
+            try { sink(x.__ykUrl, x.responseText); } catch (e) {}
+          });
+          return XS.apply(this, arguments);
+        };
+      }
+    } catch (e) { console.error("[collector/TM] hook install failed", e); }
+  }
+
+  // Summarize a seat-map JSON blob without assuming its exact schema, so the
+  // first-run diagnostic reveals whether per-section price/face is in there.
+  function tmSummarize(text) {
+    const faces = (text.match(/"face[Vv]alue"\s*:\s*"?\$?([\d.]+)/g) || []).slice(0, 8);
+    const prices = (text.match(/"(?:listPrice|price|totalPrice|currentPrice|standardPrice|amount)"\s*:\s*"?\$?([\d.]+)/g) || []).length;
+    const secs = [...new Set((text.match(/"(?:section|sectionName|sectionLabel|name)"\s*:\s*"([^"]{1,16})"/g) || []))].slice(0, 10);
+    return { bytes: text.length, faceHits: faces.length, faceSamples: faces, priceHits: prices, sectionSamples: secs };
+  }
+
+  // Parse Ticketmaster's rendered listing text into per-section min prices.
+  // TM writes listings as body text, e.g. "Sec 228 • Row 3 | Verified Resale
+  // Ticket | $747.50" — the same shape the headless scraper parses. Price shown
+  // is already per-ticket.
+  function tmQuotesFromBody(body, gamePk, url) {
+    const SECTION_CODE = "(?:[A-Za-z]*\\d[A-Za-z0-9]*|[A-Z]{1,3})";
+    const re = new RegExp("(?=\\bSec\\s+" + SECTION_CODE + "\\s*[•·]\\s*Row\\b)");
+    const bySec = {};
+    for (const chunk of body.split(re)) {
+      const sm = chunk.match(new RegExp("^\\bSec\\s+(" + SECTION_CODE + ")\\s*[•·]\\s*Row\\b"));
+      if (!sm) continue;
+      const sec = sm[1].trim().toUpperCase();
+      const pm = chunk.slice(sm[0].length).match(/\$\s*([\d,]+(?:\.\d{1,2})?)/);
+      if (!pm) continue;
+      const price = parseFloat(pm[1].replace(/,/g, ""));
+      if (!(price > 5 && price < 50000)) continue;
+      const obstructed = /obstruct/i.test(chunk.slice(0, 160));
+      if (!(sec in bySec) || price < bySec[sec].price) bySec[sec] = { price, obstructed };
+    }
+    return Object.entries(bySec).map(([sec, v]) => ({
+      gamePk, provider: "Ticketmaster",
+      section: v.obstructed ? `${sec} (obstructed)` : sec,
+      price: Math.round(v.price * 100) / 100, faceValue: null, url,
+    }));
+  }
+
+  async function ticketmasterWorker(eid) {
+    // Dismiss cookie/consent popups that can cover the listings.
+    for (let i = 0; i < 20; i++) {
+      clickMore(["accept", "accept all", "got it", "ok", "agree", "i accept"]);
+      const t = document.body ? document.body.innerText : "";
+      if (/Row\s+\w+\s+.*?\$\s*\d/.test(t)) break;
+      await sleep(400);
+    }
+    // Nudge the seat list to render / lazy-load.
+    for (let r = 0; r < 6; r++) { window.scrollBy(0, 1400); await sleep(700); }
+    const body = document.body ? document.body.innerText : "";
+    const job = GM_getValue("yk_tm_job", null);
+    const gamePk = (job && job.eidToPk && job.eidToPk[eid]) || null;
+    const url = location.href.split("?")[0];
+    const quotes = tmQuotesFromBody(body, gamePk, url);
+
+    // Diagnostic: page shape + any captured seat-map JSON, so the parser and a
+    // future face-value reader can be built from the real markup.
+    const faceCtx = [];
+    for (const mm of body.matchAll(/face\s*value/gi)) {
+      const s = Math.max(0, mm.index - 40);
+      faceCtx.push(body.slice(s, mm.index + 40).replace(/\s+/g, " "));
+      if (faceCtx.length >= 5) break;
+    }
+    const secText = (body.match(/Sec\s+[A-Za-z0-9]+\s*[•·]\s*Row[^$]{0,60}\$\s*[\d,]+/g) || []).slice(0, 8);
+    const captures = TM_CAPTURES.slice(0, 6).map((c) => ({
+      url: c.url.split("?")[0], summary: tmSummarize(c.body),
+      sample: /face[Vv]alue|listPrice|"price"/.test(c.body) ? c.body.slice(0, 700) : null,
+    }));
+    const diag = {
+      title: (document.title || "").slice(0, 120),
+      blocked: /paused|denied|robot|captcha|access to this page/i.test(body.slice(0, 400)),
+      bodyLen: body.length,
+      sectionRows: secText,
+      faceMentions: faceCtx,
+      ismdsUrls: [...new Set(TM_CAP_URLS)].slice(0, 12),
+      captures,
+    };
+    console.log(`[collector/TM] event ${eid}: ${quotes.length} sections`, diag);
+    GM_setValue("yk_tm_result_" + eid, { ts: Date.now(), quotes, diag });
+  }
 
   /* ════════════════════════ StubHub worker ═══════════════════════════════ */
   if (onStubHub) {
@@ -804,7 +957,7 @@
         "position:fixed;right:12px;bottom:12px;z-index:9999;background:#0c2340;color:#fff;" +
         "font:600 12px/1.35 -apple-system,system-ui,sans-serif;padding:.5rem .7rem;border-radius:8px;" +
         "box-shadow:0 4px 16px rgba(0,0,0,.3);max-width:17rem;cursor:pointer;";
-      chip.title = "SeatGeek + StubHub collector (this browser). Click to run both now.";
+      chip.title = "Ticketmaster + SeatGeek + StubHub collector (this browser). Click to run all now.";
       chip.addEventListener("click", () => runAll());
       document.body.appendChild(chip);
     }
@@ -819,7 +972,7 @@
     const waits = opts.waits || 70;                 // result-poll iterations (×500ms)
     const gapMin = opts.gapMin != null ? opts.gapMin : 3000;
     const gapRand = opts.gapRand != null ? opts.gapRand : 3000;
-    GM_setValue(jobKey, { active: true, startedAt: Date.now() });
+    GM_setValue(jobKey, Object.assign({ active: true, startedAt: Date.now() }, opts.jobExtra || {}));
     if (!opts.keepResults) entries.forEach(([k]) => GM_deleteValue(resultKey(k)));
     const collected = [];
     for (let i = 0; i < entries.length; i++) {
@@ -912,16 +1065,99 @@
     return collected.length;
   }
 
+  // Discover every remaining Yankees home-game Ticketmaster event via the
+  // official Discovery API (CORS/GM-friendly, uses the free key in Settings),
+  // mapped to gamePk by date. Returns entries [eid, url, gamePk] for cycle().
+  function extractEid(u) { const m = String(u).match(/\/event\/([A-Za-z0-9]+)/); return m ? m[1] : String(u); }
+  async function tmDiscover() {
+    const key = settings().tmKey;
+    if (!key) return { error: "no-key" };
+    const params = new URLSearchParams({
+      apikey: key, keyword: "New York Yankees", classificationName: "Baseball",
+      size: "199", sort: "date,asc",
+      startDateTime: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"),
+      endDateTime: new Date().getFullYear() + "-11-15T23:59:59Z",
+    });
+    const resp = await new Promise((res, rej) => GM_xmlhttpRequest({
+      method: "GET",
+      url: "https://app.ticketmaster.com/discovery/v2/events.json?" + params,
+      onload: res, onerror: rej,
+    }));
+    const data = safeJson(resp.responseText) || {};
+    const events = ((data._embedded || {}).events) || [];
+    const byDate = {};
+    for (const ev of events) {
+      const venue = ((ev._embedded || {}).venues || [{}])[0];
+      if (!/yankee stadium/i.test(venue.name || "")) continue;
+      if (/parking/i.test(ev.name || "")) continue;
+      const start = (ev.dates || {}).start || {};
+      const date = start.localDate, time = (start.localTime || "").slice(0, 5);
+      const url = ev.url;
+      if (!date || !url || !/\/event\/[A-Za-z0-9]+/.test(url)) continue;
+      (byDate[date] = byDate[date] || []).push({ time, url });
+    }
+    const entries = [];
+    for (const [date, evs] of Object.entries(byDate)) {
+      const pks = (DATE_TO_PKS[date] || []).slice().sort((a, b) => a - b);
+      if (!pks.length) continue;                       // not a remaining home game
+      evs.sort((a, b) => (a.time || "").localeCompare(b.time || ""));
+      evs.forEach((e, i) => entries.push([extractEid(e.url), e.url, pks[Math.min(i, pks.length - 1)]]));
+    }
+    return { entries };
+  }
+
+  // Cycle every discovered TM event through a real tab; publish per-section
+  // prices + a first-run diagnostic (page shape + seat-map JSON) for tuning.
+  async function collectTicketmaster(probeOnly) {
+    const disc = await tmDiscover();
+    if (disc.error === "no-key") { setChip("Ticketmaster needs your TM API key in Settings"); return 0; }
+    let entries = disc.entries || [];
+    if (!entries.length) { setChip("Ticketmaster: no events discovered"); return 0; }
+    if (probeOnly) entries = entries.slice(0, 1);
+    const eidToPk = {};
+    entries.forEach(([eid, , pk]) => { eidToPk[eid] = pk; });
+    const { qty, collected } = await cycle(
+      probeOnly ? "TM probe" : "Ticketmaster", "yk_tm_job", entries,
+      (eid) => "yk_tm_result_" + eid, true,
+      { active: !!probeOnly, waits: probeOnly ? 120 : 100,
+        gapMin: probeOnly ? 500 : 2500, gapRand: probeOnly ? 500 : 2500,
+        jobExtra: { eidToPk } });
+    const firstRes = GM_getValue("yk_tm_result_" + entries[0][0], null);
+    await putFile("/contents/data/_tm-diag.json",
+      { fetchedAt: new Date().toISOString(), games: entries.length,
+        sampleEvent: entries[0][1], totalQuotes: collected.length,
+        diag: firstRes ? firstRes.diag : "no result (event tab produced nothing)" },
+      "Ticketmaster collector diagnostic");
+    if (collected.length) {
+      await putFile(`/contents/data/listings-tm-browser-${qty}.json`,
+        { fetchedAt: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"), quotes: collected },
+        `Ticketmaster listings (blocks of ${qty}, browser collector)`);
+    }
+    const games = new Set(collected.map((q) => q.gamePk)).size;
+    if (probeOnly) {
+      setChip(firstRes && firstRes.diag && !firstRes.diag.blocked
+        ? `TM probe: ${collected.length} sections captured ✓ (tell Claude)`
+        : "TM probe: blocked/empty — see _tm-diag.json");
+    } else {
+      setChip(collected.length ? `Ticketmaster: ${collected.length} prices across ${games} games`
+                               : "Ticketmaster: 0 (blocked or empty)");
+    }
+    return collected.length;
+  }
+  const runTicketmaster = () => collectTicketmaster(false);
+
   async function runAll() {
     if (running) return;
     if (!settings().ghToken) { setChip("Set the access key in Settings first"); return; }
     running = true;
     try {
+      setChip("Ticketmaster…", true);
+      const tm = await runTicketmaster();
       setChip("StubHub…", true);
       const sh = await runStubHub();
       setChip("SeatGeek…", true);
       const sg = await runSeatGeek();
-      setChip(`Done: StubHub ${sh}, SeatGeek ${sg}. Press Search.`);
+      setChip(`Done: TM ${tm}, StubHub ${sh}, SeatGeek ${sg}. Press Search.`);
     } catch (e) {
       console.error("[collector]", e);
       setChip("Collector error — see console");
@@ -953,7 +1189,9 @@
     setChip(apiUrl ? "API URL captured ✓ (tell Claude)" : "API URL not captured — see console");
   }
 
-  GM_registerMenuCommand("Collect SeatGeek + StubHub now", runAll);
+  GM_registerMenuCommand("Collect all (TM + SeatGeek + StubHub) now", runAll);
+  GM_registerMenuCommand("Collect Ticketmaster only", async () => { if (!running) { running = true; try { const n = await runTicketmaster(); setChip(`Ticketmaster done: ${n}`); } finally { running = false; } } });
+  GM_registerMenuCommand("Probe Ticketmaster (1 game)", async () => { if (!running) { running = true; try { await collectTicketmaster(true); } finally { running = false; } } });
   GM_registerMenuCommand("Collect StubHub only", async () => { if (!running) { running = true; try { const n = await runStubHub(); setChip(`StubHub done: ${n}`); } finally { running = false; } } });
   GM_registerMenuCommand("Collect SeatGeek only", async () => { if (!running) { running = true; try { const n = await runSeatGeek(); setChip(`SeatGeek done: ${n}`); } finally { running = false; } } });
   GM_registerMenuCommand("Probe SeatGeek API (1 game)", async () => { if (!running) { running = true; try { await probeSeatGeekApi(); } finally { running = false; } } });
@@ -964,7 +1202,7 @@
       b.dataset.collWired = "1";
       b.addEventListener("click", () => runAll());
     });
-    setChip("SeatGeek + StubHub ready (this browser)");
+    setChip("Ticketmaster + SeatGeek + StubHub ready (this browser)");
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", wire);
   else wire();
