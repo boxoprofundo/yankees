@@ -13,6 +13,11 @@
 
 * { box-sizing: border-box; }
 
+/* Stop iOS Safari from auto-inflating the font size of text in wide cells
+   (e.g. the full-width "No block found" message), which made it render much
+   larger than the rest of the table on mobile. */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
