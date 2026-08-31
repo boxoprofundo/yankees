@@ -28,8 +28,9 @@
     // Ordered list of sort criteria, most-significant first. Clicking a header
     // makes that column primary and pushes the previous keys down as
     // tiebreakers, so an earlier sort is retained when you sort on a second
-    // column. Index 0 is the primary sort. Default: distance from home plate.
-    sortKeys: [{ key: "plate", asc: true }],
+    // column. Index 0 is the primary sort. Default: custom seating order
+    // (deck/infield-outfield buckets), then home-plate distance within each.
+    sortKeys: [{ key: "seating", asc: true }],
     lastQty: 2,
   };
 
@@ -585,6 +586,21 @@
     return { dist: Math.abs(d - 20), side: d >= 20 ? 0 : 1 };
   }
 
+  // Custom seating-order bucket for the default sort. Best views first:
+  // Legends, then infield/outfield decks interleaved as requested. Anything
+  // else (Bleachers, Suite, Audi Club, Standing Room, Other) sinks to the end.
+  function bucketRank(row) {
+    if (row.level === "Legends") return 0;
+    const inf = row.location === "Infield";
+    switch (row.level) {
+      case "Field":      return inf ? 1 : 3; // 100s
+      case "Main":       return inf ? 2 : 5; // 200s
+      case "Terrace":    return inf ? 4 : 7; // 300s
+      case "Grandstand": return inf ? 6 : 8; // 400s
+      default:           return 99;
+    }
+  }
+
   // Compare two rows on one sort key, honouring direction. Nulls always sink
   // to the bottom regardless of direction so blank rows don't interleave.
   function cmpKey(a, b, key, asc) {
@@ -599,17 +615,23 @@
       const c = wa < wb ? -1 : wa > wb ? 1 : 0;
       return asc ? c : -c;
     }
-    if (key === "plate") {
-      // Distance from home plate: sections ending in ~20 sit behind the plate.
-      // Rank by |lastTwoDigits - 20|; within a tie the higher side wins
-      // (21 before 19, 22 before 18). Then break by deck, then section number.
-      const pa = plateInfo(a), pb = plateInfo(b);
-      if (pa == null && pb == null) return 0;
-      if (pa == null) return 1;   // no numeric section sinks
-      if (pb == null) return -1;
-      let c = pa.dist - pb.dist;
-      if (!c) c = pa.side - pb.side;
-      if (!c) c = window.Sections.compare(a.cls, b.cls);
+    if (key === "seating") {
+      // Custom seating buckets first (Legends, infield/outfield decks), then
+      // home-plate distance within each: |lastTwoDigits - 20|, higher side
+      // winning ties (21 before 19), then section number.
+      const ba = bucketRank(a), bb = bucketRank(b);
+      let c;
+      if (ba !== bb) {
+        c = ba - bb;
+      } else {
+        const pa = plateInfo(a), pb = plateInfo(b);
+        if (pa && pb) {
+          c = pa.dist - pb.dist || pa.side - pb.side ||
+              window.Sections.compare(a.cls, b.cls);
+        } else if (pa) c = -1;
+        else if (pb) c = 1;
+        else c = window.Sections.compare(a.cls, b.cls);
+      }
       return asc ? c : -c;
     }
     const va = a[key], vb = b[key];
