@@ -205,8 +205,10 @@ th { background: #eef1f5; position: sticky; top: 0; }
 /* Shrink the section table to its contents: with every cell nowrap, letting
    the table auto-size makes each column only as wide as its widest cell
    instead of stretching columns to fill the container. */
-#section-table { font-size: .84rem; width: auto; }
-#section-table th, #section-table td { padding: .3rem .45rem; }
+/* Match the per-game table's row font size; keep horizontal padding tight so
+   the columns stay narrow, and use its vertical padding for equal row height. */
+#section-table { font-size: .92rem; width: auto; }
+#section-table th, #section-table td { padding: .55rem .45rem; }
 /* Money columns (price, face, % of face) read better right-aligned; their
    width is left to the content. Columns 2 (Level) and 3 (IF/OF) are badges. */
 #section-table td:nth-child(4), #section-table th:nth-child(4),
@@ -219,7 +221,7 @@ th { background: #eef1f5; position: sticky; top: 0; }
    right-aligned fixed-width money-column rules by cell position. */
 /* Pin the "no block found" message to the same size as the price/data cells
    (the section table's base .84rem) so it can never inherit anything larger. */
-#section-table td.noblock { text-align: left; width: auto; font-size: .84rem; }
+#section-table td.noblock { text-align: left; width: auto; font-size: inherit; }
 /* Keep the Section column tight: cap the code and ellipsize rare long ones. */
 #section-table .sec-code {
   display: inline-block; max-width: 4.5rem;
