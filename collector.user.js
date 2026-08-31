@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.1.1
+// @version      3.1.2
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -317,6 +317,14 @@
   }
 
   async function ticketmasterWorker(eid) {
+    try { await ticketmasterWorkerInner(eid); }
+    catch (e) {
+      // Always post *something* so the controller isn't left blind.
+      GM_setValue("yk_tm_result_" + eid,
+        { ts: Date.now(), quotes: [], diag: { error: String(e).slice(0, 200), where: "worker" } });
+    }
+  }
+  async function ticketmasterWorkerInner(eid) {
     // Dismiss cookie/consent popups that can cover the listings.
     for (let i = 0; i < 20; i++) {
       clickMore(["accept", "accept all", "got it", "ok", "agree", "i accept"]);
