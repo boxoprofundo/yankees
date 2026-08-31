@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.1.0
+// @version      3.1.1
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -1089,7 +1089,10 @@
     for (const ev of events) {
       const venue = ((ev._embedded || {}).venues || [{}])[0];
       if (!/yankee stadium/i.test(venue.name || "")) continue;
-      if (/parking/i.test(ev.name || "")) continue;
+      // Games only — skip stadium tours, parking, and other non-matchup events
+      // (a tour runs most days at the same venue, so name must say "… vs …").
+      if (!/\bvs\.?\b/i.test(ev.name || "")) continue;
+      if (/parking|tour/i.test(ev.name || "")) continue;
       const start = (ev.dates || {}).start || {};
       const date = start.localDate, time = (start.localTime || "").slice(0, 5);
       const url = ev.url;
