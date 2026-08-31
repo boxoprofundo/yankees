@@ -217,7 +217,13 @@ th { background: #eef1f5; position: sticky; top: 0; }
 #section-table td:nth-child(7), #section-table th:nth-child(7) {
   text-align: right;
 }
-#section-table td.rank { color: var(--muted); text-align: right; }
+/* Rank (col 1), Level (col 3) and IF/OF (col 4) read best centered. */
+#section-table td.rank { color: var(--muted); }
+#section-table td:nth-child(1), #section-table th:nth-child(1),
+#section-table td:nth-child(3), #section-table th:nth-child(3),
+#section-table td:nth-child(4), #section-table th:nth-child(4) {
+  text-align: center;
+}
 /* Empty "no block found" rows use a colspan; keep that message and the
    StubHub link left-aligned and full-width instead of inheriting the
    right-aligned fixed-width money-column rules by cell position. */
