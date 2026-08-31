@@ -255,6 +255,10 @@ th { background: #eef1f5; position: sticky; top: 0; }
   display: inline-block; max-width: 4.5rem;
   overflow: hidden; text-overflow: ellipsis; vertical-align: bottom;
 }
+/* An inline-block doesn't inherit a link's underline, so the section number
+   inside the SeatGeek link would render un-underlined next to "§ ↗". Restore
+   it in the link context (the Section column, not a link, stays plain). */
+#section-table td.link-cell a .sec-code { text-decoration: underline; }
 #section-table td.link-cell { text-align: left; width: auto; white-space: nowrap; }
 th[data-sort], th[data-gsort] { cursor: pointer; }
 th[data-sort]:hover, th[data-gsort]:hover { text-decoration: underline; }
