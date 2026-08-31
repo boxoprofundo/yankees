@@ -66,8 +66,6 @@ header h1 { margin: 0; font-size: 1.7rem; }
   font-weight: 600;
   padding: .4rem .3rem;
   white-space: nowrap;
-  text-align: center;
-  line-height: 1.1;
 }
 .nav-map:hover { color: #fff; text-decoration: underline; }
 
@@ -311,5 +309,23 @@ footer {
 @media (max-width: 640px) {
   header h1 { font-size: 1.3rem; }
   th, td { padding: .45rem .55rem; }
-  .tab { padding: .6rem .8rem; font-size: .88rem; }
+
+  /* Let the nav wrap so the map link can sit on its own row. */
+  .tabs { flex-wrap: wrap; }
+  /* Map link moves onto its own full-width row ABOVE the tab buttons
+     (i.e. under the header's site list), centered. */
+  .nav-map {
+    order: -1;
+    flex: 0 0 100%;
+    margin-left: 0;
+    text-align: center;
+    padding: .5rem .3rem;
+  }
+  /* Three equal-width tabs, ~a third of the screen each. */
+  .tab {
+    flex: 1 1 0;
+    text-align: center;
+    padding: .6rem .4rem;
+    font-size: .88rem;
+  }
 }
