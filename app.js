@@ -460,30 +460,24 @@
     const byGame = new Map(allGames.map((g) => [g.gamePk, g]));
     const scopeSet = new Set(scopeGames.map((g) => g.gamePk));
 
-    // Ticketmaster event-level minimum, a fallback face when the persistent
-    // per-section store has nothing for that game.
-    const tmFace = new Map();
-    for (const q of quotes) {
-      if (q.provider === "Ticketmaster" && q.faceValue != null && !tmFace.has(q.gamePk)) {
-        tmFace.set(q.gamePk, q.faceValue);
-      }
-    }
-
-    renderSectionTable(scopeGames, scopeSet, quotes, qty, byGame, tmFace, faceMap);
+    renderSectionTable(scopeGames, scopeSet, quotes, qty, byGame, faceMap);
     renderGameTable(scopeGames, quotes);
   }
 
-  // Look up a stored face value for a game/section, trying the section's
-  // canonical code and its raw form.
-  function faceFor(faceMap, gamePk, cls, rawSection, tmFace) {
+  // Look up a stored per-section face value for a game/section, trying the
+  // section's canonical code and its raw form. Returns null when we have no
+  // real face for that exact section — we deliberately do NOT fall back to the
+  // game's cheapest price, which would stamp premium sections (e.g. Legends)
+  // with the stadium minimum and show absurd faces like $28 on Legends.
+  function faceFor(faceMap, gamePk, cls, rawSection) {
     const keys = [`${gamePk}|${cls.code}`, `${gamePk}|${rawSection}`];
     for (const k of keys) {
       if (faceMap && faceMap[k] != null) return faceMap[k];
     }
-    return tmFace.get(gamePk) ?? null;
+    return null;
   }
 
-  function renderSectionTable(games, scopeSet, quotes, qty, byGame, tmFace, faceMap) {
+  function renderSectionTable(games, scopeSet, quotes, qty, byGame, faceMap) {
     const wrap = $("#section-results");
     const soonest = games[0]; // games are date-sorted; used for empty-row StubHub links
 
@@ -535,7 +529,7 @@
       const q = hit ? hit.q : null;
       const game = q ? byGame.get(q.gamePk) : null;
       const face = q
-        ? faceFor(faceMap, q.gamePk, cls, q.section, tmFace)
+        ? faceFor(faceMap, q.gamePk, cls, q.section)
         : null;
       const price = q ? q.price : null;
 
