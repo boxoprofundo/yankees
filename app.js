@@ -630,7 +630,7 @@
       const stubCell =
         `<td class="stub-cell"><a href="${r.stubhub}" target="_blank" rel="noopener" ` +
         `title="Opens a game on StubHub; then pick section ${r.display} on the seat map">` +
-        `open ↗</a></td>`;
+        `§<span class="sec-code">${r.display}</span> ↗</a></td>`;
 
       // Cap the code so a rare long non-numeric code (e.g. "TERRACEDUGOUT3")
       // can't widen the whole column; the full value stays available on hover.
