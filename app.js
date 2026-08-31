@@ -514,6 +514,19 @@
       if (!cur || q.price < cur.q.price) best.set(cls.code, { q, cls });
     }
 
+    // Per-game SeatGeek event URL, harvested from the SeatGeek quotes (the
+    // adapter emits one per game — a real event page, or a search fallback).
+    const sgUrlByGame = new Map();
+    for (const q of quotes) {
+      if (q.provider === "SeatGeek" && q.url && !sgUrlByGame.has(q.gamePk)) {
+        sgUrlByGame.set(q.gamePk, q.url);
+      }
+    }
+    const seatgeekLink = (g) =>
+      (g && sgUrlByGame.get(g.gamePk)) ||
+      "https://seatgeek.com/search?search=" +
+        encodeURIComponent(`New York Yankees ${g ? g.opponent : ""} ${g ? g.dateShort : ""}`);
+
     const history = loadPriceHistory();
     const nextHistory = {};
 
@@ -536,7 +549,7 @@
       }
       if (price != null) nextHistory[histKey] = price;
 
-      // StubHub link: this game if we have one, else the soonest in scope.
+      // SeatGeek link: this game if we have one, else the soonest in scope.
       const linkGame = game || soonest;
 
       return {
@@ -553,14 +566,11 @@
         face,
         pctFace: price != null && face ? (price / face) * 100 : null,
         date: game ? game.dateUTC.getTime() : null,
-        dateLabel: game ? game.compactET : "",
+        dateLabel: game ? game.displayET : "",
         opponent: game ? game.opponent : "",
         provider: q ? q.provider : "",
         url: q ? q.url : "",
-        stubhub: linkGame
-          ? window.stubhubLink(linkGame.gamePk, qty, linkGame.opponent, linkGame.dateShort)
-          : "",
-        stubSection: cls.code,
+        seatgeek: linkGame ? seatgeekLink(linkGame) : "",
       };
     });
 
@@ -678,9 +688,9 @@
     for (const r of rows) {
       const tr = document.createElement("tr");
 
-      const stubCell =
-        `<td class="stub-cell"><a href="${r.stubhub}" target="_blank" rel="noopener" ` +
-        `title="Opens a game on StubHub; then pick section ${r.display} on the seat map">` +
+      const sgCell =
+        `<td class="link-cell"><a href="${r.seatgeek}" target="_blank" rel="noopener" ` +
+        `title="Opens this game on SeatGeek; then pick section ${r.display} on the seat map">` +
         `§<span class="sec-code">${r.display}</span> ↗</a></td>`;
 
       // Cap the code so a rare long non-numeric code (e.g. "TERRACEDUGOUT3")
@@ -709,7 +719,7 @@
           levelCell +
           locCell +
           `<td class="na noblock" colspan="6">No block of ${state.lastQty} found in scope</td>` +
-          stubCell;
+          sgCell;
       } else {
         // The arrow alone carries the up/down colour; the price value itself is
         // painted on a green→red gradient (cheapest green, priciest red).
@@ -734,7 +744,7 @@
           `<td>${r.url
             ? `<a href="${r.url}" target="_blank" rel="noopener">${r.provider} →</a>`
             : r.provider}</td>` +
-          stubCell;
+          sgCell;
       }
       tbody.appendChild(tr);
     }

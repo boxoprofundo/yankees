@@ -227,7 +227,7 @@ th { background: #eef1f5; position: sticky; top: 0; }
   display: inline-block; max-width: 4.5rem;
   overflow: hidden; text-overflow: ellipsis; vertical-align: bottom;
 }
-#section-table td.stub-cell { text-align: left; width: auto; white-space: nowrap; }
+#section-table td.link-cell { text-align: left; width: auto; white-space: nowrap; }
 th[data-sort] { cursor: pointer; }
 th[data-sort]:hover { text-decoration: underline; }
 tbody tr:hover { background: #f2f6fb; }
