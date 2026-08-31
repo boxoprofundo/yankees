@@ -197,20 +197,18 @@ table { border-collapse: collapse; width: 100%; font-size: .92rem; }
 th, td { padding: .55rem .8rem; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
 th { background: #eef1f5; position: sticky; top: 0; }
 
-/* Compact the section table so all columns fit without horizontal scroll. */
-#section-table { font-size: .84rem; }
+/* Shrink the section table to its contents: with every cell nowrap, letting
+   the table auto-size makes each column only as wide as its widest cell
+   instead of stretching columns to fill the container. */
+#section-table { font-size: .84rem; width: auto; }
 #section-table th, #section-table td { padding: .4rem .5rem; }
-/* The money columns (price, face, % of face) are narrow and read better
-   right-aligned; keep them tight. Columns 2 (Level) and 3 (IF/OF) are badges
-   and stay left-aligned. */
+/* Money columns (price, face, % of face) read better right-aligned; their
+   width is left to the content. Columns 2 (Level) and 3 (IF/OF) are badges. */
 #section-table td:nth-child(4), #section-table th:nth-child(4),
 #section-table td:nth-child(5), #section-table th:nth-child(5),
 #section-table td:nth-child(6), #section-table th:nth-child(6) {
   text-align: right;
-  width: 5.5rem;
 }
-/* Section is now just the code; keep it compact. */
-#section-table td:first-child, #section-table th:first-child { width: 5rem; }
 /* Empty "no block found" rows use a colspan; keep that message and the
    StubHub link left-aligned and full-width instead of inheriting the
    right-aligned fixed-width money-column rules by cell position. */
