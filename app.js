@@ -28,8 +28,8 @@
     // Ordered list of sort criteria, most-significant first. Clicking a header
     // makes that column primary and pushes the previous keys down as
     // tiebreakers, so an earlier sort is retained when you sort on a second
-    // column. Index 0 is the primary sort.
-    sortKeys: [{ key: "section", asc: true }],
+    // column. Index 0 is the primary sort. Default: distance from home plate.
+    sortKeys: [{ key: "plate", asc: true }],
     lastQty: 2,
   };
 
@@ -577,6 +577,14 @@
     return `hsl(${hue}, 70%, 38%)`;
   }
 
+  // Home-plate proximity for a row: distance = |lastTwoDigits - 20|, and a
+  // side flag so the higher-numbered side sorts first within a tie.
+  function plateInfo(row) {
+    if (row.num == null) return null;
+    const d = row.num % 100;
+    return { dist: Math.abs(d - 20), side: d >= 20 ? 0 : 1 };
+  }
+
   // Compare two rows on one sort key, honouring direction. Nulls always sink
   // to the bottom regardless of direction so blank rows don't interleave.
   function cmpKey(a, b, key, asc) {
@@ -589,6 +597,19 @@
       const wa = window.Sections.LEVEL_ORDER[a.level] ?? 99;
       const wb = window.Sections.LEVEL_ORDER[b.level] ?? 99;
       const c = wa < wb ? -1 : wa > wb ? 1 : 0;
+      return asc ? c : -c;
+    }
+    if (key === "plate") {
+      // Distance from home plate: sections ending in ~20 sit behind the plate.
+      // Rank by |lastTwoDigits - 20|; within a tie the higher side wins
+      // (21 before 19, 22 before 18). Then break by deck, then section number.
+      const pa = plateInfo(a), pb = plateInfo(b);
+      if (pa == null && pb == null) return 0;
+      if (pa == null) return 1;   // no numeric section sinks
+      if (pb == null) return -1;
+      let c = pa.dist - pb.dist;
+      if (!c) c = pa.side - pb.side;
+      if (!c) c = window.Sections.compare(a.cls, b.cls);
       return asc ? c : -c;
     }
     const va = a[key], vb = b[key];
