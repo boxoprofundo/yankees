@@ -223,7 +223,7 @@ main h2 { margin: 1.6rem 0 .6rem; display: flex; align-items: center; gap: .8rem
 /* First results heading sits right under the search bar — no big gap above. */
 #section-results > h2 { margin-top: .5rem; }
 .sub { font-size: .85rem; color: var(--muted); font-weight: 400; }
-p#section-sub.sub { margin: -.2rem 0 .5rem; }
+main p.sub { margin: -.2rem 0 .5rem; }
 .map-link { font-size: .85rem; color: var(--navy-soft); text-decoration: none; font-weight: 600; }
 .map-link:hover { text-decoration: underline; }
 
