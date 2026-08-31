@@ -740,7 +740,9 @@
           `${LOC_ABBR[r.location] || r.location}</span></td>`
         : `<td class="na">—</td>`;
 
-      const rankCell = `<td class="rank">${r.rank}</td>`;
+      // Ranks 194+ are the leftover non-seating-bucket sections; show "NR"
+      // (not ranked) instead of a number. Sorting still uses the numeric rank.
+      const rankCell = `<td class="rank">${r.rank >= 194 ? "NR" : r.rank}</td>`;
 
       if (r.price == null) {
         tr.innerHTML =
