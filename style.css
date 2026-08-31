@@ -260,6 +260,13 @@ th { background: #eef1f5; position: sticky; top: 0; }
    it in the link context (the Section column, not a link, stays plain). */
 #section-table td.link-cell a .sec-code { text-decoration: underline; }
 #section-table td.link-cell { text-align: left; width: auto; white-space: nowrap; }
+/* Per-game table: the 7 marketplace columns (3–9) share equal width and are
+   right-justified (prices read better right-aligned); Date and Game (cols 1–2)
+   size to their content. */
+#game-table th:nth-child(n+3), #game-table td:nth-child(n+3) {
+  width: 10%;
+  text-align: right;
+}
 th[data-sort], th[data-gsort] { cursor: pointer; }
 th[data-sort]:hover, th[data-gsort]:hover { text-decoration: underline; }
 .sort-hint { font-size: .8rem; color: var(--muted); margin: 0 0 .4rem; font-style: italic; }
