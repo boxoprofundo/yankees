@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NYY Ticket Aggregator</title>
-<link rel="stylesheet" href="style.css?v=20260901a">
+<link rel="stylesheet" href="style.css?v=20260901b">
 </head>
 <body>
 <header>
@@ -38,6 +38,7 @@
     <input id="qty-all" class="qty" type="number" min="1" max="12" value="2">
     <button class="search-btn" data-scope="all">Search</button>
     <button class="refresh-btn secondary" data-scope="all" type="button">↻ Refresh prices</button>
+    <div class="status" hidden></div>
   </div>
 </section>
 
@@ -48,6 +49,7 @@
     <input id="qty-specific" class="qty" type="number" min="1" max="12" value="2">
     <button class="search-btn" data-scope="specific">Search</button>
     <button class="refresh-btn secondary" data-scope="specific" type="button">↻ Refresh prices</button>
+    <div class="status" hidden></div>
   </div>
   <div class="game-picker">
     <div class="picker-head">
@@ -103,8 +105,6 @@
   </div>
 </section>
 
-<div id="status" class="status" hidden></div>
-
 <main>
   <section id="section-results" hidden>
     <h2>Cheapest block by section</h2>
@@ -156,9 +156,9 @@
   </div>
 </div>
 
-<script src="providers.js?v=20260901a"></script>
-<script src="sections.js?v=20260901a"></script>
-<script src="stubhub-events.js?v=20260901a"></script>
-<script src="app.js?v=20260901a"></script>
+<script src="providers.js?v=20260901b"></script>
+<script src="sections.js?v=20260901b"></script>
+<script src="stubhub-events.js?v=20260901b"></script>
+<script src="app.js?v=20260901b"></script>
 </body>
 </html>

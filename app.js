@@ -78,15 +78,15 @@
 
   /* ------------------------------- status ------------------------------- */
 
+  // One status box lives inside each panel's controls (next to Refresh); update
+  // them together so whichever panel is visible shows the message.
   function setStatus(msg, isError) {
-    const el = $("#status");
-    if (!msg) {
-      el.hidden = true;
-      return;
-    }
-    el.hidden = false;
-    el.textContent = msg;
-    el.classList.toggle("error", !!isError);
+    $$(".status").forEach((el) => {
+      if (!msg) { el.hidden = true; return; }
+      el.hidden = false;
+      el.textContent = msg;
+      el.classList.toggle("error", !!isError);
+    });
   }
 
   /* ------------------------------ schedule ------------------------------ */
@@ -601,7 +601,7 @@
     const allInScope = state.games && games.length === state.games.length;
     const gs = games.length + " game" + (games.length > 1 ? "s" : "");
     $("#section-sub").textContent =
-      `— block of ${qty} ticket${qty > 1 ? "s" : ""}, ` +
+      `Block of ${qty} ticket${qty > 1 ? "s" : ""}, ` +
       (allInScope ? `across all ${games.length} remaining game${games.length > 1 ? "s" : ""}`
                   : `across ${gs} selected`);
     sortAndPaintSections();

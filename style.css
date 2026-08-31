@@ -213,10 +213,15 @@ header h1 { margin: 0; font-size: 1.7rem; }
   border: 1px solid #eadfae;
 }
 .status.error { background: #fdecec; border-color: #f0b9b9; }
+/* Inside the controls bar the status sits next to Refresh, growing to fill the
+   remaining width (wrapping to its own line within the white box if narrow). */
+.controls .status { margin: 0; max-width: none; flex: 1 1 14rem; padding: .5rem .8rem; font-size: .9rem; }
 
 /* ------------------------------ tables ------------------------------- */
 main { max-width: 76rem; margin: 0 auto; padding: 0 1rem 2rem; }
 main h2 { margin: 1.6rem 0 .6rem; display: flex; align-items: center; gap: .8rem; flex-wrap: wrap; }
+/* First results heading sits right under the search bar — no big gap above. */
+#section-results > h2 { margin-top: .5rem; }
 .sub { font-size: .85rem; color: var(--muted); font-weight: 400; }
 p#section-sub.sub { margin: -.2rem 0 .5rem; }
 .map-link { font-size: .85rem; color: var(--navy-soft); text-decoration: none; font-weight: 600; }
