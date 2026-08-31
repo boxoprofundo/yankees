@@ -385,4 +385,9 @@ footer {
     padding: .6rem .4rem;
     font-size: .88rem;
   }
+  /* The game picker's multi-column grid doesn't fit a phone — stack the games
+     in a single column. (JS sets an inline grid-template-rows for the desktop
+     column-fill; dropping grid to block ignores it and stacks them.) */
+  .game-list { display: block; }
+  .game-opt { margin-bottom: .1rem; }
 }
