@@ -756,10 +756,10 @@
       }
     }
 
-    // Header: Game | Date | <providers…>
+    // Header: Date | Game | <providers…>
     const head = $("#game-head");
     head.innerHTML =
-      "<th>Game</th><th>Date &amp; time</th>" +
+      "<th>Date &amp; time</th><th>Game</th>" +
       providerNames.map((n) => `<th>${n}</th>`).join("");
 
     const tbody = $("#game-table tbody");
@@ -775,7 +775,7 @@
       });
       const tr = document.createElement("tr");
       tr.innerHTML =
-        `<td>vs ${g.opponent}</td><td>${g.displayET}</td>` + cells.join("");
+        `<td>${g.displayET}</td><td>vs ${g.opponent}</td>` + cells.join("");
       tbody.appendChild(tr);
     }
     $("#game-results").hidden = false;
