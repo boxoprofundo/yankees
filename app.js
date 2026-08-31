@@ -451,6 +451,11 @@
       : "$" + v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
 
+  // Whole-dollar money for the dense section table (no cents → thinner columns).
+  function fmtMoney0(v) {
+    return v == null ? "—" : "$" + Math.round(v).toLocaleString("en-US");
+  }
+
   function render(allGames, scopeGames, quotes, qty, faceMap) {
     const byGame = new Map(allGames.map((g) => [g.gamePk, g]));
     const scopeSet = new Set(scopeGames.map((g) => g.gamePk));
@@ -718,8 +723,8 @@
           sectionCell +
           levelCell +
           locCell +
-          `<td class="price">${arrow}<span${priceStyle}>${fmtMoney(r.price)}</span></td>` +
-          `<td>${r.face != null ? fmtMoney(r.face) : "—"}</td>` +
+          `<td class="price">${arrow}<span${priceStyle}>${fmtMoney0(r.price)}</span></td>` +
+          `<td>${fmtMoney0(r.face)}</td>` +
           `<td${pctStyle}>${pctText}</td>` +
           `<td>${r.dateLabel}</td>` +
           `<td>${r.opponent}</td>` +
@@ -760,7 +765,7 @@
       const cells = providerNames.map((name) => {
         const q = byGameProvider.get(g.gamePk + "|" + name);
         if (!q) return `<td class="na">—</td>`;
-        const label = q.price != null ? fmtMoney(q.price) : "search →";
+        const label = q.price != null ? fmtMoney0(q.price) : "search →";
         const cls = q.price != null ? "price" : "";
         if (!q.url) return `<td class="${cls}">${label}</td>`;
         return `<td class="${cls}"><a href="${q.url}" target="_blank" rel="noopener">${label}</a></td>`;
