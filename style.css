@@ -202,13 +202,13 @@ table { border-collapse: collapse; width: 100%; font-size: .92rem; }
 th, td { padding: .55rem .8rem; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
 th { background: #eef1f5; position: sticky; top: 0; }
 
-/* Shrink the section table to its contents: with every cell nowrap, letting
-   the table auto-size makes each column only as wide as its widest cell
-   instead of stretching columns to fill the container. */
-/* Match the per-game table's row font size; keep horizontal padding tight so
-   the columns stay narrow, and use its vertical padding for equal row height. */
-#section-table { font-size: .92rem; width: auto; }
-#section-table th, #section-table td { padding: .55rem .45rem; }
+/* Match the per-game table's row font size and height. On a wide screen the
+   table fills the container (width:100% stretches the columns, no trailing
+   whitespace after the last column); on a narrow screen the content exceeds
+   the container so it stays condensed and scrolls. Horizontal padding scales
+   fluidly with the viewport so columns tighten as the screen shrinks. */
+#section-table { font-size: .92rem; width: 100%; }
+#section-table th, #section-table td { padding: .55rem clamp(.35rem, 1.1vw, 1rem); }
 /* Money columns (price, face, % of face) read better right-aligned; their
    width is left to the content. Col 1 Rank, 3 Level and 4 IF/OF are numeric/
    badge columns kept as-is. */
