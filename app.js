@@ -773,7 +773,7 @@
           `<td>${r.dateLabel}</td>` +
           `<td>${r.opponent}</td>` +
           `<td>${r.url
-            ? `<a href="${r.url}" target="_blank" rel="noopener">${r.provider} →</a>`
+            ? `<a href="${r.url}" target="_blank" rel="noopener">${r.provider} ↗</a>`
             : r.provider}</td>` +
           sgCell;
       }
@@ -838,7 +838,7 @@
       const cells = providerNames.map((name) => {
         const q = byGameProvider.get(g.gamePk + "|" + name);
         if (!q) return `<td class="na">—</td>`;
-        const label = q.price != null ? fmtMoney0(q.price) : "search →";
+        const label = q.price != null ? fmtMoney0(q.price) : "search ↗";
         const cls = q.price != null ? "price" : "";
         if (!q.url) return `<td class="${cls}">${label}</td>`;
         return `<td class="${cls}"><a href="${q.url}" target="_blank" rel="noopener">${label}</a></td>`;
