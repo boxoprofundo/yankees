@@ -592,18 +592,21 @@
   }
 
   // Custom seating-order bucket for the default sort. Best views first:
-  // Legends, then infield/outfield decks interleaved as requested. Anything
-  // else (Bleachers, Suite, Audi Club, Standing Room, Other) sinks to the end.
+  // Legends, then infield/outfield by deck interleaved as requested. Decks are
+  // keyed off the numeric hundreds tier (100s/200s/300s/400s), so Bleachers
+  // (201–204, 235–239) count as outfield 200s just like any other section.
+  // Non-numbered sections (Suite, Audi Club, Standing Room, Other) sink to end.
   function bucketRank(row) {
     if (row.level === "Legends") return 0;
-    const inf = row.location === "Infield";
-    switch (row.level) {
-      case "Field":      return inf ? 1 : 3; // 100s
-      case "Main":       return inf ? 2 : 5; // 200s
-      case "Terrace":    return inf ? 4 : 7; // 300s
-      case "Grandstand": return inf ? 6 : 8; // 400s
-      default:           return 99;
+    if (row.num != null) {
+      const tier = Math.floor(row.num / 100); // 1=100s … 4=400s
+      const inf = row.location === "Infield";
+      if (tier === 1) return inf ? 1 : 3;
+      if (tier === 2) return inf ? 2 : 5;
+      if (tier === 3) return inf ? 4 : 7;
+      if (tier === 4) return inf ? 6 : 8;
     }
+    return 99;
   }
 
   // Compare two rows on one sort key, honouring direction. Nulls always sink
