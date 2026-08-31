@@ -87,10 +87,10 @@
     s = s.toUpperCase().replace(/\s+/g, "");
 
     // Some marketplaces prefix a real section number with the premium-area
-    // name — "FIELDDUGOUT116" / "MAINDUGOUT220A" are just section 116 / 220A.
-    // Strip that prefix (only when a section number follows) so they fold into
-    // the real numbered section instead of becoming an "Other" junk row.
-    s = s.replace(/^(FIELD|MAIN)DUGOUT(?=\d)/, "");
+    // name — "FIELDDUGOUT116" / "MAINDUGOUT220A" / "LEGENDS27A" are just section
+    // 116 / 220A / 027A. Strip that prefix (only when a section number follows)
+    // so they fold into the real numbered section instead of an "Other" row.
+    s = s.replace(/^((FIELD|MAIN)DUGOUT|LEGENDS)(?=\d)/, "");
 
     // Numeric section, optionally with a letter suffix (227B, 305W, 407A).
     let num = null;
