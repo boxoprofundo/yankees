@@ -210,12 +210,14 @@ th { background: #eef1f5; position: sticky; top: 0; }
 #section-table { font-size: .92rem; width: auto; }
 #section-table th, #section-table td { padding: .55rem .45rem; }
 /* Money columns (price, face, % of face) read better right-aligned; their
-   width is left to the content. Columns 2 (Level) and 3 (IF/OF) are badges. */
-#section-table td:nth-child(4), #section-table th:nth-child(4),
+   width is left to the content. Col 1 Rank, 3 Level and 4 IF/OF are numeric/
+   badge columns kept as-is. */
 #section-table td:nth-child(5), #section-table th:nth-child(5),
-#section-table td:nth-child(6), #section-table th:nth-child(6) {
+#section-table td:nth-child(6), #section-table th:nth-child(6),
+#section-table td:nth-child(7), #section-table th:nth-child(7) {
   text-align: right;
 }
+#section-table td.rank { color: var(--muted); text-align: right; }
 /* Empty "no block found" rows use a colspan; keep that message and the
    StubHub link left-aligned and full-width instead of inheriting the
    right-aligned fixed-width money-column rules by cell position. */

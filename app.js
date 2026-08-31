@@ -570,6 +570,13 @@
 
     savePriceHistory(nextHistory);
 
+    // Seat-quality rank: fixed 1..N in the default seating order, so it stays
+    // meaningful no matter how the table is currently sorted (and sorting by
+    // the Rank column returns rows to seat-quality order).
+    [...state.sectionRows]
+      .sort((a, b) => cmpKey(a, b, "seating", true))
+      .forEach((r, i) => { r.rank = i + 1; });
+
     $("#section-sub").textContent =
       `— block of ${qty} ticket${qty > 1 ? "s" : ""}, cheapest across ` +
       `${games.length} game${games.length > 1 ? "s" : ""} in scope`;
@@ -708,8 +715,11 @@
           `${LOC_ABBR[r.location] || r.location}</span></td>`
         : `<td class="na">—</td>`;
 
+      const rankCell = `<td class="rank">${r.rank}</td>`;
+
       if (r.price == null) {
         tr.innerHTML =
+          rankCell +
           sectionCell +
           levelCell +
           locCell +
@@ -728,6 +738,7 @@
           : "";
         const pctText = r.pctFace != null ? Math.round(r.pctFace) + "%" : "—";
         tr.innerHTML =
+          rankCell +
           sectionCell +
           levelCell +
           locCell +
