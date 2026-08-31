@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NYY Ticket Aggregator</title>
-<link rel="stylesheet" href="style.css?v=20260831s">
+<link rel="stylesheet" href="style.css?v=20260831u">
 </head>
 <body>
 <header>
@@ -16,7 +16,19 @@
   <button class="tab active" data-tab="all">Search all games</button>
   <button class="tab" data-tab="specific">Search specific games</button>
   <button class="tab" data-tab="settings">Settings</button>
-  <a href="#" id="open-map" class="nav-map">🗺 View stadium map</a>
+  <span class="map-links">
+    <a href="#" id="open-map" class="nav-map">🗺 View stadium map</a>
+    <a href="#" id="open-map-tab" class="map-pop" target="_blank" rel="noopener"
+       title="Open the stadium map in a new tab"
+       aria-label="Open the stadium map in a new tab">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round"
+           stroke-linejoin="round" aria-hidden="true">
+        <path d="M14 3h7v7"/><path d="M21 3l-9 9"/>
+        <path d="M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"/>
+      </svg>
+    </a>
+  </span>
 </nav>
 
 <!-- ── Search all games ─────────────────────────────────────────── -->
@@ -98,6 +110,7 @@
     <h2>
       Cheapest block by section <span id="section-sub" class="sub"></span>
     </h2>
+    <p class="sort-hint">Click a column name to sort</p>
     <div class="table-wrap">
       <table id="section-table">
         <thead>
@@ -122,6 +135,7 @@
 
   <section id="game-results" hidden>
     <h2>Best price per game <span class="sub">(event-level, all sections)</span></h2>
+    <p class="sort-hint">Click a column name to sort</p>
     <div class="table-wrap">
       <table id="game-table">
         <thead><tr id="game-head"></tr></thead>
@@ -147,9 +161,9 @@
   <p><a href="https://boxoprofundo.github.io/">← boxoprofundo.github.io</a></p>
 </footer>
 
-<script src="providers.js?v=20260831s"></script>
-<script src="sections.js?v=20260831s"></script>
-<script src="stubhub-events.js?v=20260831s"></script>
-<script src="app.js?v=20260831s"></script>
+<script src="providers.js?v=20260831u"></script>
+<script src="sections.js?v=20260831u"></script>
+<script src="stubhub-events.js?v=20260831u"></script>
+<script src="app.js?v=20260831u"></script>
 </body>
 </html>

@@ -31,6 +31,8 @@
     // column. Index 0 is the primary sort. Default: custom seating order
     // (deck/infield-outfield buckets), then home-plate distance within each.
     sortKeys: [{ key: "seating", asc: true }],
+    gameSort: { key: "date", asc: true }, // per-game table sort
+    gameCtx: null,
     lastQty: 2,
   };
 
@@ -89,16 +91,23 @@
 
   /* ------------------------------ schedule ------------------------------ */
 
-  const fmtET = new Intl.DateTimeFormat("en-US", {
+  // Assemble the display date from parts rather than letting Intl concatenate:
+  // iOS WebKit otherwise renders "Sat, Sept 26 at 7:15 PM" (4-letter month, an
+  // "at" separator) while desktop Chrome renders "Sat, Sep 26, 7:15 PM". Using
+  // a fixed month table + manual join gives the same string on every platform.
+  const MON3 = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const _etParts = new Intl.DateTimeFormat("en-US", {
     timeZone: "America/New_York",
-    weekday: "short", month: "short", day: "numeric",
-    hour: "numeric", minute: "2-digit",
+    weekday: "short", month: "numeric", day: "numeric",
+    hour: "numeric", minute: "2-digit", hour12: true,
   });
-  // Compact date for the dense section table: no weekday, keeps the column tight.
-  const fmtCompact = new Intl.DateTimeFormat("en-US", {
-    timeZone: "America/New_York",
-    month: "short", day: "numeric", hour: "numeric", minute: "2-digit",
-  });
+  function fmtETfull(d) {
+    const p = {};
+    for (const part of _etParts.formatToParts(d)) p[part.type] = part.value;
+    return `${p.weekday}, ${MON3[+p.month - 1]} ${p.day}, ` +
+           `${p.hour}:${p.minute} ${p.dayPeriod}`;
+  }
   const fmtISO = new Intl.DateTimeFormat("en-CA", {
     timeZone: "America/New_York",
     year: "numeric", month: "2-digit", day: "2-digit",
@@ -129,8 +138,7 @@
           gamePk: g.gamePk,
           dateUTC,
           opponent: g.teams.away.team.name,
-          displayET: fmtET.format(dateUTC),
-          compactET: fmtCompact.format(dateUTC),
+          displayET: fmtETfull(dateUTC),
           isoDateET: fmtISO.format(dateUTC),
           dateShort: fmtShort.format(dateUTC),
         });
@@ -456,6 +464,19 @@
     return v == null ? "—" : "$" + Math.round(v).toLocaleString("en-US");
   }
 
+  // Will a section code overflow the capped Section cell (→ ellipsis)? Measured
+  // once with a canvas at the table font so we can left-justify only the
+  // truncated codes and keep the short ones centered.
+  let _codeCtx = null;
+  function codeTruncated(text) {
+    if (!_codeCtx) {
+      _codeCtx = document.createElement("canvas").getContext("2d");
+      _codeCtx.font =
+        '14.72px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif';
+    }
+    return _codeCtx.measureText(String(text)).width > 72; // 4.5rem cap
+  }
+
   function render(allGames, scopeGames, quotes, qty, faceMap) {
     const byGame = new Map(allGames.map((g) => [g.gamePk, g]));
     const scopeSet = new Set(scopeGames.map((g) => g.gamePk));
@@ -577,9 +598,12 @@
       .sort((a, b) => cmpKey(a, b, "seating", true))
       .forEach((r, i) => { r.rank = i + 1; });
 
+    const allInScope = state.games && games.length === state.games.length;
+    const gs = games.length + " game" + (games.length > 1 ? "s" : "");
     $("#section-sub").textContent =
-      `— block of ${qty} ticket${qty > 1 ? "s" : ""}, cheapest across ` +
-      `${games.length} game${games.length > 1 ? "s" : ""} in scope`;
+      `— block of ${qty} ticket${qty > 1 ? "s" : ""}, ` +
+      (allInScope ? `across all ${games.length} remaining game${games.length > 1 ? "s" : ""}`
+                  : `across ${gs} selected`);
     sortAndPaintSections();
     wrap.hidden = false;
   }
@@ -697,7 +721,8 @@
       // Cap the code so a rare long non-numeric code (e.g. "TERRACEDUGOUT3")
       // can't widen the whole column; the full value stays available on hover.
       const sectionCell =
-        `<td><span class="sec-code" title="${r.display}">${r.display}</span>` +
+        `<td class="sec${codeTruncated(r.display) ? " lj" : ""}">` +
+        `<span class="sec-code" title="${r.display}">${r.display}</span>` +
         (r.cls.obstructed ? ' <span class="obstructed">obstructed</span>' : "") +
         `</td>`;
 
@@ -772,15 +797,44 @@
       }
     }
 
-    // Header: Date | Game | <providers…>
+    // Header: Date | Game | <providers…>, all sortable (data-gsort).
     const head = $("#game-head");
     head.innerHTML =
-      "<th>Date &amp; time</th><th>Game</th>" +
-      providerNames.map((n) => `<th>${n}</th>`).join("");
+      '<th data-gsort="date">Date &amp; time</th><th data-gsort="game">Game</th>' +
+      providerNames.map((n) => `<th data-gsort="prov:${n}">${n}</th>`).join("");
+
+    // Keep what paintGameRows needs so header clicks can re-sort in place.
+    state.gameCtx = { games, providerNames, byGameProvider };
+    paintGameRows();
+    $("#game-results").hidden = false;
+  }
+
+  function paintGameRows() {
+    const ctx = state.gameCtx;
+    if (!ctx) return;
+    const { games, providerNames, byGameProvider } = ctx;
+    const { key, asc } = state.gameSort;
+    const priceOf = (g, name) => {
+      const q = byGameProvider.get(g.gamePk + "|" + name);
+      return q && q.price != null ? q.price : null;
+    };
+
+    const rows = [...games].sort((a, b) => {
+      let va, vb;
+      if (key === "game") { va = a.opponent; vb = b.opponent; }
+      else if (key && key.indexOf("prov:") === 0) {
+        const n = key.slice(5); va = priceOf(a, n); vb = priceOf(b, n);
+      } else { va = a.dateUTC.getTime(); vb = b.dateUTC.getTime(); }
+      if (va == null && vb == null) return 0;
+      if (va == null) return 1;   // no price sinks regardless of direction
+      if (vb == null) return -1;
+      const c = va < vb ? -1 : va > vb ? 1 : 0;
+      return asc ? c : -c;
+    });
 
     const tbody = $("#game-table tbody");
     tbody.innerHTML = "";
-    for (const g of games) {
+    for (const g of rows) {
       const cells = providerNames.map((name) => {
         const q = byGameProvider.get(g.gamePk + "|" + name);
         if (!q) return `<td class="na">—</td>`;
@@ -794,7 +848,6 @@
         `<td>${g.displayET}</td><td>vs ${g.opponent}</td>` + cells.join("");
       tbody.appendChild(tr);
     }
-    $("#game-results").hidden = false;
   }
 
   /* --------------------------- game picker ------------------------------ */
@@ -914,6 +967,8 @@
     $("#pick-all-cb").addEventListener("change", (e) => setAllPicked(e.target.checked));
 
     $("#open-map").addEventListener("click", (e) => { e.preventDefault(); openMap(); });
+    // The pop-out icon opens the same map image in a new tab (one source of URL).
+    $("#open-map-tab").href = MAP_IMG;
     $("#map-close").addEventListener("click", closeMap);
     $("#map-modal").addEventListener("click", (e) => {
       if (e.target.id === "map-modal") closeMap();
@@ -939,6 +994,17 @@
         }
         if (state.sectionRows.length) sortAndPaintSections();
       });
+    });
+
+    // Per-game table sorting. Headers are rebuilt each render, so delegate the
+    // click on the header row rather than binding each <th>.
+    $("#game-head").addEventListener("click", (e) => {
+      const th = e.target.closest("th[data-gsort]");
+      if (!th) return;
+      const key = th.dataset.gsort;
+      if (state.gameSort.key === key) state.gameSort.asc = !state.gameSort.asc;
+      else state.gameSort = { key, asc: true };
+      paintGameRows();
     });
 
     // Populate the game picker up front so the "specific" tab is usable.

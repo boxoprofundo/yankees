@@ -57,9 +57,14 @@ header h1 { margin: 0; font-size: 1.7rem; }
 }
 .tab:hover { color: #fff; }
 .tab.active { background: var(--bg); color: var(--navy); }
-.nav-map {
+.map-links {
   margin-left: auto;
   align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+}
+.nav-map {
   color: #d8e0ea;
   text-decoration: none;
   font-size: .9rem;
@@ -68,6 +73,15 @@ header h1 { margin: 0; font-size: 1.7rem; }
   white-space: nowrap;
 }
 .nav-map:hover { color: #fff; text-decoration: underline; }
+/* Pop-out icon: opens the map image in a new tab (separate from the modal). */
+.map-pop {
+  display: inline-flex;
+  align-items: center;
+  color: #d8e0ea;
+  padding: .3rem;
+  border-radius: 6px;
+}
+.map-pop:hover { color: #fff; background: rgba(255,255,255,.12); }
 
 /* ------------------------------ panels ------------------------------- */
 .panel {
@@ -224,6 +238,12 @@ th { background: #eef1f5; position: sticky; top: 0; }
 #section-table td:nth-child(4), #section-table th:nth-child(4) {
   text-align: center;
 }
+/* Section code (col 2): centered, except codes long enough to be truncated by
+   the ellipsis cap, which keep their natural left justification (class added
+   by JS after measuring). The header stays centered to match the short codes. */
+#section-table th:nth-child(2) { text-align: center; }
+#section-table td.sec { text-align: center; }
+#section-table td.sec.lj { text-align: left; }
 /* Empty "no block found" rows use a colspan; keep that message and the
    StubHub link left-aligned and full-width instead of inheriting the
    right-aligned fixed-width money-column rules by cell position. */
@@ -236,8 +256,9 @@ th { background: #eef1f5; position: sticky; top: 0; }
   overflow: hidden; text-overflow: ellipsis; vertical-align: bottom;
 }
 #section-table td.link-cell { text-align: left; width: auto; white-space: nowrap; }
-th[data-sort] { cursor: pointer; }
-th[data-sort]:hover { text-decoration: underline; }
+th[data-sort], th[data-gsort] { cursor: pointer; }
+th[data-sort]:hover, th[data-gsort]:hover { text-decoration: underline; }
+.sort-hint { font-size: .8rem; color: var(--muted); margin: 0 0 .4rem; font-style: italic; }
 tbody tr:hover { background: #f2f6fb; }
 td.price { font-weight: 700; color: var(--green); }
 td.price.flat { color: var(--text); }   /* unchanged since last run: black */
@@ -318,14 +339,14 @@ footer {
 
   /* Let the nav wrap so the map link can sit on its own row. */
   .tabs { flex-wrap: wrap; }
-  /* Map link moves onto its own full-width row ABOVE the tab buttons
-     (i.e. under the header's site list), centered. */
-  .nav-map {
+  /* Map link + pop-out icon move onto their own full-width row ABOVE the tab
+     buttons (i.e. under the header's site list), centered. */
+  .map-links {
     order: -1;
     flex: 0 0 100%;
     margin-left: 0;
-    text-align: center;
-    padding: .5rem .3rem;
+    justify-content: center;
+    padding: .3rem 0;
   }
   /* Three equal-width tabs, ~a third of the screen each. */
   .tab {
