@@ -66,6 +66,8 @@ header h1 { margin: 0; font-size: 1.7rem; }
   font-weight: 600;
   padding: .4rem .3rem;
   white-space: nowrap;
+  text-align: center;
+  line-height: 1.1;
 }
 .nav-map:hover { color: #fff; text-decoration: underline; }
 
