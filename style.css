@@ -212,7 +212,9 @@ th { background: #eef1f5; position: sticky; top: 0; }
 /* Empty "no block found" rows use a colspan; keep that message and the
    StubHub link left-aligned and full-width instead of inheriting the
    right-aligned fixed-width money-column rules by cell position. */
-#section-table td.noblock { text-align: left; width: auto; }
+/* Pin the "no block found" message to the same size as the price/data cells
+   (the section table's base .84rem) so it can never inherit anything larger. */
+#section-table td.noblock { text-align: left; width: auto; font-size: .84rem; }
 #section-table td.stub-cell { text-align: left; width: auto; white-space: nowrap; }
 th[data-sort] { cursor: pointer; }
 th[data-sort]:hover { text-decoration: underline; }
