@@ -604,7 +604,7 @@
     if (row.level === "Legends") return 0;
     if (row.num != null) {
       const tier = Math.floor(row.num / 100); // 1=100s … 4=400s
-      const inf = row.location === "Infield";
+      const inf = row.location === "Infield" || row.location === "Home Plate";
       if (tier === 1) return inf ? 1 : 3;
       if (tier === 2) return inf ? 2 : 5;
       if (tier === 3) return inf ? 4 : 7;
@@ -701,10 +701,11 @@
       const levelCell =
         `<td><span class="badge lvl-${r.level.replace(/\s/g, "")}" title="${r.level}">${levelText}</span></td>`;
 
-      // Own column so it can be sorted; abbreviated IF/OF, full word as tooltip.
+      // Own column so it can be sorted; abbreviated label, full word as tooltip.
+      const LOC_ABBR = { "Home Plate": "HP", "Infield": "IF", "Outfield": "OF" };
       const locCell = r.location
-        ? `<td><span class="badge loc-${r.location}" title="${r.location}">` +
-          `${r.location === "Infield" ? "IF" : "OF"}</span></td>`
+        ? `<td><span class="badge loc-${r.location.replace(/\s/g, "")}" title="${r.location}">` +
+          `${LOC_ABBR[r.location] || r.location}</span></td>`
         : `<td class="na">—</td>`;
 
       if (r.price == null) {
@@ -712,7 +713,7 @@
           sectionCell +
           levelCell +
           locCell +
-          `<td class="na noblock" colspan="6">No block of ${state.lastQty} found in scope</td>` +
+          `<td class="na noblock" colspan="6"></td>` +
           sgCell;
       } else {
         // The arrow alone carries the up/down colour; the price value itself is

@@ -35,10 +35,23 @@
     Other: 9,
   };
 
+  // Sections directly behind home plate (by canonical code — leading zeros
+  // stripped, letter suffix kept), across every deck. These get their own
+  // "Home Plate" location instead of the coarser Infield/Outfield split.
+  const HOME_PLATE = new Set([
+    "21B", "21A", "20", "19", "18",              // Legends
+    "121A", "120B", "120A", "119",               // Field (100s)
+    "221A", "220C", "220B", "220A", "219",       // Main (200s)
+    "39", "38", "37", "36", "35", "34",          // field home-plate sections
+    "320C", "320B", "320A",                      // Terrace (300s)
+    "420C", "420B", "420A",                      // Grandstand (400s)
+  ]);
+
   // Infield vs Outfield from the section's position within its level: the last
   // two digits 15–25 sit around the infield / behind the plate; everything else
   // is down the lines toward the outfield. Applies to any numbered section.
-  function locationFor(num) {
+  function locationFor(code, num) {
+    if (HOME_PLATE.has(code)) return "Home Plate";
     if (num == null) return null;
     const d = num % 100;
     return (d >= 15 && d <= 25) ? "Infield" : "Outfield";
@@ -83,7 +96,7 @@
     }
 
     const level = levelFor(num, code);
-    const location = locationFor(num);
+    const location = locationFor(code, num);
 
     // Display code: Legends sections are labelled with a leading zero at the
     // stadium (011–029), so show them padded to three digits. `code` stays the
