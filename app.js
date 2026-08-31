@@ -93,6 +93,11 @@
     weekday: "short", month: "short", day: "numeric",
     hour: "numeric", minute: "2-digit",
   });
+  // Compact date for the dense section table: no weekday, keeps the column tight.
+  const fmtCompact = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    month: "short", day: "numeric", hour: "numeric", minute: "2-digit",
+  });
   const fmtISO = new Intl.DateTimeFormat("en-CA", {
     timeZone: "America/New_York",
     year: "numeric", month: "2-digit", day: "2-digit",
@@ -124,6 +129,7 @@
           dateUTC,
           opponent: g.teams.away.team.name,
           displayET: fmtET.format(dateUTC),
+          compactET: fmtCompact.format(dateUTC),
           isoDateET: fmtISO.format(dateUTC),
           dateShort: fmtShort.format(dateUTC),
         });
@@ -541,7 +547,7 @@
         face,
         pctFace: price != null && face ? (price / face) * 100 : null,
         date: game ? game.dateUTC.getTime() : null,
-        dateLabel: game ? game.displayET : "",
+        dateLabel: game ? game.compactET : "",
         opponent: game ? game.opponent : "",
         provider: q ? q.provider : "",
         url: q ? q.url : "",
@@ -624,16 +630,21 @@
       const stubCell =
         `<td class="stub-cell"><a href="${r.stubhub}" target="_blank" rel="noopener" ` +
         `title="Opens a game on StubHub; then pick section ${r.display} on the seat map">` +
-        `Check §${r.display} ↗</a></td>`;
+        `open ↗</a></td>`;
 
+      // Cap the code so a rare long non-numeric code (e.g. "TERRACEDUGOUT3")
+      // can't widen the whole column; the full value stays available on hover.
       const sectionCell =
-        `<td>${r.display}` +
+        `<td><span class="sec-code" title="${r.display}">${r.display}</span>` +
         (r.cls.obstructed ? ' <span class="obstructed">obstructed</span>' : "") +
         `</td>`;
 
-      // Level badge in its own sortable column.
+      // Level badge in its own sortable column. Abbreviate the long ones so the
+      // badge (and column) stay tight; full name is on the tooltip.
+      const levelAbbr = { "Standing Room": "SR" };
+      const levelText = levelAbbr[r.level] || r.level;
       const levelCell =
-        `<td><span class="badge lvl-${r.level.replace(/\s/g, "")}">${r.level}</span></td>`;
+        `<td><span class="badge lvl-${r.level.replace(/\s/g, "")}" title="${r.level}">${levelText}</span></td>`;
 
       // Own column so it can be sorted; abbreviated IF/OF, full word as tooltip.
       const locCell = r.location
