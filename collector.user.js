@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.8.2
+// @version      3.8.3
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -90,6 +90,8 @@
   // Per-tab captures of Ticketmaster's seat-map (ISM DS / quickpicks) JSON.
   const TM_CAPTURES = [];   // { url, body }
   const TM_CAP_URLS = [];   // every services.ticketmaster.com URL seen
+  // Per-tab captures of TickPick's own api.tickpick.com listings responses.
+  const TP_CAPTURES = [];   // { url, body }
 
   /* ── SeatGeek event map ──────────────────────────────────────────────
    * SeatGeek doesn't expose gamePk, so each event page's real date+time is
@@ -1130,60 +1132,97 @@
     return { quotes, faces };
   }
 
-  // The event API is served from api.tickpick.com but the site renders
-  // server-side, so a page fetch to that subdomain fails CORS ("Failed to
-  // fetch"). GM_xmlhttpRequest is privileged (no CORS) and still sends the
-  // .tickpick.com DataDome cookie the team-page load set — same as Playwright's
-  // page.request. @connect api.tickpick.com is granted in the header.
-  function tickpickApiGet(url, referer) {
-    return new Promise((resolve) => {
-      GM_xmlhttpRequest({
-        method: "GET", url, timeout: 20000,
-        headers: { accept: "application/json", referer },
-        onload: (r) => resolve({ status: r.status, text: r.responseText || "" }),
-        onerror: () => resolve({ status: 0, text: "" }),
-        ontimeout: () => resolve({ status: "timeout", text: "" }),
-      });
-    });
+  // Direct GM_xmlhttpRequest to api.tickpick.com is DataDome-403'd (the token
+  // isn't carried), and a page fetch to that subdomain fails CORS. What DOES
+  // pass is the event page's OWN call to its API — so we hook the page network
+  // and keep that response, exactly like the SeatGeek/TM workers. Install at
+  // document-start so the page's own fetch is captured.
+  function installTPNetHook() {
+    let w;
+    try { w = (typeof unsafeWindow !== "undefined") ? unsafeWindow : window; }
+    catch (e) { w = window; }
+    if (!w || w.__ykTPHooked) return;
+    const sink = (url, text) => {
+      try {
+        const u = String(url || "");
+        if (!/api\.tickpick\.com/.test(u)) return;
+        if (!text || text.length < 20) return;
+        TP_CAPTURES.push({ url: u, body: text.slice(0, 4000000) });
+      } catch (e) {}
+    };
+    try {
+      w.__ykTPHooked = 1;
+      const of = w.fetch;
+      if (of) {
+        w.fetch = function () {
+          const a = arguments;
+          return of.apply(this, a).then((r) => {
+            try { r.clone().text().then((t) => sink(r.url || a[0], t)); } catch (e) {}
+            return r;
+          });
+        };
+      }
+      const XP = w.XMLHttpRequest && w.XMLHttpRequest.prototype;
+      if (XP) {
+        const XO = XP.open, XS = XP.send;
+        XP.open = function (m, u) { this.__ykTPU = u; return XO.apply(this, arguments); };
+        XP.send = function () {
+          const x = this;
+          this.addEventListener("load", function () { try { sink(x.__ykTPU, x.responseText); } catch (e) {} });
+          return XS.apply(this, arguments);
+        };
+      }
+    } catch (e) { console.error("[collector/TP] hook install failed", e); }
   }
 
-  async function tickpickDriver(job) {
-    const qty = job.qty || 2;
-    // Let the team page render + set the DataDome cookie; scroll to lazy-load
-    // every game, collecting event links as they appear.
+  // On one TickPick event page: wait for the page's own listings response, or
+  // fall back to the parking-free event-v2 shape if the page exposes it, then
+  // parse per-section prices + NY-law faces. Posts a result the cycle collects.
+  async function tickpickEventWorker(eid, qty) {
+    for (let i = 0; i < 100 && !document.body; i++) await sleep(50);
+    let cap = null;
+    for (let i = 0; i < 90; i++) {                    // ~45s for the page's call
+      cap = TP_CAPTURES.find((c) => /event-v2|\/listings\//i.test(c.url)) || TP_CAPTURES[0];
+      if (cap && /"listings"/.test(cap.body)) break;
+      if (i === 6) { try { window.scrollTo(0, document.body.scrollHeight); } catch (e) {} }
+      await sleep(500);
+    }
+    let quotes = [], faces = {}, j = null;
+    if (cap) { try { j = JSON.parse(cap.body); } catch (e) {} }
+    if (j && Array.isArray(j.listings)) {
+      const p = tickpickQuotesFromListings(j.listings, qty);
+      quotes = p.quotes; faces = p.faces;
+    }
+    const diag = { eid, captured: [...new Set(TP_CAPTURES.map((c) => c.url.split("?")[0]))].slice(0, 8),
+      hadApi: !!(j && Array.isArray(j.listings)), n: quotes.length,
+      sample: quotes.length ? null : (document.body ? document.body.innerText : "").slice(0, 500) };
+    console.log(`[collector/TickPick] event ${eid}: ${quotes.length} sections`, diag);
+    GM_setValue("yk_tp_result_" + eid, { ts: Date.now(), quotes, faces, diag });
+  }
+
+  async function tickpickDiscoverWorker() {
     const events = {};
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 12; i++) {
       for (const e of tickpickDiscover(document.documentElement.innerHTML)) events[e.eid] = e;
       try { window.scrollTo(0, document.body.scrollHeight); } catch (e) {}
       await sleep(700);
     }
-    const list = Object.values(events);
-    const byEid = {}; const diag = { events: list.length, fetched: [] };
-    for (const ev of list) {
-      const api = `https://api.tickpick.com/1.0/listings/internal/event-v2/${ev.eid}` +
-        "?trackView=true&includeParkingOptions=false";
-      const res = await tickpickApiGet(api, ev.url);
-      const txt = res.text || "";
-      let j = null; try { j = JSON.parse(txt); } catch (e) {}
-      const blocked = res.status === 403 || /datadome|captcha|blocked/i.test(txt.slice(0, 200));
-      const parsed = j ? tickpickQuotesFromListings(j.listings || [], qty) : { quotes: [], faces: {} };
-      if (parsed.quotes.length) byEid[ev.eid] = Object.assign({ url: ev.url, date: ev.date, hour: ev.hour }, parsed);
-      diag.fetched.push({ eid: ev.eid, status: res.status, n: parsed.quotes.length, blocked });
-      await sleep(600 + Math.random() * 500);
-    }
-    diag.blocked = !Object.keys(byEid).length && diag.fetched.some((f) => f.blocked || f.status === 403);
-    console.log("[collector/TickPick] done", diag);
-    GM_setValue("yk_tp_apiresult", { ts: Date.now(), byEid, diag });
+    GM_setValue("yk_tp_discresult", { ts: Date.now(), events: Object.values(events) });
   }
 
   if (onTickpick) {
-    const job = GM_getValue("yk_tp_apijob", null);
+    installTPNetHook();  // capture the page's own api.tickpick.com responses
+    const job = GM_getValue("yk_tp_job", null);
     const active = job && job.active && (Date.now() - job.startedAt) < JOB_TTL;
-    if (active && /new-york-yankees-tickets/.test(location.pathname)) {
-      if (document.readyState === "loading")
-        document.addEventListener("DOMContentLoaded", () =>
-          tickpickDriver(job).catch((e) => console.error("[collector/TickPick]", e)));
-      else tickpickDriver(job).catch((e) => console.error("[collector/TickPick]", e));
+    const disc = GM_getValue("yk_tp_discjob", null);
+    const discActive = disc && disc.active && (Date.now() - disc.startedAt) < JOB_TTL;
+    const em = location.pathname.match(/\/(\d{6,})\/?$/);   // event page ends in the eid
+    if (active && em) {
+      const run = () => tickpickEventWorker(em[1], job.qty || 2).catch((e) => console.error("[collector/TickPick]", e));
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
+    } else if (discActive && /new-york-yankees-tickets/.test(location.pathname)) {
+      const run = () => tickpickDiscoverWorker().catch((e) => console.error("[collector/TickPick disc]", e));
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
     }
     return;
   }
@@ -1526,47 +1565,49 @@
   }
   const runTicketmaster = () => collectTicketmaster(false);
 
-  // Open the TickPick Yankees team page in one tab; it discovers every home
-  // game and fetches each event's internal API (per-section prices + NY-law
-  // face values). Publishes listings-tickpick-<qty>.json and the face map.
+  // Discover every Yankees home game from the TickPick team page, then open
+  // each event page so the page makes (and we hook) its own listings API call —
+  // the one request that passes DataDome. Parse per-section prices + NY-law
+  // faces. Publishes listings-tickpick-<qty>.json and the face map.
   async function runTickPick() {
     const qty = qtyNow();
-    GM_deleteValue("yk_tp_apiresult");
-    GM_setValue("yk_tp_apijob", { active: true, startedAt: Date.now(), qty });
-    setChip("TickPick: opening…", true);
-    const tab = GM_openInTab("https://www.tickpick.com/mlb/new-york-yankees-tickets/",
+    // 1) Discover events (event id + url + date/hour) from the team page.
+    GM_deleteValue("yk_tp_discresult");
+    GM_setValue("yk_tp_discjob", { active: true, startedAt: Date.now() });
+    setChip("TickPick: finding games…", true);
+    const dtab = GM_openInTab("https://www.tickpick.com/mlb/new-york-yankees-tickets/",
       { active: true, insert: true });
-    let res = null;
-    const started = Date.now();
-    for (let w = 0; w < 400; w++) {                        // up to ~200s
-      res = GM_getValue("yk_tp_apiresult", null);
-      if (res) break;
-      setChip(`TickPick: collecting… (${Math.round((Date.now() - started) / 1000)}s)`, true);
-      await sleep(500);
-    }
-    try { tab.close(); } catch {}
-    GM_setValue("yk_tp_apijob", { active: false, startedAt: 0 });
+    let disc = null;
+    for (let w = 0; w < 120; w++) { disc = GM_getValue("yk_tp_discresult", null); if (disc) break; await sleep(500); }
+    try { dtab.close(); } catch {}
+    GM_setValue("yk_tp_discjob", { active: false, startedAt: 0 });
+    const evList = (disc && disc.events) || [];
+    if (!evList.length) { setChip("TickPick: no games discovered"); return 0; }
 
-    const byEid = (res && res.byEid) || {};
-    const collected = [];
+    // 2) Cycle each event page; the per-event worker hooks the page's own API
+    //    response. cycle stamps gamePk/url onto each quote it collects.
+    const entries = [];
+    for (const e of evList) { const pk = sgGamePk(e.date, e.hour); if (pk) entries.push([e.eid, e.url, pk]); }
+    const { collected: raw } = await cycle("TickPick", "yk_tp_job", entries,
+      (eid) => "yk_tp_result_" + eid, false,
+      { active: true, waits: 100, gapMin: 1200, gapRand: 1200, jobExtra: { qty } });
+
+    // 3) Shape quotes + build the face map from disclosed faces.
+    const collected = raw.map((q) => ({ gamePk: q.gamePk, provider: "TickPick",
+      section: q.section, price: q.price, faceValue: q.faceValue != null ? q.faceValue : null, url: q.url }));
     const faces = {};
     const classify = (window.Sections && window.Sections.classify) || null;
-    for (const info of Object.values(byEid)) {
-      const pk = sgGamePk(info.date, info.hour);
-      if (!pk || !Array.isArray(info.quotes)) continue;
-      for (const q of info.quotes) {
-        collected.push({ gamePk: pk, provider: "TickPick", section: q.section,
-          price: q.price, faceValue: q.faceValue, url: info.url });
-      }
-      for (const [sec, face] of Object.entries(info.faces || {})) {
-        faces[`${pk}|${sec}`] = face;
-        try { const code = classify && classify(sec).code; if (code) faces[`${pk}|${code}`] = face; } catch (e) {}
-      }
+    for (const q of collected) {
+      if (q.faceValue == null) continue;
+      const sec = String(q.section).replace(/\s*\(obstructed\)$/, "").toUpperCase();
+      faces[`${q.gamePk}|${sec}`] = q.faceValue;
+      try { const code = classify && classify(sec).code; if (code) faces[`${q.gamePk}|${code}`] = q.faceValue; } catch (e) {}
     }
+    const firstRes = GM_getValue("yk_tp_result_" + entries[0][0], null);
 
     await putFile("/contents/data/_tickpick-diag.json",
-      { fetchedAt: new Date().toISOString(),
-        result: res ? res.diag : "no result (team-page tab produced nothing)",
+      { fetchedAt: new Date().toISOString(), discovered: evList.length,
+        firstEvent: firstRes ? firstRes.diag : "no result (event tab produced nothing)",
         games: new Set(collected.map((q) => q.gamePk)).size, quotes: collected.length,
         faces: Object.keys(faces).length },
       "TickPick collector diagnostic");
@@ -1583,8 +1624,7 @@
     const games = new Set(collected.map((q) => q.gamePk)).size;
     setChip(collected.length
       ? `TickPick: ${collected.length} prices / ${Object.keys(faces).length} faces across ${games} games`
-      : (res && res.diag && res.diag.blocked ? "TickPick: blocked by DataDome — try later"
-                                             : "TickPick: 0 (blocked or empty)"));
+      : "TickPick: 0 — see _tickpick-diag.json (tell Claude)");
     return collected.length;
   }
 
