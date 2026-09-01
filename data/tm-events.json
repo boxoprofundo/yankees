@@ -1,0 +1,46 @@
+{
+  "fetchedAt": "2026-09-01T03:06:51Z",
+  "note": "Keyless TM event map; collector auto-refreshes/completes it when a TM key is present in storage.",
+  "entries": [
+    [
+      "1D006323F59943A4",
+      "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4",
+      823489
+    ],
+    [
+      "1D006323F598439F",
+      "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-25-2026/event/1D006323F598439F",
+      823491
+    ],
+    [
+      "1D006323F5974397",
+      "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-09-23-2026/event/1D006323F5974397",
+      823492
+    ],
+    [
+      "1D006323F5974399",
+      "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-09-24-2026/event/1D006323F5974399",
+      823493
+    ],
+    [
+      "1D006323F5954390",
+      "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-13-2026/event/1D006323F5954390",
+      823495
+    ],
+    [
+      "1D006323F593437A",
+      "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-09-2026/event/1D006323F593437A",
+      823497
+    ],
+    [
+      "1D006323F594437E",
+      "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
+      823498
+    ],
+    [
+      "1D006323F5924378",
+      "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-08-2026/event/1D006323F5924378",
+      823500
+    ]
+  ]
+}

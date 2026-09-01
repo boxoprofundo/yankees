@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.5.0
+// @version      3.6.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -1172,9 +1172,25 @@
   // official Discovery API (CORS/GM-friendly, uses the free key in Settings),
   // mapped to gamePk by date. Returns entries [eid, url, gamePk] for cycle().
   function extractEid(u) { const m = String(u).match(/\/event\/([A-Za-z0-9]+)/); return m ? m[1] : String(u); }
+
+  // Keyless event map published in the repo: data/tm-events.json =
+  // { entries: [[eid, url, gamePk], …] }. This is the primary source, so the
+  // site needs no Ticketmaster key. A run that still has a key in storage
+  // rediscovers via the API and republishes this file, keeping it complete and
+  // current on its own (Phase-2 auto-collect does this unattended).
+  async function loadTmEvents() {
+    try {
+      const r = await fetch("data/tm-events.json?_=" + Date.now(), { cache: "no-store" });
+      if (!r.ok) return null;
+      const j = await r.json();
+      return Array.isArray(j.entries) && j.entries.length ? j.entries : null;
+    } catch (e) { return null; }
+  }
+
   async function tmDiscover() {
     const key = settings().tmKey;
-    if (!key) return { error: "no-key" };
+    const cached = await loadTmEvents();
+    if (!key) return cached ? { entries: cached } : { error: "no-events" };
     const params = new URLSearchParams({
       apikey: key, keyword: "New York Yankees", classificationName: "Baseball",
       size: "199", sort: "date,asc",
@@ -1209,14 +1225,22 @@
       evs.sort((a, b) => (a.time || "").localeCompare(b.time || ""));
       evs.forEach((e, i) => entries.push([extractEid(e.url), e.url, pks[Math.min(i, pks.length - 1)]]));
     }
-    return { entries };
+    // Republish the keyless map so future runs (and other devices) need no key.
+    if (entries.length) {
+      await putFile("/contents/data/tm-events.json",
+        { fetchedAt: new Date().toISOString(),
+          note: "Keyless TM event map; refreshed by any run that still has a TM key in storage.",
+          entries },
+        "Refresh Ticketmaster event map").catch((e) => console.error("[collector/TM] map publish", e));
+    }
+    return { entries: entries.length ? entries : (cached || []) };
   }
 
   // Cycle every discovered TM event through a real tab; publish per-section
   // prices + a first-run diagnostic (page shape + seat-map JSON) for tuning.
   async function collectTicketmaster(probeOnly) {
     const disc = await tmDiscover();
-    if (disc.error === "no-key") { setChip("Ticketmaster needs your TM API key in Settings"); return 0; }
+    if (disc.error === "no-events") { setChip("Ticketmaster: no event map yet (data/tm-events.json)"); return 0; }
     let entries = disc.entries || [];
     if (!entries.length) { setChip("Ticketmaster: no events discovered"); return 0; }
     if (probeOnly) entries = entries.slice(0, 1);

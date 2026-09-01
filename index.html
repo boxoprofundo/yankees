@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NYY Ticket Aggregator</title>
-<link rel="stylesheet" href="style.css?v=20260901k">
+<link rel="stylesheet" href="style.css?v=20260901l">
 </head>
 <body>
 <header>
@@ -69,13 +69,6 @@
     optional — the site works without any of it.</p>
 
     <div class="field">
-      <label for="tm-key">Ticketmaster API key
-        <small>(free Consumer Key from
-        <a href="https://developer.ticketmaster.com/" target="_blank" rel="noopener">developer.ticketmaster.com</a>
-        — enables Ticketmaster prices &amp; face-value estimates)</small></label>
-      <input id="tm-key" type="text" autocomplete="off" placeholder="Consumer Key">
-    </div>
-    <div class="field">
       <label for="gh-token">Access key for the Refresh button
         <small>(one-time: lets this page run the price scraper and read its results.
         <a href="https://github.com/settings/tokens/new?scopes=repo,workflow&amp;description=Yankees%20ticket%20refresh%20button"
@@ -99,6 +92,7 @@
 </section>
 
 <main>
+  <p id="freshness" class="freshness" hidden></p>
   <section id="section-results" hidden>
     <h2>Cheapest block by section</h2>
     <p id="section-sub" class="sub"></p>
@@ -150,9 +144,9 @@
   </div>
 </div>
 
-<script src="providers.js?v=20260901k"></script>
-<script src="sections.js?v=20260901k"></script>
-<script src="stubhub-events.js?v=20260901k"></script>
-<script src="app.js?v=20260901k"></script>
+<script src="providers.js?v=20260901l"></script>
+<script src="sections.js?v=20260901l"></script>
+<script src="stubhub-events.js?v=20260901l"></script>
+<script src="app.js?v=20260901l"></script>
 </body>
 </html>

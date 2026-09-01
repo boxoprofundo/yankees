@@ -47,8 +47,12 @@
   }
 
   function saveSettings() {
+    const prev = loadSettings();
     const s = {
-      tmKey: $("#tm-key").value.trim(),
+      // No longer entered in the UI — Ticketmaster discovery is keyless via the
+      // published event map. A key already in storage is kept so a maintainer's
+      // runs can keep that map fresh; it's just never surfaced or required.
+      tmKey: prev.tmKey || "",
       ghToken: $("#gh-token").value.trim(),
       homeRunner: $("#home-runner").checked,
     };
@@ -95,6 +99,38 @@
       el.textContent = msg;
       el.classList.toggle("error", !!isError);
     });
+  }
+
+  /* ----------------------------- freshness ------------------------------ */
+
+  // Compact "how long ago" for a timestamp: "just now", "20m ago", "2h ago",
+  // "3d ago". Freshness is about recency, so minute/hour/day granularity is
+  // all a viewer needs.
+  function relTime(iso) {
+    const t = Date.parse(iso);
+    if (!isFinite(t)) return null;
+    const s = Math.max(0, (Date.now() - t) / 1000);
+    if (s < 90) return "just now";
+    const m = s / 60;
+    if (m < 60) return `${Math.round(m)}m ago`;
+    const h = m / 60;
+    if (h < 24) return `${Math.round(h)}h ago`;
+    return `${Math.round(h / 24)}d ago`;
+  }
+
+  // Per-marketplace "collected N ago" line, in the tagline's marketplace order.
+  const SOURCE_ORDER = ["Ticketmaster", "SeatGeek", "StubHub", "XP",
+    "Vivid Seats", "TickPick", "Gametime"];
+  function paintFreshness(sourceTimes) {
+    const el = $("#freshness");
+    if (!el) return;
+    const st = sourceTimes || {};
+    const names = Object.keys(st).sort(
+      (a, b) => (SOURCE_ORDER.indexOf(a) + 1 || 99) - (SOURCE_ORDER.indexOf(b) + 1 || 99));
+    if (!names.length) { el.hidden = true; return; }
+    el.textContent = "Last collected — " +
+      names.map((n) => `${n}: ${relTime(st[n]) || "unknown"}`).join(" · ");
+    el.hidden = false;
   }
 
   /* ------------------------------ schedule ------------------------------ */
@@ -216,7 +252,17 @@
     const quotes = parts.reduce(
       (acc, p) => acc.concat(p && Array.isArray(p.quotes) ? p.quotes : []), []);
     const times = parts.filter((x) => x && x.fetchedAt).map((x) => x.fetchedAt);
-    return { fetchedAt: times.sort().slice(-1)[0] || null, quotes };
+    // Per-marketplace freshness: each file carries one fetchedAt, so stamp
+    // every provider that appears in that file with its collection time
+    // (newest wins if a provider shows up in more than one file).
+    const sourceTimes = {};
+    for (const p of parts) {
+      if (!p || !p.fetchedAt || !Array.isArray(p.quotes)) continue;
+      for (const prov of new Set(p.quotes.map((q) => q && q.provider).filter(Boolean))) {
+        if (!sourceTimes[prov] || p.fetchedAt > sourceTimes[prov]) sourceTimes[prov] = p.fetchedAt;
+      }
+    }
+    return { fetchedAt: times.sort().slice(-1)[0] || null, quotes, sourceTimes };
   }
 
   // Persistent face-value store: { "gamePk|section": number }. "Prices may
@@ -441,6 +487,7 @@
         quotes.push(...listings.quotes);
         cachedAt = listings.fetchedAt || null;
       }
+      paintFreshness(listings && listings.sourceTimes);
       results.forEach((r, i) => {
         if (r.status === "fulfilled") quotes.push(...r.value);
         else {
@@ -961,7 +1008,6 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     const s = loadSettings();
-    $("#tm-key").value = s.tmKey || "";
     $("#gh-token").value = s.ghToken || "";
     $("#home-runner").checked = !!s.homeRunner;
 
