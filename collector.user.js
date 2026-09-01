@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.6.0
+// @version      3.6.1
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -182,7 +182,8 @@
         const em = u.match(/\/(\d{5,})/);
         const dm = u.match(/\/(\d{1,2})-(\d{1,2})-(\d{4})-bronx/);
         return { eid: em ? +em[1] : null, url: u,
-          date: dm ? new Date(+dm[3], +dm[2] - 1, +dm[1]) : null };
+          // slug is M-D-YYYY → Date(year, month-1, day)
+          date: dm ? new Date(+dm[3], +dm[1] - 1, +dm[2]) : null };
       })
       .filter((e) => e.eid && (!e.date || e.date >= t0))
       .sort((a, b) => (a.date && b.date ? a.date - b.date : 0));
@@ -1126,11 +1127,16 @@
     const tab = GM_openInTab(seedUrl, { active: true, insert: true });
 
     let res = null;
+    const started = Date.now();
     for (let w = 0; w < 400; w++) {                  // up to ~200s
       res = GM_getValue("yk_sg_apiresult", null);
       if (res) break;
       const p = GM_getValue("yk_sg_apiprogress", null);
-      if (p) setChip(`SeatGeek: ${p.done}/${p.total} games…`, true);
+      const secs = Math.round((Date.now() - started) / 1000);
+      // Show elapsed time even before the first fetch, so a stalled session
+      // reads as "still trying (30s)" rather than a silent freeze.
+      if (p) setChip(`SeatGeek: ${p.done}/${p.total} games… (${secs}s)`, true);
+      else setChip(`SeatGeek: opening session… (${secs}s)`, true);
       await sleep(500);
     }
     try { tab.close(); } catch {}
