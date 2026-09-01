@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.1.3
+// @version      3.2.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -355,6 +355,14 @@
       url: c.url.split("?")[0], summary: tmSummarize(c.body),
       sample: /face[Vv]alue|listPrice|"price"/.test(c.body) ? c.body.slice(0, 700) : null,
     }));
+    // Full bodies of the two most face-value-rich captures, so the exact
+    // schema linking faceValue → section can be read once and a parser built.
+    const rawFace = TM_CAPTURES
+      .map((c) => ({ c, n: (c.body.match(/face[Vv]alue/g) || []).length }))
+      .filter((x) => x.n > 0)
+      .sort((a, b) => b.n - a.n)
+      .slice(0, 2)
+      .map((x) => ({ url: x.c.url.split("?")[0], faces: x.n, body: x.c.body.slice(0, 90000) }));
     const diag = {
       title: (document.title || "").slice(0, 120),
       blocked: /paused|denied|robot|captcha|access to this page/i.test(body.slice(0, 400)),
@@ -363,6 +371,7 @@
       faceMentions: faceCtx,
       ismdsUrls: [...new Set(TM_CAP_URLS)].slice(0, 12),
       captures,
+      rawFace,
     };
     console.log(`[collector/TM] event ${eid}: ${quotes.length} sections`, diag);
     GM_setValue("yk_tm_result_" + eid, { ts: Date.now(), quotes, diag });
