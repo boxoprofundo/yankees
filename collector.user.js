@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.2.0
+// @version      3.3.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -316,6 +316,52 @@
     }));
   }
 
+  // Ticketmaster's real (official) per-section face value. The rendered page
+  // text never shows it, but the seat-map API the page fetches does: the
+  // quickpicks endpoint returns picks tagged with a human section ("214A")
+  // plus offer ids, and _embedded.offer[] carries each offer's faceValue.
+  // faceValue is a fixed per-price-level attribute — so a "Standard Ticket"
+  // offer's faceValue IS the section's face; Mastercard/promo offers discount
+  // BELOW face, so prefer the standard offer and otherwise take the max.
+  // Returns { "214A": 120, ... }. Coverage == the sections that have listings,
+  // which is exactly the sections we quote a price for.
+  function tmFaceFromCaptures() {
+    const offer = {}; // offerId -> { face, standard }
+    const picks = []; // { section, ids:[] }
+    for (const c of TM_CAPTURES) {
+      let j;
+      try { j = JSON.parse(c.body); } catch (e) { continue; }
+      const emb = j._embedded || {};
+      for (const o of emb.offer || []) {
+        if (o && o.offerId != null && o.faceValue != null) {
+          offer[o.offerId] = {
+            face: +o.faceValue,
+            standard: o.name === "Standard Ticket" && o.offerType === "standard",
+          };
+        }
+      }
+      for (const p of j.picks || []) {
+        if (!p || !p.section) continue;
+        const ids = [];
+        for (const og of p.offerGroups || []) for (const id of og.offers || []) ids.push(id);
+        picks.push({ section: String(p.section).toUpperCase(), ids });
+      }
+    }
+    const bySec = {};
+    for (const p of picks) {
+      let std = null, any = null;
+      for (const id of p.ids) {
+        const o = offer[id];
+        if (!o || !(o.face > 0)) continue;
+        if (any == null || o.face > any) any = o.face;
+        if (o.standard) std = std == null ? o.face : Math.min(std, o.face);
+      }
+      const face = std != null ? std : any;
+      if (face != null) bySec[p.section] = p.section in bySec ? Math.min(bySec[p.section], face) : face;
+    }
+    return bySec;
+  }
+
   async function ticketmasterWorker(eid) {
     try { await ticketmasterWorkerInner(eid); }
     catch (e) {
@@ -342,6 +388,13 @@
     const url = location.href.split("?")[0];
     const quotes = tmQuotesFromBody(body, gamePk, url);
 
+    // Stamp official face value onto each quote from the seat-map API.
+    const faceMap = tmFaceFromCaptures();
+    for (const q of quotes) {
+      const key = String(q.section).replace(/\s*\(obstructed\)$/, "").toUpperCase();
+      if (faceMap[key] != null) q.faceValue = faceMap[key];
+    }
+
     // Diagnostic: page shape + any captured seat-map JSON, so the parser and a
     // future face-value reader can be built from the real markup.
     const faceCtx = [];
@@ -362,7 +415,7 @@
       .filter((x) => x.n > 0)
       .sort((a, b) => b.n - a.n)
       .slice(0, 2)
-      .map((x) => ({ url: x.c.url.split("?")[0], faces: x.n, body: x.c.body.slice(0, 90000) }));
+      .map((x) => ({ url: x.c.url.split("?")[0], faces: x.n, body: x.c.body.slice(0, 1500) }));
     const diag = {
       title: (document.title || "").slice(0, 120),
       blocked: /paused|denied|robot|captcha|access to this page/i.test(body.slice(0, 400)),
@@ -370,6 +423,7 @@
       sectionRows: secText,
       faceMentions: faceCtx,
       ismdsUrls: [...new Set(TM_CAP_URLS)].slice(0, 12),
+      faces: faceMap,
       captures,
       rawFace,
     };
@@ -1155,6 +1209,26 @@
       await putFile(`/contents/data/listings-tm-browser-${qty}.json`,
         { fetchedAt: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"), quotes: collected },
         `Ticketmaster listings (blocks of ${qty}, browser collector)`);
+
+      // Publish Ticketmaster's official per-section face values, keyed
+      // "gamePk|SECTION" (and the section's canonical code when the app's
+      // classifier is on this page) so the app's face store can merge them.
+      const faces = {};
+      const classify = (window.Sections && window.Sections.classify) || null;
+      for (const q of collected) {
+        if (q.faceValue == null || !q.gamePk) continue;
+        const sec = String(q.section).replace(/\s*\(obstructed\)$/, "").toUpperCase();
+        faces[`${q.gamePk}|${sec}`] = q.faceValue;
+        try {
+          const code = classify && classify(sec).code;
+          if (code) faces[`${q.gamePk}|${code}`] = q.faceValue;
+        } catch (e) {}
+      }
+      if (!probeOnly && Object.keys(faces).length) {
+        await putFile("/contents/data/face-values-tm-browser.json",
+          { fetchedAt: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"), faces },
+          "Ticketmaster official face values (browser collector)");
+      }
     }
     const games = new Set(collected.map((q) => q.gamePk)).size;
     if (probeOnly) {

@@ -213,17 +213,30 @@
 
   // Persistent face-value store: { "gamePk|section": number }. "Prices may
   // fluctuate, but face value is forever," so the scraper accumulates these.
+  // Two layers merge: the scraper's resale-disclosed faces (base) and
+  // Ticketmaster's official primary faces (authoritative — win on conflict).
   async function fetchFaceValues() {
     const { ghToken } = loadSettings();
-    const sources = [];
-    if (ghToken) {
-      sources.push({
-        url: `${SCRAPER_API}/contents/published/face-values.json?ref=main`,
-        opts: { headers: ghHeaders(ghToken, true), cache: "no-cache" },
-      });
-    }
-    sources.push({ url: "data/face-values.json", opts: { cache: "no-cache" } });
+    const base = await fetchFaceLayer(
+      ghToken
+        ? {
+            url: `${SCRAPER_API}/contents/published/face-values.json?ref=main`,
+            opts: { headers: ghHeaders(ghToken, true), cache: "no-cache" },
+          }
+        : null,
+      { url: "data/face-values.json", opts: { cache: "no-cache" } }
+    );
+    const tm = await fetchFaceLayer({
+      url: "data/face-values-tm-browser.json",
+      opts: { cache: "no-cache" },
+    });
+    return Object.assign({}, base, tm);
+  }
+
+  // Load the first face layer that resolves, from the given source(s).
+  async function fetchFaceLayer(...sources) {
     for (const s of sources) {
+      if (!s) continue;
       try {
         const res = await fetch(s.url, s.opts);
         if (!res.ok) continue;
