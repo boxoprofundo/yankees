@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.7.0
+// @version      3.8.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -12,6 +12,7 @@
 // @match        https://seatgeek.com/*
 // @match        https://www.seatgeek.com/*
 // @match        https://www.ticketmaster.com/*
+// @match        https://www.tickpick.com/*
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_deleteValue
@@ -22,6 +23,7 @@
 // @connect      api.github.com
 // @connect      app.ticketmaster.com
 // @connect      api.seatgeek.com
+// @connect      api.tickpick.com
 // @run-at       document-start
 // ==/UserScript==
 
@@ -290,6 +292,7 @@
   const onStubHub = host.includes("stubhub.com");
   const onSeatGeek = host.includes("seatgeek.com");
   const onTicketmaster = host.includes("ticketmaster.com");
+  const onTickpick = host.includes("tickpick.com");
   const onAggregator = host.includes("boxoprofundo.github.io") || host.includes("mikeboxer.com");
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -1055,6 +1058,105 @@
     return false;
   }
 
+  /* ════════════════════════ TickPick worker ══════════════════════════════ */
+  // TickPick renders per-section listings from an internal JSON API
+  // (api.tickpick.com/1.0/listings/internal/event-v2/<eid>) that DataDome
+  // 403s from datacenter IPs but serves fine to a real browser. One tab on the
+  // Yankees team page establishes the DataDome cookie AND lists every home
+  // game's event page; from there we fetch each event's API (cookie carried,
+  // CORS allowed since the page's own origin calls it) and parse per-section
+  // prices plus the NY-law "Face Value: $X" disclosure in each listing's note.
+  function tickpickDiscover(html) {
+    const PAT = /\/buy-[a-z0-9-]*yankee-stadium-(\d{1,2})-(\d{1,2})-26-(\d{1,2})([ap])m\/(\d{6,})/g;
+    const found = {};
+    let m;
+    while ((m = PAT.exec(html))) {
+      const [full, mo, md, hh, ap, eid] = m;
+      const date = `2026-${String(+mo).padStart(2, "0")}-${String(+md).padStart(2, "0")}`;
+      const hour = (+hh % 12) + (ap === "p" ? 12 : 0);
+      found[eid] = { eid, url: "https://www.tickpick.com" + full + "/", date, hour };
+    }
+    return Object.values(found);
+  }
+
+  function tickpickQuotesFromListings(listings, qty) {
+    const FACE = /face\s*value[^$]{0,12}\$\s*([\d,]+(?:\.\d{1,2})?)/i;
+    const SEC_OK = /^[A-Za-z0-9]{1,5}$/;
+    const bySec = {}, faces = {};
+    for (const it of listings || []) {
+      if (!it || typeof it !== "object") continue;
+      const flags = it.d || [];
+      if (it.is_pk || (Array.isArray(flags) && flags.includes("pk")) ||
+          String(it.r || "").toUpperCase().startsWith("PARK")) continue;
+      const sec = String(it.sid || "").trim().toUpperCase();
+      if (!SEC_OK.test(sec)) continue;
+      const price = parseFloat(String(it.p).replace(/[$,]/g, ""));
+      if (!(price > 5 && price < 50000)) continue;
+      const q = it.q || 0, sp = it.sp || [];
+      if (q < qty || (sp.length && !sp.includes(qty))) continue;   // must fill a block of qty
+      const note = String(it.n || "");
+      const obstructed = /obstruct|limited view/i.test(note);
+      if (!(sec in bySec) || price < bySec[sec].price) bySec[sec] = { price, obstructed };
+      const fm = FACE.exec(note);
+      if (fm) {
+        const face = parseFloat(fm[1].replace(/,/g, ""));
+        if (face > 5 && face < 50000 && (!(sec in faces) || face < faces[sec])) faces[sec] = face;
+      }
+    }
+    const quotes = Object.entries(bySec).map(([sec, v]) => ({
+      section: v.obstructed ? `${sec} (obstructed)` : sec,
+      price: Math.round(v.price * 100) / 100,
+      faceValue: faces[sec] != null ? faces[sec] : null,
+    }));
+    return { quotes, faces };
+  }
+
+  async function tickpickDriver(job) {
+    const qty = job.qty || 2;
+    const w = (function () { try { return (typeof unsafeWindow !== "undefined") ? unsafeWindow : window; } catch (e) { return window; } })();
+    // Let the team page render + set the DataDome cookie; scroll to lazy-load
+    // every game, collecting event links as they appear.
+    const events = {};
+    for (let i = 0; i < 10; i++) {
+      for (const e of tickpickDiscover(document.documentElement.innerHTML)) events[e.eid] = e;
+      try { window.scrollTo(0, document.body.scrollHeight); } catch (e) {}
+      await sleep(700);
+    }
+    const list = Object.values(events);
+    const byEid = {}; const diag = { events: list.length, fetched: [] };
+    for (const ev of list) {
+      const api = `https://api.tickpick.com/1.0/listings/internal/event-v2/${ev.eid}` +
+        "?trackView=true&includeParkingOptions=false";
+      try {
+        const res = await w.fetch(api, { credentials: "include", headers: { accept: "application/json" } });
+        const txt = await res.text();
+        let j = null; try { j = JSON.parse(txt); } catch (e) {}
+        const blocked = /datadome|captcha|blocked/i.test(txt.slice(0, 200)) || res.status === 403;
+        const parsed = j ? tickpickQuotesFromListings(j.listings || [], qty) : { quotes: [], faces: {} };
+        if (parsed.quotes.length) byEid[ev.eid] = Object.assign({ url: ev.url, date: ev.date, hour: ev.hour }, parsed);
+        diag.fetched.push({ eid: ev.eid, status: res.status, n: parsed.quotes.length, blocked });
+      } catch (e) {
+        diag.fetched.push({ eid: ev.eid, error: String(e).slice(0, 80) });
+      }
+      await sleep(600 + Math.random() * 500);
+    }
+    diag.blocked = !Object.keys(byEid).length && diag.fetched.some((f) => f.blocked || f.status === 403);
+    console.log("[collector/TickPick] done", diag);
+    GM_setValue("yk_tp_apiresult", { ts: Date.now(), byEid, diag });
+  }
+
+  if (onTickpick) {
+    const job = GM_getValue("yk_tp_apijob", null);
+    const active = job && job.active && (Date.now() - job.startedAt) < JOB_TTL;
+    if (active && /new-york-yankees-tickets/.test(location.pathname)) {
+      if (document.readyState === "loading")
+        document.addEventListener("DOMContentLoaded", () =>
+          tickpickDriver(job).catch((e) => console.error("[collector/TickPick]", e)));
+      else tickpickDriver(job).catch((e) => console.error("[collector/TickPick]", e));
+    }
+    return;
+  }
+
   /* ════════════════════════ Aggregator controller ════════════════════════ */
   if (!onAggregator) return;
 
@@ -1393,6 +1495,68 @@
   }
   const runTicketmaster = () => collectTicketmaster(false);
 
+  // Open the TickPick Yankees team page in one tab; it discovers every home
+  // game and fetches each event's internal API (per-section prices + NY-law
+  // face values). Publishes listings-tickpick-<qty>.json and the face map.
+  async function runTickPick() {
+    const qty = qtyNow();
+    GM_deleteValue("yk_tp_apiresult");
+    GM_setValue("yk_tp_apijob", { active: true, startedAt: Date.now(), qty });
+    setChip("TickPick: opening…", true);
+    const tab = GM_openInTab("https://www.tickpick.com/mlb/new-york-yankees-tickets/",
+      { active: true, insert: true });
+    let res = null;
+    const started = Date.now();
+    for (let w = 0; w < 400; w++) {                        // up to ~200s
+      res = GM_getValue("yk_tp_apiresult", null);
+      if (res) break;
+      setChip(`TickPick: collecting… (${Math.round((Date.now() - started) / 1000)}s)`, true);
+      await sleep(500);
+    }
+    try { tab.close(); } catch {}
+    GM_setValue("yk_tp_apijob", { active: false, startedAt: 0 });
+
+    const byEid = (res && res.byEid) || {};
+    const collected = [];
+    const faces = {};
+    const classify = (window.Sections && window.Sections.classify) || null;
+    for (const info of Object.values(byEid)) {
+      const pk = sgGamePk(info.date, info.hour);
+      if (!pk || !Array.isArray(info.quotes)) continue;
+      for (const q of info.quotes) {
+        collected.push({ gamePk: pk, provider: "TickPick", section: q.section,
+          price: q.price, faceValue: q.faceValue, url: info.url });
+      }
+      for (const [sec, face] of Object.entries(info.faces || {})) {
+        faces[`${pk}|${sec}`] = face;
+        try { const code = classify && classify(sec).code; if (code) faces[`${pk}|${code}`] = face; } catch (e) {}
+      }
+    }
+
+    await putFile("/contents/data/_tickpick-diag.json",
+      { fetchedAt: new Date().toISOString(),
+        result: res ? res.diag : "no result (team-page tab produced nothing)",
+        games: new Set(collected.map((q) => q.gamePk)).size, quotes: collected.length,
+        faces: Object.keys(faces).length },
+      "TickPick collector diagnostic");
+    if (collected.length) {
+      await putFile(`/contents/data/listings-tickpick-${qty}.json`,
+        { fetchedAt: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"), quotes: collected },
+        `TickPick listings (blocks of ${qty}, browser collector)`);
+    }
+    if (Object.keys(faces).length) {
+      await putFile("/contents/data/face-values-tickpick.json",
+        { fetchedAt: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"), faces },
+        "TickPick per-section face values (NY-law disclosures)");
+    }
+    const games = new Set(collected.map((q) => q.gamePk)).size;
+    setChip(collected.length
+      ? `TickPick: ${collected.length} prices / ${Object.keys(faces).length} faces across ${games} games`
+      : (res && res.diag && res.diag.blocked ? "TickPick: blocked by DataDome — try later"
+                                             : "TickPick: 0 (blocked or empty)"));
+    return collected.length;
+  }
+
   async function runAll() {
     if (running) return null;
     if (!settings().ghToken) { setChip("Set the access key in Settings first"); return null; }
@@ -1400,12 +1564,15 @@
     try {
       setChip("Ticketmaster…", true);
       const tm = await runTicketmaster();
+      setChip("TickPick…", true);
+      const tp = await runTickPick();
       setChip("StubHub…", true);
       const sh = await runStubHub();
       setChip("SeatGeek…", true);
       const sg = await runSeatGeek();
-      setChip(`Done: TM ${tm}, StubHub ${sh}, SeatGeek ${sg}. Press Search.`);
-      return { tm: tm || 0, sh: sh || 0, sg: sg || 0, total: (tm || 0) + (sh || 0) + (sg || 0) };
+      setChip(`Done: TM ${tm}, TickPick ${tp}, StubHub ${sh}, SeatGeek ${sg}. Press Search.`);
+      return { tm: tm || 0, tp: tp || 0, sh: sh || 0, sg: sg || 0,
+        total: (tm || 0) + (tp || 0) + (sh || 0) + (sg || 0) };
     } catch (e) {
       console.error("[collector]", e);
       setChip("Collector error — see console");
@@ -1479,6 +1646,7 @@
   GM_registerMenuCommand("Collect all (TM + SeatGeek + StubHub) now", runAll);
   GM_registerMenuCommand("Collect Ticketmaster only", async () => { if (!running) { running = true; try { const n = await runTicketmaster(); setChip(`Ticketmaster done: ${n}`); } finally { running = false; } } });
   GM_registerMenuCommand("Probe Ticketmaster (1 game)", async () => { if (!running) { running = true; try { await collectTicketmaster(true); } finally { running = false; } } });
+  GM_registerMenuCommand("Collect TickPick only", async () => { if (!running) { running = true; try { const n = await runTickPick(); setChip(`TickPick done: ${n}`); } finally { running = false; } } });
   GM_registerMenuCommand("Collect StubHub only", async () => { if (!running) { running = true; try { const n = await runStubHub(); setChip(`StubHub done: ${n}`); } finally { running = false; } } });
   GM_registerMenuCommand("Collect SeatGeek only", async () => { if (!running) { running = true; try { const n = await runSeatGeek(); setChip(`SeatGeek done: ${n}`); } finally { running = false; } } });
   GM_registerMenuCommand("Probe SeatGeek API (1 game)", async () => { if (!running) { running = true; try { await probeSeatGeekApi(); } finally { running = false; } } });

@@ -243,7 +243,7 @@
   async function fetchCachedListings(qty) {
     const parts = await Promise.all(
       ["listings", "listings-tm", "listings-tm-browser", "listings-stubhub",
-       "listings-seatgeek", "listings-seatgeek-fallback"]
+       "listings-seatgeek", "listings-seatgeek-fallback", "listings-tickpick"]
         .map((name) => fetchOneListing(qty, name))
     );
     if (parts.every((p) => !p)) return null;
@@ -278,11 +278,16 @@
         : null,
       { url: "data/face-values.json", opts: { cache: "no-cache" } }
     );
-    const tm = await fetchFaceLayer({
-      url: "data/face-values-tm-browser.json",
-      opts: { cache: "no-cache" },
+    const tickpick = await fetchFaceLayer({
+      url: "data/face-values-tickpick.json", opts: { cache: "no-cache" },
     });
-    return Object.assign({}, base, tm);
+    const tm = await fetchFaceLayer({
+      url: "data/face-values-tm-browser.json", opts: { cache: "no-cache" },
+    });
+    // Layer by authority: resale ledger (base) < TickPick NY-law disclosures <
+    // Ticketmaster's official primary face (wins on conflict). TickPick fills
+    // the many sections TM's available-inventory face doesn't cover.
+    return Object.assign({}, base, tickpick, tm);
   }
 
   // Load the first face layer that resolves, from the given source(s).
