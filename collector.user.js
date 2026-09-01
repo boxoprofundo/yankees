@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.6.1
+// @version      3.6.2
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -1113,34 +1113,41 @@
     const qty = qtyNow();
     const upcoming = sgUpcoming();
     const eids = upcoming.map((e) => e.eid).filter((e) => SG_EID_TO_PK[e]);
-    GM_deleteValue("yk_sg_apiresult");
-    GM_deleteValue("yk_sg_apiprogress");
-    GM_setValue("yk_sg_apijob", { active: true, startedAt: Date.now(), eids, qty });
 
-    setChip("SeatGeek: opening session…", true);
     // Seed the session on the FARTHEST-out upcoming event: any live event works,
     // and the last one stays valid longest, so this keeps healing itself as
     // games pass without ever landing on a stale (redirecting) event page.
     const seedEvent = upcoming[upcoming.length - 1];
     const seedUrl = ((seedEvent && seedEvent.url) ||
       SEATGEEK_URLS[SEATGEEK_URLS.length - 1]) + "?quantity=" + qty;
-    const tab = GM_openInTab(seedUrl, { active: true, insert: true });
 
+    // SeatGeek's CDN sometimes 503s ("Max restarts limit reached") transiently.
+    // Detect an empty/blocked attempt and retry once after a pause before giving up.
     let res = null;
-    const started = Date.now();
-    for (let w = 0; w < 400; w++) {                  // up to ~200s
-      res = GM_getValue("yk_sg_apiresult", null);
-      if (res) break;
-      const p = GM_getValue("yk_sg_apiprogress", null);
-      const secs = Math.round((Date.now() - started) / 1000);
-      // Show elapsed time even before the first fetch, so a stalled session
-      // reads as "still trying (30s)" rather than a silent freeze.
-      if (p) setChip(`SeatGeek: ${p.done}/${p.total} games… (${secs}s)`, true);
-      else setChip(`SeatGeek: opening session… (${secs}s)`, true);
-      await sleep(500);
+    for (let attempt = 1; attempt <= 2; attempt++) {
+      GM_deleteValue("yk_sg_apiresult");
+      GM_deleteValue("yk_sg_apiprogress");
+      GM_setValue("yk_sg_apijob", { active: true, startedAt: Date.now(), eids, qty });
+      const tag = attempt > 1 ? ` (retry)` : "";
+      setChip(`SeatGeek: opening session…${tag}`, true);
+      const tab = GM_openInTab(seedUrl, { active: true, insert: true });
+      const started = Date.now();
+      for (let w = 0; w < 400; w++) {                // up to ~200s
+        res = GM_getValue("yk_sg_apiresult", null);
+        if (res) break;
+        const p = GM_getValue("yk_sg_apiprogress", null);
+        const secs = Math.round((Date.now() - started) / 1000);
+        // Show elapsed time even before the first fetch, so a stalled session
+        // reads as "still trying (30s)" rather than a silent freeze.
+        if (p) setChip(`SeatGeek: ${p.done}/${p.total} games…${tag} (${secs}s)`, true);
+        else setChip(`SeatGeek: opening session…${tag} (${secs}s)`, true);
+        await sleep(500);
+      }
+      try { tab.close(); } catch {}
+      GM_setValue("yk_sg_apijob", { active: false, startedAt: 0 });
+      if (res && Object.keys(res.byEid || {}).length) break;   // got data
+      if (attempt < 2) { setChip("SeatGeek: server busy (503) — retrying in 25s…", true); await sleep(25000); }
     }
-    try { tab.close(); } catch {}
-    GM_setValue("yk_sg_apijob", { active: false, startedAt: 0 });
 
     const byEid = (res && res.byEid) || {};
     const collected = [];
