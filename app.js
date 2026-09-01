@@ -49,7 +49,6 @@
   function saveSettings() {
     const s = {
       tmKey: $("#tm-key").value.trim(),
-      sgKey: $("#sg-key").value.trim(),
       ghToken: $("#gh-token").value.trim(),
       homeRunner: $("#home-runner").checked,
     };
@@ -963,7 +962,6 @@
   document.addEventListener("DOMContentLoaded", () => {
     const s = loadSettings();
     $("#tm-key").value = s.tmKey || "";
-    $("#sg-key").value = s.sgKey || "";
     $("#gh-token").value = s.ghToken || "";
     $("#home-runner").checked = !!s.homeRunner;
 

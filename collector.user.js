@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.4.0
+// @version      3.5.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -1273,8 +1273,8 @@
   const runTicketmaster = () => collectTicketmaster(false);
 
   async function runAll() {
-    if (running) return;
-    if (!settings().ghToken) { setChip("Set the access key in Settings first"); return; }
+    if (running) return null;
+    if (!settings().ghToken) { setChip("Set the access key in Settings first"); return null; }
     running = true;
     try {
       setChip("Ticketmaster…", true);
@@ -1284,10 +1284,50 @@
       setChip("SeatGeek…", true);
       const sg = await runSeatGeek();
       setChip(`Done: TM ${tm}, StubHub ${sh}, SeatGeek ${sg}. Press Search.`);
+      return { tm: tm || 0, sh: sh || 0, sg: sg || 0, total: (tm || 0) + (sh || 0) + (sg || 0) };
     } catch (e) {
       console.error("[collector]", e);
       setChip("Collector error — see console");
+      return null;
     } finally { running = false; }
+  }
+
+  /* ═══════════════════════ opportunistic auto-collect ════════════════════
+     So the machine only needs to be on *sometimes*: whenever this browser has
+     the aggregator open, collect on startup and then every few hours. Spacing
+     + DataDome back-off keep it gentle; it only runs on a maintainer's browser
+     (the access key must be set) and never overlaps a manual collection. */
+  const AUTORUN_ON = "yk_autorun_on";        // enabled? (default true)
+  const AUTORUN_LAST = "yk_autorun_last";    // ms timestamp of last attempt
+  const AUTORUN_WAIT = "yk_autorun_wait";    // current spacing in ms
+  const AUTORUN_BASE = 3 * 60 * 60 * 1000;   // 3h between healthy runs
+  const AUTORUN_MAX = 12 * 60 * 60 * 1000;   // back off to 12h when blocked
+  const autoRunOn = () => GM_getValue(AUTORUN_ON, true);
+
+  async function maybeAutoRun(reason) {
+    if (!autoRunOn() || running) return;
+    if (!settings().ghToken) return;                 // maintainer devices only
+    const wait = GM_getValue(AUTORUN_WAIT, AUTORUN_BASE);
+    const last = GM_getValue(AUTORUN_LAST, 0);
+    if (Date.now() - last < wait) return;            // too soon
+    GM_setValue(AUTORUN_LAST, Date.now());           // debounce reloads/other tabs
+    console.log(`[collector] auto-collect (${reason})`);
+    const res = await runAll();
+    if (!res) { GM_setValue(AUTORUN_LAST, Date.now()); return; }
+    // Adapt spacing: a dry run (everything blocked/empty) backs off; a
+    // productive run resets to the base interval.
+    const next = res.total > 0 ? AUTORUN_BASE : Math.min(AUTORUN_MAX, wait * 2);
+    GM_setValue(AUTORUN_WAIT, next);
+    GM_setValue(AUTORUN_LAST, Date.now());
+    const hrs = Math.round(next / 3600000);
+    setChip(`Auto-collect done (TM ${res.tm}, SH ${res.sh}, SG ${res.sg}) · next in ~${hrs}h`);
+  }
+
+  function startAutoRun() {
+    // A grace delay after load so opening the page to just look at prices isn't
+    // immediately hijacked; then a periodic check while the tab stays open.
+    setTimeout(() => maybeAutoRun("startup").catch((e) => console.error(e)), 45000);
+    setInterval(() => maybeAutoRun("timer").catch((e) => console.error(e)), 15 * 60 * 1000);
   }
 
   // Gentle single-game probe: opens ONE SeatGeek event tab and reports the full
@@ -1321,6 +1361,15 @@
   GM_registerMenuCommand("Collect StubHub only", async () => { if (!running) { running = true; try { const n = await runStubHub(); setChip(`StubHub done: ${n}`); } finally { running = false; } } });
   GM_registerMenuCommand("Collect SeatGeek only", async () => { if (!running) { running = true; try { const n = await runSeatGeek(); setChip(`SeatGeek done: ${n}`); } finally { running = false; } } });
   GM_registerMenuCommand("Probe SeatGeek API (1 game)", async () => { if (!running) { running = true; try { await probeSeatGeekApi(); } finally { running = false; } } });
+  GM_registerMenuCommand(
+    autoRunOn() ? "Auto-collect: ON — click to disable" : "Auto-collect: OFF — click to enable",
+    () => {
+      const on = !autoRunOn();
+      GM_setValue(AUTORUN_ON, on);
+      if (on) GM_setValue(AUTORUN_LAST, 0);   // allow a run right away
+      setChip(on ? "Auto-collect ON — will collect on startup + every few hours while open"
+                 : "Auto-collect OFF");
+    });
 
   function wire() {
     document.querySelectorAll(".refresh-btn").forEach((b) => {
@@ -1329,6 +1378,7 @@
       b.addEventListener("click", () => runAll());
     });
     setChip("Ticketmaster + SeatGeek + StubHub ready (this browser)");
+    startAutoRun();
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", wire);
   else wire();
