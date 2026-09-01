@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.8.3
+// @version      3.8.4
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -1588,9 +1588,11 @@
     //    response. cycle stamps gamePk/url onto each quote it collects.
     const entries = [];
     for (const e of evList) { const pk = sgGamePk(e.date, e.hour); if (pk) entries.push([e.eid, e.url, pk]); }
+    // Gentle pacing (≈5–8s between event pages) so 13 quick loads don't look
+    // like a bot and re-trip TickPick's DataDome bot-wall.
     const { collected: raw } = await cycle("TickPick", "yk_tp_job", entries,
       (eid) => "yk_tp_result_" + eid, false,
-      { active: true, waits: 100, gapMin: 1200, gapRand: 1200, jobExtra: { qty } });
+      { active: true, waits: 100, gapMin: 5000, gapRand: 3000, jobExtra: { qty } });
 
     // 3) Shape quotes + build the face map from disclosed faces.
     const collected = raw.map((q) => ({ gamePk: q.gamePk, provider: "TickPick",
