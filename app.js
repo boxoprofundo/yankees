@@ -54,10 +54,19 @@
       homeRunner: $("#home-runner").checked,
     };
     localStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
+    syncRefreshVisibility();
     const note = $("#settings-saved");
     note.hidden = false;
     setTimeout(() => (note.hidden = true), 2500);
     return s;
+  }
+
+  // "Refresh prices" only works with an access key, so it's for the
+  // data-maintainer, not visitors. Hide it (and its sub-note) unless a key is
+  // present — a new device then shows the latest prices with nothing to enter.
+  function syncRefreshVisibility() {
+    const show = !!loadSettings().ghToken;
+    $$(".refresh-btn").forEach((b) => (b.hidden = !show));
   }
 
   function loadPriceHistory() {
@@ -978,6 +987,7 @@
     );
 
     $("#save-settings").addEventListener("click", saveSettings);
+    syncRefreshVisibility();
 
     $("#pick-all-cb").addEventListener("change", (e) => setAllPicked(e.target.checked));
 
@@ -1022,9 +1032,15 @@
       paintGameRows();
     });
 
-    // Populate the game picker up front so the "specific" tab is usable.
+    // Populate the game picker up front so the "specific" tab is usable, then
+    // auto-run a search so a fresh visitor sees the latest collected prices
+    // immediately — no click and no access key required.
     fetchRemainingHomeGames()
-      .then((games) => { state.games = games; renderGamePicker(); })
+      .then((games) => {
+        state.games = games;
+        renderGamePicker();
+        return runSearch("all");
+      })
       .catch((err) => {
         $("#game-list").textContent = "Couldn't load games: " + err.message;
       });
