@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.8.1
+// @version      3.8.2
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -1130,9 +1130,25 @@
     return { quotes, faces };
   }
 
+  // The event API is served from api.tickpick.com but the site renders
+  // server-side, so a page fetch to that subdomain fails CORS ("Failed to
+  // fetch"). GM_xmlhttpRequest is privileged (no CORS) and still sends the
+  // .tickpick.com DataDome cookie the team-page load set — same as Playwright's
+  // page.request. @connect api.tickpick.com is granted in the header.
+  function tickpickApiGet(url, referer) {
+    return new Promise((resolve) => {
+      GM_xmlhttpRequest({
+        method: "GET", url, timeout: 20000,
+        headers: { accept: "application/json", referer },
+        onload: (r) => resolve({ status: r.status, text: r.responseText || "" }),
+        onerror: () => resolve({ status: 0, text: "" }),
+        ontimeout: () => resolve({ status: "timeout", text: "" }),
+      });
+    });
+  }
+
   async function tickpickDriver(job) {
     const qty = job.qty || 2;
-    const w = (function () { try { return (typeof unsafeWindow !== "undefined") ? unsafeWindow : window; } catch (e) { return window; } })();
     // Let the team page render + set the DataDome cookie; scroll to lazy-load
     // every game, collecting event links as they appear.
     const events = {};
@@ -1146,17 +1162,13 @@
     for (const ev of list) {
       const api = `https://api.tickpick.com/1.0/listings/internal/event-v2/${ev.eid}` +
         "?trackView=true&includeParkingOptions=false";
-      try {
-        const res = await w.fetch(api, { credentials: "include", headers: { accept: "application/json" } });
-        const txt = await res.text();
-        let j = null; try { j = JSON.parse(txt); } catch (e) {}
-        const blocked = /datadome|captcha|blocked/i.test(txt.slice(0, 200)) || res.status === 403;
-        const parsed = j ? tickpickQuotesFromListings(j.listings || [], qty) : { quotes: [], faces: {} };
-        if (parsed.quotes.length) byEid[ev.eid] = Object.assign({ url: ev.url, date: ev.date, hour: ev.hour }, parsed);
-        diag.fetched.push({ eid: ev.eid, status: res.status, n: parsed.quotes.length, blocked });
-      } catch (e) {
-        diag.fetched.push({ eid: ev.eid, error: String(e).slice(0, 80) });
-      }
+      const res = await tickpickApiGet(api, ev.url);
+      const txt = res.text || "";
+      let j = null; try { j = JSON.parse(txt); } catch (e) {}
+      const blocked = res.status === 403 || /datadome|captcha|blocked/i.test(txt.slice(0, 200));
+      const parsed = j ? tickpickQuotesFromListings(j.listings || [], qty) : { quotes: [], faces: {} };
+      if (parsed.quotes.length) byEid[ev.eid] = Object.assign({ url: ev.url, date: ev.date, hour: ev.hour }, parsed);
+      diag.fetched.push({ eid: ev.eid, status: res.status, n: parsed.quotes.length, blocked });
       await sleep(600 + Math.random() * 500);
     }
     diag.blocked = !Object.keys(byEid).length && diag.fetched.some((f) => f.blocked || f.status === 403);
