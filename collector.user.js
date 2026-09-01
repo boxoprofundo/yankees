@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.3.0
+// @version      3.3.1
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -155,8 +155,15 @@
       const named = s.replace(/[^a-z0-9]+/g, " ").trim().toUpperCase();
       return named ? named.slice(0, 16) : null;
     }
-    const m = s.match(/\d{1,3}/);
-    if (m) return m[0];
+    // Preserve a real section's trailing letter: Yankee Stadium home-plate and
+    // corner sections are lettered (021A, 320B, 420C, 214A). Grab digits plus a
+    // single A–D suffix when one directly follows (optionally past one
+    // separator) and isn't the start of a word like "ada". Fall back to the
+    // bare number for unlettered sections ("bleachers-204" -> "204").
+    const m = s.match(/(\d{1,3})[-_ ]?([a-d])(?![a-z])/);
+    if (m) return (m[1] + m[2]).toUpperCase();
+    const n = s.match(/\d{1,3}/);
+    if (n) return n[0];
     const named = s.replace(/[^a-z0-9]+/g, " ").trim().toUpperCase();
     return named ? named.slice(0, 16) : null;
   }
