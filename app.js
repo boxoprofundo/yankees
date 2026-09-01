@@ -545,47 +545,53 @@
     renderGameTable(scopeGames, quotes);
   }
 
-  // Build a per-section face fallback from the flat "gamePk|section" store:
-  // the median disclosed face for each section across all games. Face varies by
-  // game, so this is only an estimate — used (and flagged) when we have no exact
-  // face for the row's own game.
-  function buildSectionFace(faceMap) {
-    const bySec = {};
+  // Normalize a stored section string to the classifier's canonical code, so a
+  // face keyed under one marketplace's spelling ("020", "MAINDUGOUT220A") still
+  // matches a row whose cheapest quote came from another ("20", "220A").
+  function normSec(s) {
+    try { return window.Sections.classify(s).code || ""; }
+    catch (e) { return String(s == null ? "" : s).toUpperCase(); }
+  }
+
+  // Index the flat "gamePk|section" face store by canonical code:
+  //   exact:       "gamePk|code"  -> disclosed face for that game
+  //   sectionFace: "code"         -> median face across games (cross-game estimate)
+  // Each face is also indexed under its base code with a trailing "W"
+  // (wheelchair-accessible) stripped, so 235W inherits 235's face. Face varies
+  // by game, so sectionFace is only an estimate — flagged when used.
+  function buildFaceIndex(faceMap) {
+    const exact = {}, bySec = {};
     for (const k in faceMap) {
       const i = k.indexOf("|");
       if (i < 0 || faceMap[k] == null) continue;
-      const sec = k.slice(i + 1);
-      (bySec[sec] = bySec[sec] || []).push(faceMap[k]);
-    }
-    const out = {};
-    for (const sec in bySec) {
-      const a = bySec[sec].sort((x, y) => x - y);
-      out[sec] = a[Math.floor(a.length / 2)]; // median
-    }
-    return out;
-  }
-
-  // Look up a face value for a game/section. Prefer the EXACT game's disclosed
-  // face (TickPick / Ticketmaster); if none, fall back to the section's typical
-  // face from other games, flagged estimated:true so the UI can mark it "~".
-  // We never fall back to the game's cheapest price (that would stamp premium
-  // sections like Legends with the stadium minimum — absurd $28 faces).
-  function faceFor(faceMap, sectionFace, gamePk, cls, rawSection) {
-    for (const k of [`${gamePk}|${cls.code}`, `${gamePk}|${rawSection}`]) {
-      if (faceMap && faceMap[k] != null) return { value: faceMap[k], estimated: false };
-    }
-    if (sectionFace) {
-      for (const s of [cls.code, rawSection]) {
-        if (sectionFace[s] != null) return { value: sectionFace[s], estimated: true };
+      const gp = k.slice(0, i), v = faceMap[k];
+      const code = normSec(k.slice(i + 1));
+      if (!code) continue;
+      for (const c of new Set([code, code.replace(/W$/, "")])) {
+        if (!c) continue;
+        exact[`${gp}|${c}`] = v;
+        (bySec[c] = bySec[c] || []).push(v);
       }
     }
+    const sectionFace = {};
+    for (const c in bySec) { const a = bySec[c].sort((x, y) => x - y); sectionFace[c] = a[Math.floor(a.length / 2)]; }
+    return { exact, sectionFace };
+  }
+
+  // Prefer the EXACT game's disclosed face; else the section's cross-game median
+  // (estimated:true → UI marks it "~"). Never fall back to the cheapest price
+  // (that would stamp premium sections with the stadium minimum — absurd faces).
+  function faceFor(faceIndex, gamePk, cls) {
+    const codes = [cls.code, (cls.code || "").replace(/W$/, "")];
+    for (const c of codes) { if (c && faceIndex.exact[`${gamePk}|${c}`] != null) return { value: faceIndex.exact[`${gamePk}|${c}`], estimated: false }; }
+    for (const c of codes) { if (c && faceIndex.sectionFace[c] != null) return { value: faceIndex.sectionFace[c], estimated: true }; }
     return null;
   }
 
   function renderSectionTable(games, scopeSet, quotes, qty, byGame, faceMap) {
     const wrap = $("#section-results");
     const soonest = games[0]; // games are date-sorted; used for empty-row StubHub links
-    const sectionFace = buildSectionFace(faceMap); // cross-game estimate fallback
+    const faceIndex = buildFaceIndex(faceMap); // normalized exact + cross-game estimate
 
     // Union of every real section seen anywhere in the data (all games), so
     // sections with no block in the current scope still get a row + StubHub
@@ -634,7 +640,7 @@
       const hit = best.get(cls.code);
       const q = hit ? hit.q : null;
       const game = q ? byGame.get(q.gamePk) : null;
-      const faceHit = q ? faceFor(faceMap, sectionFace, q.gamePk, cls, q.section) : null;
+      const faceHit = q ? faceFor(faceIndex, q.gamePk, cls) : null;
       const face = faceHit ? faceHit.value : null;
       const faceEstimated = !!(faceHit && faceHit.estimated);
       const price = q ? q.price : null;
