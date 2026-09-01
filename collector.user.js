@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.9.0
+// @version      3.9.1
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -547,6 +547,11 @@
       .slice(0, 3)
       .map((x) => ({ src: x.src, url: (x.c.url || "").split("?")[0], bytes: x.c.body.length, body: x.c.body.slice(0, 4000) }));
     const mapUrls = [...new Set((GM_getValue("yk_tm_mapcap", []) || []).map((c) => (c.url || "").split("?")[0]))];
+    // What iframes/map hosts exist on the page — reveals where the seat-map
+    // manifest actually lives so the capture can be re-targeted.
+    let frames = [];
+    try { frames = [...document.querySelectorAll("iframe")].map((f) => (f.src || f.getAttribute("data-src") || "").split("?")[0]).filter(Boolean).slice(0, 12); } catch (e) {}
+    const mapish = [...new Set([...TM_CAP_URLS].concat((body.match(/https?:\/\/[a-z0-9.-]*(?:tmol|tmimg|maps|tmaps|mapsapi)[a-z0-9.\-\/]*/gi) || [])))].filter((u) => /map|tmol|tmimg/i.test(u)).slice(0, 12);
     const diag = {
       title: (document.title || "").slice(0, 120),
       blocked: /paused|denied|robot|captcha|access to this page/i.test(body.slice(0, 400)),
@@ -555,6 +560,8 @@
       faceMentions: faceCtx,
       ismdsUrls: [...new Set(TM_CAP_URLS)].slice(0, 20),
       mapUrls,
+      frames,
+      mapish,
       faces: faceMap,
       captures,
       rawFace,
