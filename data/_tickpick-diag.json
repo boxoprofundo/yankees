@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-01T19:11:21.816Z",
+  "fetchedAt": "2026-09-01T19:43:03.862Z",
   "discovered": 13,
   "firstEvent": {
     "eid": "7367906",
@@ -7,11 +7,11 @@
       "https://api.tickpick.com/1.0/tracking/pageLoad",
       "https://api.tickpick.com/1.0/listings/internal/event-v2/7367906"
     ],
-    "hadApi": false,
-    "n": 0,
-    "sample": "New York Yankees vs. Tampa Bay Rays - Tuesday, September 22, 2026 1:05 PM at Yankee Stadium, Bronx, NY\n\nExperience the excitement of Major League Baseball at Yankee Stadium! New York Yankees takes on Tampa Bay Rays on Tuesday, September 22, 2026. Get your tickets for this thrilling baseball game and enjoy America's favorite pastime.\n\nTuesday, September 22, 2026 1:05 PM\nYankee Stadium\nOne East 161st Street, Bronx, NY\nMain Performer\nNew York Yankees\nSecondary Performer\nTampa Bay Rays\nEvent Informa"
+    "hadApi": true,
+    "n": 124,
+    "sample": null
   },
-  "games": 9,
-  "quotes": 1427,
-  "faces": 1124
+  "games": 12,
+  "quotes": 1885,
+  "faces": 1488
 }
