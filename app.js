@@ -103,9 +103,7 @@
 
   /* ----------------------------- freshness ------------------------------ */
 
-  // Compact "how long ago" for a timestamp: "just now", "20m ago", "2h ago",
-  // "3d ago". Freshness is about recency, so minute/hour/day granularity is
-  // all a viewer needs.
+  // Compact "how long ago": "just now", "20m ago", "2h ago", "3d ago".
   function relTime(iso) {
     const t = Date.parse(iso);
     if (!isFinite(t)) return null;
@@ -118,7 +116,7 @@
     return `${Math.round(h / 24)}d ago`;
   }
 
-  // Per-marketplace "collected N ago" line, in the tagline's marketplace order.
+  // Per-marketplace "collected N ago", shown in Settings, in tagline order.
   const SOURCE_ORDER = ["Ticketmaster", "SeatGeek", "StubHub", "XP",
     "Vivid Seats", "TickPick", "Gametime"];
   function paintFreshness(sourceTimes) {
@@ -127,11 +125,12 @@
     const st = sourceTimes || {};
     const names = Object.keys(st).sort(
       (a, b) => (SOURCE_ORDER.indexOf(a) + 1 || 99) - (SOURCE_ORDER.indexOf(b) + 1 || 99));
-    if (!names.length) { el.hidden = true; return; }
-    el.textContent = "Last collected — " +
-      names.map((n) => `${n}: ${relTime(st[n]) || "unknown"}`).join(" · ");
-    el.hidden = false;
+    el.innerHTML = names.length
+      ? "<strong>Data freshness</strong><br>" +
+        names.map((n) => `${n}: ${relTime(st[n]) || "unknown"}`).join("<br>")
+      : "";
   }
+
 
   /* ------------------------------ schedule ------------------------------ */
 

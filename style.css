@@ -224,7 +224,9 @@ main h2 { margin: 1.6rem 0 .6rem; display: flex; align-items: center; gap: .8rem
 #section-results > h2 { margin-top: .5rem; }
 .sub { font-size: .85rem; color: var(--muted); font-weight: 400; }
 main p.sub { margin: -.2rem 0 .5rem; }
-.freshness { font-size: .8rem; color: var(--muted); margin: 0 0 .8rem; line-height: 1.5; }
+.freshness { font-size: .8rem; color: var(--muted); line-height: 1.7;
+  margin: 1.2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--line, #e3e3e3); }
+.freshness:empty { display: none; }
 .map-link { font-size: .85rem; color: var(--navy-soft); text-decoration: none; font-weight: 600; }
 .map-link:hover { text-decoration: underline; }
 
