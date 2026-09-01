@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.8.0
+// @version      3.8.1
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -319,10 +319,14 @@
     const sink = (url, text) => {
       try {
         const u = String(url || "");
-        if (!/services\.ticketmaster\.com/.test(u)) return;
+        // services.ticketmaster.com = ISM DS facets/quickpicks (price + face,
+        // for AVAILABLE sections). mapsapi.tmol.io = the seat-map MANIFEST,
+        // which lists EVERY section with its price level — the piece that lets
+        // us apply an official face to sold-out sections too.
+        if (!/services\.ticketmaster\.com|mapsapi\.tmol\.io|tmol\.io/.test(u)) return;
         TM_CAP_URLS.push(u.split("?")[0]);
         if (!text || text.length < 40) return;
-        if (!/ismds|quickpicks|facets|"price|faceValue|listPrice|offer/i.test(u + text)) return;
+        if (!/ismds|quickpicks|facets|manifest|segment|priceLevel|"price|faceValue|listPrice|offer|section/i.test(u + text)) return;
         TM_CAPTURES.push({ url: u, body: text.slice(0, 4000000) });
       } catch (e) {}
     };
@@ -454,6 +458,11 @@
     }
     // Nudge the seat list to render / lazy-load.
     for (let r = 0; r < 6; r++) { window.scrollBy(0, 1400); await sleep(700); }
+    // Scroll back to the seat map (top of the page) and give it a moment to
+    // fetch its manifest (mapsapi.tmol.io), which lists every section's price
+    // level — needed to apply an official face to sold-out sections too.
+    try { window.scrollTo(0, 0); } catch (e) {}
+    await sleep(2500);
     const body = document.body ? document.body.innerText : "";
     const job = GM_getValue("yk_tm_job", null);
     const gamePk = (job && job.eidToPk && job.eidToPk[eid]) || null;
@@ -488,16 +497,26 @@
       .sort((a, b) => b.n - a.n)
       .slice(0, 2)
       .map((x) => ({ url: x.c.url.split("?")[0], faces: x.n, body: x.c.body.slice(0, 1500) }));
+    // Seat-map manifest candidates (section → price level), so an all-sections
+    // face parser can be built: any tmol.io body, or one carrying priceLevel +
+    // section identifiers. Dump the head of the largest few to read the schema.
+    const rawMap = TM_CAPTURES
+      .filter((c) => /tmol\.io/.test(c.url) ||
+        (/priceLevel/i.test(c.body) && /"(?:section|sectionName|segment|name)"/i.test(c.body)))
+      .sort((a, b) => b.body.length - a.body.length)
+      .slice(0, 3)
+      .map((c) => ({ url: c.url.split("?")[0], bytes: c.body.length, body: c.body.slice(0, 3500) }));
     const diag = {
       title: (document.title || "").slice(0, 120),
       blocked: /paused|denied|robot|captcha|access to this page/i.test(body.slice(0, 400)),
       bodyLen: body.length,
       sectionRows: secText,
       faceMentions: faceCtx,
-      ismdsUrls: [...new Set(TM_CAP_URLS)].slice(0, 12),
+      ismdsUrls: [...new Set(TM_CAP_URLS)].slice(0, 20),
       faces: faceMap,
       captures,
       rawFace,
+      rawMap,
     };
     console.log(`[collector/TM] event ${eid}: ${quotes.length} sections`, diag);
     GM_setValue("yk_tm_result_" + eid, { ts: Date.now(), quotes, diag });
