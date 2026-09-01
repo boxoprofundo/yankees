@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.6.3
+// @version      3.7.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -21,6 +21,7 @@
 // @grant        unsafeWindow
 // @connect      api.github.com
 // @connect      app.ticketmaster.com
+// @connect      api.seatgeek.com
 // @run-at       document-start
 // ==/UserScript==
 
@@ -187,6 +188,49 @@
       })
       .filter((e) => e.eid && (!e.date || e.date >= t0))
       .sort((a, b) => (a.date && b.date ? a.date - b.date : 0));
+  }
+
+  // SeatGeek's OFFICIAL Open API (api.seatgeek.com) — documented, CORS/GM
+  // friendly, and NOT behind DataDome/Fastly, so it never 503s the way the
+  // internal listings endpoint does. Needs a free client_id. Returns every
+  // remaining Yankees home game with its event id, url, date and event-level
+  // lowest price: used both to discover event ids (no hardcoded list) and to
+  // publish a lowest-price-per-game fallback when per-section collection is
+  // blocked. Returns { events:[{eid,url,date,hour,gamePk,lowest}] } or { error }.
+  async function sgOpenDiscover() {
+    const cid = settings().sgClientId;
+    if (!cid) return { error: "no-client-id" };
+    const params = new URLSearchParams({
+      client_id: cid, "performers.slug": "new-york-yankees",
+      "datetime_local.gte": new Date().toISOString().slice(0, 10),
+      per_page: "60", sort: "datetime_local.asc",
+    });
+    let resp;
+    try {
+      resp = await new Promise((res, rej) => GM_xmlhttpRequest({
+        method: "GET", url: "https://api.seatgeek.com/2/events?" + params,
+        onload: res, onerror: rej, ontimeout: rej, timeout: 15000,
+      }));
+    } catch (e) { return { error: "network" }; }
+    if (!resp || resp.status !== 200) return { error: "http-" + (resp && resp.status) };
+    const data = safeJson(resp.responseText) || {};
+    const evs = Array.isArray(data.events) ? data.events : [];
+    const events = [];
+    for (const ev of evs) {
+      const venue = ev.venue || {};
+      if (!/yankee stadium/i.test(venue.name || "")) continue;   // home games only
+      const dt = ev.datetime_local || "";                        // "2026-09-08T19:15:00"
+      const date = dt.slice(0, 10);
+      const hour = parseInt(dt.slice(11, 13), 10);
+      const gamePk = sgGamePk(date, isFinite(hour) ? hour : null);
+      if (!gamePk) continue;                                     // not a game we track
+      const st = ev.stats || {};
+      const lowest = [st.lowest_price, st.lowest_price_good_deals]
+        .find((v) => typeof v === "number" && v > 0);
+      events.push({ eid: String(ev.id), url: ev.url || `https://seatgeek.com/e/${ev.id}`,
+        date, hour: isFinite(hour) ? hour : null, gamePk, lowest: lowest != null ? lowest : null });
+    }
+    return { events, seen: evs.length };
   }
 
   // Parse a SeatGeek event_listings_v2 JSON body into lowest-per-section quotes.
@@ -1105,14 +1149,48 @@
     return collected.length;
   }
 
+  // Publish SeatGeek's event-level lowest price per game (from the Open API) as
+  // a section-less fallback the app merges into the per-game table. Always
+  // available, so a SeatGeek number shows even when per-section collection 503s.
+  async function publishSgFallback(events) {
+    const quotes = [];
+    for (const e of events) {
+      if (e.lowest == null || !e.gamePk) continue;
+      quotes.push({ provider: "SeatGeek", gamePk: e.gamePk, section: null,
+        price: Math.round(e.lowest * 100) / 100, faceValue: null, eventLevel: true, url: e.url });
+    }
+    if (!quotes.length) return;
+    await putFile("/contents/data/listings-seatgeek-fallback.json",
+      { fetchedAt: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"), quotes },
+      "SeatGeek lowest-price-per-game fallback (official Open API)")
+      .catch((e) => console.error("[collector/SG] fallback publish", e));
+  }
+
   async function runSeatGeek() {
     // Direct-API mode: open ONE SeatGeek event tab to establish a real session
     // (its own page load passes DataDome + sets cookies), then that tab fetches
     // every game's listings straight from event_listings_v2. No tab per game,
     // so no CDN rate-limit flood.
     const qty = qtyNow();
-    const upcoming = sgUpcoming();
-    const eids = upcoming.map((e) => e.eid).filter((e) => SG_EID_TO_PK[e]);
+
+    // Official Open-API discovery (no DataDome): event ids + an event-level
+    // lowest price per game. Publish that price as a fallback right away, so the
+    // site has a SeatGeek number for every game even if per-section collection
+    // is blocked below. Without a client id, fall back to the hardcoded list.
+    const disc = await sgOpenDiscover();
+    const eidToPk = {}, eidToUrl = {};
+    let upcoming;
+    if (disc.events && disc.events.length) {
+      for (const e of disc.events) { eidToPk[e.eid] = e.gamePk; eidToUrl[e.eid] = e.url; }
+      upcoming = disc.events.map((e) => ({ eid: e.eid, url: e.url }));
+      await publishSgFallback(disc.events);
+    } else {
+      upcoming = sgUpcoming();
+    }
+    // Hardcoded maps backstop any eid discovery didn't cover (or no client id).
+    for (const k in SG_EID_TO_PK) if (!(k in eidToPk)) eidToPk[k] = SG_EID_TO_PK[k];
+    for (const k in SG_EID_TO_URL) if (!(k in eidToUrl)) eidToUrl[k] = SG_EID_TO_URL[k];
+    const eids = upcoming.map((e) => +e.eid).filter((e) => eidToPk[e]);
 
     // Seed the session by loading a live SeatGeek event page (its own load
     // passes DataDome + sets cookies). SeatGeek's CDN sometimes 503s ("Max
@@ -1158,8 +1236,8 @@
     const byEid = (res && res.byEid) || {};
     const collected = [];
     for (const [eid, quotes] of Object.entries(byEid)) {
-      const pk = SG_EID_TO_PK[eid];
-      const url = SG_EID_TO_URL[eid] || `https://seatgeek.com/e/${eid}`;
+      const pk = eidToPk[eid];
+      const url = eidToUrl[eid] || `https://seatgeek.com/e/${eid}`;
       if (!pk || !Array.isArray(quotes)) continue;
       for (const q of quotes) collected.push(Object.assign({}, q, { gamePk: pk, url }));
     }

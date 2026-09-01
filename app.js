@@ -53,6 +53,7 @@
       // published event map. A key already in storage is kept so a maintainer's
       // runs can keep that map fresh; it's just never surfaced or required.
       tmKey: prev.tmKey || "",
+      sgClientId: $("#sg-client").value.trim(),
       ghToken: $("#gh-token").value.trim(),
       homeRunner: $("#home-runner").checked,
     };
@@ -244,7 +245,8 @@
   // Merge whatever exists; the newest fetchedAt is shown as the collected time.
   async function fetchCachedListings(qty) {
     const parts = await Promise.all(
-      ["listings", "listings-tm", "listings-tm-browser", "listings-stubhub", "listings-seatgeek"]
+      ["listings", "listings-tm", "listings-tm-browser", "listings-stubhub",
+       "listings-seatgeek", "listings-seatgeek-fallback"]
         .map((name) => fetchOneListing(qty, name))
     );
     if (parts.every((p) => !p)) return null;
@@ -1007,6 +1009,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     const s = loadSettings();
+    $("#sg-client").value = s.sgClientId || "";
     $("#gh-token").value = s.ghToken || "";
     $("#home-runner").checked = !!s.homeRunner;
 

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NYY Ticket Aggregator</title>
-<link rel="stylesheet" href="style.css?v=20260901m">
+<link rel="stylesheet" href="style.css?v=20260901n">
 </head>
 <body>
 <header>
@@ -68,6 +68,15 @@
     <p>Everything here is stored only in this browser (localStorage) and is
     optional — the site works without any of it.</p>
 
+    <div class="field">
+      <label for="sg-client">SeatGeek client ID
+        <small>(free from
+        <a href="https://seatgeek.com/account/develop" target="_blank" rel="noopener">seatgeek.com/account/develop</a>
+        — lets the collector auto-discover SeatGeek events and show a
+        lowest-price-per-game fallback via SeatGeek's official API, which never
+        gets bot-blocked. Maintainer-only; results are published for everyone.)</small></label>
+      <input id="sg-client" type="text" autocomplete="off" placeholder="client_id">
+    </div>
     <div class="field">
       <label for="gh-token">Access key for the Refresh button
         <small>(one-time: lets this page run the price scraper and read its results.
@@ -145,9 +154,9 @@
   </div>
 </div>
 
-<script src="providers.js?v=20260901m"></script>
-<script src="sections.js?v=20260901m"></script>
-<script src="stubhub-events.js?v=20260901m"></script>
-<script src="app.js?v=20260901m"></script>
+<script src="providers.js?v=20260901n"></script>
+<script src="sections.js?v=20260901n"></script>
+<script src="stubhub-events.js?v=20260901n"></script>
+<script src="app.js?v=20260901n"></script>
 </body>
 </html>
