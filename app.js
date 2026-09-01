@@ -545,15 +545,39 @@
     renderGameTable(scopeGames, quotes);
   }
 
-  // Look up a stored per-section face value for a game/section, trying the
-  // section's canonical code and its raw form. Returns null when we have no
-  // real face for that exact section — we deliberately do NOT fall back to the
-  // game's cheapest price, which would stamp premium sections (e.g. Legends)
-  // with the stadium minimum and show absurd faces like $28 on Legends.
-  function faceFor(faceMap, gamePk, cls, rawSection) {
-    const keys = [`${gamePk}|${cls.code}`, `${gamePk}|${rawSection}`];
-    for (const k of keys) {
-      if (faceMap && faceMap[k] != null) return faceMap[k];
+  // Build a per-section face fallback from the flat "gamePk|section" store:
+  // the median disclosed face for each section across all games. Face varies by
+  // game, so this is only an estimate — used (and flagged) when we have no exact
+  // face for the row's own game.
+  function buildSectionFace(faceMap) {
+    const bySec = {};
+    for (const k in faceMap) {
+      const i = k.indexOf("|");
+      if (i < 0 || faceMap[k] == null) continue;
+      const sec = k.slice(i + 1);
+      (bySec[sec] = bySec[sec] || []).push(faceMap[k]);
+    }
+    const out = {};
+    for (const sec in bySec) {
+      const a = bySec[sec].sort((x, y) => x - y);
+      out[sec] = a[Math.floor(a.length / 2)]; // median
+    }
+    return out;
+  }
+
+  // Look up a face value for a game/section. Prefer the EXACT game's disclosed
+  // face (TickPick / Ticketmaster); if none, fall back to the section's typical
+  // face from other games, flagged estimated:true so the UI can mark it "~".
+  // We never fall back to the game's cheapest price (that would stamp premium
+  // sections like Legends with the stadium minimum — absurd $28 faces).
+  function faceFor(faceMap, sectionFace, gamePk, cls, rawSection) {
+    for (const k of [`${gamePk}|${cls.code}`, `${gamePk}|${rawSection}`]) {
+      if (faceMap && faceMap[k] != null) return { value: faceMap[k], estimated: false };
+    }
+    if (sectionFace) {
+      for (const s of [cls.code, rawSection]) {
+        if (sectionFace[s] != null) return { value: sectionFace[s], estimated: true };
+      }
     }
     return null;
   }
@@ -561,6 +585,7 @@
   function renderSectionTable(games, scopeSet, quotes, qty, byGame, faceMap) {
     const wrap = $("#section-results");
     const soonest = games[0]; // games are date-sorted; used for empty-row StubHub links
+    const sectionFace = buildSectionFace(faceMap); // cross-game estimate fallback
 
     // Union of every real section seen anywhere in the data (all games), so
     // sections with no block in the current scope still get a row + StubHub
@@ -609,9 +634,9 @@
       const hit = best.get(cls.code);
       const q = hit ? hit.q : null;
       const game = q ? byGame.get(q.gamePk) : null;
-      const face = q
-        ? faceFor(faceMap, q.gamePk, cls, q.section)
-        : null;
+      const faceHit = q ? faceFor(faceMap, sectionFace, q.gamePk, cls, q.section) : null;
+      const face = faceHit ? faceHit.value : null;
+      const faceEstimated = !!(faceHit && faceHit.estimated);
       const price = q ? q.price : null;
 
       // Price-change arrow vs the previous run at this block size.
@@ -639,6 +664,7 @@
         trend,
         total: price != null ? price * qty : null,
         face,
+        faceEstimated,
         pctFace: price != null && face ? (price / face) * 100 : null,
         date: game ? game.dateUTC.getTime() : null,
         dateLabel: game ? game.displayET : "",
@@ -830,8 +856,9 @@
           levelCell +
           locCell +
           `<td class="price">${arrow}<span${priceStyle}>${fmtMoney0(r.price)}</span></td>` +
-          `<td>${fmtMoney0(r.face)}</td>` +
-          `<td${pctStyle}>${pctText}</td>` +
+          `<td${r.faceEstimated ? ' class="face-est" title="Estimated from another game — face value varies by game"' : ""}>` +
+            `${r.face == null ? "—" : (r.faceEstimated ? "~" : "") + fmtMoney0(r.face)}</td>` +
+          `<td${pctStyle}>${r.faceEstimated && r.pctFace != null ? "~" : ""}${pctText}</td>` +
           `<td>${r.dateLabel}</td>` +
           `<td>${r.opponent}</td>` +
           `<td>${r.url
