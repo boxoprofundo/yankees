@@ -1,62 +1,88 @@
 {
-  "fetchedAt": "2026-09-01T05:20:29.805Z",
+  "fetchedAt": "2026-09-01T17:50:15.726Z",
   "result": {
     "events": 13,
     "fetched": [
       {
         "eid": "7367906",
-        "error": "TypeError: Failed to fetch"
+        "status": 403,
+        "n": 0,
+        "blocked": true
       },
       {
         "eid": "7368080",
-        "error": "TypeError: Failed to fetch"
+        "status": 403,
+        "n": 0,
+        "blocked": true
       },
       {
         "eid": "7368082",
-        "error": "TypeError: Failed to fetch"
+        "status": 403,
+        "n": 0,
+        "blocked": true
       },
       {
         "eid": "7368083",
-        "error": "TypeError: Failed to fetch"
+        "status": 403,
+        "n": 0,
+        "blocked": true
       },
       {
         "eid": "7368093",
-        "error": "TypeError: Failed to fetch"
+        "status": 403,
+        "n": 0,
+        "blocked": true
       },
       {
         "eid": "7368095",
-        "error": "TypeError: Failed to fetch"
+        "status": 403,
+        "n": 0,
+        "blocked": true
       },
       {
         "eid": "7368096",
-        "error": "TypeError: Failed to fetch"
+        "status": 403,
+        "n": 0,
+        "blocked": true
       },
       {
         "eid": "7368107",
-        "error": "TypeError: Failed to fetch"
+        "status": 403,
+        "n": 0,
+        "blocked": true
       },
       {
         "eid": "7368108",
-        "error": "TypeError: Failed to fetch"
+        "status": 403,
+        "n": 0,
+        "blocked": true
       },
       {
         "eid": "7368109",
-        "error": "TypeError: Failed to fetch"
+        "status": 403,
+        "n": 0,
+        "blocked": true
       },
       {
         "eid": "7368116",
-        "error": "TypeError: Failed to fetch"
+        "status": 403,
+        "n": 0,
+        "blocked": true
       },
       {
         "eid": "7368117",
-        "error": "TypeError: Failed to fetch"
+        "status": 403,
+        "n": 0,
+        "blocked": true
       },
       {
         "eid": "7368123",
-        "error": "TypeError: Failed to fetch"
+        "status": 403,
+        "n": 0,
+        "blocked": true
       }
     ],
-    "blocked": false
+    "blocked": true
   },
   "games": 0,
   "quotes": 0,
