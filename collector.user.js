@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.3.1
+// @version      3.4.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -170,6 +170,23 @@
 
   const SG_EID_TO_URL = {};
   for (const u of SEATGEEK_URLS) { const m = u.match(/\/(\d{5,})/); if (m) SG_EID_TO_URL[m[1]] = u; }
+
+  // Upcoming SeatGeek events (eid + url), earliest first, dates parsed from the
+  // slug (M-D-YYYY). A PAST event's page redirects off the ticket-listing view,
+  // so seeding the session on one leaves the driver with no event page to start
+  // on (the whole run then yields "no result"), and fetching one is wasted.
+  function sgUpcoming() {
+    const t0 = new Date(); t0.setHours(0, 0, 0, 0);
+    return SEATGEEK_URLS
+      .map((u) => {
+        const em = u.match(/\/(\d{5,})/);
+        const dm = u.match(/\/(\d{1,2})-(\d{1,2})-(\d{4})-bronx/);
+        return { eid: em ? +em[1] : null, url: u,
+          date: dm ? new Date(+dm[3], +dm[2] - 1, +dm[1]) : null };
+      })
+      .filter((e) => e.eid && (!e.date || e.date >= t0))
+      .sort((a, b) => (a.date && b.date ? a.date - b.date : 0));
+  }
 
   // Parse a SeatGeek event_listings_v2 JSON body into lowest-per-section quotes.
   // Rows use short keys: sr=section, s=section slug, p/pf/dp=price, q=available,
@@ -1093,14 +1110,19 @@
     // every game's listings straight from event_listings_v2. No tab per game,
     // so no CDN rate-limit flood.
     const qty = qtyNow();
-    const eids = Object.keys(SG_EID_TO_PK).map(Number);
+    const upcoming = sgUpcoming();
+    const eids = upcoming.map((e) => e.eid).filter((e) => SG_EID_TO_PK[e]);
     GM_deleteValue("yk_sg_apiresult");
     GM_deleteValue("yk_sg_apiprogress");
     GM_setValue("yk_sg_apijob", { active: true, startedAt: Date.now(), eids, qty });
 
     setChip("SeatGeek: opening session…", true);
-    const seedEid = 17691551;                        // known-good event
-    const seedUrl = (SG_EID_TO_URL[seedEid] || SEATGEEK_URLS[2]) + "?quantity=" + qty;
+    // Seed the session on the FARTHEST-out upcoming event: any live event works,
+    // and the last one stays valid longest, so this keeps healing itself as
+    // games pass without ever landing on a stale (redirecting) event page.
+    const seedEvent = upcoming[upcoming.length - 1];
+    const seedUrl = ((seedEvent && seedEvent.url) ||
+      SEATGEEK_URLS[SEATGEEK_URLS.length - 1]) + "?quantity=" + qty;
     const tab = GM_openInTab(seedUrl, { active: true, insert: true });
 
     let res = null;
@@ -1273,7 +1295,7 @@
   // flood — so it won't trip SeatGeek's CDN rate limit. Used to build a direct-
   // fetch collector that avoids opening a foreground tab per game.
   async function probeSeatGeekApi() {
-    const url = SEATGEEK_URLS[2];                 // 8/29 — known-good event
+    const url = (sgUpcoming().slice(-1)[0] || {}).url || SEATGEEK_URLS[SEATGEEK_URLS.length - 1];
     const eid = (url.match(/\/(\d{5,})/) || [])[1];
     GM_deleteValue("yk_sg_result_" + eid);
     GM_setValue("yk_sg_job", { active: true, startedAt: Date.now() });
