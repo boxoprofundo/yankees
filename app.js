@@ -593,12 +593,28 @@
     const soonest = games[0]; // games are date-sorted; used for empty-row StubHub links
     const faceIndex = buildFaceIndex(faceMap); // normalized exact + cross-game estimate
 
+    // Drop phantom sections. SeatGeek's section labels are the least reliable
+    // (it has surfaced nonexistent main-bowl sections like 114 / 220). The
+    // other sources cover the 100s–400s bowl densely, so a numbered bowl
+    // section (num ≥ 100) that ONLY SeatGeek reports is almost certainly a
+    // mislabel. Legends (< 100) and GA/SRO can legitimately be SeatGeek-only
+    // (sold out elsewhere), so those are kept.
+    const trustedCodes = new Set();
+    for (const q of quotes) {
+      if (q.section && q.provider !== "SeatGeek") { const c = normSec(q.section); if (c) trustedCodes.add(c); }
+    }
+    const isPhantom = (q) => {
+      if (q.provider !== "SeatGeek" || !q.section) return false;
+      const cls = window.Sections.classify(q.section);
+      return cls.num != null && cls.num >= 100 && !trustedCodes.has(cls.code);
+    };
+
     // Union of every real section seen anywhere in the data (all games), so
     // sections with no block in the current scope still get a row + StubHub
     // link. Fold raw codes to canonical form to kill duplicates.
     const canon = new Map(); // code -> classified
     for (const q of quotes) {
-      if (!q.section) continue;
+      if (!q.section || isPhantom(q)) continue;
       const cls = window.Sections.classify(q.section);
       if (!cls.code) continue;
       if (!canon.has(cls.code)) canon.set(cls.code, cls);
@@ -612,7 +628,7 @@
     // Cheapest in-scope block per canonical section.
     const best = new Map(); // code -> { q, cls }
     for (const q of quotes) {
-      if (!q.section || q.price == null) continue;
+      if (!q.section || q.price == null || isPhantom(q)) continue;
       if (!scopeSet.has(q.gamePk)) continue;
       const cls = window.Sections.classify(q.section);
       if (!cls.code) continue;
