@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.6.2
+// @version      3.6.3
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -1114,21 +1114,27 @@
     const upcoming = sgUpcoming();
     const eids = upcoming.map((e) => e.eid).filter((e) => SG_EID_TO_PK[e]);
 
-    // Seed the session on the FARTHEST-out upcoming event: any live event works,
-    // and the last one stays valid longest, so this keeps healing itself as
-    // games pass without ever landing on a stale (redirecting) event page.
-    const seedEvent = upcoming[upcoming.length - 1];
-    const seedUrl = ((seedEvent && seedEvent.url) ||
-      SEATGEEK_URLS[SEATGEEK_URLS.length - 1]) + "?quantity=" + qty;
+    // Seed the session by loading a live SeatGeek event page (its own load
+    // passes DataDome + sets cookies). SeatGeek's CDN sometimes 503s ("Max
+    // restarts limit reached") on a particular event page, so try DIFFERENT
+    // events across attempts — earliest first (most likely fully on-sale and
+    // healthy), then a middle game, then the farthest-out. All of them 503ing
+    // means SeatGeek is down site-wide / the IP is throttled, not a bad page.
+    const cand = [];
+    if (upcoming.length) {
+      cand.push(upcoming[0].url);                                  // earliest (healthiest)
+      if (upcoming.length > 2) cand.push(upcoming[Math.floor(upcoming.length / 2)].url);
+      cand.push(upcoming[upcoming.length - 1].url);                // farthest
+    }
+    const seeds = [...new Set(cand.length ? cand : [SEATGEEK_URLS[SEATGEEK_URLS.length - 1]])];
 
-    // SeatGeek's CDN sometimes 503s ("Max restarts limit reached") transiently.
-    // Detect an empty/blocked attempt and retry once after a pause before giving up.
     let res = null;
-    for (let attempt = 1; attempt <= 2; attempt++) {
+    for (let attempt = 1; attempt <= seeds.length; attempt++) {
+      const seedUrl = seeds[attempt - 1] + "?quantity=" + qty;
       GM_deleteValue("yk_sg_apiresult");
       GM_deleteValue("yk_sg_apiprogress");
       GM_setValue("yk_sg_apijob", { active: true, startedAt: Date.now(), eids, qty });
-      const tag = attempt > 1 ? ` (retry)` : "";
+      const tag = attempt > 1 ? ` (try ${attempt}/${seeds.length})` : "";
       setChip(`SeatGeek: opening session…${tag}`, true);
       const tab = GM_openInTab(seedUrl, { active: true, insert: true });
       const started = Date.now();
@@ -1146,7 +1152,7 @@
       try { tab.close(); } catch {}
       GM_setValue("yk_sg_apijob", { active: false, startedAt: 0 });
       if (res && Object.keys(res.byEid || {}).length) break;   // got data
-      if (attempt < 2) { setChip("SeatGeek: server busy (503) — retrying in 25s…", true); await sleep(25000); }
+      if (attempt < seeds.length) { setChip("SeatGeek: server busy (503) — trying another game in 20s…", true); await sleep(20000); }
     }
 
     const byEid = (res && res.byEid) || {};
