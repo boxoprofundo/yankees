@@ -1,11 +1,19 @@
 {
-  "fetchedAt": "2026-09-01T05:18:19Z",
+  "fetchedAt": "2026-09-01T22:45:25Z",
   "quotes": [
     {
       "gamePk": 823500,
       "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-08-2026/event/1D006323F5924378",
       "provider": "Ticketmaster",
       "section": "111",
+      "price": 203.35,
+      "faceValue": 180
+    },
+    {
+      "gamePk": 823500,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-08-2026/event/1D006323F5924378",
+      "provider": "Ticketmaster",
+      "section": "112",
       "price": 203.35,
       "faceValue": 180
     },
@@ -21,9 +29,25 @@
       "gamePk": 823500,
       "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-08-2026/event/1D006323F5924378",
       "provider": "Ticketmaster",
-      "section": "213",
-      "price": 135.55,
-      "faceValue": 120
+      "section": "129",
+      "price": 203.35,
+      "faceValue": 180
+    },
+    {
+      "gamePk": 823500,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-08-2026/event/1D006323F5924378",
+      "provider": "Ticketmaster",
+      "section": "133",
+      "price": 124.25,
+      "faceValue": 110
+    },
+    {
+      "gamePk": 823500,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-08-2026/event/1D006323F5924378",
+      "provider": "Ticketmaster",
+      "section": "135",
+      "price": 124.25,
+      "faceValue": 110
     },
     {
       "gamePk": 823500,
@@ -56,14 +80,6 @@
       "section": "225",
       "price": 169.45,
       "faceValue": 150
-    },
-    {
-      "gamePk": 823500,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-08-2026/event/1D006323F5924378",
-      "provider": "Ticketmaster",
-      "section": "214A",
-      "price": 135.55,
-      "faceValue": 120
     },
     {
       "gamePk": 823500,
