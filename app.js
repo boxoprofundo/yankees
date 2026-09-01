@@ -55,7 +55,6 @@
       tmKey: prev.tmKey || "",
       sgClientId: $("#sg-client").value.trim(),
       ghToken: $("#gh-token").value.trim(),
-      homeRunner: $("#home-runner").checked,
     };
     localStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
     syncRefreshVisibility();
@@ -197,7 +196,6 @@
   const SCRAPER_REPO = "boxoprofundo/ticket-scraper";
   const SCRAPER_API = `https://api.github.com/repos/${SCRAPER_REPO}`;
   const SCRAPE_WORKFLOW = "yankees-scrape.yml";
-  const SCRAPE_WORKFLOW_HOME = "yankees-scrape-home.yml";
   const POLL_MS = 20000;
 
   function ghHeaders(token, raw) {
@@ -235,14 +233,13 @@
     return null;
   }
 
-  // The cloud run writes "listings" (everything but StubHub); a home run
-  // writes "listings-stubhub". Merge both.
-  // Collected sources, each written by a different run:
-  //   listings          — the cloud run (XP, Vivid Seats, Gametime, …)
-  //   listings-tm       — the home runner (Ticketmaster + TickPick, clean IP)
-  //   listings-stubhub  — the browser collector (StubHub, real Chrome)
-  //   listings-seatgeek — the browser collector (SeatGeek, real Chrome)
-  // Merge whatever exists; the newest fetchedAt is shown as the collected time.
+  // Collected sources, each written by a different run — merge whatever exists:
+  //   listings                   — the cloud run (Gametime, XP, Vivid Seats)
+  //   listings-tm-browser        — the browser collector (Ticketmaster)
+  //   listings-stubhub           — the browser collector (StubHub)
+  //   listings-seatgeek          — the browser collector (SeatGeek, per-section)
+  //   listings-seatgeek-fallback — SeatGeek Open API (event-level lowest price)
+  //   listings-tm                — legacy home-runner file, still merged if present
   async function fetchCachedListings(qty) {
     const parts = await Promise.all(
       ["listings", "listings-tm", "listings-tm-browser", "listings-stubhub",
@@ -325,15 +322,10 @@
       return;
     }
 
-    // With the home runner on, fan out: the Mac scrapes only Ticketmaster
-    // while the cloud does everything else, concurrently and into separate
-    // files the site merges. Without it, one cloud run covers all sites.
-    const jobs = settings.homeRunner
-      ? [
-          { file: SCRAPE_WORKFLOW, inputs: { qty: String(qty), skip: "StubHub Ticketmaster" }, home: false },
-          { file: SCRAPE_WORKFLOW_HOME, inputs: { qty: String(qty) }, home: true },
-        ]
-      : [{ file: SCRAPE_WORKFLOW, inputs: { qty: String(qty) }, home: false }];
+    // One cloud run covers the sites that aren't bot-blocked (Gametime, XP,
+    // Vivid Seats). Ticketmaster, SeatGeek and StubHub come from the browser
+    // collector, which runs in a real logged-in browser where they don't block.
+    const jobs = [{ file: SCRAPE_WORKFLOW, inputs: { qty: String(qty) } }];
 
     $$(".refresh-btn").forEach((b) => (b.disabled = true));
     try {
@@ -353,12 +345,8 @@
         }
       }
       setStatus(
-        settings.homeRunner
-          ? `Refresh started (blocks of ${qty}): your Mac is scraping Ticketmaster ` +
-            "while the cloud handles the rest. Keep the Mac awake — prices load " +
-            "here automatically when both finish."
-          : `Price scrape started for blocks of ${qty} — usually 5–10 minutes. ` +
-            "Fresh prices will load here automatically when it finishes."
+        `Price scrape started for blocks of ${qty} — usually 5–10 minutes. ` +
+        "Fresh prices will load here automatically when it finishes."
       );
       watchScrape(scope, startedAt, jobs);
     } catch (err) {
@@ -373,10 +361,9 @@
   }
 
   // Poll every dispatched workflow's latest run; reload prices once all have
-  // completed (or on timeout, so a stuck home runner can't block the rest).
+  // completed (or on timeout, so a stuck run can't block the reload).
   function watchScrape(scope, startedAt, jobs) {
     clearInterval(pollTimer);
-    const label = (j) => (j.home ? "your Mac (Ticketmaster)" : "the cloud");
     const done = {}; // workflow file -> conclusion
 
     pollTimer = setInterval(async () => {
@@ -384,12 +371,7 @@
       if (Date.now() - startedAt > 25 * 60000) {
         clearInterval(pollTimer);
         reenableRefresh();
-        const stuck = jobs.filter((j) => !done[j.file]).map(label).join(" and ");
-        setStatus(
-          `Loading what's ready… ${stuck} didn't finish in time` +
-          (jobs.some((j) => j.home) ? " (is the Mac awake and the helper installed?)." : "."),
-          true
-        );
+        setStatus("Loading what's ready… the cloud scrape didn't finish in time.", true);
         await runSearch(scope);
         return;
       }
@@ -505,11 +487,15 @@
         : "";
       if (cachedAt) {
         note += `Includes prices auto-collected ${new Date(cachedAt).toLocaleString()}. `;
-      } else {
+      } else if (settings.ghToken) {
         note +=
           "No collected prices loaded yet for this block size — press " +
           "↻ Refresh prices to run the scraper, then they'll load here " +
           "automatically. Store links below work either way.";
+      } else {
+        note +=
+          "No collected prices are loaded yet for this block size. " +
+          "The store links below still work.";
       }
       setStatus(note || null, !!failed.length);
     } catch (err) {
@@ -1011,7 +997,6 @@
     const s = loadSettings();
     $("#sg-client").value = s.sgClientId || "";
     $("#gh-token").value = s.ghToken || "";
-    $("#home-runner").checked = !!s.homeRunner;
 
     $$(".tab").forEach((t) =>
       t.addEventListener("click", () => selectTab(t.dataset.tab))
