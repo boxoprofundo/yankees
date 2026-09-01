@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-01T04:04:49Z",
+  "fetchedAt": "2026-09-01T04:53:13Z",
   "quotes": [
     {
       "provider": "SeatGeek",
@@ -260,7 +260,7 @@
     {
       "provider": "SeatGeek",
       "section": "135",
-      "price": 83.94,
+      "price": 84.2,
       "faceValue": null,
       "gamePk": 823543,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-22-2026-bronx-new-york-yankee-stadium/mlb/17691545"
@@ -396,7 +396,7 @@
     {
       "provider": "SeatGeek",
       "section": "219",
-      "price": 491.49,
+      "price": 643.56,
       "faceValue": null,
       "gamePk": 823543,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-22-2026-bronx-new-york-yankee-stadium/mlb/17691545"
@@ -1300,7 +1300,7 @@
     {
       "provider": "SeatGeek",
       "section": "220B",
-      "price": 428.73,
+      "price": 553.68,
       "faceValue": null,
       "gamePk": 823543,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-22-2026-bronx-new-york-yankee-stadium/mlb/17691545"
@@ -1428,7 +1428,7 @@
     {
       "provider": "SeatGeek",
       "section": "105",
-      "price": 81.89,
+      "price": 79.58,
       "faceValue": null,
       "gamePk": 823500,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-8-2026-bronx-new-york-yankee-stadium/mlb/17691589"
@@ -1644,7 +1644,7 @@
     {
       "provider": "SeatGeek",
       "section": "202",
-      "price": 62.48,
+      "price": 61.71,
       "faceValue": null,
       "gamePk": 823500,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-8-2026-bronx-new-york-yankee-stadium/mlb/17691589"
@@ -1860,7 +1860,7 @@
     {
       "provider": "SeatGeek",
       "section": "236",
-      "price": 54.16,
+      "price": 53.01,
       "faceValue": null,
       "gamePk": 823500,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-8-2026-bronx-new-york-yankee-stadium/mlb/17691589"
@@ -1868,7 +1868,7 @@
     {
       "provider": "SeatGeek",
       "section": "237",
-      "price": 68.53,
+      "price": 67.67,
       "faceValue": null,
       "gamePk": 823500,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-8-2026-bronx-new-york-yankee-stadium/mlb/17691589"
@@ -1876,7 +1876,7 @@
     {
       "provider": "SeatGeek",
       "section": "238",
-      "price": 64.27,
+      "price": 64.89,
       "faceValue": null,
       "gamePk": 823500,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-8-2026-bronx-new-york-yankee-stadium/mlb/17691589"
@@ -1940,7 +1940,7 @@
     {
       "provider": "SeatGeek",
       "section": "313",
-      "price": 81.89,
+      "price": 77.26,
       "faceValue": null,
       "gamePk": 823500,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-8-2026-bronx-new-york-yankee-stadium/mlb/17691589"
@@ -2036,7 +2036,7 @@
     {
       "provider": "SeatGeek",
       "section": "326",
-      "price": 71.49,
+      "price": 70.33,
       "faceValue": null,
       "gamePk": 823500,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-8-2026-bronx-new-york-yankee-stadium/mlb/17691589"
@@ -2140,7 +2140,7 @@
     {
       "provider": "SeatGeek",
       "section": "411",
-      "price": 59.66,
+      "price": 57.46,
       "faceValue": null,
       "gamePk": 823500,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-8-2026-bronx-new-york-yankee-stadium/mlb/17691589"
@@ -2188,7 +2188,7 @@
     {
       "provider": "SeatGeek",
       "section": "417",
-      "price": 55.32,
+      "price": 51.86,
       "faceValue": null,
       "gamePk": 823500,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-8-2026-bronx-new-york-yankee-stadium/mlb/17691589"
@@ -2196,7 +2196,7 @@
     {
       "provider": "SeatGeek",
       "section": "418",
-      "price": 59.94,
+      "price": 50.7,
       "faceValue": null,
       "gamePk": 823500,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-8-2026-bronx-new-york-yankee-stadium/mlb/17691589"
@@ -2284,7 +2284,7 @@
     {
       "provider": "SeatGeek",
       "section": "430",
-      "price": 56.76,
+      "price": 57.46,
       "faceValue": null,
       "gamePk": 823500,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-8-2026-bronx-new-york-yankee-stadium/mlb/17691589"
@@ -2340,7 +2340,7 @@
     {
       "provider": "SeatGeek",
       "section": "232A",
-      "price": 59.94,
+      "price": 57.63,
       "faceValue": null,
       "gamePk": 823500,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-8-2026-bronx-new-york-yankee-stadium/mlb/17691589"
@@ -2524,7 +2524,7 @@
     {
       "provider": "SeatGeek",
       "section": "227A",
-      "price": 105.22,
+      "price": 104.98,
       "faceValue": null,
       "gamePk": 823500,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-8-2026-bronx-new-york-yankee-stadium/mlb/17691589"
@@ -2564,7 +2564,7 @@
     {
       "provider": "SeatGeek",
       "section": "420A",
-      "price": 81.53,
+      "price": 82.22,
       "faceValue": null,
       "gamePk": 823500,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-8-2026-bronx-new-york-yankee-stadium/mlb/17691589"
@@ -2588,7 +2588,7 @@
     {
       "provider": "SeatGeek",
       "section": "434B",
-      "price": 62.25,
+      "price": 56.48,
       "faceValue": null,
       "gamePk": 823500,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-8-2026-bronx-new-york-yankee-stadium/mlb/17691589"
@@ -2620,7 +2620,7 @@
     {
       "provider": "SeatGeek",
       "section": "434A",
-      "price": 64.79,
+      "price": 67.31,
       "faceValue": null,
       "gamePk": 823500,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-8-2026-bronx-new-york-yankee-stadium/mlb/17691589"
@@ -2948,7 +2948,7 @@
     {
       "provider": "SeatGeek",
       "section": "133",
-      "price": 69.7,
+      "price": 70.34,
       "faceValue": null,
       "gamePk": 823497,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-9-2026-bronx-new-york-yankee-stadium/mlb/17691590"
@@ -3100,7 +3100,7 @@
     {
       "provider": "SeatGeek",
       "section": "219",
-      "price": 328.5,
+      "price": 327.4,
       "faceValue": null,
       "gamePk": 823497,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-9-2026-bronx-new-york-yankee-stadium/mlb/17691590"
@@ -3212,7 +3212,7 @@
     {
       "provider": "SeatGeek",
       "section": "238",
-      "price": 16.35,
+      "price": 16.47,
       "faceValue": null,
       "gamePk": 823497,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-9-2026-bronx-new-york-yankee-stadium/mlb/17691590"
@@ -3308,7 +3308,7 @@
     {
       "provider": "SeatGeek",
       "section": "316",
-      "price": 30.79,
+      "price": 31.55,
       "faceValue": null,
       "gamePk": 823497,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-9-2026-bronx-new-york-yankee-stadium/mlb/17691590"
@@ -4308,7 +4308,7 @@
     {
       "provider": "SeatGeek",
       "section": "126",
-      "price": 209.78,
+      "price": 226.15,
       "faceValue": null,
       "gamePk": 823499,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-10-2026-bronx-new-york-yankee-stadium/mlb/17691591"
@@ -4436,7 +4436,7 @@
     {
       "provider": "SeatGeek",
       "section": "209",
-      "price": 54.16,
+      "price": 49.54,
       "faceValue": null,
       "gamePk": 823499,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-10-2026-bronx-new-york-yankee-stadium/mlb/17691591"
@@ -4452,7 +4452,7 @@
     {
       "provider": "SeatGeek",
       "section": "211",
-      "price": 55.94,
+      "price": 55.98,
       "faceValue": null,
       "gamePk": 823499,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-10-2026-bronx-new-york-yankee-stadium/mlb/17691591"
@@ -4868,7 +4868,7 @@
     {
       "provider": "SeatGeek",
       "section": "410",
-      "price": 22.83,
+      "price": 22.45,
       "faceValue": null,
       "gamePk": 823499,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-10-2026-bronx-new-york-yankee-stadium/mlb/17691591"
@@ -4884,7 +4884,7 @@
     {
       "provider": "SeatGeek",
       "section": "412",
-      "price": 21.39,
+      "price": 21.37,
       "faceValue": null,
       "gamePk": 823499,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-10-2026-bronx-new-york-yankee-stadium/mlb/17691591"
@@ -4916,7 +4916,7 @@
     {
       "provider": "SeatGeek",
       "section": "416",
-      "price": 19.02,
+      "price": 19.9,
       "faceValue": null,
       "gamePk": 823499,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-10-2026-bronx-new-york-yankee-stadium/mlb/17691591"
@@ -4924,7 +4924,7 @@
     {
       "provider": "SeatGeek",
       "section": "417",
-      "price": 18.8,
+      "price": 19.66,
       "faceValue": null,
       "gamePk": 823499,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-10-2026-bronx-new-york-yankee-stadium/mlb/17691591"
@@ -4932,7 +4932,7 @@
     {
       "provider": "SeatGeek",
       "section": "418",
-      "price": 21.1,
+      "price": 21.16,
       "faceValue": null,
       "gamePk": 823499,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-10-2026-bronx-new-york-yankee-stadium/mlb/17691591"
@@ -4956,7 +4956,7 @@
     {
       "provider": "SeatGeek",
       "section": "422",
-      "price": 21.57,
+      "price": 21.14,
       "faceValue": null,
       "gamePk": 823499,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-10-2026-bronx-new-york-yankee-stadium/mlb/17691591"
@@ -4996,7 +4996,7 @@
     {
       "provider": "SeatGeek",
       "section": "427",
-      "price": 24.24,
+      "price": 23.89,
       "faceValue": null,
       "gamePk": 823499,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-10-2026-bronx-new-york-yankee-stadium/mlb/17691591"
@@ -5060,7 +5060,7 @@
     {
       "provider": "SeatGeek",
       "section": "114A",
-      "price": 150.03,
+      "price": 156.48,
       "faceValue": null,
       "gamePk": 823499,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-10-2026-bronx-new-york-yankee-stadium/mlb/17691591"
@@ -5123,8 +5123,8 @@
     },
     {
       "provider": "SeatGeek",
-      "section": "117A",
-      "price": 222.07,
+      "section": "407A",
+      "price": 22.19,
       "faceValue": null,
       "gamePk": 823499,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-10-2026-bronx-new-york-yankee-stadium/mlb/17691591"
@@ -5212,7 +5212,7 @@
     {
       "provider": "SeatGeek",
       "section": "420A",
-      "price": 22.25,
+      "price": 23.1,
       "faceValue": null,
       "gamePk": 823499,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-10-2026-bronx-new-york-yankee-stadium/mlb/17691591"
@@ -5243,8 +5243,8 @@
     },
     {
       "provider": "SeatGeek",
-      "section": "407A",
-      "price": 22.19,
+      "section": "117A",
+      "price": 222.07,
       "faceValue": null,
       "gamePk": 823499,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-10-2026-bronx-new-york-yankee-stadium/mlb/17691591"
@@ -5284,7 +5284,7 @@
     {
       "provider": "SeatGeek",
       "section": "320A",
-      "price": 122.31,
+      "price": 130.4,
       "faceValue": null,
       "gamePk": 823499,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-10-2026-bronx-new-york-yankee-stadium/mlb/17691591"
@@ -5292,7 +5292,7 @@
     {
       "provider": "SeatGeek",
       "section": "431B",
-      "price": 21.04,
+      "price": 20.76,
       "faceValue": null,
       "gamePk": 823499,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-10-2026-bronx-new-york-yankee-stadium/mlb/17691591"
@@ -5484,7 +5484,7 @@
     {
       "provider": "SeatGeek",
       "section": "103",
-      "price": 251.36,
+      "price": 259.99,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5492,7 +5492,7 @@
     {
       "provider": "SeatGeek",
       "section": "104",
-      "price": 327.5,
+      "price": 355.62,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5500,7 +5500,7 @@
     {
       "provider": "SeatGeek",
       "section": "105",
-      "price": 227.7,
+      "price": 252.82,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5508,7 +5508,7 @@
     {
       "provider": "SeatGeek",
       "section": "106",
-      "price": 232.76,
+      "price": 259.36,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5516,7 +5516,7 @@
     {
       "provider": "SeatGeek",
       "section": "107",
-      "price": 224.77,
+      "price": 250.43,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5524,7 +5524,7 @@
     {
       "provider": "SeatGeek",
       "section": "108",
-      "price": 231.03,
+      "price": 257.42,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5532,7 +5532,7 @@
     {
       "provider": "SeatGeek",
       "section": "109",
-      "price": 236.22,
+      "price": 263.21,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5548,7 +5548,7 @@
     {
       "provider": "SeatGeek",
       "section": "111",
-      "price": 272.46,
+      "price": 280.54,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5556,7 +5556,7 @@
     {
       "provider": "SeatGeek",
       "section": "112",
-      "price": 295.32,
+      "price": 329.17,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5564,7 +5564,7 @@
     {
       "provider": "SeatGeek",
       "section": "113",
-      "price": 339.06,
+      "price": 358.82,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5588,7 +5588,7 @@
     {
       "provider": "SeatGeek",
       "section": "116",
-      "price": 590.08,
+      "price": 651.3,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5612,7 +5612,7 @@
     {
       "provider": "SeatGeek",
       "section": "122",
-      "price": 478.05,
+      "price": 578.54,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5644,7 +5644,7 @@
     {
       "provider": "SeatGeek",
       "section": "126",
-      "price": 371.78,
+      "price": 414.52,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5652,7 +5652,7 @@
     {
       "provider": "SeatGeek",
       "section": "128",
-      "price": 279.04,
+      "price": 293.25,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5660,7 +5660,7 @@
     {
       "provider": "SeatGeek",
       "section": "129",
-      "price": 269.8,
+      "price": 300.69,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5668,7 +5668,7 @@
     {
       "provider": "SeatGeek",
       "section": "130",
-      "price": 253.98,
+      "price": 270.15,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5676,7 +5676,7 @@
     {
       "provider": "SeatGeek",
       "section": "131",
-      "price": 249.51,
+      "price": 278.04,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5684,7 +5684,7 @@
     {
       "provider": "SeatGeek",
       "section": "132",
-      "price": 249.99,
+      "price": 278.57,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5692,7 +5692,7 @@
     {
       "provider": "SeatGeek",
       "section": "133",
-      "price": 221.75,
+      "price": 249.16,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5700,7 +5700,7 @@
     {
       "provider": "SeatGeek",
       "section": "134",
-      "price": 223.69,
+      "price": 237.15,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5708,7 +5708,7 @@
     {
       "provider": "SeatGeek",
       "section": "135",
-      "price": 254.2,
+      "price": 273.62,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5716,7 +5716,7 @@
     {
       "provider": "SeatGeek",
       "section": "136",
-      "price": 263.15,
+      "price": 295.54,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5732,7 +5732,7 @@
     {
       "provider": "SeatGeek",
       "section": "203",
-      "price": 223.31,
+      "price": 235.5,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5740,7 +5740,7 @@
     {
       "provider": "SeatGeek",
       "section": "204",
-      "price": 186.34,
+      "price": 207.54,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5748,7 +5748,7 @@
     {
       "provider": "SeatGeek",
       "section": "205",
-      "price": 204.36,
+      "price": 227.65,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5756,7 +5756,7 @@
     {
       "provider": "SeatGeek",
       "section": "206",
-      "price": 188.75,
+      "price": 210.21,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5764,7 +5764,7 @@
     {
       "provider": "SeatGeek",
       "section": "207",
-      "price": 200.72,
+      "price": 223.58,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5772,7 +5772,7 @@
     {
       "provider": "SeatGeek",
       "section": "208",
-      "price": 203.29,
+      "price": 226.45,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5780,7 +5780,7 @@
     {
       "provider": "SeatGeek",
       "section": "209",
-      "price": 196.71,
+      "price": 219.09,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5788,7 +5788,7 @@
     {
       "provider": "SeatGeek",
       "section": "210",
-      "price": 202.48,
+      "price": 203.16,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5796,7 +5796,7 @@
     {
       "provider": "SeatGeek",
       "section": "211",
-      "price": 248.36,
+      "price": 249.8,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5804,7 +5804,7 @@
     {
       "provider": "SeatGeek",
       "section": "212",
-      "price": 226.14,
+      "price": 251.93,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5820,7 +5820,7 @@
     {
       "provider": "SeatGeek",
       "section": "215",
-      "price": 352.4,
+      "price": 392.93,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5836,7 +5836,7 @@
     {
       "provider": "SeatGeek",
       "section": "217",
-      "price": 402.07,
+      "price": 448.35,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5844,7 +5844,7 @@
     {
       "provider": "SeatGeek",
       "section": "219",
-      "price": 554.28,
+      "price": 682.48,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5852,7 +5852,7 @@
     {
       "provider": "SeatGeek",
       "section": "223",
-      "price": 312.98,
+      "price": 348.88,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5868,7 +5868,7 @@
     {
       "provider": "SeatGeek",
       "section": "225",
-      "price": 316.35,
+      "price": 323.28,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5884,7 +5884,7 @@
     {
       "provider": "SeatGeek",
       "section": "228",
-      "price": 205.23,
+      "price": 228.62,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5892,7 +5892,7 @@
     {
       "provider": "SeatGeek",
       "section": "229",
-      "price": 208.62,
+      "price": 218.52,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5900,7 +5900,7 @@
     {
       "provider": "SeatGeek",
       "section": "230",
-      "price": 173.85,
+      "price": 193.57,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5908,7 +5908,7 @@
     {
       "provider": "SeatGeek",
       "section": "231",
-      "price": 200.3,
+      "price": 215.67,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5916,7 +5916,7 @@
     {
       "provider": "SeatGeek",
       "section": "234",
-      "price": 192.07,
+      "price": 213.91,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5924,7 +5924,7 @@
     {
       "provider": "SeatGeek",
       "section": "235",
-      "price": 154.65,
+      "price": 168.51,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5940,7 +5940,7 @@
     {
       "provider": "SeatGeek",
       "section": "237",
-      "price": 192.93,
+      "price": 193.6,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5956,7 +5956,7 @@
     {
       "provider": "SeatGeek",
       "section": "305",
-      "price": 141.1,
+      "price": 157.58,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5964,7 +5964,7 @@
     {
       "provider": "SeatGeek",
       "section": "306",
-      "price": 151.44,
+      "price": 168.56,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5972,7 +5972,7 @@
     {
       "provider": "SeatGeek",
       "section": "307",
-      "price": 174.59,
+      "price": 194.41,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5980,7 +5980,7 @@
     {
       "provider": "SeatGeek",
       "section": "308",
-      "price": 124.66,
+      "price": 141.03,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5988,7 +5988,7 @@
     {
       "provider": "SeatGeek",
       "section": "309",
-      "price": 145.74,
+      "price": 158.63,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -5996,7 +5996,7 @@
     {
       "provider": "SeatGeek",
       "section": "310",
-      "price": 158.25,
+      "price": 180.93,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6004,7 +6004,7 @@
     {
       "provider": "SeatGeek",
       "section": "311",
-      "price": 153.51,
+      "price": 176.58,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6012,7 +6012,7 @@
     {
       "provider": "SeatGeek",
       "section": "312",
-      "price": 189.94,
+      "price": 192.52,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6028,7 +6028,7 @@
     {
       "provider": "SeatGeek",
       "section": "314",
-      "price": 180.77,
+      "price": 201.28,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6036,7 +6036,7 @@
     {
       "provider": "SeatGeek",
       "section": "315",
-      "price": 190.33,
+      "price": 217.35,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6044,7 +6044,7 @@
     {
       "provider": "SeatGeek",
       "section": "316",
-      "price": 197.49,
+      "price": 223.8,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6068,7 +6068,7 @@
     {
       "provider": "SeatGeek",
       "section": "323",
-      "price": 346.38,
+      "price": 344.07,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6076,7 +6076,7 @@
     {
       "provider": "SeatGeek",
       "section": "324",
-      "price": 172.9,
+      "price": 198.44,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6084,7 +6084,7 @@
     {
       "provider": "SeatGeek",
       "section": "325",
-      "price": 178.49,
+      "price": 204.9,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6092,7 +6092,7 @@
     {
       "provider": "SeatGeek",
       "section": "326",
-      "price": 177.1,
+      "price": 197.2,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6100,7 +6100,7 @@
     {
       "provider": "SeatGeek",
       "section": "327",
-      "price": 182.26,
+      "price": 202.96,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6108,7 +6108,7 @@
     {
       "provider": "SeatGeek",
       "section": "328",
-      "price": 154.17,
+      "price": 170.57,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6116,7 +6116,7 @@
     {
       "provider": "SeatGeek",
       "section": "329",
-      "price": 158.12,
+      "price": 163.89,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6132,7 +6132,7 @@
     {
       "provider": "SeatGeek",
       "section": "331",
-      "price": 138.15,
+      "price": 157.92,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6140,7 +6140,7 @@
     {
       "provider": "SeatGeek",
       "section": "333",
-      "price": 165.21,
+      "price": 183.94,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6148,7 +6148,7 @@
     {
       "provider": "SeatGeek",
       "section": "334",
-      "price": 161.51,
+      "price": 177.75,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6156,7 +6156,7 @@
     {
       "provider": "SeatGeek",
       "section": "405",
-      "price": 122.62,
+      "price": 138.07,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6164,7 +6164,7 @@
     {
       "provider": "SeatGeek",
       "section": "406",
-      "price": 121.29,
+      "price": 135.98,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6172,7 +6172,7 @@
     {
       "provider": "SeatGeek",
       "section": "408",
-      "price": 122.82,
+      "price": 137.2,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6180,7 +6180,7 @@
     {
       "provider": "SeatGeek",
       "section": "409",
-      "price": 113.04,
+      "price": 122.95,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6188,7 +6188,7 @@
     {
       "provider": "SeatGeek",
       "section": "410",
-      "price": 128.43,
+      "price": 133.06,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6196,7 +6196,7 @@
     {
       "provider": "SeatGeek",
       "section": "411",
-      "price": 123.91,
+      "price": 133.06,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6204,7 +6204,7 @@
     {
       "provider": "SeatGeek",
       "section": "412",
-      "price": 123.84,
+      "price": 138.54,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6212,7 +6212,7 @@
     {
       "provider": "SeatGeek",
       "section": "413",
-      "price": 128.47,
+      "price": 131.55,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6220,7 +6220,7 @@
     {
       "provider": "SeatGeek",
       "section": "414",
-      "price": 122.57,
+      "price": 139.17,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6228,7 +6228,7 @@
     {
       "provider": "SeatGeek",
       "section": "415",
-      "price": 127.67,
+      "price": 142.14,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6236,7 +6236,7 @@
     {
       "provider": "SeatGeek",
       "section": "416",
-      "price": 121.41,
+      "price": 131.55,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6244,7 +6244,7 @@
     {
       "provider": "SeatGeek",
       "section": "417",
-      "price": 125.48,
+      "price": 141.96,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6252,7 +6252,7 @@
     {
       "provider": "SeatGeek",
       "section": "418",
-      "price": 127.56,
+      "price": 139.16,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6260,7 +6260,7 @@
     {
       "provider": "SeatGeek",
       "section": "419",
-      "price": 128.15,
+      "price": 144.72,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6268,7 +6268,7 @@
     {
       "provider": "SeatGeek",
       "section": "421",
-      "price": 135.57,
+      "price": 148.88,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6292,7 +6292,7 @@
     {
       "provider": "SeatGeek",
       "section": "424",
-      "price": 118.94,
+      "price": 130.17,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6300,7 +6300,7 @@
     {
       "provider": "SeatGeek",
       "section": "425",
-      "price": 120.13,
+      "price": 125.14,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6308,7 +6308,7 @@
     {
       "provider": "SeatGeek",
       "section": "426",
-      "price": 136.72,
+      "price": 152.83,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6316,7 +6316,7 @@
     {
       "provider": "SeatGeek",
       "section": "427",
-      "price": 120.33,
+      "price": 128.53,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6324,7 +6324,7 @@
     {
       "provider": "SeatGeek",
       "section": "428",
-      "price": 123.35,
+      "price": 128.53,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6332,7 +6332,7 @@
     {
       "provider": "SeatGeek",
       "section": "429",
-      "price": 110.22,
+      "price": 118.2,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6340,7 +6340,7 @@
     {
       "provider": "SeatGeek",
       "section": "430",
-      "price": 115.94,
+      "price": 122.69,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6356,7 +6356,7 @@
     {
       "provider": "SeatGeek",
       "section": "232A",
-      "price": 195.71,
+      "price": 206.19,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6380,7 +6380,7 @@
     {
       "provider": "SeatGeek",
       "section": "332B",
-      "price": 129.92,
+      "price": 143.8,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6412,7 +6412,7 @@
     {
       "provider": "SeatGeek",
       "section": "432A",
-      "price": 112.69,
+      "price": 122.66,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6428,7 +6428,7 @@
     {
       "provider": "SeatGeek",
       "section": "407B",
-      "price": 118.87,
+      "price": 120.08,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6436,7 +6436,7 @@
     {
       "provider": "SeatGeek",
       "section": "127A",
-      "price": 396.23,
+      "price": 406.88,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6452,7 +6452,7 @@
     {
       "provider": "SeatGeek",
       "section": "432B",
-      "price": 114.13,
+      "price": 120.08,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6468,7 +6468,7 @@
     {
       "provider": "SeatGeek",
       "section": "114A",
-      "price": 364.86,
+      "price": 389.41,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6500,7 +6500,7 @@
     {
       "provider": "SeatGeek",
       "section": "420A",
-      "price": 124.95,
+      "price": 131.14,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6508,7 +6508,7 @@
     {
       "provider": "SeatGeek",
       "section": "407A",
-      "price": 117.54,
+      "price": 132.34,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6516,7 +6516,7 @@
     {
       "provider": "SeatGeek",
       "section": "332A",
-      "price": 120.98,
+      "price": 136.86,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6540,7 +6540,7 @@
     {
       "provider": "SeatGeek",
       "section": "431B",
-      "price": 111.9,
+      "price": 125.01,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6548,7 +6548,7 @@
     {
       "provider": "SeatGeek",
       "section": "227B",
-      "price": 228.23,
+      "price": 254.27,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6572,7 +6572,7 @@
     {
       "provider": "SeatGeek",
       "section": "121A",
-      "price": 644.19,
+      "price": 656.25,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6588,7 +6588,7 @@
     {
       "provider": "SeatGeek",
       "section": "233B",
-      "price": 198.88,
+      "price": 221.51,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6668,7 +6668,7 @@
     {
       "provider": "SeatGeek",
       "section": "232B",
-      "price": 205.14,
+      "price": 228.5,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6684,7 +6684,7 @@
     {
       "provider": "SeatGeek",
       "section": "221A",
-      "price": 710.2,
+      "price": 805.19,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6692,7 +6692,7 @@
     {
       "provider": "SeatGeek",
       "section": "117B",
-      "price": 562.36,
+      "price": 650.14,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6780,7 +6780,7 @@
     {
       "provider": "SeatGeek",
       "section": "220B",
-      "price": 590.08,
+      "price": 784.12,
       "faceValue": null,
       "gamePk": 823498,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-11-2026-bronx-new-york-yankee-stadium/mlb/17691592"
@@ -6788,7 +6788,7 @@
     {
       "provider": "SeatGeek",
       "section": "1",
-      "price": 182.24,
+      "price": 181.68,
       "faceValue": null,
       "gamePk": 823496,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-12-2026-bronx-new-york-yankee-stadium/mlb/17691593"
@@ -8980,7 +8980,7 @@
     {
       "provider": "SeatGeek",
       "section": "419",
-      "price": 74.79,
+      "price": 75.83,
       "faceValue": null,
       "gamePk": 823495,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-13-2026-bronx-new-york-yankee-stadium/mlb/17691594"
@@ -9020,7 +9020,7 @@
     {
       "provider": "SeatGeek",
       "section": "425",
-      "price": 73.82,
+      "price": 74.18,
       "faceValue": null,
       "gamePk": 823495,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-13-2026-bronx-new-york-yankee-stadium/mlb/17691594"
@@ -9028,7 +9028,7 @@
     {
       "provider": "SeatGeek",
       "section": "426",
-      "price": 85.42,
+      "price": 93.28,
       "faceValue": null,
       "gamePk": 823495,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-13-2026-bronx-new-york-yankee-stadium/mlb/17691594"
@@ -9172,7 +9172,7 @@
     {
       "provider": "SeatGeek",
       "section": "434A",
-      "price": 66.88,
+      "price": 75.24,
       "faceValue": null,
       "gamePk": 823495,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-13-2026-bronx-new-york-yankee-stadium/mlb/17691594"
@@ -9612,7 +9612,7 @@
     {
       "provider": "SeatGeek",
       "section": "111",
-      "price": 103.83,
+      "price": 114.22,
       "faceValue": null,
       "gamePk": 823494,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-22-2026-bronx-new-york-yankee-stadium/mlb/17691595"
@@ -9844,7 +9844,7 @@
     {
       "provider": "SeatGeek",
       "section": "209",
-      "price": 36.54,
+      "price": 43.74,
       "faceValue": null,
       "gamePk": 823494,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-22-2026-bronx-new-york-yankee-stadium/mlb/17691595"
@@ -9852,7 +9852,7 @@
     {
       "provider": "SeatGeek",
       "section": "210",
-      "price": 42.89,
+      "price": 45.56,
       "faceValue": null,
       "gamePk": 823494,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-22-2026-bronx-new-york-yankee-stadium/mlb/17691595"
@@ -10164,7 +10164,7 @@
     {
       "provider": "SeatGeek",
       "section": "324",
-      "price": 25.29,
+      "price": 27.6,
       "faceValue": null,
       "gamePk": 823494,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-22-2026-bronx-new-york-yankee-stadium/mlb/17691595"
@@ -10492,7 +10492,7 @@
     {
       "provider": "SeatGeek",
       "section": "232A",
-      "price": 23.77,
+      "price": 24.19,
       "faceValue": null,
       "gamePk": 823494,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-22-2026-bronx-new-york-yankee-stadium/mlb/17691595"
@@ -10508,7 +10508,7 @@
     {
       "provider": "SeatGeek",
       "section": "320C",
-      "price": 96.9,
+      "price": 95.31,
       "faceValue": null,
       "gamePk": 823494,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-22-2026-bronx-new-york-yankee-stadium/mlb/17691595"
@@ -10628,7 +10628,7 @@
     {
       "provider": "SeatGeek",
       "section": "431B",
-      "price": 14.19,
+      "price": 11.73,
       "faceValue": null,
       "gamePk": 823494,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-22-2026-bronx-new-york-yankee-stadium/mlb/17691595"
@@ -10755,14 +10755,6 @@
     },
     {
       "provider": "SeatGeek",
-      "section": "432A",
-      "price": 10.58,
-      "faceValue": null,
-      "gamePk": 823494,
-      "url": "https://seatgeek.com/new-york-yankees-tickets/9-22-2026-bronx-new-york-yankee-stadium/mlb/17691595"
-    },
-    {
-      "provider": "SeatGeek",
       "section": "218B",
       "price": 218.18,
       "faceValue": null,
@@ -10773,6 +10765,14 @@
       "provider": "SeatGeek",
       "section": "218A",
       "price": 531.34,
+      "faceValue": null,
+      "gamePk": 823494,
+      "url": "https://seatgeek.com/new-york-yankees-tickets/9-22-2026-bronx-new-york-yankee-stadium/mlb/17691595"
+    },
+    {
+      "provider": "SeatGeek",
+      "section": "432A",
+      "price": 30.38,
       "faceValue": null,
       "gamePk": 823494,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-22-2026-bronx-new-york-yankee-stadium/mlb/17691595"
@@ -10860,7 +10860,7 @@
     {
       "provider": "SeatGeek",
       "section": "220C",
-      "price": 269,
+      "price": 305.96,
       "faceValue": null,
       "gamePk": 823494,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-22-2026-bronx-new-york-yankee-stadium/mlb/17691595"
@@ -11308,7 +11308,7 @@
     {
       "provider": "SeatGeek",
       "section": "229",
-      "price": 30.24,
+      "price": 31.35,
       "faceValue": null,
       "gamePk": 823492,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-23-2026-bronx-new-york-yankee-stadium/mlb/17691596"
@@ -12324,7 +12324,7 @@
     {
       "provider": "SeatGeek",
       "section": "115",
-      "price": 267.93,
+      "price": 292.69,
       "faceValue": null,
       "gamePk": 823493,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-24-2026-bronx-new-york-yankee-stadium/mlb/17691597"
@@ -12332,7 +12332,7 @@
     {
       "provider": "SeatGeek",
       "section": "116",
-      "price": 280.54,
+      "price": 305.96,
       "faceValue": null,
       "gamePk": 823493,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-24-2026-bronx-new-york-yankee-stadium/mlb/17691597"
@@ -12436,7 +12436,7 @@
     {
       "provider": "SeatGeek",
       "section": "133",
-      "price": 54.44,
+      "price": 56.76,
       "faceValue": null,
       "gamePk": 823493,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-24-2026-bronx-new-york-yankee-stadium/mlb/17691597"
@@ -12444,7 +12444,7 @@
     {
       "provider": "SeatGeek",
       "section": "134",
-      "price": 53.84,
+      "price": 56.76,
       "faceValue": null,
       "gamePk": 823493,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-24-2026-bronx-new-york-yankee-stadium/mlb/17691597"
@@ -12644,7 +12644,7 @@
     {
       "provider": "SeatGeek",
       "section": "231",
-      "price": 40.73,
+      "price": 41.55,
       "faceValue": null,
       "gamePk": 823493,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-24-2026-bronx-new-york-yankee-stadium/mlb/17691597"
@@ -12868,7 +12868,7 @@
     {
       "provider": "SeatGeek",
       "section": "329",
-      "price": 22.93,
+      "price": 22.88,
       "faceValue": null,
       "gamePk": 823493,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-24-2026-bronx-new-york-yankee-stadium/mlb/17691597"
@@ -13004,7 +13004,7 @@
     {
       "provider": "SeatGeek",
       "section": "418",
-      "price": 13.48,
+      "price": 12.78,
       "faceValue": null,
       "gamePk": 823493,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-24-2026-bronx-new-york-yankee-stadium/mlb/17691597"
@@ -13012,7 +13012,7 @@
     {
       "provider": "SeatGeek",
       "section": "419",
-      "price": 12.95,
+      "price": 12.83,
       "faceValue": null,
       "gamePk": 823493,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-24-2026-bronx-new-york-yankee-stadium/mlb/17691597"
@@ -13164,7 +13164,7 @@
     {
       "provider": "SeatGeek",
       "section": "232A",
-      "price": 30.87,
+      "price": 31.45,
       "faceValue": null,
       "gamePk": 823493,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-24-2026-bronx-new-york-yankee-stadium/mlb/17691597"
@@ -13196,7 +13196,7 @@
     {
       "provider": "SeatGeek",
       "section": "320C",
-      "price": 114.01,
+      "price": 112.94,
       "faceValue": null,
       "gamePk": 823493,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-24-2026-bronx-new-york-yankee-stadium/mlb/17691597"
@@ -13556,7 +13556,7 @@
     {
       "provider": "SeatGeek",
       "section": "114",
-      "price": 221.89,
+      "price": 212.75,
       "faceValue": null,
       "gamePk": 823491,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-25-2026-bronx-new-york-yankee-stadium/mlb/17691598"
@@ -13852,7 +13852,7 @@
     {
       "provider": "SeatGeek",
       "section": "226",
-      "price": 133.96,
+      "price": 119.91,
       "faceValue": null,
       "gamePk": 823491,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-25-2026-bronx-new-york-yankee-stadium/mlb/17691598"
@@ -14988,7 +14988,7 @@
     {
       "provider": "SeatGeek",
       "section": "133",
-      "price": 113.97,
+      "price": 117.4,
       "faceValue": null,
       "gamePk": 823489,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-26-2026-bronx-new-york-yankee-stadium/mlb/17691599"
@@ -14996,7 +14996,7 @@
     {
       "provider": "SeatGeek",
       "section": "134",
-      "price": 119.44,
+      "price": 120.63,
       "faceValue": null,
       "gamePk": 823489,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-26-2026-bronx-new-york-yankee-stadium/mlb/17691599"
@@ -15372,7 +15372,7 @@
     {
       "provider": "SeatGeek",
       "section": "319",
-      "price": 161.58,
+      "price": 160.09,
       "faceValue": null,
       "gamePk": 823489,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-26-2026-bronx-new-york-yankee-stadium/mlb/17691599"
@@ -15907,6 +15907,14 @@
     },
     {
       "provider": "SeatGeek",
+      "section": "232B",
+      "price": 153.98,
+      "faceValue": null,
+      "gamePk": 823489,
+      "url": "https://seatgeek.com/new-york-yankees-tickets/9-26-2026-bronx-new-york-yankee-stadium/mlb/17691599"
+    },
+    {
+      "provider": "SeatGeek",
       "section": "026",
       "price": 1071,
       "faceValue": null,
@@ -15997,14 +16005,6 @@
       "provider": "SeatGeek",
       "section": "121B",
       "price": 559.02,
-      "faceValue": null,
-      "gamePk": 823489,
-      "url": "https://seatgeek.com/new-york-yankees-tickets/9-26-2026-bronx-new-york-yankee-stadium/mlb/17691599"
-    },
-    {
-      "provider": "SeatGeek",
-      "section": "232B",
-      "price": 157.53,
       "faceValue": null,
       "gamePk": 823489,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-26-2026-bronx-new-york-yankee-stadium/mlb/17691599"
@@ -16444,7 +16444,7 @@
     {
       "provider": "SeatGeek",
       "section": "211",
-      "price": 66.14,
+      "price": 65.61,
       "faceValue": null,
       "gamePk": 823490,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-27-2026-bronx-new-york-yankee-stadium/mlb/17691600"
@@ -16580,7 +16580,7 @@
     {
       "provider": "SeatGeek",
       "section": "237",
-      "price": 27.38,
+      "price": 26.14,
       "faceValue": null,
       "gamePk": 823490,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-27-2026-bronx-new-york-yankee-stadium/mlb/17691600"
@@ -16588,7 +16588,7 @@
     {
       "provider": "SeatGeek",
       "section": "238",
-      "price": 29.67,
+      "price": 28.31,
       "faceValue": null,
       "gamePk": 823490,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-27-2026-bronx-new-york-yankee-stadium/mlb/17691600"
@@ -16780,7 +16780,7 @@
     {
       "provider": "SeatGeek",
       "section": "329",
-      "price": 30.77,
+      "price": 31.41,
       "faceValue": null,
       "gamePk": 823490,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-27-2026-bronx-new-york-yankee-stadium/mlb/17691600"
@@ -16932,7 +16932,7 @@
     {
       "provider": "SeatGeek",
       "section": "421",
-      "price": 29.52,
+      "price": 27.35,
       "faceValue": null,
       "gamePk": 823490,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-27-2026-bronx-new-york-yankee-stadium/mlb/17691600"
@@ -17092,7 +17092,7 @@
     {
       "provider": "SeatGeek",
       "section": "420A",
-      "price": 32.86,
+      "price": 33.88,
       "faceValue": null,
       "gamePk": 823490,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-27-2026-bronx-new-york-yankee-stadium/mlb/17691600"
@@ -17212,7 +17212,7 @@
     {
       "provider": "SeatGeek",
       "section": "420C",
-      "price": 32.86,
+      "price": 33.14,
       "faceValue": null,
       "gamePk": 823490,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-27-2026-bronx-new-york-yankee-stadium/mlb/17691600"
@@ -17236,7 +17236,7 @@
     {
       "provider": "SeatGeek",
       "section": "114A",
-      "price": 173.67,
+      "price": 179.55,
       "faceValue": null,
       "gamePk": 823490,
       "url": "https://seatgeek.com/new-york-yankees-tickets/9-27-2026-bronx-new-york-yankee-stadium/mlb/17691600"
