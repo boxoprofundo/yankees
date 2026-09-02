@@ -47,11 +47,19 @@
     "420C", "420B", "420A",                      // Grandstand (400s)
   ]);
 
+  // Sections just outside the 15–25 infield window that are still infield in
+  // practice — an explicit override (exact codes, so 114A stays outfield while
+  // 114B is infield).
+  const INFIELD_EXTRA = new Set([
+    "126", "114B", "226", "214B", "314", "414", "326", "426",
+  ]);
+
   // Infield vs Outfield from the section's position within its level: the last
   // two digits 15–25 sit around the infield / behind the plate; everything else
   // is down the lines toward the outfield. Applies to any numbered section.
   function locationFor(code, num) {
     if (HOME_PLATE.has(code)) return "Home Plate";
+    if (INFIELD_EXTRA.has(code)) return "Infield";
     if (num == null) return null;
     const d = num % 100;
     return (d >= 15 && d <= 25) ? "Infield" : "Outfield";
