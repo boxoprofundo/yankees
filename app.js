@@ -815,61 +815,65 @@
   function buildFilterBar() {
     const bar = $("#section-filters");
     if (!bar) return;
-    // Close the Level dropdown on an outside click — wired once.
+    // Close any open filter dropdown on an outside click — wired once.
     if (!buildFilterBar._wired) {
       buildFilterBar._wired = true;
-      document.addEventListener("click", () => { const m = $("#flevel-menu"); if (m) m.hidden = true; });
+      document.addEventListener("click", () =>
+        bar.querySelectorAll(".fmenu").forEach((m) => (m.hidden = true)));
     }
     const rows = state.sectionRows || [];
     if (!rows.length) { bar.hidden = true; return; }
     const order = (window.Sections && window.Sections.LEVEL_ORDER) || {};
     const levels = [...new Set(rows.map((r) => r.level).filter(Boolean))]
       .sort((a, b) => ((order[a] ?? 99) - (order[b] ?? 99)));
-    const LOC_ABBR = { "Home Plate": "HP", "Infield": "IF", "Outfield": "OF" };
     const locs = ["Home Plate", "Infield", "Outfield"].filter((l) => rows.some((r) => r.location === l));
     const f = state.filters;
-    const chip = (val, label, group, sel) =>
-      `<button type="button" class="fchip${sel ? " on" : ""}" data-fgroup="${group}" data-fval="${val}">${label}</button>`;
+    const setFor = (id) => (id === "level" ? f.levels : f.locs);
+    const baseLabel = (id) => (id === "level" ? "Level" : "IF/OF");
+
+    // A checkbox-dropdown filter: a button that expands a checkbox list; the
+    // button shows a count and highlights when anything is selected.
+    const dropdown = (id, opts) => {
+      const set = setFor(id), n = set.size;
+      return `<span class="fgroup fdrop">` +
+        `<button type="button" class="fbtn${n ? " on" : ""}" data-drop="${id}">${baseLabel(id)}${n ? ` (${n})` : ""} ▾</button>` +
+        `<div class="fmenu" data-menu="${id}" hidden>` +
+          opts.map((l) =>
+            `<label class="fopt"><input type="checkbox" data-drop="${id}" data-fval="${l}"${set.has(l) ? " checked" : ""}> ${l}</label>`).join("") +
+        `</div></span>`;
+    };
     const rangeGroup = (label, minId, maxId, minV, maxV) =>
       `<span class="fgroup"><span class="flabel">${label}</span>` +
         `<input type="number" id="${minId}" class="fnum" min="0" placeholder="min" value="${minV != null ? minV : ""}">` +
         `<span class="fdash">–</span>` +
         `<input type="number" id="${maxId}" class="fnum" min="0" placeholder="max" value="${maxV != null ? maxV : ""}"></span>`;
-    const lvlLabel = f.levels.size ? `Level (${f.levels.size}) ▾` : "Level ▾";
+
     bar.innerHTML =
-      `<span class="fgroup fdrop">` +
-        `<button type="button" id="flevel-btn" class="fbtn${f.levels.size ? " on" : ""}">${lvlLabel}</button>` +
-        `<div id="flevel-menu" class="fmenu" hidden>` +
-          levels.map((l) =>
-            `<label class="fopt"><input type="checkbox" data-fval="${l}"${f.levels.has(l) ? " checked" : ""}> ${l}</label>`).join("") +
-        `</div>` +
-      `</span>` +
-      `<span class="fgroup"><span class="flabel">IF/OF</span>` +
-        locs.map((l) => chip(l, LOC_ABBR[l], "loc", f.locs.has(l))).join("") + `</span>` +
+      dropdown("level", levels) +
+      dropdown("loc", locs) +
       rangeGroup("Rank", "frmin", "frmax", f.minRank, f.maxRank) +
       rangeGroup("Price/ea.", "fmin", "fmax", f.minPrice, f.maxPrice) +
       `<button type="button" id="fclear" class="fclear">Clear</button>`;
     bar.hidden = false;
 
-    // Level dropdown.
-    const lbtn = $("#flevel-btn"), lmenu = $("#flevel-menu");
-    lbtn.addEventListener("click", (e) => { e.stopPropagation(); lmenu.hidden = !lmenu.hidden; });
-    lmenu.addEventListener("click", (e) => e.stopPropagation());
-    lmenu.querySelectorAll("input[type=checkbox]").forEach((cb) =>
-      cb.addEventListener("change", () => {
-        const v = cb.dataset.fval;
-        if (cb.checked) f.levels.add(v); else f.levels.delete(v);
-        lbtn.textContent = (f.levels.size ? `Level (${f.levels.size}) ▾` : "Level ▾");
-        lbtn.classList.toggle("on", f.levels.size > 0);
-        sortAndPaintSections();
+    // Dropdown buttons: open one, closing any other.
+    bar.querySelectorAll(".fbtn[data-drop]").forEach((btn) =>
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const menu = bar.querySelector(`.fmenu[data-menu="${btn.dataset.drop}"]`);
+        const show = menu.hidden;
+        bar.querySelectorAll(".fmenu").forEach((m) => (m.hidden = true));
+        menu.hidden = !show;
       })
     );
-
-    bar.querySelectorAll(".fchip").forEach((b) =>
-      b.addEventListener("click", () => {
-        const v = b.dataset.fval;
-        if (f.locs.has(v)) f.locs.delete(v); else f.locs.add(v);
-        b.classList.toggle("on");
+    bar.querySelectorAll(".fmenu").forEach((m) => m.addEventListener("click", (e) => e.stopPropagation()));
+    bar.querySelectorAll(".fmenu input[type=checkbox]").forEach((cb) =>
+      cb.addEventListener("change", () => {
+        const id = cb.dataset.drop, set = setFor(id);
+        if (cb.checked) set.add(cb.dataset.fval); else set.delete(cb.dataset.fval);
+        const btn = bar.querySelector(`.fbtn[data-drop="${id}"]`);
+        btn.textContent = `${baseLabel(id)}${set.size ? ` (${set.size})` : ""} ▾`;
+        btn.classList.toggle("on", set.size > 0);
         sortAndPaintSections();
       })
     );
