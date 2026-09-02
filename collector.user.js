@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.9.2
+// @version      3.10.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -47,6 +47,8 @@
   "use strict";
 
   const PAGES_REPO = "boxoprofundo/yankees";
+  const SCRAPER_REPO = "boxoprofundo/ticket-scraper";   // cloud scrape (Gametime/XP/Vivid)
+  const SCRAPE_WORKFLOW = "yankees-scrape.yml";
   const JOB_TTL = 30 * 60000;
 
   // Per-tab network captures (shared between the hook and the worker, which run
@@ -1235,6 +1237,27 @@
   function safeJson(t) { try { return JSON.parse(t); } catch { return null; } }
   function b64(str) { return btoa(unescape(encodeURIComponent(str))); }
 
+  // Kick off the cloud scrape (Gametime, XP, Vivid Seats) in GitHub Actions.
+  // Those sites aren't bot-blocked, so a headless cloud run handles them; the
+  // browser collector handles the four that are. Returns fast — the run then
+  // publishes on its own in a few minutes. The Refresh button already fires
+  // this via the app; auto-collect calls it so all seven stay fresh unattended.
+  async function dispatchCloud() {
+    const token = settings().ghToken;
+    if (!token) return false;
+    const qty = qtyNow();
+    return new Promise((resolve) => {
+      GM_xmlhttpRequest({
+        method: "POST",
+        url: `https://api.github.com/repos/${SCRAPER_REPO}/actions/workflows/${SCRAPE_WORKFLOW}/dispatches`,
+        headers: { Authorization: "Bearer " + token, Accept: "application/vnd.github+json" },
+        data: JSON.stringify({ ref: "main", inputs: { qty: String(qty) } }),
+        onload: (r) => resolve(r.status === 204),
+        onerror: () => resolve(false),
+      });
+    });
+  }
+
   async function putFile(path, obj, message) {
     let sha;
     const cur = await ghApi("GET", path + "?ref=main");
@@ -1654,6 +1677,7 @@
     if (Date.now() - last < wait) return;            // too soon
     GM_setValue(AUTORUN_LAST, Date.now());           // debounce reloads/other tabs
     console.log(`[collector] auto-collect (${reason})`);
+    dispatchCloud();                                 // Gametime/XP/Vivid in GitHub Actions
     const res = await runAll();
     if (!res) { GM_setValue(AUTORUN_LAST, Date.now()); return; }
     // Adapt spacing: a dry run (everything blocked/empty) backs off; a
