@@ -304,6 +304,18 @@ th[data-sort]:hover, th[data-gsort]:hover { text-decoration: underline; }
 .fchip.on { background: var(--navy, #16324f); color: #fff; border-color: var(--navy, #16324f); }
 .fnum { width: 4.2rem; font-size: .8rem; padding: .18rem .35rem; border: 1px solid var(--line, #ccc);
   border-radius: 6px; }
+.fdrop { position: relative; }
+.fbtn { font-size: .8rem; padding: .18rem .6rem; border: 1px solid var(--line, #ccc); border-radius: 6px;
+  background: #fff; color: var(--navy, #16324f); cursor: pointer; line-height: 1.4; }
+.fbtn:hover { border-color: var(--navy-soft, #6b8bb0); }
+.fbtn.on { background: var(--navy, #16324f); color: #fff; border-color: var(--navy, #16324f); }
+.fmenu { position: absolute; top: calc(100% + 4px); left: 0; z-index: 20; min-width: 9rem;
+  background: #fff; border: 1px solid var(--line, #ccc); border-radius: 8px; padding: .35rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,.18); }
+.fopt { display: flex; align-items: center; gap: .4rem; font-size: .82rem; padding: .22rem .4rem;
+  border-radius: 5px; cursor: pointer; white-space: nowrap; color: var(--navy, #16324f); }
+.fopt:hover { background: #eef2f7; }
+.fopt input { margin: 0; }
 .filters .fdash { color: var(--muted); }
 .fclear { font-size: .78rem; padding: .18rem .55rem; border: 1px solid transparent; border-radius: 6px;
   background: none; color: var(--navy-soft, #6b8bb0); cursor: pointer; text-decoration: underline; }

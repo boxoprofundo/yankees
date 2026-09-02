@@ -35,7 +35,7 @@
     gameCtx: null,
     lastQty: 2,
     // Section-table filters (empty = show all). Persist across re-searches.
-    filters: { levels: new Set(), locs: new Set(), minPrice: null, maxPrice: null },
+    filters: { levels: new Set(), locs: new Set(), minPrice: null, maxPrice: null, minRank: null, maxRank: null },
   };
 
   /* ------------------------------ settings ------------------------------ */
@@ -803,6 +803,8 @@
     const f = state.filters;
     if (f.levels.size && !f.levels.has(r.level)) return false;
     if (f.locs.size && !f.locs.has(r.location)) return false;
+    if (f.minRank != null && !(r.rank >= f.minRank)) return false;
+    if (f.maxRank != null && !(r.rank <= f.maxRank)) return false;
     if (f.minPrice != null && (r.price == null || r.price < f.minPrice)) return false;
     if (f.maxPrice != null && (r.price == null || r.price > f.maxPrice)) return false;
     return true;
@@ -813,6 +815,11 @@
   function buildFilterBar() {
     const bar = $("#section-filters");
     if (!bar) return;
+    // Close the Level dropdown on an outside click — wired once.
+    if (!buildFilterBar._wired) {
+      buildFilterBar._wired = true;
+      document.addEventListener("click", () => { const m = $("#flevel-menu"); if (m) m.hidden = true; });
+    }
     const rows = state.sectionRows || [];
     if (!rows.length) { bar.hidden = true; return; }
     const order = (window.Sections && window.Sections.LEVEL_ORDER) || {};
@@ -823,23 +830,45 @@
     const f = state.filters;
     const chip = (val, label, group, sel) =>
       `<button type="button" class="fchip${sel ? " on" : ""}" data-fgroup="${group}" data-fval="${val}">${label}</button>`;
+    const rangeGroup = (label, minId, maxId, minV, maxV) =>
+      `<span class="fgroup"><span class="flabel">${label}</span>` +
+        `<input type="number" id="${minId}" class="fnum" min="0" placeholder="min" value="${minV != null ? minV : ""}">` +
+        `<span class="fdash">–</span>` +
+        `<input type="number" id="${maxId}" class="fnum" min="0" placeholder="max" value="${maxV != null ? maxV : ""}"></span>`;
+    const lvlLabel = f.levels.size ? `Level (${f.levels.size}) ▾` : "Level ▾";
     bar.innerHTML =
-      `<span class="fgroup"><span class="flabel">Level</span>` +
-        levels.map((l) => chip(l, l, "level", f.levels.has(l))).join("") + `</span>` +
+      `<span class="fgroup fdrop">` +
+        `<button type="button" id="flevel-btn" class="fbtn${f.levels.size ? " on" : ""}">${lvlLabel}</button>` +
+        `<div id="flevel-menu" class="fmenu" hidden>` +
+          levels.map((l) =>
+            `<label class="fopt"><input type="checkbox" data-fval="${l}"${f.levels.has(l) ? " checked" : ""}> ${l}</label>`).join("") +
+        `</div>` +
+      `</span>` +
       `<span class="fgroup"><span class="flabel">IF/OF</span>` +
         locs.map((l) => chip(l, LOC_ABBR[l], "loc", f.locs.has(l))).join("") + `</span>` +
-      `<span class="fgroup"><span class="flabel">Price/ea.</span>` +
-        `<input type="number" id="fmin" class="fnum" min="0" placeholder="min" value="${f.minPrice != null ? f.minPrice : ""}">` +
-        `<span class="fdash">–</span>` +
-        `<input type="number" id="fmax" class="fnum" min="0" placeholder="max" value="${f.maxPrice != null ? f.maxPrice : ""}"></span>` +
+      rangeGroup("Rank", "frmin", "frmax", f.minRank, f.maxRank) +
+      rangeGroup("Price/ea.", "fmin", "fmax", f.minPrice, f.maxPrice) +
       `<button type="button" id="fclear" class="fclear">Clear</button>`;
     bar.hidden = false;
 
+    // Level dropdown.
+    const lbtn = $("#flevel-btn"), lmenu = $("#flevel-menu");
+    lbtn.addEventListener("click", (e) => { e.stopPropagation(); lmenu.hidden = !lmenu.hidden; });
+    lmenu.addEventListener("click", (e) => e.stopPropagation());
+    lmenu.querySelectorAll("input[type=checkbox]").forEach((cb) =>
+      cb.addEventListener("change", () => {
+        const v = cb.dataset.fval;
+        if (cb.checked) f.levels.add(v); else f.levels.delete(v);
+        lbtn.textContent = (f.levels.size ? `Level (${f.levels.size}) ▾` : "Level ▾");
+        lbtn.classList.toggle("on", f.levels.size > 0);
+        sortAndPaintSections();
+      })
+    );
+
     bar.querySelectorAll(".fchip").forEach((b) =>
       b.addEventListener("click", () => {
-        const set = b.dataset.fgroup === "level" ? f.levels : f.locs;
         const v = b.dataset.fval;
-        if (set.has(v)) set.delete(v); else set.add(v);
+        if (f.locs.has(v)) f.locs.delete(v); else f.locs.add(v);
         b.classList.toggle("on");
         sortAndPaintSections();
       })
@@ -852,11 +881,11 @@
         sortAndPaintSections();
       });
     };
-    wireNum("fmin", "minPrice");
-    wireNum("fmax", "maxPrice");
+    wireNum("frmin", "minRank"); wireNum("frmax", "maxRank");
+    wireNum("fmin", "minPrice"); wireNum("fmax", "maxPrice");
     const clr = $("#fclear");
     if (clr) clr.addEventListener("click", () => {
-      state.filters = { levels: new Set(), locs: new Set(), minPrice: null, maxPrice: null };
+      state.filters = { levels: new Set(), locs: new Set(), minPrice: null, maxPrice: null, minRank: null, maxRank: null };
       buildFilterBar();
       sortAndPaintSections();
     });
