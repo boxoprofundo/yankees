@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.9.1
+// @version      3.9.2
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -13,7 +13,6 @@
 // @match        https://www.seatgeek.com/*
 // @match        https://www.ticketmaster.com/*
 // @match        https://www.tickpick.com/*
-// @match        https://mapsapi.tmol.io/*
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_deleteValue
@@ -296,39 +295,8 @@
   const onSeatGeek = host.includes("seatgeek.com");
   const onTicketmaster = host.includes("ticketmaster.com");
   const onTickpick = host.includes("tickpick.com");
-  const onTmol = host.includes("tmol.io");   // Ticketmaster's map iframe host
   const onAggregator = host.includes("boxoprofundo.github.io") || host.includes("mikeboxer.com");
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
-  /* ════════════════════ Ticketmaster map-iframe capture ══════════════════════
-     TM's seat map renders in a mapsapi.tmol.io iframe that fetches the seat-map
-     MANIFEST (every section + its price level) — invisible to the main-frame
-     hook. Run inside that iframe, hook its fetch/XHR, and stash any
-     section/price-level JSON in shared GM storage for the main TM worker to
-     read. Joined with the offers (price level → faceValue), this yields an
-     official face for EVERY section, Legends included. */
-  if (onTmol) {
-    try {
-      const w = (function () { try { return (typeof unsafeWindow !== "undefined") ? unsafeWindow : window; } catch (e) { return window; } })();
-      if (w && !w.__ykMapHooked) {
-        w.__ykMapHooked = 1;
-        const push = (url, text) => {
-          try {
-            if (!text || text.length < 60) return;
-            if (!/priceLevel|segment|"section|sectionName|placeDetail|manifest|"pl"/i.test(text.slice(0, 4000))) return;
-            const cur = GM_getValue("yk_tm_mapcap", []);
-            cur.push({ url: String(url || "").split("?")[0], body: text.slice(0, 300000) });
-            GM_setValue("yk_tm_mapcap", cur.slice(-10));
-          } catch (e) {}
-        };
-        const of = w.fetch;
-        if (of) w.fetch = function () { const a = arguments; return of.apply(this, a).then((r) => { try { r.clone().text().then((t) => push(r.url || a[0], t)); } catch (e) {} return r; }); };
-        const XP = w.XMLHttpRequest && w.XMLHttpRequest.prototype;
-        if (XP) { const XO = XP.open, XS = XP.send; XP.open = function (m, u) { this.__ykMU = u; return XO.apply(this, arguments); }; XP.send = function () { const x = this; this.addEventListener("load", function () { try { push(x.__ykMU, x.responseText); } catch (e) {} }); return XS.apply(this, arguments); }; }
-      }
-    } catch (e) {}
-    return;
-  }
 
   /* ════════════════════════ Ticketmaster worker ══════════════════════════ */
   if (onTicketmaster) {
@@ -353,14 +321,10 @@
     const sink = (url, text) => {
       try {
         const u = String(url || "");
-        // services.ticketmaster.com = ISM DS facets/quickpicks (price + face,
-        // for AVAILABLE sections). mapsapi.tmol.io = the seat-map MANIFEST,
-        // which lists EVERY section with its price level — the piece that lets
-        // us apply an official face to sold-out sections too.
-        if (!/services\.ticketmaster\.com|mapsapi\.tmol\.io|tmol\.io/.test(u)) return;
+        if (!/services\.ticketmaster\.com/.test(u)) return;   // ISM DS facets/quickpicks
         TM_CAP_URLS.push(u.split("?")[0]);
         if (!text || text.length < 40) return;
-        if (!/ismds|quickpicks|facets|manifest|segment|priceLevel|"price|faceValue|listPrice|offer|section/i.test(u + text)) return;
+        if (!/ismds|quickpicks|facets|"price|faceValue|listPrice|offer/i.test(u + text)) return;
         TM_CAPTURES.push({ url: u, body: text.slice(0, 4000000) });
       } catch (e) {}
     };
@@ -481,7 +445,6 @@
     }
   }
   async function ticketmasterWorkerInner(eid) {
-    GM_setValue("yk_tm_mapcap", []);   // clear before the map iframe repopulates it
     // We run at document-start; wait for the DOM before touching it.
     for (let i = 0; i < 100 && !document.body; i++) await sleep(50);
     // Dismiss cookie/consent popups that can cover the listings.
@@ -493,11 +456,6 @@
     }
     // Nudge the seat list to render / lazy-load.
     for (let r = 0; r < 6; r++) { window.scrollBy(0, 1400); await sleep(700); }
-    // Scroll back to the seat map (top of the page) and give it a moment to
-    // fetch its manifest (mapsapi.tmol.io), which lists every section's price
-    // level — needed to apply an official face to sold-out sections too.
-    try { window.scrollTo(0, 0); } catch (e) {}
-    await sleep(2500);
     const body = document.body ? document.body.innerText : "";
     const job = GM_getValue("yk_tm_job", null);
     const gamePk = (job && job.eidToPk && job.eidToPk[eid]) || null;
@@ -532,26 +490,6 @@
       .sort((a, b) => b.n - a.n)
       .slice(0, 2)
       .map((x) => ({ url: x.c.url.split("?")[0], faces: x.n, body: x.c.body.slice(0, 1500) }));
-    // Seat-map manifest candidates (section → price level), so an all-sections
-    // face parser can be built. Prefer what the map iframe captured (mapsapi),
-    // falling back to any main-frame body carrying priceLevel + section ids.
-    // Give the iframe a moment to load its manifest first.
-    await sleep(1500);
-    const mapCaps = (GM_getValue("yk_tm_mapcap", []) || []).map((c) => ({ c, src: "iframe" }));
-    const mainCaps = TM_CAPTURES
-      .filter((c) => /tmol\.io/.test(c.url) ||
-        (/priceLevel/i.test(c.body) && /"(?:section|sectionName|segment|name)"/i.test(c.body)))
-      .map((c) => ({ c, src: "main" }));
-    const rawMap = mapCaps.concat(mainCaps)
-      .sort((a, b) => b.c.body.length - a.c.body.length)
-      .slice(0, 3)
-      .map((x) => ({ src: x.src, url: (x.c.url || "").split("?")[0], bytes: x.c.body.length, body: x.c.body.slice(0, 4000) }));
-    const mapUrls = [...new Set((GM_getValue("yk_tm_mapcap", []) || []).map((c) => (c.url || "").split("?")[0]))];
-    // What iframes/map hosts exist on the page — reveals where the seat-map
-    // manifest actually lives so the capture can be re-targeted.
-    let frames = [];
-    try { frames = [...document.querySelectorAll("iframe")].map((f) => (f.src || f.getAttribute("data-src") || "").split("?")[0]).filter(Boolean).slice(0, 12); } catch (e) {}
-    const mapish = [...new Set([...TM_CAP_URLS].concat((body.match(/https?:\/\/[a-z0-9.-]*(?:tmol|tmimg|maps|tmaps|mapsapi)[a-z0-9.\-\/]*/gi) || [])))].filter((u) => /map|tmol|tmimg/i.test(u)).slice(0, 12);
     const diag = {
       title: (document.title || "").slice(0, 120),
       blocked: /paused|denied|robot|captcha|access to this page/i.test(body.slice(0, 400)),
@@ -559,13 +497,9 @@
       sectionRows: secText,
       faceMentions: faceCtx,
       ismdsUrls: [...new Set(TM_CAP_URLS)].slice(0, 20),
-      mapUrls,
-      frames,
-      mapish,
       faces: faceMap,
       captures,
       rawFace,
-      rawMap,
     };
     console.log(`[collector/TM] event ${eid}: ${quotes.length} sections`, diag);
     GM_setValue("yk_tm_result_" + eid, { ts: Date.now(), quotes, diag });
