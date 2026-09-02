@@ -34,6 +34,8 @@
     gameSort: { key: "date", asc: true }, // per-game table sort
     gameCtx: null,
     lastQty: 2,
+    // Section-table filters (empty = show all). Persist across re-searches.
+    filters: { levels: new Set(), locs: new Set(), minPrice: null, maxPrice: null },
   };
 
   /* ------------------------------ settings ------------------------------ */
@@ -712,6 +714,7 @@
       `Block of ${qty} ticket${qty > 1 ? "s" : ""}, ` +
       (allInScope ? `across all ${games.length} remaining game${games.length > 1 ? "s" : ""}`
                   : `across ${gs} selected`);
+    buildFilterBar();
     sortAndPaintSections();
     wrap.hidden = false;
   }
@@ -793,8 +796,74 @@
     return asc ? c : -c;
   }
 
+  // Does a section row pass the active filters? Level/location filters only
+  // apply when something is selected; a price filter also hides no-block rows
+  // (they have no price to compare).
+  function passesFilter(r) {
+    const f = state.filters;
+    if (f.levels.size && !f.levels.has(r.level)) return false;
+    if (f.locs.size && !f.locs.has(r.location)) return false;
+    if (f.minPrice != null && (r.price == null || r.price < f.minPrice)) return false;
+    if (f.maxPrice != null && (r.price == null || r.price > f.maxPrice)) return false;
+    return true;
+  }
+
+  // Build the filter bar from the levels/locations present, preserving current
+  // selections. Chips toggle a value; the price inputs bound the price column.
+  function buildFilterBar() {
+    const bar = $("#section-filters");
+    if (!bar) return;
+    const rows = state.sectionRows || [];
+    if (!rows.length) { bar.hidden = true; return; }
+    const order = (window.Sections && window.Sections.LEVEL_ORDER) || {};
+    const levels = [...new Set(rows.map((r) => r.level).filter(Boolean))]
+      .sort((a, b) => ((order[a] ?? 99) - (order[b] ?? 99)));
+    const LOC_ABBR = { "Home Plate": "HP", "Infield": "IF", "Outfield": "OF" };
+    const locs = ["Home Plate", "Infield", "Outfield"].filter((l) => rows.some((r) => r.location === l));
+    const f = state.filters;
+    const chip = (val, label, group, sel) =>
+      `<button type="button" class="fchip${sel ? " on" : ""}" data-fgroup="${group}" data-fval="${val}">${label}</button>`;
+    bar.innerHTML =
+      `<span class="fgroup"><span class="flabel">Level</span>` +
+        levels.map((l) => chip(l, l, "level", f.levels.has(l))).join("") + `</span>` +
+      `<span class="fgroup"><span class="flabel">IF/OF</span>` +
+        locs.map((l) => chip(l, LOC_ABBR[l], "loc", f.locs.has(l))).join("") + `</span>` +
+      `<span class="fgroup"><span class="flabel">Price/ea.</span>` +
+        `<input type="number" id="fmin" class="fnum" min="0" placeholder="min" value="${f.minPrice != null ? f.minPrice : ""}">` +
+        `<span class="fdash">–</span>` +
+        `<input type="number" id="fmax" class="fnum" min="0" placeholder="max" value="${f.maxPrice != null ? f.maxPrice : ""}"></span>` +
+      `<button type="button" id="fclear" class="fclear">Clear</button>`;
+    bar.hidden = false;
+
+    bar.querySelectorAll(".fchip").forEach((b) =>
+      b.addEventListener("click", () => {
+        const set = b.dataset.fgroup === "level" ? f.levels : f.locs;
+        const v = b.dataset.fval;
+        if (set.has(v)) set.delete(v); else set.add(v);
+        b.classList.toggle("on");
+        sortAndPaintSections();
+      })
+    );
+    const wireNum = (id, key) => {
+      const el = $("#" + id);
+      if (el) el.addEventListener("input", () => {
+        const v = parseFloat(el.value);
+        f[key] = isFinite(v) ? v : null;
+        sortAndPaintSections();
+      });
+    };
+    wireNum("fmin", "minPrice");
+    wireNum("fmax", "maxPrice");
+    const clr = $("#fclear");
+    if (clr) clr.addEventListener("click", () => {
+      state.filters = { levels: new Set(), locs: new Set(), minPrice: null, maxPrice: null };
+      buildFilterBar();
+      sortAndPaintSections();
+    });
+  }
+
   function sortAndPaintSections() {
-    const rows = [...state.sectionRows];
+    const rows = state.sectionRows.filter(passesFilter);
 
     // Walk the sort keys most-significant first; the first that separates the
     // two rows wins, so earlier sorts act as tiebreakers for later ones.
@@ -820,11 +889,6 @@
     tbody.innerHTML = "";
     for (const r of rows) {
       const tr = document.createElement("tr");
-
-      const sgCell =
-        `<td class="link-cell"><a href="${r.seatgeek}" target="_blank" rel="noopener" ` +
-        `title="Opens this game on SeatGeek; then pick section ${r.display} on the seat map">` +
-        `§<span class="sec-code">${r.display}</span> ↗</a></td>`;
 
       // Cap the code so a rare long non-numeric code (e.g. "TERRACEDUGOUT3")
       // can't widen the whole column; the full value stays available on hover.
@@ -858,8 +922,7 @@
           sectionCell +
           levelCell +
           locCell +
-          `<td class="na noblock" colspan="6"></td>` +
-          sgCell;
+          `<td class="na noblock" colspan="6"></td>`;
       } else {
         // The arrow alone carries the up/down colour; the price value itself is
         // painted on a green→red gradient (cheapest green, priciest red).
@@ -885,8 +948,7 @@
           `<td>${r.opponent}</td>` +
           `<td>${r.url
             ? `<a href="${r.url}" target="_blank" rel="noopener">${r.provider} ↗</a>`
-            : r.provider}</td>` +
-          sgCell;
+            : r.provider}</td>`;
       }
       tbody.appendChild(tr);
     }
