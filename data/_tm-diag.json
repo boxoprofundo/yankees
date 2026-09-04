@@ -1,7 +1,173 @@
 {
-  "fetchedAt": "2026-09-04T17:25:52.314Z",
+  "fetchedAt": "2026-09-04T18:10:06.810Z",
   "games": 13,
   "sampleEvent": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-08-2026/event/1D006323F5924378",
-  "totalQuotes": 79,
-  "diag": "no result (event tab produced nothing)"
+  "totalQuotes": 157,
+  "diag": {
+    "title": "New York Yankees vs. Colorado Rockies Tickets Sep 08, 2026 Bronx, NY | Ticketmaster",
+    "blocked": false,
+    "bodyLen": 8172,
+    "sectionRows": [
+      "Sec 234S • Row 21S\nStandard Ticket\n$84",
+      "Sec 228S • Row 21S\nStandard Ticket\n$96",
+      "Sec 229S • Row 21S\nStandard Ticket\n$96",
+      "Sec 211S • Row 21S\nStandard Ticket\n$96",
+      "Sec 231S • Row 21S\nStandard Ticket\n$96",
+      "Sec 209S • Row 21S\nStandard Ticket\n$96",
+      "Sec 206S • Row 21S\nStandard Ticket\n$96",
+      "Sec 205S • Row 21S\nStandard Ticket\n$96"
+    ],
+    "faceMentions": [],
+    "ismdsUrls": [
+      "https://services.ticketmaster.com/api/ismds/event/1D006323F5924378/facets",
+      "https://services.ticketmaster.com/api/ismds/event/1D006323F5924378/quickpicks"
+    ],
+    "faces": {
+      "133": 95,
+      "135": 95,
+      "213": 115,
+      "226": 115,
+      "234S": 75,
+      "205S": 85,
+      "211S": 85,
+      "228S": 85,
+      "231S": 85,
+      "206S": 85,
+      "229S": 85,
+      "209S": 85,
+      "134S": 95,
+      "133S": 95,
+      "109S": 100,
+      "132S": 100,
+      "106S": 100,
+      "105S": 100,
+      "214BS": 115,
+      "214B": 115,
+      "226S": 115,
+      "214A": 115,
+      "130S": 115
+    },
+    "captures": [
+      {
+        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F5924378/facets",
+        "summary": {
+          "bytes": 12500,
+          "faceHits": 0,
+          "faceSamples": [],
+          "priceHits": 0,
+          "sectionSamples": []
+        },
+        "sample": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:EventFacets:1.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:EventFacets\",\n    \"modified\" : \"2026-09-04T17:46:47.618365711Z\",\n    \"expires\" : \"2026-09-04T17:47:47.618365711Z\"\n  },\n  \"eventId\" : \"1D006323F5924378\",\n  \"facets\" : [ {\n    \"shapes\" : [ \"s_26\" ],\n    \"count\" : 9,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 100.00,\n      \"max\" : 100.00\n    } ]\n  }, {\n    \"shapes\" : [ \"s_40\" ],\n    \"count\" : 9,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 100.00,\n      \"max\" : 100.00\n    } ]\n  }, {\n    \"shapes\" : [ \"s_45\" ],\n    \"count\" : 15,\n    \"listPriceRange\" : [ {\n   "
+      },
+      {
+        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F5924378/facets",
+        "summary": {
+          "bytes": 28883,
+          "faceHits": 0,
+          "faceSamples": [],
+          "priceHits": 0,
+          "sectionSamples": [
+            "\"name\" : \"DELTA\"",
+            "\"name\" : \"FIELD\"",
+            "\"name\" : \"MAINCAFE\"",
+            "\"name\" : \"NETSEATS\"",
+            "\"name\" : \"FMVPCB\"",
+            "\"name\" : \"DELTAWC\"",
+            "\"name\" : \"FIELDWC\"",
+            "\"name\" : \"MAINWC\"",
+            "\"name\" : \"TERRACWC\"",
+            "\"name\" : \"BLCHWC\""
+          ]
+        },
+        "sample": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:EventFacets:1.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:EventFacets\",\n    \"modified\" : \"2026-09-04T17:46:47.618365711Z\",\n    \"expires\" : \"2026-09-04T17:47:47.618365711Z\"\n  },\n  \"eventId\" : \"1D006323F5924378\",\n  \"facets\" : [ {\n    \"areas\" : [ \"20\" ],\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offerTypes\" : [ \"standard\" ],\n    \"priceLevels\" : [ \"62\" ],\n    \"priceLevelSecnames\" : [ \"P15\" ],\n    \"ticketTypes\" : [ \"00C000000001\", \"02C000000006\" ],\n    \"count\" : 37,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 95.00,\n      \"max\" : 100.00\n    } ]\n  }, {\n    \"areas\" : [ \"1\" ],\n    \"inventor"
+      },
+      {
+        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F5924378/facets",
+        "summary": {
+          "bytes": 91003,
+          "faceHits": 8,
+          "faceSamples": [
+            "\"faceValue\" : 430.00",
+            "\"faceValue\" : 330.00",
+            "\"faceValue\" : 150.00",
+            "\"faceValue\" : 130.00",
+            "\"faceValue\" : 330.00",
+            "\"faceValue\" : 250.00",
+            "\"faceValue\" : 245.00",
+            "\"faceValue\" : 245.00"
+          ],
+          "priceHits": 260,
+          "sectionSamples": [
+            "\"name\" : \"Standard Ticket\""
+          ]
+        },
+        "sample": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:EventFacets:1.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:EventFacets\",\n    \"modified\" : \"2026-09-04T17:46:47.618365711Z\",\n    \"expires\" : \"2026-09-04T17:47:47.618365711Z\"\n  },\n  \"eventId\" : \"1D006323F5924378\",\n  \"facets\" : [ {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BWGI\", \"GJ6EGMBQGAYDAMBQGAYXYNRS\" ],\n    \"count\" : 45,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 95.00,\n      \"max\" : 100.00\n    } ]\n  }, {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BVG4\", \"GJ6EGMBQGAYDAMBQGAYXYNJX\" ],\n    \"count\" : 95,\n    \"list"
+      },
+      {
+        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F5924378/facets",
+        "summary": {
+          "bytes": 1169,
+          "faceHits": 0,
+          "faceSamples": [],
+          "priceHits": 0,
+          "sectionSamples": []
+        },
+        "sample": null
+      },
+      {
+        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F5924378/facets",
+        "summary": {
+          "bytes": 6016,
+          "faceHits": 0,
+          "faceSamples": [],
+          "priceHits": 0,
+          "sectionSamples": []
+        },
+        "sample": null
+      },
+      {
+        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F5924378/quickpicks",
+        "summary": {
+          "bytes": 62461,
+          "faceHits": 8,
+          "faceSamples": [
+            "\"faceValue\" : 75.00",
+            "\"faceValue\" : 73.00",
+            "\"faceValue\" : 85.00",
+            "\"faceValue\" : 83.00",
+            "\"faceValue\" : 92.00",
+            "\"faceValue\" : 95.00",
+            "\"faceValue\" : 100.00",
+            "\"faceValue\" : 95.00"
+          ],
+          "priceHits": 60,
+          "sectionSamples": [
+            "\"section\" : \"234S\"",
+            "\"section\" : \"205S\"",
+            "\"section\" : \"211S\"",
+            "\"section\" : \"228S\"",
+            "\"section\" : \"231S\"",
+            "\"section\" : \"206S\"",
+            "\"section\" : \"229S\"",
+            "\"section\" : \"209S\"",
+            "\"section\" : \"133\"",
+            "\"section\" : \"134S\""
+          ]
+        },
+        "sample": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:QuickPicks:4.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:QuickPicks\",\n    \"modified\" : \"2026-09-04T17:46:47.618365711Z\",\n    \"expires\" : \"2026-09-04T17:47:47.618365711Z\"\n  },\n  \"eventId\" : \"1D006323F5924378\",\n  \"offset\" : 0,\n  \"total\" : 212,\n  \"picks\" : [ {\n    \"type\" : \"seat\",\n    \"selection\" : \"standard\",\n    \"quality\" : 0.012626,\n    \"section\" : \"234S\",\n    \"row\" : \"21S\",\n    \"offerGroups\" : [ {\n      \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BWHE\", \"GJ6EGMBQGAYDAMBQGAYXYNRZ\" ],\n      \"places\" : [ \"GIZTIUZ2GIYVGORRGI\", \"GIZTIUZ2GIYVGORRGM\" ],\n      \"seats\" : [ \"12\", \"13\" ],\n      \"coordinates\" : [ ]\n    } ],\n"
+      }
+    ],
+    "rawFace": [
+      {
+        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F5924378/facets",
+        "faces": 52,
+        "body": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:EventFacets:1.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:EventFacets\",\n    \"modified\" : \"2026-09-04T17:46:47.618365711Z\",\n    \"expires\" : \"2026-09-04T17:47:47.618365711Z\"\n  },\n  \"eventId\" : \"1D006323F5924378\",\n  \"facets\" : [ {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BWGI\", \"GJ6EGMBQGAYDAMBQGAYXYNRS\" ],\n    \"count\" : 45,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 95.00,\n      \"max\" : 100.00\n    } ]\n  }, {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BVG4\", \"GJ6EGMBQGAYDAMBQGAYXYNJX\" ],\n    \"count\" : 95,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 150.00,\n      \"max\" : 160.00\n    } ]\n  }, {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BVHE\", \"GJ6EGMBQGAYDAMBQGAYXYNJZ\" ],\n    \"count\" : 13,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 130.00,\n      \"max\" : 135.00\n    } ]\n  }, {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BVHA\", \"GJ6EGMBQGAYDAMBQGAYXYNJY\" ],\n    \"count\" : 20,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 132.00,\n      \"max\" : 137.00\n    } ]\n  }, {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BVGY\", \"GJ6EGMBQGAYDAMBQGAYXYNJW\" ],\n    \"count\" : 63,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 190.00,\n  "
+      },
+      {
+        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F5924378/quickpicks",
+        "faces": 12,
+        "body": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:QuickPicks:4.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:QuickPicks\",\n    \"modified\" : \"2026-09-04T17:46:47.618365711Z\",\n    \"expires\" : \"2026-09-04T17:47:47.618365711Z\"\n  },\n  \"eventId\" : \"1D006323F5924378\",\n  \"offset\" : 0,\n  \"total\" : 212,\n  \"picks\" : [ {\n    \"type\" : \"seat\",\n    \"selection\" : \"standard\",\n    \"quality\" : 0.012626,\n    \"section\" : \"234S\",\n    \"row\" : \"21S\",\n    \"offerGroups\" : [ {\n      \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BWHE\", \"GJ6EGMBQGAYDAMBQGAYXYNRZ\" ],\n      \"places\" : [ \"GIZTIUZ2GIYVGORRGI\", \"GIZTIUZ2GIYVGORRGM\" ],\n      \"seats\" : [ \"12\", \"13\" ],\n      \"coordinates\" : [ ]\n    } ],\n    \"area\" : null,\n    \"areasForPerks\" : [ ],\n    \"descriptionId\" : \"IE5DCMA\",\n    \"maxQuantity\" : 8,\n    \"shapes\" : null,\n    \"snapshotImageUrl\" : \"image?systemId=HOST&sectionNames=234S&placeId=GIZTIUZ2GIYVGORRGI\"\n  }, {\n    \"type\" : \"seat\",\n    \"selection\" : \"standard\",\n    \"quality\" : 0.015152,\n    \"section\" : \"205S\",\n    \"row\" : \"21S\",\n    \"offerGroups\" : [ {\n      \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BWHA\", \"GJ6EGMBQGAYDAMBQGAYXYNRY\" ],\n      \"places\" : [ \"GIYDKUZ2GIYVGORS\", \"GIYDKUZ2GIYVGORT\" ],\n      \"seats\" : [ \"2\", \"3\" ],\n      \"coordinates\" : [ ]\n    } ],\n    \"area\" : null,\n    \"areasForPerks\" : [ ],\n    \"descriptionId\" : \"IE5DCMA\",\n    \"maxQuantity\" : 9,\n    \"shapes\" : null,\n    \"snapshotImageUrl\" : \"image?systemId=HOST&sectionNames=205S&placeId=GIYDKUZ2GIYVGORS\"\n  }, {\n    \"type"
+      }
+    ]
+  }
 }
