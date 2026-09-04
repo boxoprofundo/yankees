@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-04T00:26:04.125Z",
+  "fetchedAt": "2026-09-04T17:41:16.843Z",
   "mode": "direct-api",
   "result": {
     "qty": 2,
@@ -7,13 +7,13 @@
       {
         "eid": 17691589,
         "status": 200,
-        "n": 169,
+        "n": 171,
         "blocked": false
       },
       {
         "eid": 17691590,
         "status": 200,
-        "n": 176,
+        "n": 173,
         "blocked": false
       },
       {
@@ -25,67 +25,66 @@
       {
         "eid": 17691592,
         "status": 200,
-        "n": 167,
+        "n": 168,
         "blocked": false
       },
       {
         "eid": 17691593,
         "status": 200,
-        "n": 171,
+        "n": 172,
         "blocked": false
       },
       {
         "eid": 17691594,
         "status": 200,
-        "n": 171,
+        "n": 170,
         "blocked": false
       },
       {
         "eid": 17691545,
-        "status": 403,
-        "n": 0,
-        "blocked": true
+        "status": 200,
+        "n": 175,
+        "blocked": false
       },
       {
         "eid": 17691595,
-        "status": 403,
-        "n": 0,
-        "blocked": true
+        "status": 200,
+        "n": 170,
+        "blocked": false
       },
       {
         "eid": 17691596,
-        "status": 403,
-        "n": 0,
-        "blocked": true
+        "status": 200,
+        "n": 167,
+        "blocked": false
       },
       {
         "eid": 17691597,
-        "status": 403,
-        "n": 0,
-        "blocked": true
+        "status": 200,
+        "n": 156,
+        "blocked": false
       },
       {
         "eid": 17691598,
-        "status": 403,
-        "n": 0,
-        "blocked": true
+        "status": 200,
+        "n": 159,
+        "blocked": false
       },
       {
         "eid": 17691599,
-        "status": 403,
-        "n": 0,
-        "blocked": true
+        "status": 200,
+        "n": 171,
+        "blocked": false
       },
       {
         "eid": 17691600,
-        "status": 403,
-        "n": 0,
-        "blocked": true
+        "status": 200,
+        "n": 167,
+        "blocked": false
       }
     ],
-    "saw_listings": true,
     "blocked": false
   },
-  "games": 6,
-  "quotes": 1022
+  "games": 13,
+  "quotes": 2187
 }
