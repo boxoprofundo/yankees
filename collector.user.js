@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.10.0
+// @version      3.11.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -1221,6 +1221,13 @@
     const el = document.querySelector("#qty-all") || document.querySelector("#qty-specific");
     return Math.max(1, Math.min(12, parseInt(el && el.value, 10) || 2));
   }
+  // Open collection tabs in the BACKGROUND (don't steal focus) by default, so a
+  // run — manual or auto — doesn't disrupt what you're doing. A menu toggle can
+  // force foreground if a source ever needs a visible tab. So: tab active flag
+  // = NOT background. (There's no true-headless option: a userscript can't make
+  // invisible tabs, and a never-visible render is exactly what DataDome blocks.)
+  function bgTabs() { return GM_getValue("yk_bg_tabs", true); }
+  function tabActive() { return !bgTabs(); }
 
   async function ghApi(method, path, body) {
     const token = settings().ghToken;
@@ -1298,7 +1305,7 @@
       const [key, url, gamePk] = entries[i];
       setChip(`${label} ${i + 1}/${entries.length}…`, true);
       const tab = GM_openInTab(url + (url.includes("?") ? "&" : "?") + "quantity=" + qty,
-                               { active: !!opts.active, insert: true });
+                               { active: tabActive(), insert: true });
       let result = null;
       for (let w = 0; w < waits; w++) { result = GM_getValue(resultKey(key), null); if (result) break; await sleep(500); }
       try { tab.close(); } catch {}
@@ -1390,7 +1397,7 @@
       GM_setValue("yk_sg_apijob", { active: true, startedAt: Date.now(), eids, qty });
       const tag = attempt > 1 ? ` (try ${attempt}/${seeds.length})` : "";
       setChip(`SeatGeek: opening session…${tag}`, true);
-      const tab = GM_openInTab(seedUrl, { active: true, insert: true });
+      const tab = GM_openInTab(seedUrl, { active: tabActive(), insert: true });
       const started = Date.now();
       for (let w = 0; w < 400; w++) {                // up to ~200s
         res = GM_getValue("yk_sg_apiresult", null);
@@ -1522,7 +1529,7 @@
     const { qty, collected } = await cycle(
       probeOnly ? "TM probe" : "Ticketmaster", "yk_tm_job", entries,
       (eid) => "yk_tm_result_" + eid, true,
-      { active: !!probeOnly, waits: probeOnly ? 120 : 100,
+      { waits: probeOnly ? 120 : 100,
         gapMin: probeOnly ? 500 : 2500, gapRand: probeOnly ? 500 : 2500,
         jobExtra: { eidToPk } });
     const firstRes = GM_getValue("yk_tm_result_" + entries[0][0], null);
@@ -1580,7 +1587,7 @@
     GM_setValue("yk_tp_discjob", { active: true, startedAt: Date.now() });
     setChip("TickPick: finding games…", true);
     const dtab = GM_openInTab("https://www.tickpick.com/mlb/new-york-yankees-tickets/",
-      { active: true, insert: true });
+      { active: tabActive(), insert: true });
     let disc = null;
     for (let w = 0; w < 120; w++) { disc = GM_getValue("yk_tp_discresult", null); if (disc) break; await sleep(500); }
     try { dtab.close(); } catch {}
@@ -1596,7 +1603,7 @@
     // like a bot and re-trip TickPick's DataDome bot-wall.
     const { collected: raw } = await cycle("TickPick", "yk_tp_job", entries,
       (eid) => "yk_tp_result_" + eid, false,
-      { active: true, waits: 100, gapMin: 5000, gapRand: 3000, jobExtra: { qty } });
+      { waits: 100, gapMin: 5000, gapRand: 3000, jobExtra: { qty } });
 
     // 3) Shape quotes + build the face map from disclosed faces.
     const collected = raw.map((q) => ({ gamePk: q.gamePk, provider: "TickPick",
@@ -1706,7 +1713,7 @@
     GM_deleteValue("yk_sg_result_" + eid);
     GM_setValue("yk_sg_job", { active: true, startedAt: Date.now() });
     setChip("Probing SeatGeek API (1 tab)…", true);
-    const tab = GM_openInTab(url + "?quantity=2", { active: true, insert: true });
+    const tab = GM_openInTab(url + "?quantity=2", { active: tabActive(), insert: true });
     let r = null;
     for (let w = 0; w < 130; w++) { r = GM_getValue("yk_sg_result_" + eid, null); if (r) break; await sleep(500); }
     try { tab.close(); } catch {}
@@ -1728,6 +1735,15 @@
   GM_registerMenuCommand("Collect StubHub only", async () => { if (!running) { running = true; try { const n = await runStubHub(); setChip(`StubHub done: ${n}`); } finally { running = false; } } });
   GM_registerMenuCommand("Collect SeatGeek only", async () => { if (!running) { running = true; try { const n = await runSeatGeek(); setChip(`SeatGeek done: ${n}`); } finally { running = false; } } });
   GM_registerMenuCommand("Probe SeatGeek API (1 game)", async () => { if (!running) { running = true; try { await probeSeatGeekApi(); } finally { running = false; } } });
+  GM_registerMenuCommand(
+    bgTabs() ? "Tabs: background (won't steal focus) — click for foreground"
+             : "Tabs: foreground — click for background",
+    () => {
+      const on = !bgTabs();
+      GM_setValue("yk_bg_tabs", on);
+      setChip(on ? "Collection tabs now open in the background (no focus steal)"
+                 : "Collection tabs now open in the foreground");
+    });
   GM_registerMenuCommand(
     autoRunOn() ? "Auto-collect: ON — click to disable" : "Auto-collect: OFF — click to enable",
     () => {
