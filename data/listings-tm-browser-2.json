@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-04T18:10:08Z",
+  "fetchedAt": "2026-09-05T05:48:41Z",
   "quotes": [
     {
       "gamePk": 823500,
@@ -32,14 +32,6 @@
       "section": "226",
       "price": 129.9,
       "faceValue": 115
-    },
-    {
-      "gamePk": 823500,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-08-2026/event/1D006323F5924378",
-      "provider": "Ticketmaster",
-      "section": "234S",
-      "price": 84.75,
-      "faceValue": 75
     },
     {
       "gamePk": 823500,
@@ -186,6 +178,22 @@
       "faceValue": 115
     },
     {
+      "gamePk": 823500,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-08-2026/event/1D006323F5924378",
+      "provider": "Ticketmaster",
+      "section": "215S",
+      "price": 143.45,
+      "faceValue": 127
+    },
+    {
+      "gamePk": 823500,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-08-2026/event/1D006323F5924378",
+      "provider": "Ticketmaster",
+      "section": "111S",
+      "price": 152.5,
+      "faceValue": 135
+    },
+    {
       "gamePk": 823497,
       "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-09-2026/event/1D006323F593437A",
       "provider": "Ticketmaster",
@@ -245,6 +253,14 @@
       "gamePk": 823499,
       "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-10-2026/event/1D006323F594437C",
       "provider": "Ticketmaster",
+      "section": "235",
+      "price": 21.1,
+      "faceValue": 19
+    },
+    {
+      "gamePk": 823499,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-10-2026/event/1D006323F594437C",
+      "provider": "Ticketmaster",
       "section": "405",
       "price": 12.25,
       "faceValue": 11
@@ -253,23 +269,7 @@
       "gamePk": 823499,
       "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-10-2026/event/1D006323F594437C",
       "provider": "Ticketmaster",
-      "section": "406",
-      "price": 12.25,
-      "faceValue": 11
-    },
-    {
-      "gamePk": 823499,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-10-2026/event/1D006323F594437C",
-      "provider": "Ticketmaster",
       "section": "433",
-      "price": 12.25,
-      "faceValue": 11
-    },
-    {
-      "gamePk": 823499,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-10-2026/event/1D006323F594437C",
-      "provider": "Ticketmaster",
-      "section": "407A",
       "price": 12.25,
       "faceValue": 11
     },
@@ -333,14 +333,6 @@
       "gamePk": 823498,
       "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
       "provider": "Ticketmaster",
-      "section": "128",
-      "price": 384.05,
-      "faceValue": 340
-    },
-    {
-      "gamePk": 823498,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
-      "provider": "Ticketmaster",
       "section": "131",
       "price": 209,
       "faceValue": 185
@@ -350,14 +342,6 @@
       "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
       "provider": "Ticketmaster",
       "section": "410",
-      "price": 101.7,
-      "faceValue": 90
-    },
-    {
-      "gamePk": 823498,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
-      "provider": "Ticketmaster",
-      "section": "411",
       "price": 101.7,
       "faceValue": 90
     },
@@ -429,14 +413,6 @@
       "gamePk": 823498,
       "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
       "provider": "Ticketmaster",
-      "section": "428",
-      "price": 101.7,
-      "faceValue": 90
-    },
-    {
-      "gamePk": 823498,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
-      "provider": "Ticketmaster",
       "section": "429",
       "price": 101.7,
       "faceValue": 90
@@ -456,30 +432,6 @@
       "section": "232A",
       "price": 169.45,
       "faceValue": 150
-    },
-    {
-      "gamePk": 823498,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
-      "provider": "Ticketmaster",
-      "section": "AUDI1",
-      "price": 203.35,
-      "faceValue": 180
-    },
-    {
-      "gamePk": 823498,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
-      "provider": "Ticketmaster",
-      "section": "AUDI3",
-      "price": 203.35,
-      "faceValue": 180
-    },
-    {
-      "gamePk": 823498,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
-      "provider": "Ticketmaster",
-      "section": "AUDI1W",
-      "price": 203.35,
-      "faceValue": 180
     },
     {
       "gamePk": 823496,
@@ -661,14 +613,6 @@
       "gamePk": 823495,
       "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-13-2026/event/1D006323F5954390",
       "provider": "Ticketmaster",
-      "section": "422",
-      "price": 62.15,
-      "faceValue": 55
-    },
-    {
-      "gamePk": 823495,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-13-2026/event/1D006323F5954390",
-      "provider": "Ticketmaster",
       "section": "423",
       "price": 62.15,
       "faceValue": 55
@@ -717,6 +661,14 @@
       "gamePk": 823495,
       "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-13-2026/event/1D006323F5954390",
       "provider": "Ticketmaster",
+      "section": "430",
+      "price": 62.15,
+      "faceValue": 55
+    },
+    {
+      "gamePk": 823495,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-13-2026/event/1D006323F5954390",
+      "provider": "Ticketmaster",
       "section": "431B",
       "price": 53.3,
       "faceValue": 48
@@ -752,94 +704,6 @@
       "section": "434B",
       "price": 53.3,
       "faceValue": 48
-    },
-    {
-      "gamePk": 823494,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-09-22-2026/event/1D006323F57942DC",
-      "provider": "Ticketmaster",
-      "section": "235",
-      "price": 28.9,
-      "faceValue": 26
-    },
-    {
-      "gamePk": 823494,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-09-22-2026/event/1D006323F57942DC",
-      "provider": "Ticketmaster",
-      "section": "405",
-      "price": 16.65,
-      "faceValue": 15
-    },
-    {
-      "gamePk": 823494,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-09-22-2026/event/1D006323F57942DC",
-      "provider": "Ticketmaster",
-      "section": "406",
-      "price": 16.65,
-      "faceValue": 15
-    },
-    {
-      "gamePk": 823494,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-09-22-2026/event/1D006323F57942DC",
-      "provider": "Ticketmaster",
-      "section": "409",
-      "price": 28.9,
-      "faceValue": 26
-    },
-    {
-      "gamePk": 823494,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-09-22-2026/event/1D006323F57942DC",
-      "provider": "Ticketmaster",
-      "section": "412",
-      "price": 28.9,
-      "faceValue": 26
-    },
-    {
-      "gamePk": 823494,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-09-22-2026/event/1D006323F57942DC",
-      "provider": "Ticketmaster",
-      "section": "423",
-      "price": 28.9,
-      "faceValue": 26
-    },
-    {
-      "gamePk": 823494,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-09-22-2026/event/1D006323F57942DC",
-      "provider": "Ticketmaster",
-      "section": "433",
-      "price": 16.65,
-      "faceValue": 15
-    },
-    {
-      "gamePk": 823494,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-09-22-2026/event/1D006323F57942DC",
-      "provider": "Ticketmaster",
-      "section": "407A",
-      "price": 16.65,
-      "faceValue": 15
-    },
-    {
-      "gamePk": 823494,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-09-22-2026/event/1D006323F57942DC",
-      "provider": "Ticketmaster",
-      "section": "434A",
-      "price": 16.65,
-      "faceValue": 15
-    },
-    {
-      "gamePk": 823494,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-09-22-2026/event/1D006323F57942DC",
-      "provider": "Ticketmaster",
-      "section": "434B",
-      "price": 16.65,
-      "faceValue": 15
-    },
-    {
-      "gamePk": 823494,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-09-22-2026/event/1D006323F57942DC",
-      "provider": "Ticketmaster",
-      "section": "420C",
-      "price": 28.9,
-      "faceValue": 26
     },
     {
       "gamePk": 823543,
@@ -944,6 +808,14 @@
       "section": "405",
       "price": 8.9,
       "faceValue": 8
+    },
+    {
+      "gamePk": 823493,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-09-24-2026/event/1D006323F5974399",
+      "provider": "Ticketmaster",
+      "section": "408",
+      "price": 18.9,
+      "faceValue": 17
     },
     {
       "gamePk": 823493,
@@ -1104,78 +976,6 @@
       "section": "430",
       "price": 43.3,
       "faceValue": 39
-    },
-    {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4",
-      "provider": "Ticketmaster",
-      "section": "405",
-      "price": 30,
-      "faceValue": 27
-    },
-    {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4",
-      "provider": "Ticketmaster",
-      "section": "406",
-      "price": 30,
-      "faceValue": 27
-    },
-    {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4",
-      "provider": "Ticketmaster",
-      "section": "409",
-      "price": 30,
-      "faceValue": 27
-    },
-    {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4",
-      "provider": "Ticketmaster",
-      "section": "433",
-      "price": 30,
-      "faceValue": 27
-    },
-    {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4",
-      "provider": "Ticketmaster",
-      "section": "431B",
-      "price": 30,
-      "faceValue": 27
-    },
-    {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4",
-      "provider": "Ticketmaster",
-      "section": "407B",
-      "price": 30,
-      "faceValue": 27
-    },
-    {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4",
-      "provider": "Ticketmaster",
-      "section": "432A",
-      "price": 30,
-      "faceValue": 27
-    },
-    {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4",
-      "provider": "Ticketmaster",
-      "section": "434A",
-      "price": 30,
-      "faceValue": 27
-    },
-    {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4",
-      "provider": "Ticketmaster",
-      "section": "434B",
-      "price": 30,
-      "faceValue": 27
     },
     {
       "gamePk": 823490,
