@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-06T05:23:50.176Z",
+  "fetchedAt": "2026-09-06T19:12:50.213Z",
   "mode": "direct-api",
   "result": {
     "qty": 2,
@@ -7,43 +7,43 @@
       {
         "eid": 17691589,
         "status": 200,
-        "n": 195,
+        "n": 190,
         "blocked": false
       },
       {
         "eid": 17691590,
         "status": 200,
-        "n": 192,
+        "n": 191,
         "blocked": false
       },
       {
         "eid": 17691591,
         "status": 200,
-        "n": 164,
+        "n": 178,
         "blocked": false
       },
       {
         "eid": 17691592,
         "status": 200,
-        "n": 171,
+        "n": 185,
         "blocked": false
       },
       {
         "eid": 17691593,
         "status": 200,
-        "n": 172,
+        "n": 181,
         "blocked": false
       },
       {
         "eid": 17691594,
         "status": 200,
-        "n": 172,
+        "n": 182,
         "blocked": false
       },
       {
         "eid": 17691545,
         "status": 200,
-        "n": 176,
+        "n": 175,
         "blocked": false
       },
       {
@@ -55,13 +55,13 @@
       {
         "eid": 17691596,
         "status": 200,
-        "n": 165,
+        "n": 166,
         "blocked": false
       },
       {
         "eid": 17691597,
         "status": 200,
-        "n": 157,
+        "n": 156,
         "blocked": false
       },
       {
@@ -79,12 +79,12 @@
       {
         "eid": 17691600,
         "status": 200,
-        "n": 163,
+        "n": 161,
         "blocked": false
       }
     ],
     "blocked": false
   },
   "games": 13,
-  "quotes": 2226
+  "quotes": 2264
 }
