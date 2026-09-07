@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-06T23:17:50.140Z",
+  "fetchedAt": "2026-09-07T08:03:49.930Z",
   "discovered": 13,
   "firstEvent": {
     "eid": "7367906",
@@ -12,6 +12,6 @@
     "sample": null
   },
   "games": 13,
-  "quotes": 2025,
-  "faces": 1545
+  "quotes": 2022,
+  "faces": 1529
 }
