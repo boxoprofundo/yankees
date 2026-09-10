@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.12.1
+// @version      3.12.2
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -1574,6 +1574,13 @@
     const eidToPk = {};
     entries.forEach(([eid, , pk]) => { eidToPk[eid] = pk; });
     const promo = (settings().promoCode || "").trim();
+    // The listing page has no promo field (codes live in presale / checkout),
+    // so also pass the code in the URL — some TM offers unlock inventory/pricing
+    // from ?promoCode=. The worker still tries the DOM for presale-style events.
+    if (promo) {
+      entries = entries.map(([eid, url, pk]) =>
+        [eid, url + (url.includes("?") ? "&" : "?") + "promoCode=" + encodeURIComponent(promo), pk]);
+    }
     const { qty, collected } = await cycle(
       probeOnly ? "TM probe" : "Ticketmaster", "yk_tm_job", entries,
       (eid) => "yk_tm_result_" + eid, true,
