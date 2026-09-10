@@ -1,93 +1,109 @@
 {
-  "fetchedAt": "2026-09-10T22:48:25Z",
+  "fetchedAt": "2026-09-10T23:27:44Z",
   "quotes": [
     {
-      "gamePk": 823499,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-10-2026/event/1D006323F594437C",
+      "gamePk": 823498,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
+      "provider": "Ticketmaster",
+      "section": "115",
+      "price": 451.8,
+      "faceValue": 400
+    },
+    {
+      "gamePk": 823498,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
+      "provider": "Ticketmaster",
+      "section": "116",
+      "price": 451.8,
+      "faceValue": 400
+    },
+    {
+      "gamePk": 823498,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
+      "provider": "Ticketmaster",
+      "section": "205",
+      "price": 175.1,
+      "faceValue": 155
+    },
+    {
+      "gamePk": 823498,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
+      "provider": "Ticketmaster",
+      "section": "219",
+      "price": 451.8,
+      "faceValue": 400
+    },
+    {
+      "gamePk": 823498,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
+      "provider": "Ticketmaster",
+      "section": "222",
+      "price": 451.8,
+      "faceValue": 400
+    },
+    {
+      "gamePk": 823498,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
       "provider": "Ticketmaster",
       "section": "236",
-      "price": 25.55,
-      "faceValue": 23
+      "price": 107.35,
+      "faceValue": 95
     },
     {
-      "gamePk": 823499,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-10-2026/event/1D006323F594437C",
+      "gamePk": 823498,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
       "provider": "Ticketmaster",
       "section": "237",
-      "price": 25.55,
-      "faceValue": 23
+      "price": 107.35,
+      "faceValue": 95
     },
     {
-      "gamePk": 823499,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-10-2026/event/1D006323F594437C",
+      "gamePk": 823498,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
       "provider": "Ticketmaster",
       "section": "238",
-      "price": 25.55,
-      "faceValue": 23
+      "price": 107.35,
+      "faceValue": 95
     },
     {
-      "gamePk": 823499,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-10-2026/event/1D006323F594437C",
+      "gamePk": 823498,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
       "provider": "Ticketmaster",
-      "section": "405",
-      "price": 21.1,
-      "faceValue": 19
+      "section": "117A",
+      "price": 395.35,
+      "faceValue": 350
     },
     {
-      "gamePk": 823499,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-10-2026/event/1D006323F594437C",
+      "gamePk": 823498,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
       "provider": "Ticketmaster",
-      "section": "406",
-      "price": 21.1,
-      "faceValue": 19
+      "section": "221A",
+      "price": 451.8,
+      "faceValue": 400
     },
     {
-      "gamePk": 823499,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-10-2026/event/1D006323F594437C",
+      "gamePk": 823498,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
       "provider": "Ticketmaster",
-      "section": "412",
-      "price": 26.65,
-      "faceValue": 24
+      "section": "218B",
+      "price": 451.8,
+      "faceValue": 400
     },
     {
-      "gamePk": 823499,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-10-2026/event/1D006323F594437C",
+      "gamePk": 823498,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
       "provider": "Ticketmaster",
-      "section": "423",
-      "price": 26.65,
-      "faceValue": 24
+      "section": "221B",
+      "price": 451.8,
+      "faceValue": 400
     },
     {
-      "gamePk": 823499,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-10-2026/event/1D006323F594437C",
+      "gamePk": 823498,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-11-2026/event/1D006323F594437E",
       "provider": "Ticketmaster",
-      "section": "433",
-      "price": 21.1,
-      "faceValue": 19
-    },
-    {
-      "gamePk": 823499,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-10-2026/event/1D006323F594437C",
-      "provider": "Ticketmaster",
-      "section": "407A",
-      "price": 21.1,
-      "faceValue": 19
-    },
-    {
-      "gamePk": 823499,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-10-2026/event/1D006323F594437C",
-      "provider": "Ticketmaster",
-      "section": "434A",
-      "price": 21.1,
-      "faceValue": 19
-    },
-    {
-      "gamePk": 823499,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-colorado-rockies-bronx-new-york-09-10-2026/event/1D006323F594437C",
-      "provider": "Ticketmaster",
-      "section": "434B",
-      "price": 21.1,
-      "faceValue": 19
+      "section": "117B",
+      "price": 451.8,
+      "faceValue": 400
     }
   ]
 }
