@@ -1,43 +1,31 @@
 {
-  "fetchedAt": "2026-09-08T03:10:18.290Z",
+  "fetchedAt": "2026-09-10T21:24:45.800Z",
   "mode": "direct-api",
   "result": {
     "qty": 2,
     "fetched": [
       {
-        "eid": 17691589,
-        "status": 200,
-        "n": 186,
-        "blocked": false
-      },
-      {
-        "eid": 17691590,
-        "status": 200,
-        "n": 188,
-        "blocked": false
-      },
-      {
         "eid": 17691591,
         "status": 200,
-        "n": 181,
+        "n": 144,
         "blocked": false
       },
       {
         "eid": 17691592,
         "status": 200,
-        "n": 184,
+        "n": 186,
         "blocked": false
       },
       {
         "eid": 17691593,
         "status": 200,
-        "n": 179,
+        "n": 197,
         "blocked": false
       },
       {
         "eid": 17691594,
         "status": 200,
-        "n": 182,
+        "n": 189,
         "blocked": false
       },
       {
@@ -49,42 +37,42 @@
       {
         "eid": 17691595,
         "status": 200,
-        "n": 177,
+        "n": 174,
         "blocked": false
       },
       {
         "eid": 17691596,
         "status": 200,
-        "n": 174,
+        "n": 175,
         "blocked": false
       },
       {
         "eid": 17691597,
         "status": 200,
-        "n": 162,
+        "n": 160,
         "blocked": false
       },
       {
         "eid": 17691598,
         "status": 200,
-        "n": 170,
+        "n": 172,
         "blocked": false
       },
       {
         "eid": 17691599,
         "status": 200,
-        "n": 176,
+        "n": 175,
         "blocked": false
       },
       {
         "eid": 17691600,
         "status": 200,
-        "n": 167,
+        "n": 170,
         "blocked": false
       }
     ],
     "blocked": false
   },
-  "games": 13,
-  "quotes": 2308
+  "games": 11,
+  "quotes": 1924
 }
