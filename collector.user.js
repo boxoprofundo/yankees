@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.11.0
+// @version      3.12.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -446,6 +446,49 @@
         { ts: Date.now(), quotes: [], diag: { error: String(e).slice(0, 200), where: "worker" } });
     }
   }
+
+  // Best-effort: enter a Ticketmaster promo / presale code on the event page so
+  // the listings reflect it. TM hides the field behind an "Enter code" / "Unlock"
+  // control, so reveal it, fill the input, submit, and let the page re-render.
+  // Returns a diag of what it found so selectors can be tuned from a real run.
+  async function applyTmPromo(code) {
+    const info = { hasCode: !!code, found: false, submitted: false, controls: [] };
+    if (!code) return info;
+    const findInput = () => [...document.querySelectorAll("input")].find((el) => {
+      if (el.type === "hidden" || el.type === "number" || el.disabled) return false;
+      const t = ((el.placeholder || "") + " " + (el.name || "") + " " + (el.id || "") + " " +
+        (el.getAttribute("aria-label") || "")).toLowerCase();
+      return /promo|passcode|access\s*code|offer\s*code|presale|unlock|\bcode\b/.test(t);
+    });
+    for (let i = 0; i < 4; i++) {
+      let input = findInput();
+      if (!input) {
+        clickMore(["enter code", "have a code", "promo code", "access code", "offer code",
+          "presale code", "unlock", "use a code", "add code", "enter promo"]);
+        await sleep(700);
+        input = findInput();
+      }
+      if (input) {
+        info.found = true;
+        try {
+          input.focus();
+          input.value = code;
+          input.dispatchEvent(new Event("input", { bubbles: true }));
+          input.dispatchEvent(new Event("change", { bubbles: true }));
+          input.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter", keyCode: 13, bubbles: true }));
+          info.submitted = clickMore(["apply", "submit", "unlock", "go", "enter", "add", "redeem"]) || true;
+        } catch (e) { info.error = String(e).slice(0, 80); }
+        await sleep(2000);       // let listings re-render with the code applied
+        return info;
+      }
+      await sleep(500);
+    }
+    // Not found — record nearby control labels so the selectors can be refined.
+    info.controls = [...document.querySelectorAll("button,a,[role=button]")]
+      .map((e) => (e.innerText || "").trim())
+      .filter((t) => t && /code|promo|unlock|presale/i.test(t)).slice(0, 8);
+    return info;
+  }
   async function ticketmasterWorkerInner(eid) {
     // We run at document-start; wait for the DOM before touching it.
     for (let i = 0; i < 100 && !document.body; i++) await sleep(50);
@@ -456,6 +499,9 @@
       if (/Row\s+\w+\s+.*?\$\s*\d/.test(t)) break;
       await sleep(400);
     }
+    // Apply a promo / presale code if one is set (listings then reflect it).
+    const tmJob = GM_getValue("yk_tm_job", null);
+    const promoInfo = (tmJob && tmJob.promo) ? await applyTmPromo(tmJob.promo) : null;
     // Nudge the seat list to render / lazy-load.
     for (let r = 0; r < 6; r++) { window.scrollBy(0, 1400); await sleep(700); }
     const body = document.body ? document.body.innerText : "";
@@ -499,6 +545,7 @@
       sectionRows: secText,
       faceMentions: faceCtx,
       ismdsUrls: [...new Set(TM_CAP_URLS)].slice(0, 20),
+      promo: promoInfo,
       faces: faceMap,
       captures,
       rawFace,
@@ -1526,12 +1573,13 @@
     if (probeOnly) entries = entries.slice(0, 1);
     const eidToPk = {};
     entries.forEach(([eid, , pk]) => { eidToPk[eid] = pk; });
+    const promo = (settings().promoCode || "").trim();
     const { qty, collected } = await cycle(
       probeOnly ? "TM probe" : "Ticketmaster", "yk_tm_job", entries,
       (eid) => "yk_tm_result_" + eid, true,
       { waits: probeOnly ? 120 : 100,
         gapMin: probeOnly ? 500 : 2500, gapRand: probeOnly ? 500 : 2500,
-        jobExtra: { eidToPk } });
+        jobExtra: { eidToPk, promo } });
     const firstRes = GM_getValue("yk_tm_result_" + entries[0][0], null);
     await putFile("/contents/data/_tm-diag.json",
       { fetchedAt: new Date().toISOString(), games: entries.length,

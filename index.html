@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NYY Ticket Aggregator</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg?v=1">
-<link rel="stylesheet" href="style.css?v=20260901x">
+<link rel="stylesheet" href="style.css?v=20260901y">
 </head>
 <body>
 <header>
@@ -77,6 +77,13 @@
         lowest-price-per-game fallback via SeatGeek's official API, which never
         gets bot-blocked. Maintainer-only; results are published for everyone.)</small></label>
       <input id="sg-client" type="text" autocomplete="off" placeholder="client_id">
+    </div>
+    <div class="field">
+      <label for="tm-promo">Ticketmaster promo / presale code
+        <small>(optional — the collector enters this on each Ticketmaster event
+        page before reading prices, so listings reflect the code's pricing or
+        unlocked inventory)</small></label>
+      <input id="tm-promo" type="text" autocomplete="off" placeholder="promo code">
     </div>
     <div class="field">
       <label for="gh-token">Access key for the Refresh button
@@ -153,9 +160,9 @@
   </div>
 </div>
 
-<script src="providers.js?v=20260901x"></script>
-<script src="sections.js?v=20260901x"></script>
-<script src="stubhub-events.js?v=20260901x"></script>
-<script src="app.js?v=20260901x"></script>
+<script src="providers.js?v=20260901y"></script>
+<script src="sections.js?v=20260901y"></script>
+<script src="stubhub-events.js?v=20260901y"></script>
+<script src="app.js?v=20260901y"></script>
 </body>
 </html>

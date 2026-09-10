@@ -56,6 +56,7 @@
       // runs can keep that map fresh; it's just never surfaced or required.
       tmKey: prev.tmKey || "",
       sgClientId: $("#sg-client").value.trim(),
+      promoCode: $("#tm-promo").value.trim(),
       ghToken: $("#gh-token").value.trim(),
     };
     localStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
@@ -1145,6 +1146,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     const s = loadSettings();
     $("#sg-client").value = s.sgClientId || "";
+    $("#tm-promo").value = s.promoCode || "";
     $("#gh-token").value = s.ghToken || "";
 
     $$(".tab").forEach((t) =>
