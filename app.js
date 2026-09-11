@@ -244,12 +244,14 @@
   //   listings-seatgeek-fallback — SeatGeek Open API (event-level lowest price)
   //   listings-tm                — legacy home-runner file, still merged if present
   async function fetchCachedListings(qty) {
-    const parts = await Promise.all(
-      ["listings", "listings-tm", "listings-tm-browser", "listings-stubhub",
-       "listings-seatgeek", "listings-seatgeek-fallback", "listings-tickpick"]
-        .map((name) => fetchOneListing(qty, name))
-    );
+    const names = ["listings", "listings-tm", "listings-tm-browser", "listings-stubhub",
+       "listings-seatgeek", "listings-seatgeek-fallback", "listings-tickpick"];
+    const parts = await Promise.all(names.map((name) => fetchOneListing(qty, name)));
     if (parts.every((p) => !p)) return null;
+    // The browser collector stamps the TM file with the promo/presale code that
+    // was active during collection, so the app can flag promo-affected pricing.
+    const tmPart = parts[names.indexOf("listings-tm-browser")];
+    const tmPromo = (tmPart && tmPart.promo) || null;
     const quotes = parts.reduce(
       (acc, p) => acc.concat(p && Array.isArray(p.quotes) ? p.quotes : []), []);
     const times = parts.filter((x) => x && x.fetchedAt).map((x) => x.fetchedAt);
@@ -263,7 +265,7 @@
         if (!sourceTimes[prov] || p.fetchedAt > sourceTimes[prov]) sourceTimes[prov] = p.fetchedAt;
       }
     }
-    return { fetchedAt: times.sort().slice(-1)[0] || null, quotes, sourceTimes };
+    return { fetchedAt: times.sort().slice(-1)[0] || null, quotes, sourceTimes, tmPromo };
   }
 
   // Persistent face-value store: { "gamePk|section": number }. "Prices may
@@ -478,6 +480,7 @@
         quotes.push(...listings.quotes);
         cachedAt = listings.fetchedAt || null;
       }
+      state.tmPromo = (listings && listings.tmPromo) || null;
       paintFreshness(listings && listings.sourceTimes);
       results.forEach((r, i) => {
         if (r.status === "fulfilled") quotes.push(...r.value);
@@ -711,10 +714,19 @@
 
     const allInScope = state.games && games.length === state.games.length;
     const gs = games.length + " game" + (games.length > 1 ? "s" : "");
-    $("#section-sub").textContent =
+    const sub = $("#section-sub");
+    sub.textContent =
       `Block of ${qty} ticket${qty > 1 ? "s" : ""}, ` +
       (allInScope ? `across all ${games.length} remaining game${games.length > 1 ? "s" : ""}`
                   : `across ${gs} selected`);
+    if (state.tmPromo) {
+      const badge = document.createElement("span");
+      badge.className = "promo-badge";
+      badge.textContent = "🎟 TM promo: " + state.tmPromo;
+      badge.title = "Ticketmaster prices reflect this promo / presale code, " +
+        "applied during collection. Clear it in Settings to see standard pricing.";
+      sub.append(" ", badge);
+    }
     buildFilterBar();
     sortAndPaintSections();
     wrap.hidden = false;

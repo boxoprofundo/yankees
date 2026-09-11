@@ -228,6 +228,10 @@ main p.sub { margin: -.2rem 0 .5rem; }
   margin: 1.2rem 0 0; padding: .7rem .85rem; background: #fbfaf6;
   border: 1px solid var(--line, #e3e3e3); border-radius: 8px; }
 .face-est { color: var(--muted); font-style: italic; }
+.promo-badge { display: inline-block; font-size: .78rem; font-weight: 600;
+  padding: .1rem .5rem; margin-left: .35rem; border-radius: 999px;
+  background: #fff3d6; color: #8a5a00; border: 1px solid #e6c98a;
+  vertical-align: middle; cursor: help; letter-spacing: .01em; }
 .freshness { font-size: .8rem; color: var(--muted); line-height: 1.7;
   margin: 1.2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--line, #e3e3e3); }
 .freshness:empty { display: none; }
