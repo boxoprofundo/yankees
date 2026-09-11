@@ -698,6 +698,7 @@
         dateLabel: game ? game.displayET : "",
         opponent: game ? game.opponent : "",
         provider: q ? q.provider : "",
+        promoApplied: !!(state.tmPromo && q && q.provider === "Ticketmaster"),
         url: q ? q.url : "",
         seatgeek: linkGame ? seatgeekLink(linkGame) : "",
       };
@@ -994,7 +995,9 @@
           `<td>${r.opponent}</td>` +
           `<td>${r.url
             ? `<a href="${r.url}" target="_blank" rel="noopener">${r.provider} ↗</a>`
-            : r.provider}</td>`;
+            : r.provider}${r.promoApplied
+            ? ` <span class="promo-mark" title="Price reflects the '${state.tmPromo}' promo / presale code">🎟</span>`
+            : ""}</td>`;
       }
       tbody.appendChild(tr);
     }
