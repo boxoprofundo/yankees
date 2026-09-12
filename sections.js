@@ -60,6 +60,8 @@
   function locationFor(code, num) {
     if (HOME_PLATE.has(code)) return "Home Plate";
     if (INFIELD_EXTRA.has(code)) return "Infield";
+    // Center Field Sports Bar (CFSB*) — dead-center outfield, no seat number.
+    if (/^CFSB/.test(code)) return "Outfield";
     if (num == null) return null;
     const d = num % 100;
     return (d >= 15 && d <= 25) ? "Infield" : "Outfield";
@@ -76,6 +78,7 @@
       if (num >= 400 && num <= 499) return "Grandstand";
       return "Other";
     }
+    if (/^CFSB/i.test(code)) return "Main";     // Center Field Sports Bar
     if (/^AUDI/i.test(code)) return "Audi Club";
     if (/^GA/i.test(code)) return "Standing Room";
     if (/^[A-Z]{1,2}$/i.test(code)) return "Suite";
@@ -109,6 +112,10 @@
       code = m[1] + m[2]; // leading zeros stripped, suffix kept
     }
 
+    // Fold every "CFSB…" variant (CFSBTABLE1, CFSB100, …) into one canonical
+    // Center Field Sports Bar row, so the table shows the cheapest bar block.
+    if (/^CFSB/.test(code)) code = "CFSB";
+
     const level = levelFor(num, code);
     const location = locationFor(code, num);
 
@@ -120,6 +127,7 @@
       const suffix = m ? m[2] : "";
       display = String(num).padStart(3, "0") + suffix;
     }
+    if (code === "CFSB") display = "CF Sports Bar";
 
     let label = display ? level + " " + display : level;
     if (obstructed) label += " (obstructed)";

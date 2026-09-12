@@ -746,6 +746,9 @@
   // Home-plate proximity for a row: distance = |lastTwoDigits - 20|, and a
   // side flag so the higher-numbered side sorts first within a tie.
   function plateInfo(row) {
+    // Center Field Sports Bar has no seat number; rank it right below 238/202
+    // (both at |lastTwo-20| = 18) by giving it a hair more plate-distance.
+    if (row.code === "CFSB") return { dist: 18.5, side: 1 };
     if (row.num == null) return null;
     const d = row.num % 100;
     return { dist: Math.abs(d - 20), side: d >= 20 ? 0 : 1 };
@@ -758,6 +761,9 @@
   // Non-numbered sections (Suite, Audi Club, Standing Room, Other) sink to end.
   function bucketRank(row) {
     if (row.level === "Legends") return 0;
+    // CFSB has no seat number but belongs with the 200s outfield (bucket 5),
+    // sorted last within it via plateInfo's oversized distance.
+    if (row.code === "CFSB") return 5;
     if (row.num != null) {
       const tier = Math.floor(row.num / 100); // 1=100s … 4=400s
       const inf = row.location === "Infield" || row.location === "Home Plate";
