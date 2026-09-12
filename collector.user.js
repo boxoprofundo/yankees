@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.13.0
+// @version      3.14.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -334,8 +334,23 @@
       w.__ykTMHooked = 1;
       const of = w.fetch;
       if (of) {
+        w.__ykFetch = of;   // pristine fetch, for replaying quickpicks paginated
         w.fetch = function () {
           const a = arguments;
+          // Remember the page's own quickpicks request (URL + auth headers) so
+          // the worker can replay it with a big limit and pull every pick, not
+          // just the first (quality-ranked) page the UI shows.
+          try {
+            const u0 = (a[0] && a[0].url) ? a[0].url : String(a[0] || "");
+            if (/\/ismds\/event\/[^/]+\/quickpicks/.test(u0)) {
+              const hdrs = {};
+              if (a[0] && a[0].headers && a[0].headers.forEach) a[0].headers.forEach((v, k) => { hdrs[k] = v; });
+              if (a[1] && a[1].headers) {
+                try { new Headers(a[1].headers).forEach((v, k) => { hdrs[k] = v; }); } catch (e) {}
+              }
+              w.__ykTMqp = { url: u0, headers: hdrs };
+            }
+          } catch (e) {}
           return of.apply(this, a).then((r) => {
             try { r.clone().text().then((t) => sink(r.url || a[0], t)); } catch (e) {}
             return r;
@@ -355,6 +370,29 @@
         };
       }
     } catch (e) { console.error("[collector/TM] hook install failed", e); }
+  }
+
+  // Replay the page's own quickpicks request with a large limit so every pick
+  // (all sections, incl. promo "S" price levels) comes back, not just the first
+  // quality-ranked page the UI renders. Uses the pristine page fetch + the
+  // captured auth headers + the session cookies, so it passes DataDome exactly
+  // as the page's own call does. Responses land in TM_CAPTURES via the hook.
+  async function tmFetchAllQuickpicks() {
+    let w;
+    try { w = (typeof unsafeWindow !== "undefined") ? unsafeWindow : window; } catch (e) { w = window; }
+    const qp = w && w.__ykTMqp;
+    if (!qp || !qp.url) return 0;
+    const doFetch = (w && w.fetch) || fetch;   // hooked fetch → auto-captured
+    let got = 0;
+    try {
+      const u = new URL(qp.url, location.href);
+      u.searchParams.set("limit", "400");
+      u.searchParams.set("offset", "0");
+      const r = await doFetch(u.toString(), { headers: qp.headers || {}, credentials: "include" });
+      const t = await r.text();
+      if (t && t.length > 40) { try { got = (JSON.parse(t).picks || []).length; } catch (e) {} }
+    } catch (e) { /* best-effort */ }
+    return got;
   }
 
   // Summarize a seat-map JSON blob without assuming its exact schema, so the
@@ -557,8 +595,19 @@
     // Apply a promo / presale code if one is set (listings then reflect it).
     const tmJob = GM_getValue("yk_tm_job", null);
     const promoInfo = (tmJob && tmJob.promo) ? await applyTmPromo(tmJob.promo) : null;
-    // Nudge the seat list to render / lazy-load.
+    // Nudge the seat list to render / lazy-load (also triggers the page's own
+    // quickpicks fetch, which we need to have seen before we can replay it).
     for (let r = 0; r < 6; r++) { window.scrollBy(0, 1400); await sleep(700); }
+    // Wait (up to ~24s) for the page to actually load listings — some events are
+    // slow, and reading too early is why games came back with zero sections.
+    const hasList = () => TM_CAPTURES.some((c) => /quickpicks/.test(c.url)) ||
+      /Row\s+\w+\s+.*?\$\s*\d/.test(document.body ? document.body.innerText : "");
+    for (let i = 0; i < 32 && !hasList(); i++) { window.scrollBy(0, 900); await sleep(750); }
+    // Replay quickpicks with a big limit to pull EVERY pick (all sections and
+    // promo price levels), not just the first quality-ranked page; then give the
+    // hook a moment to capture that response.
+    const qpReplayPicks = await tmFetchAllQuickpicks();
+    await sleep(1500);
     const body = document.body ? document.body.innerText : "";
     const job = GM_getValue("yk_tm_job", null);
     const gamePk = (job && job.eidToPk && job.eidToPk[eid]) || null;
@@ -611,7 +660,7 @@
       title: (document.title || "").slice(0, 120),
       blocked: /paused|denied|robot|captcha|access to this page/i.test(body.slice(0, 400)),
       bodyLen: body.length,
-      sections: { total: quotes.length, fromBody: bodyQuotes.length, fromJson: jsonQuotes.length },
+      sections: { total: quotes.length, fromBody: bodyQuotes.length, fromJson: jsonQuotes.length, qpReplayPicks },
       sectionRows: secText,
       faceMentions: faceCtx,
       ismdsUrls: [...new Set(TM_CAP_URLS)].slice(0, 20),
