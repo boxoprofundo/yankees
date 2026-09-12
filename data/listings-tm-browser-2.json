@@ -1,7 +1,271 @@
 {
-  "fetchedAt": "2026-09-12T02:30:25Z",
+  "fetchedAt": "2026-09-12T03:13:46Z",
   "promo": "GRANDSLAM",
   "quotes": [
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "128",
+      "price": 192.05,
+      "faceValue": 170
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "207",
+      "price": 101.7,
+      "faceValue": 90
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "213",
+      "price": 146.85,
+      "faceValue": 130
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "216",
+      "price": 180.75,
+      "faceValue": 160
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "217",
+      "price": 180.75,
+      "faceValue": 160
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "223",
+      "price": 180.75,
+      "faceValue": 160
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "224",
+      "price": 180.75,
+      "faceValue": 160
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "225",
+      "price": 163.8,
+      "faceValue": 145
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "228S",
+      "price": 101.7,
+      "faceValue": 90
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "211S",
+      "price": 101.7,
+      "faceValue": 90
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "231S",
+      "price": 101.7,
+      "faceValue": 90
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "209S",
+      "price": 101.7,
+      "faceValue": 90
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "206S",
+      "price": 101.7,
+      "faceValue": 90
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "205S",
+      "price": 101.7,
+      "faceValue": 90
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "109S",
+      "price": 124.25,
+      "faceValue": 110
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "132S",
+      "price": 124.25,
+      "faceValue": 110
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "133S",
+      "price": 124.25,
+      "faceValue": 110
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "106S",
+      "price": 124.25,
+      "faceValue": 110
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "134S",
+      "price": 124.25,
+      "faceValue": 110
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "214B",
+      "price": 146.85,
+      "faceValue": 130
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "227A",
+      "price": 146.85,
+      "faceValue": 130
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "130S",
+      "price": 146.85,
+      "faceValue": 130
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "226S",
+      "price": 146.85,
+      "faceValue": 130
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "214BS",
+      "price": 146.85,
+      "faceValue": 130
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "320C",
+      "price": 152.5,
+      "faceValue": 135
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "111S",
+      "price": 169.45,
+      "faceValue": 150
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "AUDI2",
+      "price": 180.75,
+      "faceValue": 160
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "AUDI3",
+      "price": 180.75,
+      "faceValue": 160
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "216S",
+      "price": 180.75,
+      "faceValue": 160
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "127A",
+      "price": 231.55,
+      "faceValue": 205
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "127AS",
+      "price": 231.55,
+      "faceValue": 205
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "120BS",
+      "price": 316.3,
+      "faceValue": 280
+    },
+    {
+      "gamePk": 823496,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "121AS",
+      "price": 316.3,
+      "faceValue": 280
+    },
     {
       "gamePk": 823494,
       "url": "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-09-22-2026/event/1D006323F57942DC?promoCode=GRANDSLAM",
@@ -275,340 +539,212 @@
       "faceValue": 17
     },
     {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4?promoCode=GRANDSLAM",
+      "gamePk": 823491,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-25-2026/event/1D006323F598439F?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "309",
+      "price": 66.65,
+      "faceValue": 59
+    },
+    {
+      "gamePk": 823491,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-25-2026/event/1D006323F598439F?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "334",
+      "price": 66.65,
+      "faceValue": 59
+    },
+    {
+      "gamePk": 823491,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-25-2026/event/1D006323F598439F?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "414",
+      "price": 66.65,
+      "faceValue": 59
+    },
+    {
+      "gamePk": 823491,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-25-2026/event/1D006323F598439F?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "416",
+      "price": 66.65,
+      "faceValue": 59
+    },
+    {
+      "gamePk": 823491,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-25-2026/event/1D006323F598439F?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "417",
+      "price": 66.65,
+      "faceValue": 59
+    },
+    {
+      "gamePk": 823491,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-25-2026/event/1D006323F598439F?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "418",
+      "price": 66.65,
+      "faceValue": 59
+    },
+    {
+      "gamePk": 823491,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-25-2026/event/1D006323F598439F?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "421",
+      "price": 66.65,
+      "faceValue": 59
+    },
+    {
+      "gamePk": 823491,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-25-2026/event/1D006323F598439F?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "422",
+      "price": 66.65,
+      "faceValue": 59
+    },
+    {
+      "gamePk": 823491,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-25-2026/event/1D006323F598439F?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "423",
+      "price": 66.65,
+      "faceValue": 59
+    },
+    {
+      "gamePk": 823491,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-25-2026/event/1D006323F598439F?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "424",
+      "price": 66.65,
+      "faceValue": 59
+    },
+    {
+      "gamePk": 823491,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-25-2026/event/1D006323F598439F?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "425",
+      "price": 66.65,
+      "faceValue": 59
+    },
+    {
+      "gamePk": 823491,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-25-2026/event/1D006323F598439F?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "426",
+      "price": 66.65,
+      "faceValue": 59
+    },
+    {
+      "gamePk": 823491,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-25-2026/event/1D006323F598439F?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "428",
+      "price": 42.2,
+      "faceValue": 38
+    },
+    {
+      "gamePk": 823491,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-25-2026/event/1D006323F598439F?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "429",
+      "price": 42.2,
+      "faceValue": 38
+    },
+    {
+      "gamePk": 823491,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-25-2026/event/1D006323F598439F?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "430",
+      "price": 42.2,
+      "faceValue": 38
+    },
+    {
+      "gamePk": 823491,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-25-2026/event/1D006323F598439F?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "332A",
+      "price": 66.65,
+      "faceValue": 59
+    },
+    {
+      "gamePk": 823490,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-27-2026/event/1D006323F59943A9?promoCode=GRANDSLAM",
       "provider": "Ticketmaster",
       "section": "405",
-      "price": 30,
-      "faceValue": 27
+      "price": 17.8,
+      "faceValue": 16
     },
     {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "406",
-      "price": 30,
-      "faceValue": 27
-    },
-    {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4?promoCode=GRANDSLAM",
+      "gamePk": 823490,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-27-2026/event/1D006323F59943A9?promoCode=GRANDSLAM",
       "provider": "Ticketmaster",
       "section": "408",
-      "price": 30,
-      "faceValue": 27
+      "price": 17.8,
+      "faceValue": 16
     },
     {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4?promoCode=GRANDSLAM",
+      "gamePk": 823490,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-27-2026/event/1D006323F59943A9?promoCode=GRANDSLAM",
       "provider": "Ticketmaster",
       "section": "433",
-      "price": 30,
-      "faceValue": 27
+      "price": 17.8,
+      "faceValue": 16
     },
     {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4?promoCode=GRANDSLAM",
+      "gamePk": 823490,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-27-2026/event/1D006323F59943A9?promoCode=GRANDSLAM",
       "provider": "Ticketmaster",
       "section": "431A",
-      "price": 30,
-      "faceValue": 27
+      "price": 17.8,
+      "faceValue": 16
     },
     {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4?promoCode=GRANDSLAM",
+      "gamePk": 823490,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-27-2026/event/1D006323F59943A9?promoCode=GRANDSLAM",
       "provider": "Ticketmaster",
       "section": "431B",
-      "price": 30,
-      "faceValue": 27
+      "price": 17.8,
+      "faceValue": 16
     },
     {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4?promoCode=GRANDSLAM",
+      "gamePk": 823490,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-27-2026/event/1D006323F59943A9?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "407B",
+      "price": 17.8,
+      "faceValue": 16
+    },
+    {
+      "gamePk": 823490,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-27-2026/event/1D006323F59943A9?promoCode=GRANDSLAM",
       "provider": "Ticketmaster",
       "section": "432A",
-      "price": 30,
-      "faceValue": 27
+      "price": 17.8,
+      "faceValue": 16
     },
     {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4?promoCode=GRANDSLAM",
+      "gamePk": 823490,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-27-2026/event/1D006323F59943A9?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "432B",
+      "price": 17.8,
+      "faceValue": 16
+    },
+    {
+      "gamePk": 823490,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-27-2026/event/1D006323F59943A9?promoCode=GRANDSLAM",
       "provider": "Ticketmaster",
       "section": "434A",
-      "price": 30,
-      "faceValue": 27
+      "price": 17.8,
+      "faceValue": 16
     },
     {
-      "gamePk": 823489,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-26-2026/event/1D006323F59943A4?promoCode=GRANDSLAM",
+      "gamePk": 823490,
+      "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-27-2026/event/1D006323F59943A9?promoCode=GRANDSLAM",
       "provider": "Ticketmaster",
       "section": "434B",
-      "price": 30,
-      "faceValue": 27
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "128",
-      "price": 192.05,
-      "faceValue": 170
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "207",
-      "price": 101.7,
-      "faceValue": 90
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "213",
-      "price": 146.85,
-      "faceValue": 130
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "216",
-      "price": 194.94,
-      "faceValue": 160
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "217",
-      "price": 180.75,
-      "faceValue": 160
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "223",
-      "price": 180.75,
-      "faceValue": 160
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "224",
-      "price": 180.75,
-      "faceValue": 160
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "225",
-      "price": 163.8,
-      "faceValue": 145
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "234S",
-      "price": 90.4,
-      "faceValue": 80
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "228S",
-      "price": 101.7,
-      "faceValue": 90
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "211S",
-      "price": 101.7,
-      "faceValue": 90
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "231S",
-      "price": 101.7,
-      "faceValue": 90
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "209S",
-      "price": 101.7,
-      "faceValue": 90
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "206S",
-      "price": 101.7,
-      "faceValue": 90
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "205S",
-      "price": 101.7,
-      "faceValue": 90
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "109S",
-      "price": 124.25,
-      "faceValue": 110
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "132S",
-      "price": 124.25,
-      "faceValue": 110
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "133S",
-      "price": 124.25,
-      "faceValue": 110
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "106S",
-      "price": 124.25,
-      "faceValue": 110
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "134S",
-      "price": 124.25,
-      "faceValue": 110
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "214B",
-      "price": 146.85,
-      "faceValue": 130
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "227A",
-      "price": 146.85,
-      "faceValue": 130
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "130S",
-      "price": 146.85,
-      "faceValue": 130
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "226S",
-      "price": 146.85,
-      "faceValue": 130
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "214BS",
-      "price": 146.85,
-      "faceValue": 130
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "320C",
-      "price": 152.5,
-      "faceValue": 135
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "111S",
-      "price": 169.45,
-      "faceValue": 150
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "AUDI2",
-      "price": 180.75,
-      "faceValue": 160
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "216S",
-      "price": 180.75,
-      "faceValue": 160
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "127A",
-      "price": 231.55,
-      "faceValue": 205
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "127AS",
-      "price": 231.55,
-      "faceValue": 205
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "120BS",
-      "price": 316.3,
-      "faceValue": 280
-    },
-    {
-      "gamePk": 823496,
-      "url": "https://www.ticketmaster.com/new-york-yankees-vs-new-york-bronx-new-york-09-12-2026/event/1D006323F595438E?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "121AS",
-      "price": 316.3,
-      "faceValue": 280
+      "price": 17.8,
+      "faceValue": 16
     }
   ]
 }
