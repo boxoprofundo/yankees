@@ -609,9 +609,15 @@
     for (const q of quotes) {
       if (q.section && q.provider !== "SeatGeek") { const c = normSec(q.section); if (c) trustedCodes.add(c); }
     }
+    // Section numbers that don't exist at Yankee Stadium — the bleachers run
+    // 202–238 with the Center Field Sports Bar between 238 and 202, so 201 and
+    // 239 are never real. Drop them from any source (mislabels).
+    const NONEXISTENT = new Set(["201", "239"]);
     const isPhantom = (q) => {
-      if (q.provider !== "SeatGeek" || !q.section) return false;
+      if (!q.section) return false;
       const cls = window.Sections.classify(q.section);
+      if (NONEXISTENT.has(cls.code)) return true;
+      if (q.provider !== "SeatGeek") return false;
       return cls.num != null && cls.num >= 100 && !trustedCodes.has(cls.code);
     };
 
