@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.12.3
+// @version      3.13.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -438,6 +438,61 @@
     return bySec;
   }
 
+  // Per-section CHEAPEST price straight from the seat-map JSON (quickpicks
+  // picks[] → offerGroups → _embedded.offer[]). The rendered page only lists a
+  // virtualised subset of sections, so scraping body text misses many; the JSON
+  // the page itself fetches carries every listed section. Offer price fields
+  // vary (totalPrice = all-in, listPrice = base), so take the first present and
+  // the min across a section's offers. Returns Ticketmaster quote objects.
+  function tmQuotesFromCaptures(gamePk, url) {
+    const offer = {}; // offerId -> { price, face, standard }
+    const picks = []; // { section, ids:[] }
+    for (const c of TM_CAPTURES) {
+      let j;
+      try { j = JSON.parse(c.body); } catch (e) { continue; }
+      const emb = j._embedded || {};
+      for (const o of emb.offer || []) {
+        if (!o || o.offerId == null) continue;
+        const raw = o.totalPrice != null ? o.totalPrice
+          : o.listPrice != null ? o.listPrice
+          : o.price != null ? o.price : null;
+        const price = raw != null ? +raw : null;
+        offer[o.offerId] = {
+          price: price != null && price > 0 ? price : null,
+          face: o.faceValue != null ? +o.faceValue : null,
+          standard: o.name === "Standard Ticket" && o.offerType === "standard",
+        };
+      }
+      for (const p of j.picks || []) {
+        if (!p || !p.section) continue;
+        const ids = [];
+        for (const og of p.offerGroups || []) for (const id of og.offers || []) ids.push(id);
+        picks.push({ section: String(p.section).toUpperCase(), ids });
+      }
+    }
+    const bySec = {};
+    for (const p of picks) {
+      let minPrice = null, std = null, any = null;
+      for (const id of p.ids) {
+        const o = offer[id];
+        if (!o) continue;
+        if (o.price != null && (minPrice == null || o.price < minPrice)) minPrice = o.price;
+        if (o.face > 0) {
+          if (any == null || o.face > any) any = o.face;
+          if (o.standard) std = std == null ? o.face : Math.min(std, o.face);
+        }
+      }
+      if (minPrice == null) continue;
+      const face = std != null ? std : any;
+      const cur = bySec[p.section];
+      if (!cur || minPrice < cur.price) bySec[p.section] = { price: minPrice, face };
+    }
+    return Object.entries(bySec).map(([sec, v]) => ({
+      gamePk, provider: "Ticketmaster", section: sec,
+      price: Math.round(v.price * 100) / 100, faceValue: v.face != null ? v.face : null, url,
+    }));
+  }
+
   async function ticketmasterWorker(eid) {
     try { await ticketmasterWorkerInner(eid); }
     catch (e) {
@@ -508,14 +563,28 @@
     const job = GM_getValue("yk_tm_job", null);
     const gamePk = (job && job.eidToPk && job.eidToPk[eid]) || null;
     const url = location.href.split("?")[0];
-    const quotes = tmQuotesFromBody(body, gamePk, url);
 
-    // Stamp official face value onto each quote from the seat-map API.
+    // Prices from the rendered list (authoritative — exactly what TM displays)
+    // unioned with the seat-map JSON, which lists every available section (the
+    // visible list is virtualised and only shows a subset). Body wins on price
+    // where both have a section; JSON fills the many sections the body misses.
     const faceMap = tmFaceFromCaptures();
-    for (const q of quotes) {
-      const key = String(q.section).replace(/\s*\(obstructed\)$/, "").toUpperCase();
+    const bodyQuotes = tmQuotesFromBody(body, gamePk, url);
+    const jsonQuotes = tmQuotesFromCaptures(gamePk, url);
+    const bySec = {};
+    const baseKey = (s) => String(s).replace(/\s*\(obstructed\)$/, "").toUpperCase();
+    for (const q of bodyQuotes) {
+      const key = baseKey(q.section);
       if (faceMap[key] != null) q.faceValue = faceMap[key];
+      bySec[key] = q;
     }
+    for (const q of jsonQuotes) {
+      const key = baseKey(q.section);
+      if (!(key in bySec)) bySec[key] = q;              // fill missing section
+      else if (bySec[key].faceValue == null && q.faceValue != null)
+        bySec[key].faceValue = q.faceValue;            // backfill face only
+    }
+    const quotes = Object.values(bySec);
 
     // Diagnostic: page shape + any captured seat-map JSON, so the parser and a
     // future face-value reader can be built from the real markup.
@@ -542,6 +611,7 @@
       title: (document.title || "").slice(0, 120),
       blocked: /paused|denied|robot|captcha|access to this page/i.test(body.slice(0, 400)),
       bodyLen: body.length,
+      sections: { total: quotes.length, fromBody: bodyQuotes.length, fromJson: jsonQuotes.length },
       sectionRows: secText,
       faceMentions: faceCtx,
       ismdsUrls: [...new Set(TM_CAP_URLS)].slice(0, 20),
@@ -1570,6 +1640,16 @@
     if (disc.error === "no-events") { setChip("Ticketmaster: no event map yet (data/tm-events.json)"); return 0; }
     let entries = disc.entries || [];
     if (!entries.length) { setChip("Ticketmaster: no events discovered"); return 0; }
+    // Drop games that have already happened — the event map keeps the whole
+    // season, but a past game's page has no listings (it wasted a slot and the
+    // diagnostic every run). Date is in the URL as MM-DD-YYYY.
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    entries = entries.filter(([, url]) => {
+      const m = String(url).match(/(\d\d)-(\d\d)-(\d{4})/);
+      if (!m) return true;
+      return new Date(+m[3], +m[1] - 1, +m[2]) >= today;
+    });
+    if (!entries.length) { setChip("Ticketmaster: no upcoming games"); return 0; }
     if (probeOnly) entries = entries.slice(0, 1);
     const eidToPk = {};
     entries.forEach(([eid, , pk]) => { eidToPk[eid] = pk; });
@@ -1587,11 +1667,45 @@
       { waits: probeOnly ? 120 : 100,
         gapMin: probeOnly ? 500 : 2500, gapRand: probeOnly ? 500 : 2500,
         jobExtra: { eidToPk, promo } });
-    const firstRes = GM_getValue("yk_tm_result_" + entries[0][0], null);
+
+    // DataDome tends to challenge the later tabs in a long back-to-back run, so
+    // some games come back empty. Reopen just those once, slower, to recover
+    // them. (Delete their stale empty results first so cycle re-polls them.)
+    if (!probeOnly) {
+      const empty = entries.filter(([eid]) => {
+        const r = GM_getValue("yk_tm_result_" + eid, null);
+        return !(r && r.quotes && r.quotes.length);
+      });
+      if (empty.length && empty.length < entries.length) {
+        empty.forEach(([eid]) => GM_deleteValue("yk_tm_result_" + eid));
+        setChip(`Ticketmaster: retrying ${empty.length} empty game(s)…`, true);
+        const retry = await cycle("TM retry", "yk_tm_job", empty,
+          (eid) => "yk_tm_result_" + eid, true,
+          { waits: 120, gapMin: 8000, gapRand: 4000, keepResults: true,
+            jobExtra: { eidToPk, promo } });
+        for (const q of retry.collected) collected.push(q);
+      }
+    }
+
+    // Per-game outcome + the first NON-empty diagnostic (the soonest game can
+    // legitimately have no seats), so the diag is actually informative.
+    const perGame = entries.map(([eid, url]) => {
+      const r = GM_getValue("yk_tm_result_" + eid, null);
+      return { eid, date: (String(url).match(/(\d\d-\d\d-\d{4})/) || [])[1] || null,
+        sections: r && r.quotes ? r.quotes.length : 0,
+        blocked: !!(r && r.diag && r.diag.blocked) };
+    });
+    let firstRes = null;
+    for (const [eid] of entries) {
+      const r = GM_getValue("yk_tm_result_" + eid, null);
+      if (r && r.quotes && r.quotes.length) { firstRes = r; break; }
+    }
+    if (!firstRes) firstRes = GM_getValue("yk_tm_result_" + entries[0][0], null);
     await putFile("/contents/data/_tm-diag.json",
       { fetchedAt: new Date().toISOString(), games: entries.length,
+        gamesWithData: new Set(collected.map((q) => q.gamePk)).size,
         sampleEvent: entries[0][1], totalQuotes: collected.length,
-        promoInSettings: !!promo, promoLen: promo.length,
+        promoInSettings: !!promo, promoLen: promo.length, perGame,
         diag: firstRes ? firstRes.diag : "no result (event tab produced nothing)" },
       "Ticketmaster collector diagnostic");
     if (collected.length) {
