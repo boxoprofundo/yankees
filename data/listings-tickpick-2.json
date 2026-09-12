@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-12T02:33:30Z",
+  "fetchedAt": "2026-09-12T03:16:28Z",
   "quotes": [
     {
       "gamePk": 823543,
@@ -13,8 +13,8 @@
       "gamePk": 823543,
       "provider": "TickPick",
       "section": "104",
-      "price": 130,
-      "faceValue": 106.69,
+      "price": 160,
+      "faceValue": 159,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
     {
@@ -37,24 +37,16 @@
       "gamePk": 823543,
       "provider": "TickPick",
       "section": "107",
-      "price": 125,
-      "faceValue": 102.36,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
-    },
-    {
-      "gamePk": 823543,
-      "provider": "TickPick",
-      "section": "108",
-      "price": 121,
-      "faceValue": 99.47,
+      "price": 176,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
     {
       "gamePk": 823543,
       "provider": "TickPick",
       "section": "109",
-      "price": 115,
-      "faceValue": 95.14,
+      "price": 137,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
     {
@@ -140,14 +132,6 @@
     {
       "gamePk": 823543,
       "provider": "TickPick",
-      "section": "132",
-      "price": 117,
-      "faceValue": 95.14,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
-    },
-    {
-      "gamePk": 823543,
-      "provider": "TickPick",
       "section": "133",
       "price": 109,
       "faceValue": null,
@@ -165,7 +149,7 @@
       "gamePk": 823543,
       "provider": "TickPick",
       "section": "135",
-      "price": 87,
+      "price": 77,
       "faceValue": 80.69,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
@@ -198,7 +182,7 @@
       "provider": "TickPick",
       "section": "204",
       "price": 57,
-      "faceValue": 79.25,
+      "faceValue": 66.26,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
     {
@@ -206,15 +190,15 @@
       "provider": "TickPick",
       "section": "205",
       "price": 65,
-      "faceValue": 73.48,
+      "faceValue": 63.38,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
     {
       "gamePk": 823543,
       "provider": "TickPick",
       "section": "206",
-      "price": 91,
-      "faceValue": 73.47,
+      "price": 77,
+      "faceValue": 63.38,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
     {
@@ -254,7 +238,7 @@
       "provider": "TickPick",
       "section": "212",
       "price": 104,
-      "faceValue": 102.36,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
     {
@@ -285,7 +269,7 @@
       "gamePk": 823543,
       "provider": "TickPick",
       "section": "219",
-      "price": 554,
+      "price": 420,
       "faceValue": 335.28,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
@@ -310,7 +294,7 @@
       "provider": "TickPick",
       "section": "228",
       "price": 87,
-      "faceValue": 93.7,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
     {
@@ -404,9 +388,17 @@
     {
       "gamePk": 823543,
       "provider": "TickPick",
+      "section": "310",
+      "price": 62,
+      "faceValue": 50.9,
+      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
+    },
+    {
+      "gamePk": 823543,
+      "provider": "TickPick",
       "section": "311",
-      "price": 69,
-      "faceValue": 56.15,
+      "price": 62,
+      "faceValue": 50.9,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
     {
@@ -421,8 +413,8 @@
       "gamePk": 823543,
       "provider": "TickPick",
       "section": "313",
-      "price": 67,
-      "faceValue": 57.6,
+      "price": 65,
+      "faceValue": 52.39,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
     {
@@ -454,7 +446,7 @@
       "provider": "TickPick",
       "section": "322",
       "price": 77,
-      "faceValue": 87.1,
+      "faceValue": 77.81,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
     {
@@ -470,7 +462,7 @@
       "provider": "TickPick",
       "section": "324",
       "price": 69,
-      "faceValue": 64.83,
+      "faceValue": 56.15,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
     {
@@ -485,8 +477,8 @@
       "gamePk": 823543,
       "provider": "TickPick",
       "section": "326",
-      "price": 69,
-      "faceValue": 92.25,
+      "price": 67,
+      "faceValue": 79.25,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
     {
@@ -573,7 +565,7 @@
       "gamePk": 823543,
       "provider": "TickPick",
       "section": "411",
-      "price": 41,
+      "price": 37,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
@@ -621,7 +613,7 @@
       "gamePk": 823543,
       "provider": "TickPick",
       "section": "417",
-      "price": 27,
+      "price": 22,
       "faceValue": 11.82,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
@@ -796,6 +788,14 @@
     {
       "gamePk": 823543,
       "provider": "TickPick",
+      "section": "233A",
+      "price": 62,
+      "faceValue": 50.9,
+      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
+    },
+    {
+      "gamePk": 823543,
+      "provider": "TickPick",
       "section": "232B",
       "price": 67,
       "faceValue": null,
@@ -828,14 +828,6 @@
     {
       "gamePk": 823543,
       "provider": "TickPick",
-      "section": "233A",
-      "price": 70,
-      "faceValue": 56.15,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
-    },
-    {
-      "gamePk": 823543,
-      "provider": "TickPick",
       "section": "407B",
       "price": 84,
       "faceValue": null,
@@ -863,14 +855,6 @@
       "section": "320A",
       "price": 115,
       "faceValue": null,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
-    },
-    {
-      "gamePk": 823543,
-      "provider": "TickPick",
-      "section": "227B",
-      "price": 115,
-      "faceValue": 95.14,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
     {
@@ -1005,7 +989,7 @@
       "gamePk": 823543,
       "provider": "TickPick",
       "section": "020",
-      "price": 2218,
+      "price": 1958,
       "faceValue": 928.5,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-1pm/7367906/"
     },
@@ -1029,8 +1013,8 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "103",
-      "price": 157,
-      "faceValue": 133,
+      "price": 149,
+      "faceValue": 126.35,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -1045,8 +1029,8 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "105",
-      "price": 184,
-      "faceValue": 157.9,
+      "price": 182,
+      "faceValue": 153.43,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -1054,7 +1038,7 @@
       "provider": "TickPick",
       "section": "106",
       "price": 147,
-      "faceValue": 133,
+      "faceValue": 126.35,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -1077,16 +1061,16 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "111",
-      "price": 280,
-      "faceValue": 242.73,
+      "price": 260,
+      "faceValue": 224.46,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "112",
-      "price": 293,
-      "faceValue": 253.17,
+      "price": 298,
+      "faceValue": 258.39,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -1133,15 +1117,15 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "122",
-      "price": 437,
-      "faceValue": 378.48,
+      "price": 449,
+      "faceValue": 388.92,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "123",
-      "price": 433,
+      "price": 438,
       "faceValue": 280,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
@@ -1172,9 +1156,17 @@
     {
       "gamePk": 823496,
       "provider": "TickPick",
+      "section": "128",
+      "price": 608,
+      "faceValue": 527.28,
+      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
+    },
+    {
+      "gamePk": 823496,
+      "provider": "TickPick",
       "section": "129",
-      "price": 151,
-      "faceValue": 130.48,
+      "price": 270,
+      "faceValue": 233.59,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -1237,23 +1229,23 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "204",
-      "price": 124,
-      "faceValue": 104.5,
+      "price": 118,
+      "faceValue": 99.28,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "205",
-      "price": 124,
-      "faceValue": 104.5,
+      "price": 118,
+      "faceValue": 99.28,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "206",
-      "price": 110,
+      "price": 113,
       "faceValue": 131.79,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
@@ -1277,8 +1269,8 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "209",
-      "price": 134,
-      "faceValue": 114.82,
+      "price": 142,
+      "faceValue": 122.65,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -1294,7 +1286,7 @@
       "provider": "TickPick",
       "section": "211",
       "price": 149,
-      "faceValue": 146.14,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -1302,7 +1294,7 @@
       "provider": "TickPick",
       "section": "212",
       "price": 175,
-      "faceValue": 165.72,
+      "faceValue": 169.64,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -1333,24 +1325,24 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "217",
-      "price": 194,
-      "faceValue": 152.25,
+      "price": 210,
+      "faceValue": 181.38,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "219",
-      "price": 313,
-      "faceValue": 266,
+      "price": 297,
+      "faceValue": 252.7,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "222",
-      "price": 413,
-      "faceValue": 357.59,
+      "price": 371,
+      "faceValue": 321.05,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -1373,7 +1365,7 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "228",
-      "price": 135,
+      "price": 127,
       "faceValue": 70.77,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
@@ -1381,15 +1373,15 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "229",
-      "price": 124,
-      "faceValue": 104.5,
+      "price": 118,
+      "faceValue": 99.28,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "230",
-      "price": 124,
+      "price": 118,
       "faceValue": 68.97,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
@@ -1397,7 +1389,7 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "235",
-      "price": 86,
+      "price": 85,
       "faceValue": 48,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
@@ -1405,7 +1397,7 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "236",
-      "price": 86,
+      "price": 80,
       "faceValue": 44.38,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
@@ -1413,7 +1405,7 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "237",
-      "price": 98,
+      "price": 96,
       "faceValue": 39.2,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
@@ -1429,15 +1421,15 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "310",
-      "price": 110,
-      "faceValue": 95,
+      "price": 107,
+      "faceValue": 92.18,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "311",
-      "price": 92,
+      "price": 95,
       "faceValue": 45.17,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
@@ -1469,8 +1461,8 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "316",
-      "price": 177,
-      "faceValue": 152.67,
+      "price": 168,
+      "faceValue": 144.83,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -1589,7 +1581,7 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "408",
-      "price": 63,
+      "price": 64,
       "faceValue": 26.13,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
@@ -1605,7 +1597,7 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "410",
-      "price": 55,
+      "price": 56,
       "faceValue": 31.19,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
@@ -1629,7 +1621,7 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "413",
-      "price": 56,
+      "price": 57,
       "faceValue": 31.19,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
@@ -1678,7 +1670,7 @@
       "provider": "TickPick",
       "section": "419",
       "price": 101,
-      "faceValue": 95,
+      "faceValue": 90.25,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -1718,7 +1710,7 @@
       "provider": "TickPick",
       "section": "425",
       "price": 81,
-      "faceValue": 100.68,
+      "faceValue": 96.42,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -1741,7 +1733,7 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "428",
-      "price": 56,
+      "price": 57,
       "faceValue": 31.19,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
@@ -1749,7 +1741,7 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "429",
-      "price": 56,
+      "price": 59,
       "faceValue": 31.19,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
@@ -1757,8 +1749,16 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "430",
-      "price": 55,
+      "price": 56,
       "faceValue": 28.61,
+      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
+    },
+    {
+      "gamePk": 823496,
+      "provider": "TickPick",
+      "section": "433",
+      "price": 90,
+      "faceValue": 76.56,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -1837,7 +1837,7 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "227B",
-      "price": 155,
+      "price": 156,
       "faceValue": 103.43,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
@@ -1868,17 +1868,17 @@
     {
       "gamePk": 823496,
       "provider": "TickPick",
-      "section": "320A",
-      "price": 186,
-      "faceValue": null,
+      "section": "320C",
+      "price": 177,
+      "faceValue": 82,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
       "gamePk": 823496,
       "provider": "TickPick",
-      "section": "320C",
-      "price": 189,
-      "faceValue": 82,
+      "section": "320A",
+      "price": 186,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -1892,25 +1892,17 @@
     {
       "gamePk": 823496,
       "provider": "TickPick",
-      "section": "234S",
-      "price": 201,
-      "faceValue": 97.5,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
-    },
-    {
-      "gamePk": 823496,
-      "provider": "TickPick",
       "section": "227A",
-      "price": 221,
+      "price": 205,
       "faceValue": 158.38,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
       "gamePk": 823496,
       "provider": "TickPick",
-      "section": "127B",
-      "price": 228,
-      "faceValue": 197.04,
+      "section": "127A",
+      "price": 243,
+      "faceValue": 210.1,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -1924,17 +1916,17 @@
     {
       "gamePk": 823496,
       "provider": "TickPick",
-      "section": "127A",
-      "price": 255,
-      "faceValue": 220.55,
+      "section": "114B",
+      "price": 254,
+      "faceValue": 212.13,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
       "gamePk": 823496,
       "provider": "TickPick",
-      "section": "114B",
-      "price": 261,
-      "faceValue": 212.13,
+      "section": "127B",
+      "price": 263,
+      "faceValue": 227.07,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -1958,7 +1950,7 @@
       "provider": "TickPick",
       "section": "114A",
       "price": 306,
-      "faceValue": 332.5,
+      "faceValue": 315.88,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -1966,14 +1958,6 @@
       "provider": "TickPick",
       "section": "117B",
       "price": 311,
-      "faceValue": 429.39,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
-    },
-    {
-      "gamePk": 823496,
-      "provider": "TickPick",
-      "section": "221A",
-      "price": 317,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
@@ -1988,6 +1972,14 @@
     {
       "gamePk": 823496,
       "provider": "TickPick",
+      "section": "012",
+      "price": 372,
+      "faceValue": 315.88,
+      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
+    },
+    {
+      "gamePk": 823496,
+      "provider": "TickPick",
       "section": "120B",
       "price": 382,
       "faceValue": 331.49,
@@ -1996,17 +1988,25 @@
     {
       "gamePk": 823496,
       "provider": "TickPick",
-      "section": "012",
-      "price": 391,
-      "faceValue": 332.5,
+      "section": "218B",
+      "price": 417,
+      "faceValue": 361.51,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
       "gamePk": 823496,
       "provider": "TickPick",
-      "section": "121B",
-      "price": 424,
-      "faceValue": 368.03,
+      "section": "220C",
+      "price": 420,
+      "faceValue": 362.81,
+      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
+    },
+    {
+      "gamePk": 823496,
+      "provider": "TickPick",
+      "section": "120A",
+      "price": 420,
+      "faceValue": 364.11,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -2020,41 +2020,25 @@
     {
       "gamePk": 823496,
       "provider": "TickPick",
-      "section": "218B",
-      "price": 436,
-      "faceValue": 377.18,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
-    },
-    {
-      "gamePk": 823496,
-      "provider": "TickPick",
-      "section": "220C",
-      "price": 441,
-      "faceValue": 382.4,
+      "section": "220A",
+      "price": 438,
+      "faceValue": 379.78,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "220B",
-      "price": 466,
-      "faceValue": 403.28,
+      "price": 447,
+      "faceValue": 387.62,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
       "gamePk": 823496,
       "provider": "TickPick",
-      "section": "220A",
-      "price": 472,
-      "faceValue": 409.8,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
-    },
-    {
-      "gamePk": 823496,
-      "provider": "TickPick",
-      "section": "120A",
-      "price": 533,
-      "faceValue": null,
+      "section": "121B",
+      "price": 465,
+      "faceValue": 408.5,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -2076,9 +2060,17 @@
     {
       "gamePk": 823496,
       "provider": "TickPick",
+      "section": "015A",
+      "price": 743,
+      "faceValue": 631.75,
+      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
+    },
+    {
+      "gamePk": 823496,
+      "provider": "TickPick",
       "section": "024A",
       "price": 747,
-      "faceValue": 741,
+      "faceValue": 703.95,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -2108,25 +2100,9 @@
     {
       "gamePk": 823496,
       "provider": "TickPick",
-      "section": "015A",
-      "price": 781,
-      "faceValue": 665,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
-    },
-    {
-      "gamePk": 823496,
-      "provider": "TickPick",
       "section": "017A",
       "price": 790,
       "faceValue": null,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
-    },
-    {
-      "gamePk": 823496,
-      "provider": "TickPick",
-      "section": "014B",
-      "price": 948,
-      "faceValue": 807.5,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -2141,8 +2117,8 @@
       "gamePk": 823496,
       "provider": "TickPick",
       "section": "017B",
-      "price": 1338,
-      "faceValue": 1140,
+      "price": 1271,
+      "faceValue": 1083,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-12-26-1pm/7368095/"
     },
     {
@@ -2221,7 +2197,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "108",
-      "price": 85,
+      "price": 84,
       "faceValue": 429,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2229,7 +2205,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "109",
-      "price": 100,
+      "price": 99,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2237,8 +2213,8 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "110",
-      "price": 210,
-      "faceValue": 173.56,
+      "price": 213,
+      "faceValue": 176.16,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
@@ -2270,7 +2246,7 @@
       "provider": "TickPick",
       "section": "115",
       "price": 501,
-      "faceValue": null,
+      "faceValue": 373.38,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
@@ -2309,8 +2285,8 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "123",
-      "price": 378,
-      "faceValue": 314.52,
+      "price": 555,
+      "faceValue": 462.01,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
@@ -2341,23 +2317,23 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "128",
-      "price": 174,
-      "faceValue": 143.53,
+      "price": 180,
+      "faceValue": 148.75,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "129",
-      "price": 162,
-      "faceValue": 133.09,
+      "price": 155,
+      "faceValue": 127.87,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "130",
-      "price": 139,
+      "price": 140,
       "faceValue": 116.13,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2365,7 +2341,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "131",
-      "price": 202,
+      "price": 201,
       "faceValue": 104.52,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2381,7 +2357,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "133",
-      "price": 86,
+      "price": 85,
       "faceValue": 90.37,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2397,7 +2373,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "135",
-      "price": 88,
+      "price": 87,
       "faceValue": 90.37,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2405,7 +2381,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "136",
-      "price": 96,
+      "price": 95,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2429,8 +2405,8 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "204",
-      "price": 111,
-      "faceValue": 90.75,
+      "price": 121,
+      "faceValue": 99.26,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
@@ -2469,7 +2445,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "209",
-      "price": 71,
+      "price": 67,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2477,7 +2453,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "210",
-      "price": 85,
+      "price": 83,
       "faceValue": 79,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2517,8 +2493,8 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "216",
-      "price": 169,
-      "faceValue": 152.25,
+      "price": 216,
+      "faceValue": 175,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
@@ -2581,7 +2557,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "229",
-      "price": 85,
+      "price": 83,
       "faceValue": 440,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2589,7 +2565,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "230",
-      "price": 83,
+      "price": 78,
       "faceValue": 382.8,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2613,7 +2589,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "236",
-      "price": 66,
+      "price": 61,
       "faceValue": 39,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2692,17 +2668,9 @@
     {
       "gamePk": 823495,
       "provider": "TickPick",
-      "section": "315",
-      "price": 164,
-      "faceValue": 83,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
-    },
-    {
-      "gamePk": 823495,
-      "provider": "TickPick",
       "section": "316",
-      "price": 99,
-      "faceValue": 83,
+      "price": 162,
+      "faceValue": 133.09,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
@@ -2718,7 +2686,7 @@
       "provider": "TickPick",
       "section": "319",
       "price": 136,
-      "faceValue": 146.14,
+      "faceValue": 135.7,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
@@ -2733,7 +2701,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "324",
-      "price": 101,
+      "price": 105,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2749,8 +2717,8 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "328",
-      "price": 70,
-      "faceValue": 45.73,
+      "price": 78,
+      "faceValue": 250.8,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
@@ -2765,8 +2733,8 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "330",
-      "price": 57,
-      "faceValue": 34.83,
+      "price": 104,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
@@ -2797,7 +2765,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "408",
-      "price": 163,
+      "price": 97,
       "faceValue": 26.13,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2805,7 +2773,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "409",
-      "price": 95,
+      "price": 79,
       "faceValue": 25.81,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2813,7 +2781,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "410",
-      "price": 90,
+      "price": 75,
       "faceValue": 31.19,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2821,7 +2789,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "411",
-      "price": 60,
+      "price": 49,
       "faceValue": 31.19,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2829,7 +2797,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "412",
-      "price": 73,
+      "price": 69,
       "faceValue": 31.19,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2837,7 +2805,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "413",
-      "price": 51,
+      "price": 50,
       "faceValue": 31.19,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2853,7 +2821,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "415",
-      "price": 68,
+      "price": 57,
       "faceValue": 57.7,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2861,7 +2829,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "416",
-      "price": 56,
+      "price": 53,
       "faceValue": 35.93,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2869,7 +2837,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "417",
-      "price": 61,
+      "price": 50,
       "faceValue": 35.49,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2877,7 +2845,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "418",
-      "price": 71,
+      "price": 60,
       "faceValue": 35.49,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2885,7 +2853,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "419",
-      "price": 46,
+      "price": 49,
       "faceValue": 55,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2894,7 +2862,7 @@
       "provider": "TickPick",
       "section": "421",
       "price": 66,
-      "faceValue": 242,
+      "faceValue": 75.15,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
@@ -2909,7 +2877,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "423",
-      "price": 66,
+      "price": 56,
       "faceValue": 35.49,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2917,7 +2885,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "424",
-      "price": 83,
+      "price": 74,
       "faceValue": 36.31,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2925,7 +2893,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "425",
-      "price": 80,
+      "price": 68,
       "faceValue": 57.7,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2941,7 +2909,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "428",
-      "price": 74,
+      "price": 50,
       "faceValue": 31.19,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2949,7 +2917,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "429",
-      "price": 60,
+      "price": 51,
       "faceValue": 52.26,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2957,7 +2925,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "430",
-      "price": 100,
+      "price": 84,
       "faceValue": 28.61,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -2981,8 +2949,8 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "407A",
-      "price": 93,
-      "faceValue": 76.56,
+      "price": 85,
+      "faceValue": 74.96,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
@@ -3020,25 +2988,25 @@
     {
       "gamePk": 823495,
       "provider": "TickPick",
-      "section": "227A",
-      "price": 131,
-      "faceValue": 108.28,
+      "section": "232A",
+      "price": 136,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "320B",
-      "price": 136,
-      "faceValue": 159.19,
+      "price": 137,
+      "faceValue": 163.12,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
       "gamePk": 823495,
       "provider": "TickPick",
-      "section": "232A",
-      "price": 136,
-      "faceValue": null,
+      "section": "227A",
+      "price": 137,
+      "faceValue": 135.01,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
@@ -3093,7 +3061,7 @@
       "gamePk": 823495,
       "provider": "TickPick",
       "section": "114A",
-      "price": 172,
+      "price": 180,
       "faceValue": 164.23,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
@@ -3140,14 +3108,6 @@
     {
       "gamePk": 823495,
       "provider": "TickPick",
-      "section": "117B",
-      "price": 230,
-      "faceValue": 177,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
-    },
-    {
-      "gamePk": 823495,
-      "provider": "TickPick",
       "section": "214B",
       "price": 242,
       "faceValue": 200.96,
@@ -3158,7 +3118,7 @@
       "provider": "TickPick",
       "section": "218B",
       "price": 250,
-      "faceValue": 300.16,
+      "faceValue": 318.44,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
@@ -3190,7 +3150,7 @@
       "provider": "TickPick",
       "section": "221B",
       "price": 295,
-      "faceValue": 364.11,
+      "faceValue": 416.32,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
@@ -3198,7 +3158,7 @@
       "provider": "TickPick",
       "section": "220C",
       "price": 299,
-      "faceValue": 313.21,
+      "faceValue": 318.44,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
@@ -3231,6 +3191,14 @@
       "section": "S122A",
       "price": 362,
       "faceValue": null,
+      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
+    },
+    {
+      "gamePk": 823495,
+      "provider": "TickPick",
+      "section": "117B",
+      "price": 436,
+      "faceValue": 462.01,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-new-york-mets-tickets-yankee-stadium-9-13-26-1pm/7368096/"
     },
     {
@@ -3797,7 +3765,7 @@
       "gamePk": 823494,
       "provider": "TickPick",
       "section": "231",
-      "price": 58,
+      "price": 59,
       "faceValue": 59.94,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-7pm/7368107/"
     },
@@ -4093,7 +4061,7 @@
       "gamePk": 823494,
       "provider": "TickPick",
       "section": "409",
-      "price": 14,
+      "price": 13,
       "faceValue": 20.41,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-7pm/7368107/"
     },
@@ -4117,7 +4085,7 @@
       "gamePk": 823494,
       "provider": "TickPick",
       "section": "412",
-      "price": 15,
+      "price": 14,
       "faceValue": 25.21,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-7pm/7368107/"
     },
@@ -4165,7 +4133,7 @@
       "gamePk": 823494,
       "provider": "TickPick",
       "section": "418",
-      "price": 16,
+      "price": 17,
       "faceValue": 28.78,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-7pm/7368107/"
     },
@@ -4213,7 +4181,7 @@
       "gamePk": 823494,
       "provider": "TickPick",
       "section": "425",
-      "price": 15,
+      "price": 16,
       "faceValue": 28.78,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-7pm/7368107/"
     },
@@ -4436,14 +4404,6 @@
     {
       "gamePk": 823494,
       "provider": "TickPick",
-      "section": "CFSB3",
-      "price": 75,
-      "faceValue": 59.94,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-7pm/7368107/"
-    },
-    {
-      "gamePk": 823494,
-      "provider": "TickPick",
       "section": "CFSB4",
       "price": 75,
       "faceValue": 59.94,
@@ -4453,6 +4413,14 @@
       "gamePk": 823494,
       "provider": "TickPick",
       "section": "CFSB1",
+      "price": 75,
+      "faceValue": 59.94,
+      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-7pm/7368107/"
+    },
+    {
+      "gamePk": 823494,
+      "provider": "TickPick",
+      "section": "CFSB3",
       "price": 75,
       "faceValue": 59.94,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-22-26-7pm/7368107/"
@@ -4789,7 +4757,7 @@
       "gamePk": 823492,
       "provider": "TickPick",
       "section": "113",
-      "price": 95,
+      "price": 109,
       "faceValue": 164.23,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-23-26-7pm/7368108/"
     },
@@ -4869,7 +4837,7 @@
       "gamePk": 823492,
       "provider": "TickPick",
       "section": "128",
-      "price": 107,
+      "price": 117,
       "faceValue": 170.57,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-23-26-7pm/7368108/"
     },
@@ -5085,7 +5053,7 @@
       "gamePk": 823492,
       "provider": "TickPick",
       "section": "225",
-      "price": 85,
+      "price": 81,
       "faceValue": 119.39,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-23-26-7pm/7368108/"
     },
@@ -5093,7 +5061,7 @@
       "gamePk": 823492,
       "provider": "TickPick",
       "section": "226",
-      "price": 84,
+      "price": 81,
       "faceValue": 96.26,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-23-26-7pm/7368108/"
     },
@@ -5118,7 +5086,7 @@
       "provider": "TickPick",
       "section": "230",
       "price": 39,
-      "faceValue": 62.25,
+      "faceValue": 64.6,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-23-26-7pm/7368108/"
     },
     {
@@ -5357,7 +5325,7 @@
       "gamePk": 823492,
       "provider": "TickPick",
       "section": "329",
-      "price": 16,
+      "price": 15,
       "faceValue": 18.36,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-23-26-7pm/7368108/"
     },
@@ -5365,7 +5333,7 @@
       "gamePk": 823492,
       "provider": "TickPick",
       "section": "330",
-      "price": 12,
+      "price": 14,
       "faceValue": 34.83,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-23-26-7pm/7368108/"
     },
@@ -5814,7 +5782,7 @@
       "provider": "TickPick",
       "section": "114A",
       "price": 119,
-      "faceValue": 212.13,
+      "faceValue": 192.35,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-23-26-7pm/7368108/"
     },
     {
@@ -5924,14 +5892,6 @@
     {
       "gamePk": 823492,
       "provider": "TickPick",
-      "section": "121B",
-      "price": 379,
-      "faceValue": 304.58,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-23-26-7pm/7368108/"
-    },
-    {
-      "gamePk": 823492,
-      "provider": "TickPick",
       "section": "220C",
       "price": 411,
       "faceValue": 346.53,
@@ -5943,6 +5903,14 @@
       "section": "221B",
       "price": 478,
       "faceValue": 403.65,
+      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-23-26-7pm/7368108/"
+    },
+    {
+      "gamePk": 823492,
+      "provider": "TickPick",
+      "section": "121B",
+      "price": 498,
+      "faceValue": 402.02,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-23-26-7pm/7368108/"
     },
     {
@@ -6102,7 +6070,7 @@
       "provider": "TickPick",
       "section": "109",
       "price": 95,
-      "faceValue": 115.41,
+      "faceValue": 119.4,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
     {
@@ -6134,7 +6102,7 @@
       "provider": "TickPick",
       "section": "113",
       "price": 169,
-      "faceValue": 181.84,
+      "faceValue": 145.41,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
     {
@@ -6157,7 +6125,7 @@
       "gamePk": 823493,
       "provider": "TickPick",
       "section": "119",
-      "price": 330,
+      "price": 331,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
@@ -6173,8 +6141,8 @@
       "gamePk": 823493,
       "provider": "TickPick",
       "section": "123",
-      "price": 337,
-      "faceValue": 288.1,
+      "price": 349,
+      "faceValue": 258.6,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
     {
@@ -6253,7 +6221,7 @@
       "gamePk": 823493,
       "provider": "TickPick",
       "section": "134",
-      "price": 54,
+      "price": 56,
       "faceValue": 90.37,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
@@ -6262,7 +6230,7 @@
       "provider": "TickPick",
       "section": "136",
       "price": 101,
-      "faceValue": 115.35,
+      "faceValue": 123.39,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
     {
@@ -6382,7 +6350,7 @@
       "provider": "TickPick",
       "section": "219",
       "price": 365,
-      "faceValue": 414.28,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
     {
@@ -6574,15 +6542,15 @@
       "provider": "TickPick",
       "section": "319",
       "price": 84,
-      "faceValue": 156.6,
+      "faceValue": 114.09,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
     {
       "gamePk": 823493,
       "provider": "TickPick",
       "section": "321",
-      "price": 181,
-      "faceValue": 153.94,
+      "price": 208,
+      "faceValue": 133.86,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
     {
@@ -6613,7 +6581,7 @@
       "gamePk": 823493,
       "provider": "TickPick",
       "section": "325",
-      "price": 28,
+      "price": 26,
       "faceValue": 50.38,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
@@ -6621,7 +6589,7 @@
       "gamePk": 823493,
       "provider": "TickPick",
       "section": "326",
-      "price": 28,
+      "price": 26,
       "faceValue": 50.38,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
@@ -6694,7 +6662,7 @@
       "provider": "TickPick",
       "section": "408",
       "price": 11,
-      "faceValue": 5.99,
+      "faceValue": 20.41,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
     {
@@ -6717,7 +6685,7 @@
       "gamePk": 823493,
       "provider": "TickPick",
       "section": "411",
-      "price": 10,
+      "price": 11,
       "faceValue": 25.29,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
@@ -6871,14 +6839,6 @@
       "section": "432B",
       "price": 11,
       "faceValue": 20.41,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
-    },
-    {
-      "gamePk": 823493,
-      "provider": "TickPick",
-      "section": "407A",
-      "price": 11,
-      "faceValue": 5.99,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
     {
@@ -7038,7 +6998,7 @@
       "provider": "TickPick",
       "section": "114A",
       "price": 141,
-      "faceValue": 168.54,
+      "faceValue": 147.72,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
     {
@@ -7046,7 +7006,7 @@
       "provider": "TickPick",
       "section": "127A",
       "price": 169,
-      "faceValue": 167.22,
+      "faceValue": 122.31,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
     {
@@ -7070,7 +7030,7 @@
       "provider": "TickPick",
       "section": "220C",
       "price": 362,
-      "faceValue": 398.34,
+      "faceValue": 439.51,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
     {
@@ -7087,14 +7047,6 @@
       "section": "220B",
       "price": 386,
       "faceValue": 330.6,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
-    },
-    {
-      "gamePk": 823493,
-      "provider": "TickPick",
-      "section": "218B",
-      "price": 411,
-      "faceValue": 351.85,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-tampa-bay-rays-tickets-yankee-stadium-9-24-26-7pm/7368109/"
     },
     {
@@ -7381,7 +7333,7 @@
       "gamePk": 823491,
       "provider": "TickPick",
       "section": "202",
-      "price": 45,
+      "price": 41,
       "faceValue": 29.12,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-25-26-7pm/7368116/"
     },
@@ -7517,7 +7469,7 @@
       "gamePk": 823491,
       "provider": "TickPick",
       "section": "225",
-      "price": 101,
+      "price": 104,
       "faceValue": 124.3,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-25-26-7pm/7368116/"
     },
@@ -7605,7 +7557,7 @@
       "gamePk": 823491,
       "provider": "TickPick",
       "section": "309",
-      "price": 57,
+      "price": 59,
       "faceValue": 45.73,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-25-26-7pm/7368116/"
     },
@@ -7701,7 +7653,7 @@
       "gamePk": 823491,
       "provider": "TickPick",
       "section": "325",
-      "price": 66,
+      "price": 65,
       "faceValue": 82.75,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-25-26-7pm/7368116/"
     },
@@ -7717,7 +7669,7 @@
       "gamePk": 823491,
       "provider": "TickPick",
       "section": "327",
-      "price": 80,
+      "price": 78,
       "faceValue": 82.88,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-25-26-7pm/7368116/"
     },
@@ -8085,7 +8037,7 @@
       "gamePk": 823491,
       "provider": "TickPick",
       "section": "227B",
-      "price": 103,
+      "price": 102,
       "faceValue": 84.92,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-25-26-7pm/7368116/"
     },
@@ -8125,7 +8077,7 @@
       "gamePk": 823491,
       "provider": "TickPick",
       "section": "114A",
-      "price": 156,
+      "price": 167,
       "faceValue": 212.13,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-25-26-7pm/7368116/"
     },
@@ -9109,7 +9061,7 @@
       "gamePk": 823489,
       "provider": "TickPick",
       "section": "430",
-      "price": 30,
+      "price": 29,
       "faceValue": 31.58,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-26-26-7pm/7368117/"
     },
@@ -9733,7 +9685,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "128",
-      "price": 116,
+      "price": 117,
       "faceValue": 164.17,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -9773,7 +9725,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "133",
-      "price": 61,
+      "price": 59,
       "faceValue": 90.25,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -9781,7 +9733,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "134",
-      "price": 60,
+      "price": 59,
       "faceValue": 90.37,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -10141,7 +10093,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "325",
-      "price": 44,
+      "price": 48,
       "faceValue": 82.75,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -10173,7 +10125,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "329",
-      "price": 32,
+      "price": 31,
       "faceValue": 35.39,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -10477,7 +10429,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "232A",
-      "price": 48,
+      "price": 44,
       "faceValue": 54.44,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -10565,7 +10517,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "320A",
-      "price": 151,
+      "price": 145,
       "faceValue": 152.29,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -10661,8 +10613,8 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "218A",
-      "price": 540,
-      "faceValue": 456.78,
+      "price": 572,
+      "faceValue": 483.35,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
