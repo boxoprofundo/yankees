@@ -599,6 +599,16 @@
     const soonest = games[0]; // games are date-sorted; used for empty-row StubHub links
     const faceIndex = buildFaceIndex(faceMap); // normalized exact + cross-game estimate
 
+    // SeatGeek labels the Center Field Sports Bar tables as bare "1".."4"
+    // (elsewhere those numbers are field suites). Fold SeatGeek's 1-4 into CFSB
+    // so they join the real CF Sports Bar row instead of phantom "Suite 1" rows.
+    for (const q of quotes) {
+      if (q.provider === "SeatGeek" && q.section != null &&
+          /^0*[1-4]$/.test(String(q.section).trim())) {
+        q.section = "CFSB";
+      }
+    }
+
     // Drop phantom sections. SeatGeek's section labels are the least reliable
     // (it has surfaced nonexistent main-bowl sections like 114 / 220). The
     // other sources cover the 100s–400s bowl densely, so a numbered bowl
