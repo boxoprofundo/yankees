@@ -717,7 +717,7 @@
     // the Rank column returns rows to seat-quality order).
     [...state.sectionRows]
       .sort((a, b) => cmpKey(a, b, "seating", true))
-      .forEach((r, i) => { r.rank = i + 1; });
+      .forEach((r, i) => { r.rank = i + 1; r.notRanked = bucketRank(r) >= 99; });
 
     const allInScope = state.games && games.length === state.games.length;
     const gs = games.length + " game" + (games.length > 1 ? "s" : "");
@@ -971,9 +971,10 @@
           `${LOC_ABBR[r.location] || r.location}</span></td>`
         : `<td class="na">—</td>`;
 
-      // Ranks 194+ are the leftover non-seating-bucket sections; show "NR"
-      // (not ranked) instead of a number. Sorting still uses the numeric rank.
-      const rankCell = `<td class="rank">${r.rank >= 194 ? "NR" : r.rank}</td>`;
+      // Non-seating rows (suites, GA/SRO, unnumbered "Other") show "NR" instead
+      // of a number; every real bowl section (Legends→Grandstand, incl. the
+      // 400s) always gets its seat-quality rank. Sorting still uses r.rank.
+      const rankCell = `<td class="rank">${r.notRanked ? "NR" : r.rank}</td>`;
 
       if (r.price == null) {
         tr.innerHTML =
