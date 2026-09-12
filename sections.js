@@ -115,6 +115,8 @@
     // Fold every "CFSB…" variant (CFSBTABLE1, CFSB100, …) into one canonical
     // Center Field Sports Bar row, so the table shows the cheapest bar block.
     if (/^CFSB/.test(code)) code = "CFSB";
+    // Likewise fold GA variants (GA, GASRO, GA1, …) into one Standing Room row.
+    if (/^GA/.test(code)) code = "GA";
 
     const level = levelFor(num, code);
     const location = locationFor(code, num);
