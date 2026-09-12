@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.14.0
+// @version      3.15.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -656,11 +656,27 @@
       .sort((a, b) => b.n - a.n)
       .slice(0, 2)
       .map((x) => ({ url: x.c.url.split("?")[0], faces: x.n, body: x.c.body.slice(0, 1500) }));
+    // A few raw offer objects, so we can confirm faceValue is the UNDISCOUNTED
+    // face (e.g. 290.30) even on a promo run, vs the promo-discounted price.
+    let offerSample = [];
+    for (const c of TM_CAPTURES) {
+      try {
+        const os = (JSON.parse(c.body)._embedded || {}).offer;
+        if (os && os.length) {
+          offerSample = os.slice(0, 5).map((o) => ({
+            name: o.name, type: o.offerType, face: o.faceValue,
+            list: o.listPrice, total: o.totalPrice, price: o.price,
+            rank: o.rank, inv: o.inventoryTypes }));
+          break;
+        }
+      } catch (e) {}
+    }
     const diag = {
       title: (document.title || "").slice(0, 120),
       blocked: /paused|denied|robot|captcha|access to this page/i.test(body.slice(0, 400)),
       bodyLen: body.length,
       sections: { total: quotes.length, fromBody: bodyQuotes.length, fromJson: jsonQuotes.length, qpReplayPicks },
+      offerSample,
       sectionRows: secText,
       faceMentions: faceCtx,
       ismdsUrls: [...new Set(TM_CAP_URLS)].slice(0, 20),
@@ -1431,6 +1447,19 @@
     });
   }
 
+  // Read an existing JSON file from the Pages repo (decoded), or null. Used to
+  // accumulate face values run-over-run instead of overwriting them.
+  async function getFileJson(path) {
+    try {
+      const cur = await ghApi("GET", path + "?ref=main");
+      if (cur.status === 200 && cur.json && cur.json.content) {
+        const raw = decodeURIComponent(escape(atob(String(cur.json.content).replace(/\n/g, ""))));
+        return JSON.parse(raw);
+      }
+    } catch (e) {}
+    return null;
+  }
+
   async function putFile(path, obj, message) {
     let sha;
     const cur = await ghApi("GET", path + "?ref=main");
@@ -1778,9 +1807,15 @@
         } catch (e) {}
       }
       if (!probeOnly && Object.keys(faces).length) {
+        // Face value is a fixed per-game/section fact ("filed for later"), so
+        // ACCUMULATE it across runs rather than overwriting — a run that misses
+        // a section must not erase a face we already learned. Newest wins per key.
+        const prev = await getFileJson("/contents/data/face-values-tm-browser.json");
+        const merged = Object.assign({}, prev && prev.faces, faces);
         await putFile("/contents/data/face-values-tm-browser.json",
-          { fetchedAt: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"), faces },
-          "Ticketmaster official face values (browser collector)");
+          { fetchedAt: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"),
+            faces: merged, learnedThisRun: Object.keys(faces).length, total: Object.keys(merged).length },
+          "Ticketmaster official face values (browser collector, accumulated)");
       }
     }
     const games = new Set(collected.map((q) => q.gamePk)).size;
