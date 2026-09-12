@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-12T01:01:19.502Z",
+  "fetchedAt": "2026-09-12T02:43:33.653Z",
   "mode": "direct-api",
   "result": {
     "qty": 2,
@@ -7,7 +7,7 @@
       {
         "eid": 17691593,
         "status": 200,
-        "n": 188,
+        "n": 187,
         "blocked": false
       },
       {
@@ -62,5 +62,5 @@
     "blocked": false
   },
   "games": 9,
-  "quotes": 1525
+  "quotes": 1524
 }
