@@ -110,6 +110,10 @@
     if (m) {
       num = parseInt(m[1], 10);
       code = m[1] + m[2]; // leading zeros stripped, suffix kept
+      // Ticketmaster tags promo / special price-level rows with a trailing "S"
+      // ("234S", "121AS", "214BS", "205S") — that's not a real seat suffix (real
+      // ones are A/B/C/W). Strip it so those fold into the real section.
+      code = code.replace(/S$/, "");
     }
 
     // Fold every "CFSB…" variant (CFSBTABLE1, CFSB100, …) into one canonical

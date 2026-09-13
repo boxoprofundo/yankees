@@ -300,6 +300,8 @@ th { background: #eef1f5; position: sticky; top: 0; z-index: 2; }
 }
 th[data-sort], th[data-gsort] { cursor: pointer; }
 th[data-sort]:hover, th[data-gsort]:hover { text-decoration: underline; }
+th.sorted { background: #dde4ee; }
+.sort-arrow { font-size: .72em; color: var(--accent, #16324f); margin-left: .1rem; }
 .sort-hint { font-size: .8rem; color: var(--muted); margin: 0 0 .4rem; font-style: italic; }
 
 /* Section-table filters */

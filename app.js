@@ -714,7 +714,7 @@
         dateLabel: game ? game.displayET : "",
         opponent: game ? game.opponent : "",
         provider: q ? q.provider : "",
-        promoApplied: !!(state.tmPromo && q && q.provider === "Ticketmaster"),
+        promoApplied: !!(q && q.promoApplied),
         url: q ? q.url : "",
         seatgeek: linkGame ? seatgeekLink(linkGame) : "",
       };
@@ -736,12 +736,15 @@
       `Block of ${qty} ticket${qty > 1 ? "s" : ""}, ` +
       (allInScope ? `across all ${games.length} remaining game${games.length > 1 ? "s" : ""}`
                   : `across ${gs} selected`);
-    if (state.tmPromo) {
+    // Show the promo badge only when a code actually discounted at least one
+    // in-scope row — not merely because a code is set (it may not apply to these
+    // games, or may have expired).
+    if (state.tmPromo && state.sectionRows.some((r) => r.promoApplied)) {
       const badge = document.createElement("span");
       badge.className = "promo-badge";
       badge.textContent = "🎟 TM promo: " + state.tmPromo;
-      badge.title = "Ticketmaster prices reflect this promo / presale code, " +
-        "applied during collection. Clear it in Settings to see standard pricing.";
+      badge.title = "Some Ticketmaster prices below reflect this promo / presale " +
+        "code (marked 🎟). Others are standard prices where the code didn't apply.";
       sub.append(" ", badge);
     }
     buildFilterBar();
@@ -931,7 +934,23 @@
     });
   }
 
+  // Mark the header of the current sort column with a ▲/▼ arrow so it's clear
+  // which column a table is sorted by, and in which direction. Works for either
+  // table via its sort-key attribute.
+  function paintSortIndicators(sel, attr, key, asc) {
+    $$(sel).forEach((th) => {
+      if (!th.dataset.label) th.dataset.label = th.textContent.replace(/\s*[▲▼]\s*$/, "").trim();
+      const active = th.getAttribute(attr) === key;
+      th.classList.toggle("sorted", active);
+      th.setAttribute("aria-sort", active ? (asc ? "ascending" : "descending") : "none");
+      th.innerHTML = th.dataset.label +
+        (active ? ` <span class="sort-arrow">${asc ? "▲" : "▼"}</span>` : "");
+    });
+  }
+
   function sortAndPaintSections() {
+    const primary = state.sortKeys[0] || {};
+    paintSortIndicators("#section-table th[data-sort]", "data-sort", primary.key, primary.asc);
     const rows = state.sectionRows.filter(passesFilter);
 
     // Walk the sort keys most-significant first; the first that separates the
@@ -1059,6 +1078,7 @@
     if (!ctx) return;
     const { games, providerNames, byGameProvider } = ctx;
     const { key, asc } = state.gameSort;
+    paintSortIndicators("#game-head th[data-gsort]", "data-gsort", key, asc);
     const priceOf = (g, name) => {
       const q = byGameProvider.get(g.gamePk + "|" + name);
       return q && q.price != null ? q.price : null;

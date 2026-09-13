@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.15.0
+// @version      3.16.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -1786,10 +1786,20 @@
         promoInSettings: !!promo, promoLen: promo.length, perGame,
         diag: firstRes ? firstRes.diag : "no result (event tab produced nothing)" },
       "Ticketmaster collector diagnostic");
+    // A promo code was passed in the URL, but it doesn't apply to every game
+    // (and can expire). Mark a quote as promo-affected ONLY when its captured
+    // price is genuinely below face — otherwise it's just the standard price and
+    // must not be labelled "with code" in the app.
+    if (promo) {
+      for (const q of collected) {
+        q.promoApplied = q.faceValue != null && q.price != null && q.price < q.faceValue - 1;
+      }
+    }
+    const promoHits = collected.filter((q) => q.promoApplied).length;
     if (collected.length) {
       await putFile(`/contents/data/listings-tm-browser-${qty}.json`,
         { fetchedAt: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"),
-          promo: promo || null, quotes: collected },
+          promo: promo || null, promoHits, quotes: collected },
         `Ticketmaster listings (blocks of ${qty}, browser collector)`);
 
       // Publish Ticketmaster's official per-section face values, keyed
