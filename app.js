@@ -844,8 +844,11 @@
     if (f.locs.size && !f.locs.has(r.location)) return false;
     if (f.minRank != null && !(r.rank >= f.minRank)) return false;
     if (f.maxRank != null && !(r.rank <= f.maxRank)) return false;
-    if (f.minPrice != null && (r.price == null || r.price < f.minPrice)) return false;
-    if (f.maxPrice != null && (r.price == null || r.price > f.maxPrice)) return false;
+    // Compare against the whole-dollar price the table actually displays, so a
+    // row shown as "$100" (really $100.40) isn't excluded by a max of 100.
+    const shown = r.price == null ? null : Math.round(r.price);
+    if (f.minPrice != null && (shown == null || shown < f.minPrice)) return false;
+    if (f.maxPrice != null && (shown == null || shown > f.maxPrice)) return false;
     return true;
   }
 
