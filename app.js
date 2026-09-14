@@ -28,9 +28,10 @@
     // Ordered list of sort criteria, most-significant first. Clicking a header
     // makes that column primary and pushes the previous keys down as
     // tiebreakers, so an earlier sort is retained when you sort on a second
-    // column. Index 0 is the primary sort. Default: custom seating order
-    // (deck/infield-outfield buckets), then home-plate distance within each.
-    sortKeys: [{ key: "seating", asc: true }],
+    // column. Index 0 is the primary sort. Default: the Rank column, whose
+    // values are the custom seating order (deck/infield-outfield buckets, then
+    // home-plate distance) — so the initial sort arrow shows on Rank.
+    sortKeys: [{ key: "rank", asc: true }],
     gameSort: { key: "date", asc: true }, // per-game table sort
     gameCtx: null,
     lastQty: 2,
