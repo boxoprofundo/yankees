@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.16.0
+// @version      3.17.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -24,6 +24,7 @@
 // @connect      app.ticketmaster.com
 // @connect      api.seatgeek.com
 // @connect      api.tickpick.com
+// @connect      statsapi.mlb.com
 // @run-at       document-start
 // ==/UserScript==
 
@@ -146,8 +147,59 @@
     "2026-08-29": { day: 823539, night: 823501 },
     "2026-09-22": { day: 823543, night: 823494 },
   };
+  // ── Live schedule (so new home games are picked up without editing maps) ──
+  // The hardcoded StubHub/SeatGeek maps only cover the games known when they
+  // were written. Fetch the real MLB schedule (same feed the site uses) once
+  // per run and build date/time → gamePk lookups from it, so Ticketmaster
+  // discovery (and SeatGeek's gamePk resolution) automatically cover any newly
+  // scheduled home game — including playoffs (gameTypes R,F,D,L,W). Falls back
+  // to the hardcoded maps if the fetch fails.
+  const NYY_TEAM_ID = 147;
+  const _etISO = new Intl.DateTimeFormat("en-CA",
+    { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" });
+  const _etHour = new Intl.DateTimeFormat("en-US",
+    { timeZone: "America/New_York", hour: "numeric", hour12: false });
+  function etISO(d) { return _etISO.format(d); }
+  function etHour(d) { return parseInt(_etHour.format(d), 10) % 24; }
+
+  let DYN_SCHED = null; // { dateToPks: {iso:[pk]}, gamesByDate: {iso:[{hour,pk}]} }
+  async function loadSchedule() {
+    if (DYN_SCHED) return DYN_SCHED;
+    const dateToPks = {}, gamesByDate = {};
+    try {
+      const year = new Date().getFullYear();
+      const url = "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=" + NYY_TEAM_ID +
+        "&startDate=" + etISO(new Date()) + "&endDate=" + year + "-11-15&gameTypes=R,F,D,L,W";
+      const resp = await new Promise((res, rej) =>
+        GM_xmlhttpRequest({ method: "GET", url, onload: res, onerror: rej }));
+      const data = safeJson(resp.responseText) || {};
+      for (const day of data.dates || []) {
+        for (const g of day.games || []) {
+          if (!g.teams || !g.teams.home || g.teams.home.team.id !== NYY_TEAM_ID) continue;
+          const d = new Date(g.gameDate);
+          const iso = etISO(d);
+          (dateToPks[iso] = dateToPks[iso] || []).push(g.gamePk);
+          (gamesByDate[iso] = gamesByDate[iso] || []).push({ hour: etHour(d), pk: g.gamePk });
+        }
+      }
+    } catch (e) { console.warn("[collector] MLB schedule fetch failed", e); }
+    DYN_SCHED = { dateToPks, gamesByDate };
+    return DYN_SCHED;
+  }
+
   function sgGamePk(date, hour) {
     if (!date) return null;
+    // Live schedule first, so newly added games resolve without a map edit.
+    const dyn = DYN_SCHED && DYN_SCHED.gamesByDate[date];
+    if (dyn && dyn.length) {
+      if (dyn.length === 1) return dyn[0].pk;
+      if (hour != null) {
+        return dyn.reduce((best, g) =>
+          Math.abs(g.hour - hour) < Math.abs(best.hour - hour) ? g : best).pk;
+      }
+      return dyn.slice().sort((a, b) => a.hour - b.hour)[0].pk; // earliest = game 1
+    }
+    // Fallback: the hardcoded maps.
     if (SG_PK_DH[date]) return (hour != null && hour < 16) ? SG_PK_DH[date].day : SG_PK_DH[date].night;
     return SG_PK_BY_DATE[date] || null;
   }
@@ -206,6 +258,7 @@
   async function sgOpenDiscover() {
     const cid = settings().sgClientId;
     if (!cid) return { error: "no-client-id" };
+    await loadSchedule();   // so sgGamePk resolves newly scheduled games
     const params = new URLSearchParams({
       client_id: cid, "performers.slug": "new-york-yankees",
       "datetime_local.gte": new Date().toISOString().slice(0, 10),
@@ -1693,9 +1746,13 @@
       if (!date || !url || !/\/event\/[A-Za-z0-9]+/.test(url)) continue;
       (byDate[date] = byDate[date] || []).push({ time, url });
     }
+    // Combine the hardcoded date→gamePk map with the live MLB schedule so a
+    // newly scheduled home game (or a playoff game) is mapped automatically.
+    const sched = await loadSchedule();
+    const dateToPks = Object.assign({}, DATE_TO_PKS, sched.dateToPks);
     const entries = [];
     for (const [date, evs] of Object.entries(byDate)) {
-      const pks = (DATE_TO_PKS[date] || []).slice().sort((a, b) => a - b);
+      const pks = (dateToPks[date] || []).slice().sort((a, b) => a - b);
       if (!pks.length) continue;                       // not a remaining home game
       evs.sort((a, b) => (a.time || "").localeCompare(b.time || ""));
       evs.forEach((e, i) => entries.push([extractEid(e.url), e.url, pks[Math.min(i, pks.length - 1)]]));
