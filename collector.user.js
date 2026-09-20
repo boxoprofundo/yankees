@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.17.0
+// @version      3.18.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -1715,6 +1715,33 @@
     } catch (e) { return null; }
   }
 
+  // Postseason placeholder events go on sale before matchups are set, so they
+  // have no MLB gamePk. Parse the round + home-game number out of the event
+  // title into a stable synthetic key so every marketplace can join on it, the
+  // same way real games join on gamePk. Returns null for a normal game.
+  const PS_ROUND_ORDER = { WC: 1, DS: 2, CS: 3, WS: 4, PS: 5 };
+  const PS_ROUND_LABEL = { WC: "Wild Card", DS: "Division Series",
+    CS: "League Championship", WS: "World Series", PS: "Postseason" };
+  function parsePostseasonSlot(name, dateISO) {
+    const s = String(name || "");
+    if (!/postseason|playoffs?|wild ?card|division series|championship series|world series|\bAL(?:DS|CS|WC)\b|\bNL(?:DS|CS|WC)\b/i.test(s)) {
+      return null;
+    }
+    let round = "PS";
+    if (/world series/i.test(s)) round = "WS";
+    else if (/championship series|ALCS|NLCS/i.test(s)) round = "CS";
+    else if (/division series|ALDS|NLDS/i.test(s)) round = "DS";
+    else if (/wild ?card|ALWC|NLWC/i.test(s)) round = "WC";
+    const gm = s.match(/(?:home\s+)?game\s*(\d+)/i);
+    const n = gm ? parseInt(gm[1], 10) : null;
+    // Unique key: round+number when known, else fall back to the date so two
+    // undated generic events don't collapse into one row. Keep it selector-safe
+    // ([A-Za-z0-9-] only) since the app builds element ids from gamePk.
+    const key = "PS-" + round + (n != null ? n : (dateISO ? dateISO.replace(/-/g, "") : ""));
+    const opponent = PS_ROUND_LABEL[round] + (n != null ? " · G" + n : "") + " (TBD)";
+    return { key, round, n, roundOrder: PS_ROUND_ORDER[round], opponent };
+  }
+
   async function tmDiscover() {
     const key = settings().tmKey;
     const cached = await loadTmEvents();
@@ -1733,17 +1760,25 @@
     const data = safeJson(resp.responseText) || {};
     const events = ((data._embedded || {}).events) || [];
     const byDate = {};
+    const postseason = [];
     for (const ev of events) {
       const venue = ((ev._embedded || {}).venues || [{}])[0];
       if (!/yankee stadium/i.test(venue.name || "")) continue;
-      // Games only — skip stadium tours, parking, and other non-matchup events
-      // (a tour runs most days at the same venue, so name must say "… vs …").
-      if (!/\bvs\.?\b/i.test(ev.name || "")) continue;
       if (/parking|tour/i.test(ev.name || "")) continue;
       const start = (ev.dates || {}).start || {};
       const date = start.localDate, time = (start.localTime || "").slice(0, 5);
       const url = ev.url;
-      if (!date || !url || !/\/event\/[A-Za-z0-9]+/.test(url)) continue;
+      if (!url || !/\/event\/[A-Za-z0-9]+/.test(url)) continue;
+      // Postseason placeholder home games (on sale before matchups are set).
+      const ps = parsePostseasonSlot(ev.name, date);
+      if (ps) {
+        postseason.push(Object.assign({ eid: extractEid(url), url, date, time,
+          name: ev.name }, ps));
+        continue;
+      }
+      // Regular games: name must say "… vs …" (a tour runs most days here).
+      if (!/\bvs\.?\b/i.test(ev.name || "")) continue;
+      if (!date) continue;
       (byDate[date] = byDate[date] || []).push({ time, url });
     }
     // Combine the hardcoded date→gamePk map with the live MLB schedule so a
@@ -1757,6 +1792,14 @@
       evs.sort((a, b) => (a.time || "").localeCompare(b.time || ""));
       evs.forEach((e, i) => entries.push([extractEid(e.url), e.url, pks[Math.min(i, pks.length - 1)]]));
     }
+    // Add postseason placeholders to the collection list (synthetic string key)
+    // and build the manifest the app reads to show them as games.
+    const psManifest = [];
+    for (const p of postseason) {
+      entries.push([p.eid, p.url, p.key]);
+      psManifest.push({ gamePk: p.key, opponent: p.opponent, round: p.round,
+        n: p.n, roundOrder: p.roundOrder, date: p.date || null, time: p.time || null });
+    }
     // Republish the keyless map so future runs (and other devices) need no key.
     if (entries.length) {
       await putFile("/contents/data/tm-events.json",
@@ -1765,6 +1808,17 @@
           entries },
         "Refresh Ticketmaster event map").catch((e) => console.error("[collector/TM] map publish", e));
     }
+    // Publish the postseason manifest (so the app shows placeholder games) and a
+    // discovery diagnostic (raw titles) so the slot parser can be tuned.
+    await putFile("/contents/data/postseason-games.json",
+      { fetchedAt: new Date().toISOString(),
+        games: psManifest.sort((a, b) => (a.roundOrder - b.roundOrder) || ((a.n || 0) - (b.n || 0))) },
+      "Yankees postseason placeholder games").catch((e) => console.error("[collector/TM] ps manifest", e));
+    await putFile("/contents/data/_postseason-diag.json",
+      { fetchedAt: new Date().toISOString(),
+        found: postseason.map((p) => ({ name: p.name, date: p.date, time: p.time,
+          key: p.key, round: p.round, n: p.n })) },
+      "Postseason discovery diagnostic").catch(() => {});
     return { entries: entries.length ? entries : (cached || []) };
   }
 

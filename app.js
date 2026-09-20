@@ -191,6 +191,31 @@
         });
       }
     }
+    // Postseason placeholder home games: tickets go on sale before MLB assigns
+    // the Yankees to a real game (no gamePk yet), so the collector discovers the
+    // marketplaces' conditional events and publishes them here with a synthetic
+    // key. Merge them in so they show alongside the real schedule.
+    try {
+      const r = await fetch("data/postseason-games.json?_=" + Date.now(), { cache: "no-store" });
+      if (r.ok) {
+        const j = await r.json();
+        for (const g of (j.games || [])) {
+          if (!g || !g.gamePk) continue;
+          const dt = g.date ? new Date(`${g.date}T${g.time || "19:00"}:00`)
+                            : new Date("2099-01-01T00:00:00");
+          games.push({
+            gamePk: g.gamePk,
+            dateUTC: dt,
+            opponent: g.opponent || "TBD (postseason)",
+            displayET: g.date ? fmtETfull(dt) : (g.opponent || "Postseason (TBD)"),
+            isoDateET: g.date || "",
+            dateShort: g.date ? fmtShort.format(dt) : "TBD",
+            isPostseason: true,
+          });
+        }
+      }
+    } catch (e) { /* no postseason data yet — fine */ }
+
     games.sort((a, b) => a.dateUTC - b.dateUTC);
     return games;
   }
