@@ -1,0 +1,77 @@
+{
+  "fetchedAt": "2026-09-22T21:49:31.178Z",
+  "found": [
+    {
+      "name": "Pinstripe Pass * 2026 NY Yankees Wild Card Game 1",
+      "date": "2026-09-29",
+      "time": "",
+      "key": "PS-WC1",
+      "round": "WC",
+      "n": 1
+    },
+    {
+      "name": "2026 NY Yankees Wild Card Game 1",
+      "date": "2026-09-29",
+      "time": "",
+      "key": "PS-WC1",
+      "round": "WC",
+      "n": 1
+    },
+    {
+      "name": "2026 NY Yankees Wild Card Game 1 * Premium Seating *",
+      "date": "2026-09-29",
+      "time": "",
+      "key": "PS-WC1",
+      "round": "WC",
+      "n": 1
+    },
+    {
+      "name": "Pinstripe Pass * 2026 NY Yankees Wild Card Game 2",
+      "date": "2026-09-30",
+      "time": "",
+      "key": "PS-WC2",
+      "round": "WC",
+      "n": 2
+    },
+    {
+      "name": "2026 NY Yankees Wild Card Game 2 * Premium Seating *",
+      "date": "2026-09-30",
+      "time": "",
+      "key": "PS-WC2",
+      "round": "WC",
+      "n": 2
+    },
+    {
+      "name": "2026 NY Yankees Wild Card Game 2",
+      "date": "2026-09-30",
+      "time": "",
+      "key": "PS-WC2",
+      "round": "WC",
+      "n": 2
+    },
+    {
+      "name": "Pinstripe Pass * 2026 NY Yankees Wild Card Game 3",
+      "date": "2026-10-01",
+      "time": "",
+      "key": "PS-WC3",
+      "round": "WC",
+      "n": 3
+    },
+    {
+      "name": "2026 NY Yankees Wild Card Game 3 * Premium Seating *",
+      "date": "2026-10-01",
+      "time": "",
+      "key": "PS-WC3",
+      "round": "WC",
+      "n": 3
+    },
+    {
+      "name": "2026 NY Yankees Wild Card Game 3",
+      "date": "2026-10-01",
+      "time": "",
+      "key": "PS-WC3",
+      "round": "WC",
+      "n": 3
+    }
+  ]
+}
