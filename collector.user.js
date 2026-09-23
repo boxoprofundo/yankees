@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.19.0
+// @version      3.20.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -283,11 +283,11 @@
       const dt = ev.datetime_local || "";                        // "2026-09-08T19:15:00"
       const date = dt.slice(0, 10);
       const hour = parseInt(dt.slice(11, 13), 10);
-      // Postseason placeholder events join on the same synthetic slot key as
-      // Ticketmaster (parsed from the title), so they merge into the one game;
-      // regular games resolve by date via the live schedule.
+      // Prefer the real MLB gamePk for this date (so all providers merge and it
+      // matches the site's schedule); fall back to the synthetic postseason slot
+      // only while MLB hasn't assigned the game yet.
       const ps = parsePostseasonSlot(title, date);
-      const gamePk = ps ? ps.key : sgGamePk(date, isFinite(hour) ? hour : null);
+      const gamePk = sgGamePk(date, isFinite(hour) ? hour : null) || (ps && ps.key) || null;
       if (!gamePk) continue;                                     // not a game we track
       const st = ev.stats || {};
       const lowest = [st.lowest_price, st.lowest_price_good_deals]
@@ -1765,6 +1765,10 @@
     }));
     const data = safeJson(resp.responseText) || {};
     const events = ((data._embedded || {}).events) || [];
+    // Combine the hardcoded date→gamePk map with the live MLB schedule so a
+    // newly scheduled home game (or a playoff game) is mapped automatically.
+    const sched = await loadSchedule();
+    const dateToPks = Object.assign({}, DATE_TO_PKS, sched.dateToPks);
     const byDate = {};
     const postseason = [];
     for (const ev of events) {
@@ -1778,21 +1782,24 @@
       const url = ev.url;
       if (!url || !/\/event\/[A-Za-z0-9]+/.test(url)) continue;
       // Postseason placeholder home games (on sale before matchups are set).
+      // Once MLB assigns the real game for this date, map to that real gamePk
+      // (via the regular date path) so all providers merge on it and it doesn't
+      // duplicate the MLB-scheduled game; use the synthetic slot only until then.
       const ps = parsePostseasonSlot(ev.name, date);
       if (ps) {
-        postseason.push(Object.assign({ eid: extractEid(url), url, date, time,
-          name: ev.name }, ps));
+        if (!(date && (dateToPks[date] || []).length)) {
+          postseason.push(Object.assign({ eid: extractEid(url), url, date, time,
+            name: ev.name }, ps));
+          continue;
+        }
+        // else fall through to the regular date-mapped path below
+      } else if (!/\bvs\.?\b/i.test(ev.name || "")) {
+        // Regular games: name must say "… vs …" (a tour runs most days here).
         continue;
       }
-      // Regular games: name must say "… vs …" (a tour runs most days here).
-      if (!/\bvs\.?\b/i.test(ev.name || "")) continue;
       if (!date) continue;
       (byDate[date] = byDate[date] || []).push({ time, url });
     }
-    // Combine the hardcoded date→gamePk map with the live MLB schedule so a
-    // newly scheduled home game (or a playoff game) is mapped automatically.
-    const sched = await loadSchedule();
-    const dateToPks = Object.assign({}, DATE_TO_PKS, sched.dateToPks);
     const entries = [];
     for (const [date, evs] of Object.entries(byDate)) {
       const pks = (dateToPks[date] || []).slice().sort((a, b) => a - b);

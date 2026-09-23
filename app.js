@@ -155,6 +155,12 @@
     return `${p.weekday}, ${MON3[+p.month - 1]} ${p.day}, ` +
            `${p.hour}:${p.minute} ${p.dayPeriod}`;
   }
+  // Date only, no time — for postseason games whose start time is still TBD.
+  function fmtETdate(d) {
+    const p = {};
+    for (const part of _etParts.formatToParts(d)) p[part.type] = part.value;
+    return `${p.weekday}, ${MON3[+p.month - 1]} ${p.day}`;
+  }
   const fmtISO = new Intl.DateTimeFormat("en-CA", {
     timeZone: "America/New_York",
     year: "numeric", month: "2-digit", day: "2-digit",
@@ -181,13 +187,17 @@
         if (g.status.abstractGameState === "Final") continue;
         const dateUTC = new Date(g.gameDate);
         if (dateUTC.getTime() < Date.now() - 4 * 3600 * 1000) continue;
+        // Postseason games carry a placeholder start time (07:33Z ≈ 3:33 AM ET)
+        // until it's set; MLB flags that with startTimeTBD. Show the date only.
+        const tbd = !!(g.status && g.status.startTimeTBD);
         games.push({
           gamePk: g.gamePk,
           dateUTC,
           opponent: g.teams.away.team.name,
-          displayET: fmtETfull(dateUTC),
+          displayET: tbd ? fmtETdate(dateUTC) + " · time TBD" : fmtETfull(dateUTC),
           isoDateET: fmtISO.format(dateUTC),
           dateShort: fmtShort.format(dateUTC),
+          startTimeTBD: tbd,
         });
       }
     }
@@ -200,8 +210,13 @@
       if (r.ok) {
         const j = await r.json();
         const seen = new Set(games.map((g) => g.gamePk));
+        // Once MLB assigns the real game for a date, it comes through above with
+        // a real gamePk — so drop the marketplace placeholder for that date to
+        // avoid showing the game twice.
+        const realDates = new Set(games.map((g) => g.isoDateET).filter(Boolean));
         for (const g of (j.games || [])) {
           if (!g || !g.gamePk || seen.has(g.gamePk)) continue;   // no duplicate rows
+          if (g.date && realDates.has(g.date)) continue;         // MLB already lists it
           seen.add(g.gamePk);
           const dt = g.date ? new Date(`${g.date}T${g.time || "19:00"}:00`)
                             : new Date("2099-01-01T00:00:00");
