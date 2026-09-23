@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.18.0
+// @version      3.19.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -278,10 +278,16 @@
     for (const ev of evs) {
       const venue = ev.venue || {};
       if (!/yankee stadium/i.test(venue.name || "")) continue;   // home games only
+      const title = ev.title || ev.short_title || "";
+      if (/pinstripe pass/i.test(title)) continue;               // membership, not a ticket
       const dt = ev.datetime_local || "";                        // "2026-09-08T19:15:00"
       const date = dt.slice(0, 10);
       const hour = parseInt(dt.slice(11, 13), 10);
-      const gamePk = sgGamePk(date, isFinite(hour) ? hour : null);
+      // Postseason placeholder events join on the same synthetic slot key as
+      // Ticketmaster (parsed from the title), so they merge into the one game;
+      // regular games resolve by date via the live schedule.
+      const ps = parsePostseasonSlot(title, date);
+      const gamePk = ps ? ps.key : sgGamePk(date, isFinite(hour) ? hour : null);
       if (!gamePk) continue;                                     // not a game we track
       const st = ev.stats || {};
       const lowest = [st.lowest_price, st.lowest_price_good_deals]
@@ -1764,7 +1770,9 @@
     for (const ev of events) {
       const venue = ((ev._embedded || {}).venues || [{}])[0];
       if (!/yankee stadium/i.test(venue.name || "")) continue;
-      if (/parking|tour/i.test(ev.name || "")) continue;
+      // Skip non-ticket / bundle products: parking, tours, and "Pinstripe Pass"
+      // (a membership pass, not a seated ticket — it duplicates each game).
+      if (/parking|tour|pinstripe pass/i.test(ev.name || "")) continue;
       const start = (ev.dates || {}).start || {};
       const date = start.localDate, time = (start.localTime || "").slice(0, 5);
       const url = ev.url;
@@ -1793,10 +1801,16 @@
       evs.forEach((e, i) => entries.push([extractEid(e.url), e.url, pks[Math.min(i, pks.length - 1)]]));
     }
     // Add postseason placeholders to the collection list (synthetic string key)
-    // and build the manifest the app reads to show them as games.
+    // and build the manifest the app reads to show them as games. TM lists
+    // several events per game (Standard, Premium Seating, …) that all map to the
+    // one slot: collect them all (merged, cheapest wins) but emit ONE manifest
+    // row per slot so the app doesn't show duplicate games.
     const psManifest = [];
+    const psSeen = new Set();
     for (const p of postseason) {
       entries.push([p.eid, p.url, p.key]);
+      if (psSeen.has(p.key)) continue;
+      psSeen.add(p.key);
       psManifest.push({ gamePk: p.key, opponent: p.opponent, round: p.round,
         n: p.n, roundOrder: p.roundOrder, date: p.date || null, time: p.time || null });
     }

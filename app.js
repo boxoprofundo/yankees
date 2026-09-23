@@ -199,8 +199,10 @@
       const r = await fetch("data/postseason-games.json?_=" + Date.now(), { cache: "no-store" });
       if (r.ok) {
         const j = await r.json();
+        const seen = new Set(games.map((g) => g.gamePk));
         for (const g of (j.games || [])) {
-          if (!g || !g.gamePk) continue;
+          if (!g || !g.gamePk || seen.has(g.gamePk)) continue;   // no duplicate rows
+          seen.add(g.gamePk);
           const dt = g.date ? new Date(`${g.date}T${g.time || "19:00"}:00`)
                             : new Date("2099-01-01T00:00:00");
           games.push({
