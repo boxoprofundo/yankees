@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-23T18:02:02.612Z",
+  "fetchedAt": "2026-09-23T21:50:37.376Z",
   "mode": "direct-api",
   "result": {
     "qty": 2,
@@ -7,7 +7,7 @@
       {
         "eid": 17691596,
         "status": 200,
-        "n": 150,
+        "n": 129,
         "blocked": false
       },
       {
@@ -19,7 +19,7 @@
       {
         "eid": 17691598,
         "status": 200,
-        "n": 162,
+        "n": 166,
         "blocked": false
       },
       {
@@ -37,24 +37,90 @@
       {
         "eid": 18343017,
         "status": 200,
-        "n": 185,
+        "n": 186,
         "blocked": false
       },
       {
         "eid": 18343016,
         "status": 200,
-        "n": 178,
+        "n": 177,
         "blocked": false
       },
       {
         "eid": 18343018,
         "status": 200,
-        "n": 183,
+        "n": 180,
+        "blocked": false
+      },
+      {
+        "eid": 18343019,
+        "status": 200,
+        "n": 130,
+        "blocked": false
+      },
+      {
+        "eid": 18343021,
+        "status": 200,
+        "n": 149,
+        "blocked": false
+      },
+      {
+        "eid": 18343020,
+        "status": 200,
+        "n": 109,
+        "blocked": false
+      },
+      {
+        "eid": 18343028,
+        "status": 200,
+        "n": 106,
+        "blocked": false
+      },
+      {
+        "eid": 18343029,
+        "status": 200,
+        "n": 107,
+        "blocked": false
+      },
+      {
+        "eid": 18343032,
+        "status": 200,
+        "n": 108,
+        "blocked": false
+      },
+      {
+        "eid": 18343033,
+        "status": 200,
+        "n": 80,
+        "blocked": false
+      },
+      {
+        "eid": 18343034,
+        "status": 200,
+        "n": 89,
+        "blocked": false
+      },
+      {
+        "eid": 18343035,
+        "status": 200,
+        "n": 83,
+        "blocked": false
+      },
+      {
+        "eid": 18343040,
+        "status": 200,
+        "n": 80,
+        "blocked": false
+      },
+      {
+        "eid": 18343042,
+        "status": 200,
+        "n": 44,
         "blocked": false
       }
     ],
     "blocked": false
   },
-  "games": 8,
-  "quotes": 1400
+  "games": 19,
+  "quotes": 2465
 }
