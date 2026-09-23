@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-23T17:28:36.187Z",
+  "fetchedAt": "2026-09-23T18:54:15.769Z",
   "note": "Keyless TM event map; refreshed by any run that still has a TM key in storage.",
   "entries": [
     [
@@ -28,49 +28,34 @@
       823490
     ],
     [
-      "1D00652C0262AE75",
-      "https://www.ticketmaster.com/pinstripe-pass-2026-ny-yankees-wild-bronx-new-york-09-29-2026/event/1D00652C0262AE75",
-      "PS-WC1"
-    ],
-    [
       "1D00652CBC28DC2A",
       "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-29-2026/event/1D00652CBC28DC2A",
-      "PS-WC1"
+      849851
     ],
     [
       "1D00652CADBEB20E",
       "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-29-2026/event/1D00652CADBEB20E",
-      "PS-WC1"
-    ],
-    [
-      "1D00652C03C7B2ED",
-      "https://www.ticketmaster.com/pinstripe-pass-2026-ny-yankees-wild-bronx-new-york-09-30-2026/event/1D00652C03C7B2ED",
-      "PS-WC2"
+      849851
     ],
     [
       "1D00652CB323C208",
       "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CB323C208",
-      "PS-WC2"
+      849848
     ],
     [
       "1D00652CBD9FE0B3",
       "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3",
-      "PS-WC2"
-    ],
-    [
-      "1D00652C03D2B307",
-      "https://www.ticketmaster.com/pinstripe-pass-2026-ny-yankees-wild-bronx-new-york-10-01-2026/event/1D00652C03D2B307",
-      "PS-WC3"
+      849848
     ],
     [
       "1D00652CB367C2BE",
       "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-10-01-2026/event/1D00652CB367C2BE",
-      "PS-WC3"
+      849847
     ],
     [
       "1D00652CBDB3E0FD",
       "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-10-01-2026/event/1D00652CBDB3E0FD",
-      "PS-WC3"
+      849847
     ]
   ]
 }
