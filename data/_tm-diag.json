@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-09-23T16:01:06.579Z",
+  "fetchedAt": "2026-09-23T17:48:19.573Z",
   "games": 14,
-  "gamesWithData": 6,
+  "gamesWithData": 5,
   "sampleEvent": "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-09-23-2026/event/1D006323F5974397?promoCode=GRANDSLAM",
-  "totalQuotes": 55,
+  "totalQuotes": 54,
   "promoInSettings": true,
   "promoLen": 9,
   "perGame": [
@@ -16,13 +16,13 @@
     {
       "eid": "1D006323F5974399",
       "date": "09-24-2026",
-      "sections": 17,
+      "sections": 0,
       "blocked": false
     },
     {
       "eid": "1D006323F598439F",
       "date": "09-25-2026",
-      "sections": 22,
+      "sections": 0,
       "blocked": false
     },
     {
@@ -46,7 +46,7 @@
     {
       "eid": "1D00652CBC28DC2A",
       "date": "09-29-2026",
-      "sections": 0,
+      "sections": 8,
       "blocked": false
     },
     {
@@ -70,7 +70,7 @@
     {
       "eid": "1D00652CBD9FE0B3",
       "date": "09-30-2026",
-      "sections": 0,
+      "sections": 7,
       "blocked": false
     },
     {
@@ -82,7 +82,7 @@
     {
       "eid": "1D00652CB367C2BE",
       "date": "10-01-2026",
-      "sections": 5,
+      "sections": 6,
       "blocked": false
     },
     {
@@ -93,68 +93,71 @@
     }
   ],
   "diag": {
-    "title": "New York Yankees vs. Tampa Bay Rays Tickets Sep 24, 2026 Bronx, NY | Ticketmaster",
+    "title": "New York Yankees vs. Baltimore Orioles Tickets Sep 26, 2026 Bronx, NY | Ticketmaster",
     "blocked": false,
-    "bodyLen": 10511,
+    "bodyLen": 10538,
     "sections": {
-      "total": 17,
-      "fromBody": 16,
-      "fromJson": 17,
+      "total": 11,
+      "fromBody": 11,
+      "fromJson": 11,
       "qpReplayPicks": 0
     },
     "offerSample": [
       {
-        "name": "Special Offers",
+        "name": "Audi Yankees Club",
         "type": "standard",
-        "rank": 6
+        "face": 153,
+        "list": 153,
+        "total": 186.42,
+        "rank": 2
       },
       {
         "name": "Mastercard Preferred Pricing",
         "type": "standard",
-        "face": 330,
-        "list": 330,
-        "total": 402.02,
+        "face": 450,
+        "list": 450,
+        "total": 548.22,
         "rank": 1
       },
       {
         "name": "Mastercard Preferred Pricing",
         "type": "standard",
-        "face": 210,
-        "list": 210,
-        "total": 255.83,
+        "face": 379,
+        "list": 379,
+        "total": 461.72,
         "rank": 1
       },
       {
         "name": "Mastercard Preferred Pricing",
         "type": "standard",
-        "face": 135,
-        "list": 135,
-        "total": 164.47,
+        "face": 184,
+        "list": 184,
+        "total": 224.17,
         "rank": 1
       },
       {
         "name": "Mastercard Preferred Pricing",
         "type": "standard",
-        "face": 330,
-        "list": 330,
-        "total": 402.02,
+        "face": 145,
+        "list": 145,
+        "total": 176.66,
         "rank": 1
       }
     ],
     "sectionRows": [
-      "Sec 226 • Row 18\nStandard Ticket\n$103",
-      "Sec 226 • Row 19\nStandard Ticket\n$103",
-      "Sec 214B • Row 15\nStandard Ticket\n$103",
-      "Sec 227A • Row 3\nStandard Ticket\n$103",
-      "Sec 227A • Row 4\nStandard Ticket\n$103",
-      "Sec 227A • Row 16\nStandard Ticket\n$103",
-      "Sec 227A • Row 17\nStandard Ticket\n$103",
-      "Sec 227A • Row 18\nStandard Ticket\n$103"
+      "Sec 408 • Row 13\nStandard Ticket\n$36",
+      "Sec 408 • Row 14\nStandard Ticket\n$36",
+      "Sec 431B • Row 13\nStandard Ticket\n$36",
+      "Sec 431B • Row 14\nStandard Ticket\n$36",
+      "Sec 407B • Row 8\nStandard Ticket\n$36",
+      "Sec 407B • Row 10\nStandard Ticket\n$36",
+      "Sec 407B • Row 11\nStandard Ticket\n$36",
+      "Sec 407B • Row 12\nStandard Ticket\n$36"
     ],
     "faceMentions": [],
     "ismdsUrls": [
-      "https://services.ticketmaster.com/api/ismds/event/1D006323F5974399/facets",
-      "https://services.ticketmaster.com/api/ismds/event/1D006323F5974399/quickpicks"
+      "https://services.ticketmaster.com/api/ismds/event/1D006323F59943A4/facets",
+      "https://services.ticketmaster.com/api/ismds/event/1D006323F59943A4/quickpicks"
     ],
     "promo": {
       "hasCode": true,
@@ -163,29 +166,56 @@
       "controls": []
     },
     "faces": {
-      "135": 107,
-      "211": 92,
-      "213": 92,
-      "217": 107,
-      "224": 107,
-      "225": 107,
-      "226": 92,
-      "231": 92,
-      "315": 92,
-      "323": 92,
-      "324": 92,
-      "327": 92,
-      "432A": 40,
-      "227B": 92,
-      "214B": 92,
-      "227A": 92,
-      "214A": 92
+      "405": 33,
+      "406": 33,
+      "408": 33,
+      "433": 33,
+      "434B": 33,
+      "434A": 33,
+      "431B": 33,
+      "407B": 33,
+      "432A": 33,
+      "432B": 33,
+      "407A": 33
     },
     "captures": [
       {
-        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F5974399/facets",
+        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F59943A4/facets",
         "summary": {
-          "bytes": 30203,
+          "bytes": 22406,
+          "faceHits": 0,
+          "faceSamples": [],
+          "priceHits": 0,
+          "sectionSamples": []
+        },
+        "sample": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:EventFacets:1.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:EventFacets\",\n    \"modified\" : \"2026-09-23T17:30:26.093531216Z\",\n    \"expires\" : \"2026-09-23T17:31:26.093531216Z\"\n  },\n  \"eventId\" : \"1D006323F59943A4\",\n  \"facets\" : [ {\n    \"shapes\" : [ \"s_24\" ],\n    \"count\" : 1,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 100.00,\n      \"max\" : 100.00\n    } ]\n  }, {\n    \"shapes\" : [ \"s_25\" ],\n    \"count\" : 1,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 100.00,\n      \"max\" : 100.00\n    } ]\n  }, {\n    \"shapes\" : [ \"s_40\" ],\n    \"count\" : 10,\n    \"listPriceRange\" : [ {\n   "
+      },
+      {
+        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F59943A4/facets",
+        "summary": {
+          "bytes": 110202,
+          "faceHits": 8,
+          "faceSamples": [
+            "\"faceValue\" : 153.00",
+            "\"faceValue\" : 450.00",
+            "\"faceValue\" : 379.00",
+            "\"faceValue\" : 184.00",
+            "\"faceValue\" : 145.00",
+            "\"faceValue\" : 362.00",
+            "\"faceValue\" : 308.00",
+            "\"faceValue\" : 300.00"
+          ],
+          "priceHits": 315,
+          "sectionSamples": [
+            "\"name\" : \"Standard Ticket\""
+          ]
+        },
+        "sample": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:EventFacets:1.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:EventFacets\",\n    \"modified\" : \"2026-09-23T17:30:26.093531216Z\",\n    \"expires\" : \"2026-09-23T17:31:26.093531216Z\"\n  },\n  \"eventId\" : \"1D006323F59943A4\",\n  \"facets\" : [ {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BWGI\", \"GJ6EGMBQGAYDAMBQGAYXYNRS\" ],\n    \"count\" : 395,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 95.00,\n      \"max\" : 100.00\n    } ]\n  }, {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BVHE\", \"GJ6EGMBQGAYDAMBQGAYXYNJZ\" ],\n    \"count\" : 95,\n    \"lis"
+      },
+      {
+        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F59943A4/facets",
+        "summary": {
+          "bytes": 38934,
           "faceHits": 0,
           "faceSamples": [],
           "priceHits": 0,
@@ -202,46 +232,12 @@
             "\"name\" : \"OBST\""
           ]
         },
-        "sample": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:EventFacets:1.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:EventFacets\",\n    \"modified\" : \"2026-09-23T15:39:11.884527030Z\",\n    \"expires\" : \"2026-09-23T15:40:11.884527030Z\"\n  },\n  \"eventId\" : \"1D006323F5974399\",\n  \"facets\" : [ {\n    \"areas\" : [ \"1\" ],\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offerTypes\" : [ \"standard\" ],\n    \"priceLevels\" : [ \"59\" ],\n    \"priceLevelSecnames\" : [ \"P12\" ],\n    \"ticketTypes\" : [ \"00C000000001\", \"02C000000006\", \"04C00000000A\", \"MDKHDP225\" ],\n    \"count\" : 1,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 74.00,\n      \"max\" : 149.00\n    } ]\n  }, {\n    \"area"
+        "sample": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:EventFacets:1.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:EventFacets\",\n    \"modified\" : \"2026-09-23T17:29:29.367571448Z\",\n    \"expires\" : \"2026-09-23T17:30:29.367571448Z\"\n  },\n  \"eventId\" : \"1D006323F59943A4\",\n  \"facets\" : [ {\n    \"areas\" : [ \"1\" ],\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offerTypes\" : [ \"standard\" ],\n    \"priceLevels\" : [ \"62\" ],\n    \"priceLevelSecnames\" : [ \"P15\" ],\n    \"ticketTypes\" : [ \"00C000000001\", \"02C000000006\" ],\n    \"count\" : 363,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 95.00,\n      \"max\" : 100.00\n    } ]\n  }, {\n    \"areas\" : [ \"14\" ],\n    \"invento"
       },
       {
-        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F5974399/facets",
+        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F59943A4/facets",
         "summary": {
-          "bytes": 11705,
-          "faceHits": 0,
-          "faceSamples": [],
-          "priceHits": 0,
-          "sectionSamples": []
-        },
-        "sample": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:EventFacets:1.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:EventFacets\",\n    \"modified\" : \"2026-09-23T15:39:11.884527030Z\",\n    \"expires\" : \"2026-09-23T15:40:11.884527030Z\"\n  },\n  \"eventId\" : \"1D006323F5974399\",\n  \"facets\" : [ {\n    \"shapes\" : [ \"s_39\" ],\n    \"count\" : 1,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 149.00,\n      \"max\" : 149.00\n    } ]\n  }, {\n    \"shapes\" : [ \"s_50\" ],\n    \"count\" : 5,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 330.00,\n      \"max\" : 330.00\n    } ]\n  }, {\n    \"shapes\" : [ \"s_51\" ],\n    \"count\" : 8,\n    \"listPriceRange\" : [ {\n    "
-      },
-      {
-        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F5974399/facets",
-        "summary": {
-          "bytes": 113789,
-          "faceHits": 8,
-          "faceSamples": [
-            "\"faceValue\" : 330.00",
-            "\"faceValue\" : 210.00",
-            "\"faceValue\" : 135.00",
-            "\"faceValue\" : 330.00",
-            "\"faceValue\" : 250.00",
-            "\"faceValue\" : 250.00",
-            "\"faceValue\" : 235.00",
-            "\"faceValue\" : 161.00"
-          ],
-          "priceHits": 325,
-          "sectionSamples": [
-            "\"name\" : \"Special Offers\"",
-            "\"name\" : \"Standard Ticket\""
-          ]
-        },
-        "sample": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:EventFacets:1.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:EventFacets\",\n    \"modified\" : \"2026-09-23T15:39:11.884527030Z\",\n    \"expires\" : \"2026-09-23T15:40:11.884527030Z\"\n  },\n  \"eventId\" : \"1D006323F5974399\",\n  \"facets\" : [ {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"G56GYZLWMVWF65DXN5PW2YLTNNPXE33MNR2XA\", \"GJ6DEQZQGAYDAMBQGAYDM7BVHE\", \"GJ6DIQZQGAYDAMBQGAYEC7BVHE\", \"GJ6EGMBQGAYDAMBQGAYXYNJZ\" ],\n    \"count\" : 1,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 74.00,\n      \"max\" : 149.00\n    } ]\n  }, {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"GJ6DEQZQGAYDAMBQ"
-      },
-      {
-        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F5974399/facets",
-        "summary": {
-          "bytes": 1853,
+          "bytes": 1362,
           "faceHits": 0,
           "faceSamples": [],
           "priceHits": 0,
@@ -250,58 +246,54 @@
         "sample": null
       },
       {
-        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F5974399/quickpicks",
+        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F59943A4/facets",
         "summary": {
-          "bytes": 91263,
-          "faceHits": 8,
+          "bytes": 7220,
+          "faceHits": 0,
+          "faceSamples": [],
+          "priceHits": 0,
+          "sectionSamples": []
+        },
+        "sample": null
+      },
+      {
+        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F59943A4/quickpicks",
+        "summary": {
+          "bytes": 40307,
+          "faceHits": 4,
           "faceSamples": [
-            "\"faceValue\" : 5.00",
-            "\"faceValue\" : 20.00",
-            "\"faceValue\" : 40.00",
-            "\"faceValue\" : 87.00",
-            "\"faceValue\" : 92.00",
-            "\"faceValue\" : 46.00",
-            "\"faceValue\" : 92.00",
-            "\"faceValue\" : 46.00"
+            "\"faceValue\" : 33.00",
+            "\"faceValue\" : 33.00",
+            "\"faceValue\" : 32.00",
+            "\"faceValue\" : 33.00"
           ],
-          "priceHits": 135,
+          "priceHits": 20,
           "sectionSamples": [
+            "\"section\" : \"434B\"",
+            "\"section\" : \"434A\"",
+            "\"section\" : \"431B\"",
+            "\"section\" : \"405\"",
+            "\"section\" : \"406\"",
+            "\"section\" : \"433\"",
+            "\"section\" : \"407B\"",
             "\"section\" : \"432A\"",
-            "\"section\" : \"227B\"",
-            "\"section\" : \"323\"",
-            "\"section\" : \"214B\"",
-            "\"section\" : \"231\"",
-            "\"section\" : \"227A\"",
-            "\"section\" : \"213\"",
-            "\"section\" : \"324\"",
-            "\"section\" : \"214A\"",
-            "\"section\" : \"211\""
+            "\"section\" : \"408\"",
+            "\"section\" : \"432B\""
           ]
         },
-        "sample": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:QuickPicks:4.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:QuickPicks\",\n    \"modified\" : \"2026-09-23T15:39:11.884527030Z\",\n    \"expires\" : \"2026-09-23T15:40:11.884527030Z\"\n  },\n  \"eventId\" : \"1D006323F5974399\",\n  \"offset\" : 0,\n  \"total\" : 75,\n  \"picks\" : [ {\n    \"type\" : \"seat\",\n    \"selection\" : \"standard\",\n    \"quality\" : 0.371212,\n    \"section\" : \"432A\",\n    \"row\" : \"11\",\n    \"offerGroups\" : [ {\n      \"offers\" : [ \"G56GYZLWMVWF65DXN5PW2YLTNNPXE33MNR2XA\", \"GJ6DEQZQGAYDAMBQGAYDM7BXGY\", \"GJ6DIQZQGAYDAMBQGAYEC7BXGY\", \"GJ6EGMBQGAYDAMBQGAYXYNZW\" ],\n      \"places\" : [ \"GQZTEQJ2GEYTUMJS\", \"GQZTEQJ2GEYTUMJT\" ],\n  "
-      },
-      {
-        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F5974399/facets",
-        "summary": {
-          "bytes": 6874,
-          "faceHits": 0,
-          "faceSamples": [],
-          "priceHits": 0,
-          "sectionSamples": []
-        },
-        "sample": null
+        "sample": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:QuickPicks:4.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:QuickPicks\",\n    \"modified\" : \"2026-09-23T17:31:26.427357829Z\",\n    \"expires\" : \"2026-09-23T17:32:26.427357829Z\"\n  },\n  \"eventId\" : \"1D006323F59943A4\",\n  \"offset\" : 0,\n  \"total\" : 370,\n  \"picks\" : [ {\n    \"type\" : \"seat\",\n    \"selection\" : \"standard\",\n    \"quality\" : 0.345960,\n    \"section\" : \"434B\",\n    \"row\" : \"2\",\n    \"offerGroups\" : [ {\n      \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BXG4\", \"GJ6EGMBQGAYDAMBQGAYXYNZX\" ],\n      \"places\" : [ \"GQZTIQR2GI5DCNI\", \"GQZTIQR2GI5DCNQ\" ],\n      \"seats\" : [ \"15\", \"16\" ],\n      \"coordinates\" : [ ]\n    } ],\n    \"are"
       }
     ],
     "rawFace": [
       {
-        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F5974399/facets",
-        "faces": 65,
-        "body": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:EventFacets:1.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:EventFacets\",\n    \"modified\" : \"2026-09-23T15:39:11.884527030Z\",\n    \"expires\" : \"2026-09-23T15:40:11.884527030Z\"\n  },\n  \"eventId\" : \"1D006323F5974399\",\n  \"facets\" : [ {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"G56GYZLWMVWF65DXN5PW2YLTNNPXE33MNR2XA\", \"GJ6DEQZQGAYDAMBQGAYDM7BVHE\", \"GJ6DIQZQGAYDAMBQGAYEC7BVHE\", \"GJ6EGMBQGAYDAMBQGAYXYNJZ\" ],\n    \"count\" : 1,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 74.00,\n      \"max\" : 149.00\n    } ]\n  }, {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BVGE\", \"GJ6EGMBQGAYDAMBQGAYXYNJR\" ],\n    \"count\" : 55,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 330.00,\n      \"max\" : 330.00\n    } ]\n  }, {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"G56GYZLWMVWF65DXN5PW2YLTNNPXE33MNR2XA\", \"GJ6DEQZQGAYDAMBQGAYDM7BVGI\", \"GJ6EGMBQGAYDAMBQGAYXYNJS\" ],\n    \"count\" : 38,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 250.00,\n      \"max\" : 250.00\n    } ]\n  }, {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"G56GYZLWMVWF65DXN5PW2YLTNNPXE33MNR2XA\", \"GJ6DEQZQGAYDAMBQGAYDM7BVGM\", \"GJ6EGMBQGAYDAMBQGAYXYNJT\" ],\n    \"count\" : 14,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 250.00,\n      \"max\" : 250.00\n    } ]\n  }, {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"G5"
+        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F59943A4/facets",
+        "faces": 63,
+        "body": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:EventFacets:1.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:EventFacets\",\n    \"modified\" : \"2026-09-23T17:30:26.093531216Z\",\n    \"expires\" : \"2026-09-23T17:31:26.093531216Z\"\n  },\n  \"eventId\" : \"1D006323F59943A4\",\n  \"facets\" : [ {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BWGI\", \"GJ6EGMBQGAYDAMBQGAYXYNRS\" ],\n    \"count\" : 395,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 95.00,\n      \"max\" : 100.00\n    } ]\n  }, {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BVHE\", \"GJ6EGMBQGAYDAMBQGAYXYNJZ\" ],\n    \"count\" : 95,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 131.00,\n      \"max\" : 136.00\n    } ]\n  }, {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BWGE\", \"GJ6EGMBQGAYDAMBQGAYXYNRR\" ],\n    \"count\" : 9,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 117.00,\n      \"max\" : 122.00\n    } ]\n  }, {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BVHA\", \"GJ6EGMBQGAYDAMBQGAYXYNJY\" ],\n    \"count\" : 64,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 150.00,\n      \"max\" : 155.00\n    } ]\n  }, {\n    \"inventoryTypes\" : [ \"primary\" ],\n    \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BWGA\", \"GJ6EGMBQGAYDAMBQGAYXYNRQ\" ],\n    \"count\" : 46,\n    \"listPriceRange\" : [ {\n      \"currency\" : \"USD\",\n      \"min\" : 117.00,\n  "
       },
       {
-        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F5974399/quickpicks",
-        "faces": 27,
-        "body": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:QuickPicks:4.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:QuickPicks\",\n    \"modified\" : \"2026-09-23T15:39:11.884527030Z\",\n    \"expires\" : \"2026-09-23T15:40:11.884527030Z\"\n  },\n  \"eventId\" : \"1D006323F5974399\",\n  \"offset\" : 0,\n  \"total\" : 75,\n  \"picks\" : [ {\n    \"type\" : \"seat\",\n    \"selection\" : \"standard\",\n    \"quality\" : 0.371212,\n    \"section\" : \"432A\",\n    \"row\" : \"11\",\n    \"offerGroups\" : [ {\n      \"offers\" : [ \"G56GYZLWMVWF65DXN5PW2YLTNNPXE33MNR2XA\", \"GJ6DEQZQGAYDAMBQGAYDM7BXGY\", \"GJ6DIQZQGAYDAMBQGAYEC7BXGY\", \"GJ6EGMBQGAYDAMBQGAYXYNZW\" ],\n      \"places\" : [ \"GQZTEQJ2GEYTUMJS\", \"GQZTEQJ2GEYTUMJT\" ],\n      \"seats\" : [ \"12\", \"13\" ],\n      \"coordinates\" : [ ]\n    } ],\n    \"area\" : \"6\",\n    \"areasForPerks\" : [ ],\n    \"descriptionId\" : \"IE5DM\",\n    \"maxQuantity\" : 9,\n    \"shapes\" : null,\n    \"snapshotImageUrl\" : \"image?systemId=HOST&sectionNames=432A&placeId=GQZTEQJ2GEYTUMJS\"\n  }, {\n    \"type\" : \"seat\",\n    \"selection\" : \"standard\",\n    \"quality\" : 0.659091,\n    \"section\" : \"227B\",\n    \"row\" : \"9\",\n    \"offerGroups\" : [ {\n      \"offers\" : [ \"G56GYZLWMVWF65DXN5PW2YLTNNPXE33MNR2XA\", \"GJ6DEQZQGAYDAMBQGAYDM7BWGY\", \"GJ6DIQZQGAYDAMBQGAYEC7BWGY\", \"GJ6EGMBQGAYDAMBQGAYXYNRW\" ],\n      \"places\" : [ \"GIZDOQR2HE5DEMA\", \"GIZDOQR2HE5DEMI\" ],\n      \"seats\" : [ \"20\", \"21\" ],\n      \"coordinates\" : [ ]\n    } ],\n    \"area\" : \"4\",\n    \"areasForPerks\" : [ ],\n    \"descriptionId\" : \"IE5DI\",\n    \"maxQuantity\" : 2,\n "
+        "url": "https://services.ticketmaster.com/api/ismds/event/1D006323F59943A4/quickpicks",
+        "faces": 4,
+        "body": "{\n  \"schema\" : \"urn:com.ticketmaster.services:schema:ismds:QuickPicks:4.0\",\n  \"meta\" : {\n    \"type\" : \"urn:com.ticketmaster.services:type:ismds:QuickPicks\",\n    \"modified\" : \"2026-09-23T17:31:26.427357829Z\",\n    \"expires\" : \"2026-09-23T17:32:26.427357829Z\"\n  },\n  \"eventId\" : \"1D006323F59943A4\",\n  \"offset\" : 0,\n  \"total\" : 370,\n  \"picks\" : [ {\n    \"type\" : \"seat\",\n    \"selection\" : \"standard\",\n    \"quality\" : 0.345960,\n    \"section\" : \"434B\",\n    \"row\" : \"2\",\n    \"offerGroups\" : [ {\n      \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BXG4\", \"GJ6EGMBQGAYDAMBQGAYXYNZX\" ],\n      \"places\" : [ \"GQZTIQR2GI5DCNI\", \"GQZTIQR2GI5DCNQ\" ],\n      \"seats\" : [ \"15\", \"16\" ],\n      \"coordinates\" : [ ]\n    } ],\n    \"area\" : \"6\",\n    \"areasForPerks\" : [ ],\n    \"descriptionId\" : \"IE5DM\",\n    \"maxQuantity\" : 2,\n    \"shapes\" : null,\n    \"snapshotImageUrl\" : \"image?systemId=HOST&sectionNames=434B&placeId=GQZTIQR2GI5DCNI\"\n  }, {\n    \"type\" : \"seat\",\n    \"selection\" : \"standard\",\n    \"quality\" : 0.345960,\n    \"section\" : \"434B\",\n    \"row\" : \"7\",\n    \"offerGroups\" : [ {\n      \"offers\" : [ \"GJ6DEQZQGAYDAMBQGAYDM7BXG4\", \"GJ6EGMBQGAYDAMBQGAYXYNZX\" ],\n      \"places\" : [ \"GQZTIQR2G45DQ\", \"GQZTIQR2G45DS\" ],\n      \"seats\" : [ \"8\", \"9\" ],\n      \"coordinates\" : [ ]\n    } ],\n    \"area\" : \"6\",\n    \"areasForPerks\" : [ ],\n    \"descriptionId\" : \"IE5DM\",\n    \"maxQuantity\" : 9,\n    \"shapes\" : null,\n    \"snapshotImageUrl\" : \"image?systemId=HOST&sectionNames=434B&placeId=GQZTIQR2G45DQ\"\n  }, {\n    \"type\" : \"seat\",\n    \"selection\" "
       }
     ]
   }
