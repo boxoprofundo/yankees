@@ -1,18 +1,18 @@
 {
-  "fetchedAt": "2026-09-25T15:00:08.227Z",
+  "fetchedAt": "2026-09-25T15:07:42.293Z",
   "discovered": 3,
   "firstEvent": {
     "eid": "7368123",
     "captured": [
       "https://api.tickpick.com/1.0/tracking/pageLoad",
-      "https://api.tickpick.com/1.0/listings/internal/event-v2/7368123",
-      "https://api.tickpick.com/1.0/events/7368123/price-trends/preview"
+      "https://api.tickpick.com/1.0/events/7368123/price-trends/preview",
+      "https://api.tickpick.com/1.0/listings/internal/event-v2/7368123"
     ],
     "hadApi": true,
     "n": 151,
     "sample": null
   },
   "games": 3,
-  "quotes": 472,
-  "faces": 402
+  "quotes": 473,
+  "faces": 405
 }
