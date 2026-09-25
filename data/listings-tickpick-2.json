@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-25T15:00:10Z",
+  "fetchedAt": "2026-09-25T15:07:45Z",
   "quotes": [
     {
       "gamePk": 823490,
@@ -341,7 +341,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "223",
-      "price": 55,
+      "price": 64,
       "faceValue": 152.25,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -870,7 +870,7 @@
       "provider": "TickPick",
       "section": "320C",
       "price": 32,
-      "faceValue": 48.65,
+      "faceValue": 75,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
@@ -1437,7 +1437,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "133",
-      "price": 246,
+      "price": 243,
       "faceValue": 114.88,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-tbd-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1445,7 +1445,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "134",
-      "price": 225,
+      "price": 223,
       "faceValue": 114.88,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-tbd-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1598,7 +1598,7 @@
       "provider": "TickPick",
       "section": "223",
       "price": 365,
-      "faceValue": null,
+      "faceValue": 390.22,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-tbd-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
@@ -1695,6 +1695,14 @@
       "section": "238",
       "price": 245,
       "faceValue": 63.7,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-tbd-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
+    },
+    {
+      "gamePk": 849851,
+      "provider": "TickPick",
+      "section": "306",
+      "price": 244,
+      "faceValue": 200.96,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-tbd-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
@@ -1830,7 +1838,7 @@
       "provider": "TickPick",
       "section": "325",
       "price": 211,
-      "faceValue": null,
+      "faceValue": 219.24,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-tbd-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
@@ -1901,7 +1909,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "412",
-      "price": 120,
+      "price": 124,
       "faceValue": 56.08,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-tbd-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1981,7 +1989,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "423",
-      "price": 112,
+      "price": 115,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-tbd-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2557,7 +2565,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "107",
-      "price": 200,
+      "price": 214,
       "faceValue": 155.16,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-tbd-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2677,7 +2685,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "128",
-      "price": 355,
+      "price": 339,
       "faceValue": 186.73,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-tbd-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2773,7 +2781,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "205",
-      "price": 177,
+      "price": 176,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-tbd-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2789,7 +2797,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "208",
-      "price": 258,
+      "price": 243,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-tbd-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2941,7 +2949,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "234",
-      "price": 172,
+      "price": 160,
       "faceValue": 224.46,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-tbd-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2981,7 +2989,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "307",
-      "price": 151,
+      "price": 157,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-tbd-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3238,7 +3246,7 @@
       "provider": "TickPick",
       "section": "419",
       "price": 129,
-      "faceValue": 220,
+      "faceValue": 170.95,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-tbd-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
