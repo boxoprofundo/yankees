@@ -1,4 +1,23 @@
 {
-  "fetchedAt": "2026-09-24T19:56:09.311Z",
-  "games": []
+  "fetchedAt": "2026-09-25T08:26:48.256Z",
+  "games": [
+    {
+      "gamePk": "PS-DS1",
+      "opponent": "Division Series · G1 (TBD)",
+      "round": "DS",
+      "n": 1,
+      "roundOrder": 2,
+      "date": "2026-10-07",
+      "time": null
+    },
+    {
+      "gamePk": "PS-DS2",
+      "opponent": "Division Series · G2 (TBD)",
+      "round": "DS",
+      "n": 2,
+      "roundOrder": 2,
+      "date": "2026-10-08",
+      "time": null
+    }
+  ]
 }
