@@ -1,4 +1,37 @@
 {
-  "fetchedAt": "2026-09-24T19:56:11.310Z",
-  "found": []
+  "fetchedAt": "2026-09-25T08:26:50.265Z",
+  "found": [
+    {
+      "name": "2026 NY Yankees Division Series Home Game 1 * Premium Seating *",
+      "date": "2026-10-07",
+      "time": "",
+      "key": "PS-DS1",
+      "round": "DS",
+      "n": 1
+    },
+    {
+      "name": "2026 NY Yankees Division Series Home Game 1",
+      "date": "2026-10-07",
+      "time": "",
+      "key": "PS-DS1",
+      "round": "DS",
+      "n": 1
+    },
+    {
+      "name": "2026 NY Yankees Division Series Home Game 2",
+      "date": "2026-10-08",
+      "time": "",
+      "key": "PS-DS2",
+      "round": "DS",
+      "n": 2
+    },
+    {
+      "name": "2026 NY Yankees Division Series Home Game 2 * Premium Seating *",
+      "date": "2026-10-08",
+      "time": "",
+      "key": "PS-DS2",
+      "round": "DS",
+      "n": 2
+    }
+  ]
 }
