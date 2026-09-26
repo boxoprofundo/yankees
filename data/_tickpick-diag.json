@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-26T00:59:42.400Z",
+  "fetchedAt": "2026-09-26T10:17:42.315Z",
   "discovered": 3,
   "firstEvent": {
     "eid": "7368123",
@@ -9,10 +9,10 @@
       "https://api.tickpick.com/1.0/listings/internal/event-v2/7368123"
     ],
     "hadApi": true,
-    "n": 151,
+    "n": 149,
     "sample": null
   },
   "games": 3,
-  "quotes": 495,
-  "faces": 443
+  "quotes": 496,
+  "faces": 446
 }
