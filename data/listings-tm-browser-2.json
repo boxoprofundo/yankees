@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-26T10:10:44Z",
+  "fetchedAt": "2026-09-26T19:23:32Z",
   "promo": "GRANDSLAM",
   "promoHits": 0,
   "quotes": [
@@ -79,7 +79,7 @@
       "gamePk": 823490,
       "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-27-2026/event/1D006323F59943A9?promoCode=GRANDSLAM",
       "provider": "Ticketmaster",
-      "section": "423",
+      "section": "416",
       "price": 53.3,
       "faceValue": 48,
       "promoApplied": false
@@ -88,9 +88,9 @@
       "gamePk": 823490,
       "url": "https://www.ticketmaster.com/new-york-yankees-vs-baltimore-orioles-bronx-new-york-09-27-2026/event/1D006323F59943A9?promoCode=GRANDSLAM",
       "provider": "Ticketmaster",
-      "section": "427",
-      "price": 35.55,
-      "faceValue": 32,
+      "section": "423",
+      "price": 53.3,
+      "faceValue": 48,
       "promoApplied": false
     },
     {
@@ -160,60 +160,6 @@
       "gamePk": 849851,
       "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-29-2026/event/1D00652CBC28DC2A?promoCode=GRANDSLAM",
       "provider": "Ticketmaster",
-      "section": "212",
-      "price": 175.25,
-      "faceValue": 166,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849851,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-29-2026/event/1D00652CBC28DC2A?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "217",
-      "price": 226.25,
-      "faceValue": 216,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849851,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-29-2026/event/1D00652CBC28DC2A?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "223",
-      "price": 226.25,
-      "faceValue": 216,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849851,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-29-2026/event/1D00652CBC28DC2A?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "224",
-      "price": 226.25,
-      "faceValue": 216,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849851,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-29-2026/event/1D00652CBC28DC2A?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "408",
-      "price": 93.7,
-      "faceValue": 86,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849851,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-29-2026/event/1D00652CBC28DC2A?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "414",
-      "price": 103.9,
-      "faceValue": 96,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849851,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-29-2026/event/1D00652CBC28DC2A?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
       "section": "434A",
       "price": 88.6,
       "faceValue": 81,
@@ -226,33 +172,6 @@
       "section": "434B",
       "price": 88.6,
       "faceValue": 81,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849851,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-29-2026/event/1D00652CBC28DC2A?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "431A",
-      "price": 93.7,
-      "faceValue": 86,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849851,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-29-2026/event/1D00652CBC28DC2A?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "407B",
-      "price": 93.7,
-      "faceValue": 86,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849851,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-29-2026/event/1D00652CBC28DC2A?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "432A",
-      "price": 93.7,
-      "faceValue": 86,
       "promoApplied": false
     },
     {
@@ -337,105 +256,6 @@
       "promoApplied": false
     },
     {
-      "gamePk": 849848,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "405",
-      "price": 88.6,
-      "faceValue": 81,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849848,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "406",
-      "price": 88.6,
-      "faceValue": 81,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849848,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "408",
-      "price": 93.7,
-      "faceValue": 86,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849848,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "409",
-      "price": 93.7,
-      "faceValue": 86,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849848,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "433",
-      "price": 88.6,
-      "faceValue": 81,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849848,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "407A",
-      "price": 88.6,
-      "faceValue": 81,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849848,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "434A",
-      "price": 88.6,
-      "faceValue": 81,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849848,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "434B",
-      "price": 88.6,
-      "faceValue": 81,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849848,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "431A",
-      "price": 93.7,
-      "faceValue": 86,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849848,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "431B",
-      "price": 93.7,
-      "faceValue": 86,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849848,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "432A",
-      "price": 93.7,
-      "faceValue": 86,
-      "promoApplied": false
-    },
-    {
       "gamePk": 849847,
       "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-10-01-2026/event/1D00652CB367C2BE?promoCode=GRANDSLAM",
       "provider": "Ticketmaster",
@@ -472,60 +292,6 @@
       "promoApplied": false
     },
     {
-      "gamePk": 849847,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-10-01-2026/event/1D00652CBDB3E0FD?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "405",
-      "price": 93.7,
-      "faceValue": 86,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849847,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-10-01-2026/event/1D00652CBDB3E0FD?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "406",
-      "price": 93.7,
-      "faceValue": 86,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849847,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-10-01-2026/event/1D00652CBDB3E0FD?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "433",
-      "price": 93.7,
-      "faceValue": 86,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849847,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-10-01-2026/event/1D00652CBDB3E0FD?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "407A",
-      "price": 93.7,
-      "faceValue": 86,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849847,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-10-01-2026/event/1D00652CBDB3E0FD?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "434A",
-      "price": 93.7,
-      "faceValue": 86,
-      "promoApplied": false
-    },
-    {
-      "gamePk": 849847,
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-10-01-2026/event/1D00652CBDB3E0FD?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "434B",
-      "price": 93.7,
-      "faceValue": 86,
-      "promoApplied": false
-    },
-    {
       "gamePk": "PS-DS1",
       "url": "https://www.ticketmaster.com/2026-ny-yankees-division-series-home-bronx-new-york-10-07-2026/event/1D00652CB3DCC452?promoCode=GRANDSLAM",
       "provider": "Ticketmaster",
@@ -548,15 +314,6 @@
       "url": "https://www.ticketmaster.com/2026-ny-yankees-division-series-home-bronx-new-york-10-07-2026/event/1D00652CB3DCC452?promoCode=GRANDSLAM",
       "provider": "Ticketmaster",
       "section": "011",
-      "price": 878.7,
-      "faceValue": 856,
-      "promoApplied": false
-    },
-    {
-      "gamePk": "PS-DS1",
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-division-series-home-bronx-new-york-10-07-2026/event/1D00652CB3DCC452?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "029",
       "price": 878.7,
       "faceValue": 856,
       "promoApplied": false
@@ -653,87 +410,6 @@
     },
     {
       "gamePk": "PS-DS2",
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-division-series-home-bronx-new-york-10-08-2026/event/1D00652CBE24E250?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "405",
-      "price": 83.5,
-      "faceValue": 76,
-      "promoApplied": false
-    },
-    {
-      "gamePk": "PS-DS2",
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-division-series-home-bronx-new-york-10-08-2026/event/1D00652CBE24E250?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "406",
-      "price": 83.5,
-      "faceValue": 76,
-      "promoApplied": false
-    },
-    {
-      "gamePk": "PS-DS2",
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-division-series-home-bronx-new-york-10-08-2026/event/1D00652CBE24E250?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "409",
-      "price": 88.6,
-      "faceValue": 81,
-      "promoApplied": false
-    },
-    {
-      "gamePk": "PS-DS2",
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-division-series-home-bronx-new-york-10-08-2026/event/1D00652CBE24E250?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "433",
-      "price": 83.5,
-      "faceValue": 76,
-      "promoApplied": false
-    },
-    {
-      "gamePk": "PS-DS2",
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-division-series-home-bronx-new-york-10-08-2026/event/1D00652CBE24E250?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "407A",
-      "price": 83.5,
-      "faceValue": 76,
-      "promoApplied": false
-    },
-    {
-      "gamePk": "PS-DS2",
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-division-series-home-bronx-new-york-10-08-2026/event/1D00652CBE24E250?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "434A",
-      "price": 83.5,
-      "faceValue": 76,
-      "promoApplied": false
-    },
-    {
-      "gamePk": "PS-DS2",
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-division-series-home-bronx-new-york-10-08-2026/event/1D00652CBE24E250?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "434B",
-      "price": 83.5,
-      "faceValue": 76,
-      "promoApplied": false
-    },
-    {
-      "gamePk": "PS-DS2",
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-division-series-home-bronx-new-york-10-08-2026/event/1D00652CBE24E250?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "431B",
-      "price": 88.6,
-      "faceValue": 81,
-      "promoApplied": false
-    },
-    {
-      "gamePk": "PS-DS2",
-      "url": "https://www.ticketmaster.com/2026-ny-yankees-division-series-home-bronx-new-york-10-08-2026/event/1D00652CBE24E250?promoCode=GRANDSLAM",
-      "provider": "Ticketmaster",
-      "section": "432A",
-      "price": 88.6,
-      "faceValue": 81,
-      "promoApplied": false
-    },
-    {
-      "gamePk": "PS-DS2",
       "url": "https://www.ticketmaster.com/2026-ny-yankees-division-series-home-bronx-new-york-10-08-2026/event/1D00652CB801D045?promoCode=GRANDSLAM",
       "provider": "Ticketmaster",
       "section": "028",
@@ -757,6 +433,96 @@
       "section": "029",
       "price": 878.7,
       "faceValue": 856,
+      "promoApplied": false
+    },
+    {
+      "gamePk": 849848,
+      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "405",
+      "price": 88.6,
+      "faceValue": 81,
+      "promoApplied": false
+    },
+    {
+      "gamePk": 849848,
+      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "408",
+      "price": 93.7,
+      "faceValue": 86,
+      "promoApplied": false
+    },
+    {
+      "gamePk": 849848,
+      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "409",
+      "price": 93.7,
+      "faceValue": 86,
+      "promoApplied": false
+    },
+    {
+      "gamePk": 849848,
+      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "433",
+      "price": 88.6,
+      "faceValue": 81,
+      "promoApplied": false
+    },
+    {
+      "gamePk": 849848,
+      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "407A",
+      "price": 88.6,
+      "faceValue": 81,
+      "promoApplied": false
+    },
+    {
+      "gamePk": 849848,
+      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "434A",
+      "price": 88.6,
+      "faceValue": 81,
+      "promoApplied": false
+    },
+    {
+      "gamePk": 849848,
+      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "434B",
+      "price": 88.6,
+      "faceValue": 81,
+      "promoApplied": false
+    },
+    {
+      "gamePk": 849848,
+      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "431A",
+      "price": 93.7,
+      "faceValue": 86,
+      "promoApplied": false
+    },
+    {
+      "gamePk": 849848,
+      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "431B",
+      "price": 93.7,
+      "faceValue": 86,
+      "promoApplied": false
+    },
+    {
+      "gamePk": 849848,
+      "url": "https://www.ticketmaster.com/2026-ny-yankees-wild-card-game-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3?promoCode=GRANDSLAM",
+      "provider": "Ticketmaster",
+      "section": "432A",
+      "price": 93.7,
+      "faceValue": 86,
       "promoApplied": false
     }
   ]
