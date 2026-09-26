@@ -1,27 +1,27 @@
 {
-  "fetchedAt": "2026-09-26T10:17:44Z",
+  "fetchedAt": "2026-09-26T19:24:46Z",
   "quotes": [
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "103",
-      "price": 29,
-      "faceValue": 29.47,
+      "price": 25,
+      "faceValue": 30,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "104",
-      "price": 51,
-      "faceValue": 40,
+      "price": 38,
+      "faceValue": 30,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "105",
-      "price": 48,
+      "price": 34,
       "faceValue": 159,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -37,23 +37,15 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "107",
-      "price": 21,
-      "faceValue": 56.2,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
-      "section": "108",
-      "price": 55,
-      "faceValue": 29.47,
+      "price": 61,
+      "faceValue": 50.12,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "110",
-      "price": 30,
+      "price": 20,
       "faceValue": 69.47,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -61,15 +53,15 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "111",
-      "price": 39,
-      "faceValue": 27.2,
+      "price": 154,
+      "faceValue": 125,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "112",
-      "price": 73,
+      "price": 181,
       "faceValue": 161.81,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -77,31 +69,31 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "113",
-      "price": 52,
-      "faceValue": 60,
+      "price": 38,
+      "faceValue": 50,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "115",
-      "price": 203,
-      "faceValue": 168.34,
+      "price": 164,
+      "faceValue": 135.7,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "116",
-      "price": 88,
-      "faceValue": 86.11,
+      "price": 118,
+      "faceValue": 97.85,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "118",
-      "price": 400,
+      "price": 396,
       "faceValue": 331.49,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -109,23 +101,23 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "119",
-      "price": 151,
-      "faceValue": 254,
+      "price": 132,
+      "faceValue": 177.47,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "122",
-      "price": 203,
-      "faceValue": 168.34,
+      "price": 130,
+      "faceValue": 107.78,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "123",
-      "price": 280,
+      "price": 278,
       "faceValue": 230.99,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -133,55 +125,39 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "125",
-      "price": 210,
-      "faceValue": null,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
-      "section": "126",
-      "price": 53,
-      "faceValue": 31.63,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
-      "section": "128",
-      "price": 266,
-      "faceValue": 213.22,
+      "price": 175,
+      "faceValue": 146.14,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "129",
-      "price": 62,
+      "price": 61,
       "faceValue": 50,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "130",
-      "price": 59,
-      "faceValue": 85.35,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
       "section": "131",
-      "price": 56,
+      "price": 53,
       "faceValue": 39.52,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
+      "section": "132",
+      "price": 135,
+      "faceValue": 112.03,
+      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
+    },
+    {
+      "gamePk": 823490,
+      "provider": "TickPick",
       "section": "133",
-      "price": 44,
+      "price": 39,
       "faceValue": 29,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -189,7 +165,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "134",
-      "price": 53,
+      "price": 52,
       "faceValue": 90.37,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -197,15 +173,15 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "135",
-      "price": 25,
-      "faceValue": 85.35,
+      "price": 21,
+      "faceValue": 90.37,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "136",
-      "price": 68,
+      "price": 67,
       "faceValue": 55.27,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -213,8 +189,8 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "202",
-      "price": 8,
-      "faceValue": 12,
+      "price": 7,
+      "faceValue": 10,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
@@ -222,14 +198,14 @@
       "provider": "TickPick",
       "section": "203",
       "price": 13,
-      "faceValue": 12,
+      "faceValue": 10,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "204",
-      "price": 8,
+      "price": 16,
       "faceValue": 12,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -245,15 +221,15 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "206",
-      "price": 64,
-      "faceValue": 32.88,
+      "price": 118,
+      "faceValue": 97.85,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "208",
-      "price": 16,
+      "price": 13,
       "faceValue": 70.77,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -261,7 +237,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "209",
-      "price": 18,
+      "price": 17,
       "faceValue": 70.77,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -269,7 +245,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "210",
-      "price": 20,
+      "price": 12,
       "faceValue": 25,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -277,16 +253,16 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "211",
-      "price": 20,
-      "faceValue": 18.12,
+      "price": 17,
+      "faceValue": 25,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "212",
-      "price": 37,
-      "faceValue": 35,
+      "price": 29,
+      "faceValue": 30,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
@@ -301,7 +277,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "215",
-      "price": 62,
+      "price": 61,
       "faceValue": 50.12,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -309,7 +285,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "216",
-      "price": 62,
+      "price": 57,
       "faceValue": 50,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -317,23 +293,23 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "217",
-      "price": 35,
-      "faceValue": 27.2,
+      "price": 32,
+      "faceValue": 50.12,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "219",
-      "price": 89,
-      "faceValue": 72.3,
+      "price": 85,
+      "faceValue": 73.73,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "222",
-      "price": 137,
+      "price": 135,
       "faceValue": 112.21,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -341,24 +317,16 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "223",
-      "price": 36,
-      "faceValue": 125.49,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
-      "section": "224",
-      "price": 39,
-      "faceValue": 55.77,
+      "price": 41,
+      "faceValue": 51.58,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "225",
-      "price": 63,
-      "faceValue": 38.55,
+      "price": 139,
+      "faceValue": 148.75,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
@@ -373,7 +341,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "228",
-      "price": 20,
+      "price": 17,
       "faceValue": 30,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -381,7 +349,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "229",
-      "price": 17,
+      "price": 14,
       "faceValue": 25,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -389,7 +357,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "230",
-      "price": 24,
+      "price": 21,
       "faceValue": 25,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -397,7 +365,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "231",
-      "price": 22,
+      "price": 20,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -405,7 +373,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "234",
-      "price": 64,
+      "price": 63,
       "faceValue": 54.34,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -413,24 +381,24 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "235",
-      "price": 8,
-      "faceValue": 12,
+      "price": 7,
+      "faceValue": 10,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "236",
-      "price": 8,
-      "faceValue": 12,
+      "price": 7,
+      "faceValue": 10,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "237",
-      "price": 8,
-      "faceValue": 12,
+      "price": 7,
+      "faceValue": 10,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
@@ -445,23 +413,15 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "307",
-      "price": 27,
+      "price": 21,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "308",
-      "price": 78,
-      "faceValue": 63.8,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
       "section": "310",
-      "price": 13,
+      "price": 10,
       "faceValue": 11.2,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -469,16 +429,16 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "311",
-      "price": 16,
-      "faceValue": 12,
+      "price": 14,
+      "faceValue": 10,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "312",
-      "price": 24,
-      "faceValue": 36.84,
+      "price": 23,
+      "faceValue": 45.72,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
@@ -486,14 +446,14 @@
       "provider": "TickPick",
       "section": "313",
       "price": 22,
-      "faceValue": 24.93,
+      "faceValue": 62.38,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "314",
-      "price": 25,
+      "price": 20,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -501,7 +461,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "315",
-      "price": 37,
+      "price": 31,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -509,7 +469,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "316",
-      "price": 25,
+      "price": 14,
       "faceValue": 20,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -517,7 +477,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "317",
-      "price": 33,
+      "price": 22,
       "faceValue": 65.66,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -525,7 +485,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "318",
-      "price": 25,
+      "price": 20,
       "faceValue": 88,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -533,31 +493,15 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "319",
-      "price": 26,
+      "price": 20,
       "faceValue": 59.54,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "321",
-      "price": 68,
-      "faceValue": 55.27,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
-      "section": "322",
-      "price": 119,
-      "faceValue": 97.85,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
       "section": "323",
-      "price": 94,
+      "price": 93,
       "faceValue": 76.56,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -573,15 +517,15 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "325",
-      "price": 16,
-      "faceValue": 59.4,
+      "price": 9,
+      "faceValue": 82.75,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "326",
-      "price": 15,
+      "price": 8,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -589,15 +533,15 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "327",
-      "price": 65,
-      "faceValue": 57.2,
+      "price": 93,
+      "faceValue": 76.56,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "328",
-      "price": 8,
+      "price": 24,
       "faceValue": 45.73,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -605,7 +549,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "329",
-      "price": 8,
+      "price": 7,
       "faceValue": 35.39,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -613,47 +557,23 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "330",
-      "price": 11,
+      "price": 13,
       "faceValue": 34.83,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "331",
-      "price": 74,
-      "faceValue": 57.56,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
-      "section": "333",
-      "price": 75,
-      "faceValue": 57.56,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
-      "section": "405",
-      "price": 39,
-      "faceValue": 20.67,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
       "section": "406",
-      "price": 40,
-      "faceValue": 29.97,
+      "price": 164,
+      "faceValue": 135.7,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "410",
-      "price": 9,
+      "price": 8,
       "faceValue": 28,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -669,23 +589,23 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "412",
-      "price": 6,
-      "faceValue": 20.67,
+      "price": 7,
+      "faceValue": 31.58,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "413",
-      "price": 6,
-      "faceValue": 24.14,
+      "price": 8,
+      "faceValue": 28.31,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "414",
-      "price": 68,
+      "price": 67,
       "faceValue": 55.27,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -701,15 +621,15 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "416",
-      "price": 8,
-      "faceValue": 28.6,
+      "price": 7,
+      "faceValue": 35.93,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "417",
-      "price": 7,
+      "price": 6,
       "faceValue": 10,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -718,7 +638,7 @@
       "provider": "TickPick",
       "section": "418",
       "price": 7,
-      "faceValue": 10,
+      "faceValue": 8,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
@@ -734,7 +654,7 @@
       "provider": "TickPick",
       "section": "421",
       "price": 7,
-      "faceValue": 25.29,
+      "faceValue": 33,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
@@ -758,15 +678,15 @@
       "provider": "TickPick",
       "section": "424",
       "price": 8,
-      "faceValue": 10,
+      "faceValue": 8,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "425",
-      "price": 8,
-      "faceValue": 25.29,
+      "price": 9,
+      "faceValue": 35.93,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
@@ -789,8 +709,8 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "428",
-      "price": 7,
-      "faceValue": 22,
+      "price": 6,
+      "faceValue": 28,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
@@ -798,7 +718,7 @@
       "provider": "TickPick",
       "section": "429",
       "price": 7,
-      "faceValue": 22,
+      "faceValue": 31.58,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
@@ -812,17 +732,9 @@
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "420A",
-      "price": 8,
-      "faceValue": 12,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
       "section": "420C",
       "price": 8,
-      "faceValue": 35.92,
+      "faceValue": 35.93,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
@@ -836,24 +748,24 @@
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "232A",
-      "price": 13,
-      "faceValue": 26.06,
+      "section": "420A",
+      "price": 8,
+      "faceValue": 10,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "331W",
-      "price": 16,
-      "faceValue": null,
+      "section": "232A",
+      "price": 14,
+      "faceValue": 34,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "317W",
-      "price": 25,
+      "price": 18,
       "faceValue": 37.31,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -868,30 +780,6 @@
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "326W",
-      "price": 28,
-      "faceValue": null,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
-      "section": "434B",
-      "price": 39,
-      "faceValue": 29.97,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
-      "section": "434A",
-      "price": 39,
-      "faceValue": 27.6,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
       "section": "227A",
       "price": 38,
       "faceValue": 30,
@@ -901,55 +789,7 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "127B",
-      "price": 38,
-      "faceValue": 60,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
-      "section": "407B",
-      "price": 49,
-      "faceValue": 37.2,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
-      "section": "432A",
-      "price": 49,
-      "faceValue": 37.2,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
-      "section": "127A",
-      "price": 50,
-      "faceValue": 60,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
-      "section": "214A",
-      "price": 51,
-      "faceValue": 40,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
-      "section": "332A",
-      "price": 52,
-      "faceValue": 27.6,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
-      "section": "320C",
-      "price": 53,
+      "price": 40,
       "faceValue": 50,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -957,32 +797,32 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "114A",
-      "price": 56,
-      "faceValue": 125,
+      "price": 49,
+      "faceValue": 112.03,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "407A",
-      "price": 64,
-      "faceValue": 27.6,
+      "section": "214A",
+      "price": 50,
+      "faceValue": 40,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "114B",
-      "price": 75,
+      "section": "127A",
+      "price": 51,
       "faceValue": 60,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "320A",
-      "price": 75,
-      "faceValue": 48.76,
+      "section": "320C",
+      "price": 61,
+      "faceValue": 50,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
@@ -996,48 +836,48 @@
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "221B",
-      "price": 82,
-      "faceValue": 66.63,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
       "section": "220C",
-      "price": 94,
-      "faceValue": 89.33,
+      "price": 81,
+      "faceValue": 85.08,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "220B",
-      "price": 96,
-      "faceValue": 77.98,
+      "section": "114B",
+      "price": 89,
+      "faceValue": 75,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "233B",
-      "price": 111,
-      "faceValue": 87.74,
+      "section": "320A",
+      "price": 93,
+      "faceValue": 76.56,
+      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
+    },
+    {
+      "gamePk": 823490,
+      "provider": "TickPick",
+      "section": "218B",
+      "price": 110,
+      "faceValue": 90.75,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "320B",
-      "price": 114,
-      "faceValue": 152.29,
+      "price": 113,
+      "faceValue": 174.86,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "120B",
-      "price": 131,
+      "price": 129,
       "faceValue": 57.84,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -1045,24 +885,48 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "120A",
-      "price": 133,
-      "faceValue": 89.62,
+      "price": 135,
+      "faceValue": 112.03,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "AUDI3",
-      "price": 159,
-      "faceValue": 125.49,
+      "section": "220B",
+      "price": 140,
+      "faceValue": 116.13,
+      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
+    },
+    {
+      "gamePk": 823490,
+      "provider": "TickPick",
+      "section": "221B",
+      "price": 148,
+      "faceValue": 122.65,
+      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
+    },
+    {
+      "gamePk": 823490,
+      "provider": "TickPick",
+      "section": "218A",
+      "price": 148,
+      "faceValue": 122.65,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "117A",
-      "price": 163,
-      "faceValue": 134.39,
+      "price": 154,
+      "faceValue": 125,
+      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
+    },
+    {
+      "gamePk": 823490,
+      "provider": "TickPick",
+      "section": "221A",
+      "price": 167,
+      "faceValue": 168.34,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
@@ -1076,40 +940,32 @@
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "221A",
-      "price": 186,
-      "faceValue": 168.34,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
-      "section": "121B",
-      "price": 211,
-      "faceValue": 173.56,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
       "section": "117B",
-      "price": 228,
-      "faceValue": 187.91,
+      "price": 182,
+      "faceValue": 151.36,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "027B",
-      "price": 278,
+      "price": 206,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
+      "section": "121B",
+      "price": 209,
+      "faceValue": 173.56,
+      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
+    },
+    {
+      "gamePk": 823490,
+      "provider": "TickPick",
       "section": "026",
-      "price": 337,
+      "price": 304,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -1117,39 +973,31 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "021B",
-      "price": 384,
+      "price": 346,
       "faceValue": 870,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "218B",
-      "price": 387,
-      "faceValue": 319.75,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
-      "section": "025",
-      "price": 436,
-      "faceValue": null,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
       "section": "018",
-      "price": 444,
+      "price": 411,
       "faceValue": null,
+      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
+    },
+    {
+      "gamePk": 823490,
+      "provider": "TickPick",
+      "section": "015A",
+      "price": 427,
+      "faceValue": 350,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "027A",
-      "price": 455,
+      "price": 450,
       "faceValue": 500,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -1157,23 +1005,15 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "024A",
-      "price": 464,
+      "price": 459,
       "faceValue": 850,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
-      "section": "015A",
-      "price": 492,
-      "faceValue": 400,
-      "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
-    },
-    {
-      "gamePk": 823490,
-      "provider": "TickPick",
       "section": "022",
-      "price": 588,
+      "price": 582,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
@@ -1181,23 +1021,23 @@
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "021A",
-      "price": 737,
-      "faceValue": 600,
+      "price": 608,
+      "faceValue": 500,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 823490,
       "provider": "TickPick",
       "section": "017B",
-      "price": 737,
-      "faceValue": 600,
+      "price": 608,
+      "faceValue": 500,
       "url": "https://www.tickpick.com/buy-new-york-yankees-vs-baltimore-orioles-tickets-yankee-stadium-9-27-26-3pm/7368123/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "12",
-      "price": 1567,
+      "price": 1570,
       "faceValue": 900,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1205,15 +1045,23 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "18",
-      "price": 2151,
+      "price": 2156,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
+      "section": "26",
+      "price": 2498,
+      "faceValue": 1100,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
+    },
+    {
+      "gamePk": 849851,
+      "provider": "TickPick",
       "section": "29",
-      "price": 1753,
+      "price": 1756,
       "faceValue": 700,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1221,7 +1069,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "103",
-      "price": 228,
+      "price": 217,
       "faceValue": 144.27,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1229,7 +1077,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "104",
-      "price": 240,
+      "price": 241,
       "faceValue": 118.14,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1237,7 +1085,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "105",
-      "price": 253,
+      "price": 254,
       "faceValue": 123.59,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1245,7 +1093,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "106",
-      "price": 240,
+      "price": 228,
       "faceValue": 123.59,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1261,15 +1109,15 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "108",
-      "price": 213,
-      "faceValue": 381.09,
+      "price": 210,
+      "faceValue": 340.63,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "109",
-      "price": 238,
+      "price": 224,
       "faceValue": 144.27,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1277,7 +1125,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "110",
-      "price": 238,
+      "price": 224,
       "faceValue": 162.78,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1285,7 +1133,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "111",
-      "price": 254,
+      "price": 281,
       "faceValue": 182.38,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1293,7 +1141,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "112",
-      "price": 364,
+      "price": 365,
       "faceValue": 209.6,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1301,7 +1149,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "113",
-      "price": 361,
+      "price": 362,
       "faceValue": 162.78,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1309,7 +1157,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "115",
-      "price": 569,
+      "price": 600,
       "faceValue": 229.19,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1317,7 +1165,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "116",
-      "price": 655,
+      "price": 656,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1325,15 +1173,15 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "118",
-      "price": 793,
-      "faceValue": 316,
+      "price": 744,
+      "faceValue": 937.12,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "119",
-      "price": 633,
+      "price": 634,
       "faceValue": 483.15,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1341,7 +1189,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "122",
-      "price": 599,
+      "price": 600,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1349,7 +1197,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "123",
-      "price": 710,
+      "price": 684,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1357,7 +1205,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "124",
-      "price": 760,
+      "price": 727,
       "faceValue": 500,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1365,7 +1213,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "125",
-      "price": 638,
+      "price": 633,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1373,7 +1221,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "126",
-      "price": 521,
+      "price": 479,
       "faceValue": 355.7,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1381,23 +1229,23 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "128",
-      "price": 371,
-      "faceValue": null,
+      "price": 303,
+      "faceValue": 345,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "129",
-      "price": 222,
-      "faceValue": 182.38,
+      "price": 201,
+      "faceValue": 150,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "130",
-      "price": 282,
+      "price": 271,
       "faceValue": 166,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1421,7 +1269,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "133",
-      "price": 249,
+      "price": 230,
       "faceValue": 114.88,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1429,7 +1277,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "134",
-      "price": 226,
+      "price": 208,
       "faceValue": 114.88,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1445,7 +1293,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "136",
-      "price": 260,
+      "price": 250,
       "faceValue": 178.36,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1453,7 +1301,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "202",
-      "price": 172,
+      "price": 180,
       "faceValue": 54.99,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1501,7 +1349,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "209",
-      "price": 170,
+      "price": 161,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1509,7 +1357,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "210",
-      "price": 172,
+      "price": 166,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1517,7 +1365,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "211",
-      "price": 187,
+      "price": 210,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1533,7 +1381,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "213",
-      "price": 262,
+      "price": 263,
       "faceValue": 127.94,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1541,7 +1389,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "215",
-      "price": 285,
+      "price": 258,
       "faceValue": 244.88,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1549,7 +1397,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "216",
-      "price": 297,
+      "price": 338,
       "faceValue": 174.76,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1557,7 +1405,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "217",
-      "price": 408,
+      "price": 387,
       "faceValue": 174.76,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1565,7 +1413,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "219",
-      "price": 722,
+      "price": 723,
       "faceValue": 455.43,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1573,7 +1421,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "222",
-      "price": 650,
+      "price": 809,
       "faceValue": 455.43,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1581,15 +1429,15 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "223",
-      "price": 325,
-      "faceValue": 401.75,
+      "price": 368,
+      "faceValue": 309.3,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "224",
-      "price": 297,
+      "price": 317,
       "faceValue": 201.98,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1597,15 +1445,15 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "225",
-      "price": 298,
-      "faceValue": 236.94,
+      "price": 349,
+      "faceValue": 239.33,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "226",
-      "price": 364,
+      "price": 365,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1613,15 +1461,15 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "228",
-      "price": 215,
-      "faceValue": 250,
+      "price": 193,
+      "faceValue": 157.7,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "229",
-      "price": 203,
+      "price": 206,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1637,7 +1485,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "231",
-      "price": 190,
+      "price": 183,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1653,7 +1501,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "235",
-      "price": 179,
+      "price": 187,
       "faceValue": 63.7,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1661,7 +1509,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "236",
-      "price": 170,
+      "price": 167,
       "faceValue": 63.7,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1669,7 +1517,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "237",
-      "price": 154,
+      "price": 171,
       "faceValue": 63.7,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1677,7 +1525,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "238",
-      "price": 240,
+      "price": 241,
       "faceValue": 63.7,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1685,7 +1533,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "306",
-      "price": 239,
+      "price": 240,
       "faceValue": 200.96,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1701,7 +1549,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "309",
-      "price": 140,
+      "price": 141,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1717,7 +1565,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "311",
-      "price": 140,
+      "price": 177,
       "faceValue": 70.24,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1725,7 +1573,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "312",
-      "price": 168,
+      "price": 151,
       "faceValue": 70.24,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1733,7 +1581,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "313",
-      "price": 170,
+      "price": 153,
       "faceValue": 210,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1741,15 +1589,15 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "314",
-      "price": 170,
-      "faceValue": 89.83,
+      "price": 161,
+      "faceValue": 111.61,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "315",
-      "price": 228,
+      "price": 229,
       "faceValue": 157.94,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1765,7 +1613,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "317",
-      "price": 205,
+      "price": 200,
       "faceValue": 104.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1773,8 +1621,8 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "318",
-      "price": 215,
-      "faceValue": 136,
+      "price": 221,
+      "faceValue": 160,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
@@ -1805,15 +1653,15 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "323",
-      "price": 236,
-      "faceValue": 150,
+      "price": 181,
+      "faceValue": 107.25,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "324",
-      "price": 199,
+      "price": 172,
       "faceValue": 89.83,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1821,7 +1669,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "325",
-      "price": 192,
+      "price": 167,
       "faceValue": 219.24,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1829,8 +1677,8 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "326",
-      "price": 346,
-      "faceValue": 291.02,
+      "price": 298,
+      "faceValue": 250.56,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
@@ -1845,7 +1693,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "328",
-      "price": 149,
+      "price": 131,
       "faceValue": 70.24,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1853,15 +1701,15 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "329",
-      "price": 140,
-      "faceValue": 60.08,
+      "price": 136,
+      "faceValue": 60.17,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "330",
-      "price": 139,
+      "price": 135,
       "faceValue": 59.35,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1877,7 +1725,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "333",
-      "price": 120,
+      "price": 127,
       "faceValue": 83.5,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1893,7 +1741,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "405",
-      "price": 126,
+      "price": 127,
       "faceValue": 84.17,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1901,7 +1749,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "408",
-      "price": 153,
+      "price": 140,
       "faceValue": 50.64,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1909,7 +1757,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "409",
-      "price": 128,
+      "price": 129,
       "faceValue": 50.64,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1917,15 +1765,15 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "410",
-      "price": 114,
-      "faceValue": 56.08,
+      "price": 110,
+      "faceValue": 56,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "411",
-      "price": 110,
+      "price": 99,
       "faceValue": 50.03,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1941,7 +1789,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "413",
-      "price": 120,
+      "price": 115,
       "faceValue": 56.08,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1949,7 +1797,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "415",
-      "price": 125,
+      "price": 123,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1957,7 +1805,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "416",
-      "price": 109,
+      "price": 129,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1989,7 +1837,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "421",
-      "price": 124,
+      "price": 128,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -1997,7 +1845,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "422",
-      "price": 122,
+      "price": 125,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2005,7 +1853,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "423",
-      "price": 120,
+      "price": 145,
       "faceValue": 88.2,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2013,7 +1861,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "424",
-      "price": 121,
+      "price": 120,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2021,7 +1869,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "425",
-      "price": 119,
+      "price": 128,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2029,7 +1877,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "426",
-      "price": 116,
+      "price": 117,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2037,7 +1885,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "427",
-      "price": 120,
+      "price": 128,
       "faceValue": 56.08,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2045,7 +1893,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "428",
-      "price": 108,
+      "price": 111,
       "faceValue": 48.53,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2053,7 +1901,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "429",
-      "price": 116,
+      "price": 101,
       "faceValue": 48.36,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2068,32 +1916,24 @@
     {
       "gamePk": 849851,
       "provider": "TickPick",
-      "section": "432B",
-      "price": 98,
-      "faceValue": 78.62,
+      "section": "306W",
+      "price": 112,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "434B",
-      "price": 118,
+      "price": 119,
       "faceValue": 89.71,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
-      "section": "306W",
-      "price": 123,
-      "faceValue": 59.35,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
-    },
-    {
-      "gamePk": 849851,
-      "provider": "TickPick",
       "section": "434A",
-      "price": 126,
+      "price": 127,
       "faceValue": 84.17,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2101,40 +1941,48 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "431A",
-      "price": 129,
+      "price": 130,
       "faceValue": 50.64,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
-      "section": "431B",
-      "price": 131,
-      "faceValue": 148.75,
+      "section": "420C",
+      "price": 130,
+      "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "420B",
-      "price": 133,
+      "price": 131,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
-      "section": "420C",
-      "price": 133,
-      "faceValue": 60.44,
+      "section": "431B",
+      "price": 137,
+      "faceValue": 148.75,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "420A",
-      "price": 138,
+      "price": 139,
       "faceValue": 60.44,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
+    },
+    {
+      "gamePk": 849851,
+      "provider": "TickPick",
+      "section": "331W",
+      "price": 143,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
@@ -2148,16 +1996,8 @@
     {
       "gamePk": 849851,
       "provider": "TickPick",
-      "section": "331W",
-      "price": 156,
-      "faceValue": null,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
-    },
-    {
-      "gamePk": 849851,
-      "provider": "TickPick",
       "section": "232A",
-      "price": 170,
+      "price": 161,
       "faceValue": 78.95,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2165,8 +2005,16 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "326W",
-      "price": 180,
+      "price": 168,
       "faceValue": null,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
+    },
+    {
+      "gamePk": 849851,
+      "provider": "TickPick",
+      "section": "233B",
+      "price": 181,
+      "faceValue": 125,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
@@ -2180,32 +2028,24 @@
     {
       "gamePk": 849851,
       "provider": "TickPick",
-      "section": "233B",
-      "price": 187,
-      "faceValue": 125,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
-    },
-    {
-      "gamePk": 849851,
-      "provider": "TickPick",
-      "section": "206W",
-      "price": 191,
-      "faceValue": null,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
-    },
-    {
-      "gamePk": 849851,
-      "provider": "TickPick",
       "section": "106W",
-      "price": 197,
+      "price": 191,
       "faceValue": 156.54,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
+      "section": "407A",
+      "price": 199,
+      "faceValue": 146.38,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
+    },
+    {
+      "gamePk": 849851,
+      "provider": "TickPick",
       "section": "130S",
-      "price": 219,
+      "price": 214,
       "faceValue": 200.53,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2213,39 +2053,15 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "227A",
-      "price": 230,
+      "price": 222,
       "faceValue": 128,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
-      "section": "227B",
-      "price": 245,
-      "faceValue": 127.94,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
-    },
-    {
-      "gamePk": 849851,
-      "provider": "TickPick",
-      "section": "CFSB1",
-      "price": 261,
-      "faceValue": null,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
-    },
-    {
-      "gamePk": 849851,
-      "provider": "TickPick",
-      "section": "320CW",
-      "price": 261,
-      "faceValue": 169.42,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
-    },
-    {
-      "gamePk": 849851,
-      "provider": "TickPick",
       "section": "320B",
-      "price": 266,
+      "price": 223,
       "faceValue": 183.9,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2253,32 +2069,72 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "320C",
-      "price": 274,
-      "faceValue": 163.87,
+      "price": 226,
+      "faceValue": 131,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
-      "section": "214A",
-      "price": 279,
+      "section": "206W",
+      "price": 229,
+      "faceValue": null,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
+    },
+    {
+      "gamePk": 849851,
+      "provider": "TickPick",
+      "section": "227B",
+      "price": 257,
       "faceValue": 127.94,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
+      "section": "CFSB1",
+      "price": 262,
+      "faceValue": null,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
+    },
+    {
+      "gamePk": 849851,
+      "provider": "TickPick",
+      "section": "224W",
+      "price": 265,
+      "faceValue": null,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
+    },
+    {
+      "gamePk": 849851,
+      "provider": "TickPick",
+      "section": "432B",
+      "price": 271,
+      "faceValue": 203.12,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
+    },
+    {
+      "gamePk": 849851,
+      "provider": "TickPick",
       "section": "320A",
-      "price": 298,
-      "faceValue": 158.43,
+      "price": 296,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "127AW",
-      "price": 307,
+      "price": 297,
       "faceValue": 244.88,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
+    },
+    {
+      "gamePk": 849851,
+      "provider": "TickPick",
+      "section": "214A",
+      "price": 309,
+      "faceValue": 127.94,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
@@ -2287,14 +2143,6 @@
       "section": "320AW",
       "price": 309,
       "faceValue": 259.69,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
-    },
-    {
-      "gamePk": 849851,
-      "provider": "TickPick",
-      "section": "224W",
-      "price": 312,
-      "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
@@ -2317,7 +2165,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "127A",
-      "price": 370,
+      "price": 371,
       "faceValue": 305,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2325,7 +2173,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "AUDI1",
-      "price": 408,
+      "price": 409,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2333,15 +2181,15 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "114A",
-      "price": 471,
-      "faceValue": 650,
+      "price": 432,
+      "faceValue": 296.4,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "114B",
-      "price": 488,
+      "price": 460,
       "faceValue": 234.64,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2349,7 +2197,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "118W",
-      "price": 550,
+      "price": 551,
       "faceValue": 335.89,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2357,7 +2205,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "116W",
-      "price": 589,
+      "price": 590,
       "faceValue": 411.08,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2365,16 +2213,16 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "117A",
-      "price": 609,
+      "price": 610,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
-      "section": "120B",
-      "price": 683,
-      "faceValue": 600,
+      "section": "117B",
+      "price": 634,
+      "faceValue": 1800,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
@@ -2388,24 +2236,16 @@
     {
       "gamePk": 849851,
       "provider": "TickPick",
-      "section": "121A",
-      "price": 692,
-      "faceValue": 316,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
-    },
-    {
-      "gamePk": 849851,
-      "provider": "TickPick",
       "section": "121B",
-      "price": 717,
+      "price": 711,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
-      "section": "120A",
-      "price": 755,
+      "section": "120B",
+      "price": 726,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2413,23 +2253,31 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "218B",
-      "price": 759,
+      "price": 760,
       "faceValue": 174.76,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
-      "section": "220A",
-      "price": 792,
-      "faceValue": 1800,
+      "section": "121A",
+      "price": 770,
+      "faceValue": 316,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
-      "section": "117B",
-      "price": 797,
+      "section": "120A",
+      "price": 784,
+      "faceValue": 993.26,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
+    },
+    {
+      "gamePk": 849851,
+      "provider": "TickPick",
+      "section": "220A",
+      "price": 794,
       "faceValue": 1800,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2437,31 +2285,39 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "220B",
-      "price": 812,
+      "price": 814,
       "faceValue": 456,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
-      "section": "028",
-      "price": 1083,
-      "faceValue": null,
+      "section": "220C",
+      "price": 1098,
+      "faceValue": 566.54,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "029",
-      "price": 1223,
+      "price": 1225,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
+      "section": "014A",
+      "price": 1244,
+      "faceValue": 370,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
+    },
+    {
+      "gamePk": 849851,
+      "provider": "TickPick",
       "section": "011",
-      "price": 1251,
+      "price": 1254,
       "faceValue": 236.73,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2469,31 +2325,23 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "012",
-      "price": 1283,
+      "price": 1286,
       "faceValue": 843.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
-      "section": "220C",
-      "price": 1285,
-      "faceValue": 566.54,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
-    },
-    {
-      "gamePk": 849851,
-      "provider": "TickPick",
-      "section": "014A",
-      "price": 1587,
-      "faceValue": 370,
+      "section": "028",
+      "price": 1448,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "027A",
-      "price": 1785,
+      "price": 1788,
       "faceValue": 500,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2501,39 +2349,39 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "026",
-      "price": 1999,
+      "price": 2003,
       "faceValue": null,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
-    },
-    {
-      "gamePk": 849851,
-      "provider": "TickPick",
-      "section": "027B",
-      "price": 2044,
-      "faceValue": null,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
-    },
-    {
-      "gamePk": 849851,
-      "provider": "TickPick",
-      "section": "014B",
-      "price": 2118,
-      "faceValue": 364.03,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "025",
-      "price": 2153,
+      "price": 2045,
       "faceValue": 1452.81,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
+      "section": "014B",
+      "price": 2045,
+      "faceValue": 364.03,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
+    },
+    {
+      "gamePk": 849851,
+      "provider": "TickPick",
+      "section": "027B",
+      "price": 2048,
+      "faceValue": null,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
+    },
+    {
+      "gamePk": 849851,
+      "provider": "TickPick",
       "section": "021A",
-      "price": 2153,
+      "price": 2158,
       "faceValue": 1120.35,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2541,7 +2389,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "018",
-      "price": 2232,
+      "price": 2236,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2549,7 +2397,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "016",
-      "price": 2267,
+      "price": 2272,
       "faceValue": 1452.81,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2557,7 +2405,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "021B",
-      "price": 2511,
+      "price": 2451,
       "faceValue": 416,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2565,7 +2413,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "024B",
-      "price": 2955,
+      "price": 2845,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2573,7 +2421,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "015B",
-      "price": 3136,
+      "price": 3143,
       "faceValue": 2600,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2581,7 +2429,7 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "017A",
-      "price": 3302,
+      "price": 3193,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2589,23 +2437,15 @@
       "gamePk": 849851,
       "provider": "TickPick",
       "section": "015A",
-      "price": 3377,
+      "price": 3384,
       "faceValue": 2800,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
     {
       "gamePk": 849851,
       "provider": "TickPick",
-      "section": "023",
-      "price": 3522,
-      "faceValue": 2006,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
-    },
-    {
-      "gamePk": 849851,
-      "provider": "TickPick",
       "section": "017B",
-      "price": 5788,
+      "price": 5799,
       "faceValue": 4800,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-1-tickets-yankee-stadium-9-29-26-3am/8173613/"
     },
@@ -2613,15 +2453,23 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "23",
-      "price": 4754,
+      "price": 4675,
       "faceValue": 2000,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
+      "section": "26",
+      "price": 2913,
+      "faceValue": 1100,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
+    },
+    {
+      "gamePk": 849848,
+      "provider": "TickPick",
       "section": "103",
-      "price": 232,
+      "price": 257,
       "faceValue": 118.14,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2629,7 +2477,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "104",
-      "price": 296,
+      "price": 292,
       "faceValue": 118.14,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2637,7 +2485,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "105",
-      "price": 231,
+      "price": 227,
       "faceValue": 123.59,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2645,7 +2493,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "106",
-      "price": 265,
+      "price": 260,
       "faceValue": 123.59,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2653,7 +2501,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "107",
-      "price": 200,
+      "price": 197,
       "faceValue": 155.16,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2661,7 +2509,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "108",
-      "price": 209,
+      "price": 221,
       "faceValue": 176.66,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2669,7 +2517,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "109",
-      "price": 231,
+      "price": 227,
       "faceValue": 123.59,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2677,7 +2525,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "110",
-      "price": 238,
+      "price": 292,
       "faceValue": 162.78,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2685,7 +2533,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "111",
-      "price": 264,
+      "price": 256,
       "faceValue": 191.09,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2693,7 +2541,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "112",
-      "price": 291,
+      "price": 304,
       "faceValue": 162.78,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2701,7 +2549,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "113",
-      "price": 383,
+      "price": 377,
       "faceValue": 360,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2709,7 +2557,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "115",
-      "price": 609,
+      "price": 599,
       "faceValue": 229.19,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2717,7 +2565,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "116",
-      "price": 724,
+      "price": 712,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2725,7 +2573,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "118",
-      "price": 675,
+      "price": 664,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2733,7 +2581,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "119",
-      "price": 603,
+      "price": 593,
       "faceValue": 466.52,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2741,7 +2589,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "122",
-      "price": 564,
+      "price": 576,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2749,7 +2597,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "123",
-      "price": 778,
+      "price": 765,
       "faceValue": 444.34,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2757,7 +2605,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "124",
-      "price": 611,
+      "price": 601,
       "faceValue": 500,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2765,7 +2613,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "125",
-      "price": 520,
+      "price": 551,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2773,7 +2621,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "126",
-      "price": 463,
+      "price": 437,
       "faceValue": 234.64,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2781,7 +2629,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "128",
-      "price": 301,
+      "price": 296,
       "faceValue": 186.73,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2789,15 +2637,15 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "129",
-      "price": 236,
-      "faceValue": 182.38,
+      "price": 232,
+      "faceValue": 150,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "130",
-      "price": 236,
+      "price": 232,
       "faceValue": 162.78,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2805,7 +2653,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "131",
-      "price": 223,
+      "price": 208,
       "faceValue": 166,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2813,7 +2661,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "132",
-      "price": 196,
+      "price": 189,
       "faceValue": 183.9,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2821,7 +2669,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "133",
-      "price": 222,
+      "price": 225,
       "faceValue": 114.88,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2829,7 +2677,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "134",
-      "price": 255,
+      "price": 261,
       "faceValue": 114.88,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2837,7 +2685,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "135",
-      "price": 312,
+      "price": 307,
       "faceValue": 114.88,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2845,7 +2693,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "136",
-      "price": 358,
+      "price": 352,
       "faceValue": 114.88,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2853,7 +2701,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "202",
-      "price": 175,
+      "price": 183,
       "faceValue": 54.99,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2861,7 +2709,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "203",
-      "price": 199,
+      "price": 196,
       "faceValue": 54.99,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2869,7 +2717,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "204",
-      "price": 217,
+      "price": 213,
       "faceValue": 63.7,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2877,7 +2725,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "205",
-      "price": 186,
+      "price": 183,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2885,7 +2733,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "206",
-      "price": 208,
+      "price": 205,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2893,7 +2741,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "208",
-      "price": 168,
+      "price": 167,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2901,7 +2749,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "209",
-      "price": 175,
+      "price": 172,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2909,7 +2757,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "210",
-      "price": 178,
+      "price": 175,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2917,7 +2765,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "211",
-      "price": 226,
+      "price": 224,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2925,7 +2773,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "212",
-      "price": 255,
+      "price": 252,
       "faceValue": 109.43,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2933,7 +2781,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "213",
-      "price": 284,
+      "price": 279,
       "faceValue": 127.94,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2941,7 +2789,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "215",
-      "price": 285,
+      "price": 297,
       "faceValue": 180.02,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2949,7 +2797,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "216",
-      "price": 320,
+      "price": 315,
       "faceValue": 174.76,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2957,7 +2805,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "217",
-      "price": 303,
+      "price": 320,
       "faceValue": 174.76,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2965,7 +2813,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "219",
-      "price": 1589,
+      "price": 1562,
       "faceValue": 185.64,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2973,7 +2821,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "222",
-      "price": 884,
+      "price": 754,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2981,7 +2829,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "223",
-      "price": 392,
+      "price": 385,
       "faceValue": 175,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -2990,14 +2838,14 @@
       "provider": "TickPick",
       "section": "224",
       "price": 328,
-      "faceValue": 174.76,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "225",
-      "price": 259,
+      "price": 292,
       "faceValue": 240,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3005,7 +2853,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "226",
-      "price": 327,
+      "price": 322,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3013,7 +2861,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "228",
-      "price": 204,
+      "price": 213,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3021,7 +2869,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "229",
-      "price": 189,
+      "price": 186,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3029,7 +2877,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "230",
-      "price": 175,
+      "price": 172,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3037,7 +2885,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "231",
-      "price": 195,
+      "price": 191,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3045,7 +2893,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "234",
-      "price": 251,
+      "price": 247,
       "faceValue": 123.41,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3061,22 +2909,6 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "236",
-      "price": 168,
-      "faceValue": 63.7,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
-    },
-    {
-      "gamePk": 849848,
-      "provider": "TickPick",
-      "section": "237",
-      "price": 183,
-      "faceValue": 63.7,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
-    },
-    {
-      "gamePk": 849848,
-      "provider": "TickPick",
-      "section": "238",
       "price": 178,
       "faceValue": 63.7,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
@@ -3084,8 +2916,24 @@
     {
       "gamePk": 849848,
       "provider": "TickPick",
+      "section": "237",
+      "price": 180,
+      "faceValue": 63.7,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
+    },
+    {
+      "gamePk": 849848,
+      "provider": "TickPick",
+      "section": "238",
+      "price": 219,
+      "faceValue": 63.7,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
+    },
+    {
+      "gamePk": 849848,
+      "provider": "TickPick",
       "section": "306",
-      "price": 128,
+      "price": 126,
       "faceValue": 73.5,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3101,7 +2949,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "310",
-      "price": 183,
+      "price": 180,
       "faceValue": 99.98,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3109,7 +2957,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "311",
-      "price": 147,
+      "price": 148,
       "faceValue": 70.24,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3125,15 +2973,15 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "313",
-      "price": 230,
-      "faceValue": 210,
+      "price": 183,
+      "faceValue": 89.83,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "314",
-      "price": 179,
+      "price": 185,
       "faceValue": 89.83,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3141,7 +2989,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "315",
-      "price": 242,
+      "price": 209,
       "faceValue": 107.25,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3149,7 +2997,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "316",
-      "price": 211,
+      "price": 197,
       "faceValue": 230,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3157,7 +3005,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "317",
-      "price": 237,
+      "price": 233,
       "faceValue": 136,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3173,23 +3021,23 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "319",
-      "price": 224,
-      "faceValue": 246.65,
+      "price": 281,
+      "faceValue": 214.48,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "321",
-      "price": 337,
-      "faceValue": 276.9,
+      "price": 249,
+      "faceValue": 253.06,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "322",
-      "price": 368,
+      "price": 362,
       "faceValue": 304.08,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3197,7 +3045,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "323",
-      "price": 217,
+      "price": 208,
       "faceValue": 107.25,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3205,7 +3053,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "324",
-      "price": 224,
+      "price": 216,
       "faceValue": 89.83,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3213,7 +3061,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "325",
-      "price": 199,
+      "price": 200,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3221,7 +3069,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "326",
-      "price": 175,
+      "price": 178,
       "faceValue": 89.83,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3229,7 +3077,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "327",
-      "price": 183,
+      "price": 188,
       "faceValue": 338.01,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3237,7 +3085,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "328",
-      "price": 142,
+      "price": 139,
       "faceValue": 70.24,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3245,7 +3093,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "329",
-      "price": 132,
+      "price": 129,
       "faceValue": 59.35,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3253,7 +3101,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "330",
-      "price": 118,
+      "price": 115,
       "faceValue": 59.35,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3261,7 +3109,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "333",
-      "price": 120,
+      "price": 118,
       "faceValue": 83.5,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3269,7 +3117,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "405",
-      "price": 151,
+      "price": 149,
       "faceValue": 84.17,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3277,7 +3125,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "408",
-      "price": 138,
+      "price": 135,
       "faceValue": 50.64,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3285,7 +3133,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "409",
-      "price": 110,
+      "price": 135,
       "faceValue": 50.64,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3293,15 +3141,15 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "410",
-      "price": 124,
-      "faceValue": 56.08,
+      "price": 122,
+      "faceValue": 56,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "411",
-      "price": 120,
+      "price": 125,
       "faceValue": 56.08,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3309,7 +3157,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "412",
-      "price": 117,
+      "price": 127,
       "faceValue": 56.08,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3317,7 +3165,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "413",
-      "price": 122,
+      "price": 113,
       "faceValue": 56.08,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3325,7 +3173,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "414",
-      "price": 197,
+      "price": 152,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3333,7 +3181,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "415",
-      "price": 111,
+      "price": 121,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3341,7 +3189,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "416",
-      "price": 118,
+      "price": 122,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3349,7 +3197,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "417",
-      "price": 118,
+      "price": 113,
       "faceValue": 54.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3357,7 +3205,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "418",
-      "price": 124,
+      "price": 122,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3365,7 +3213,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "419",
-      "price": 126,
+      "price": 124,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3373,7 +3221,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "421",
-      "price": 134,
+      "price": 137,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3381,7 +3229,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "422",
-      "price": 124,
+      "price": 122,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3389,7 +3237,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "423",
-      "price": 120,
+      "price": 125,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3397,7 +3245,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "424",
-      "price": 128,
+      "price": 134,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3405,7 +3253,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "425",
-      "price": 131,
+      "price": 139,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3413,7 +3261,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "426",
-      "price": 208,
+      "price": 205,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3421,7 +3269,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "427",
-      "price": 124,
+      "price": 122,
       "faceValue": 56.08,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3429,7 +3277,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "428",
-      "price": 119,
+      "price": 122,
       "faceValue": 56.08,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3437,7 +3285,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "429",
-      "price": 116,
+      "price": 120,
       "faceValue": 56.08,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3445,23 +3293,23 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "430",
-      "price": 110,
+      "price": 117,
       "faceValue": 56.08,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
-      "section": "407B",
-      "price": 124,
+      "section": "431B",
+      "price": 122,
       "faceValue": 89.71,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
-      "section": "431B",
-      "price": 124,
+      "section": "407B",
+      "price": 122,
       "faceValue": 89.71,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3469,7 +3317,15 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "420A",
-      "price": 133,
+      "price": 124,
+      "faceValue": 60.44,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
+    },
+    {
+      "gamePk": 849848,
+      "provider": "TickPick",
+      "section": "420C",
+      "price": 128,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3484,16 +3340,16 @@
     {
       "gamePk": 849848,
       "provider": "TickPick",
-      "section": "420C",
-      "price": 137,
-      "faceValue": 60.44,
+      "section": "431A",
+      "price": 147,
+      "faceValue": 50.64,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "332B",
-      "price": 159,
+      "price": 151,
       "faceValue": 86,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3501,23 +3357,23 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "232A",
-      "price": 163,
+      "price": 161,
       "faceValue": 78.95,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
-      "section": "431A",
-      "price": 176,
-      "faceValue": 50.64,
+      "section": "326W",
+      "price": 173,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "313W",
-      "price": 178,
+      "price": 175,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3525,7 +3381,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "232B",
-      "price": 188,
+      "price": 185,
       "faceValue": 128.51,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3533,47 +3389,23 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "314W",
-      "price": 188,
+      "price": 185,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
-      "section": "206W",
-      "price": 194,
-      "faceValue": null,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
-    },
-    {
-      "gamePk": 849848,
-      "provider": "TickPick",
-      "section": "327W",
-      "price": 195,
-      "faceValue": null,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
-    },
-    {
-      "gamePk": 849848,
-      "provider": "TickPick",
-      "section": "326W",
-      "price": 208,
-      "faceValue": null,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
-    },
-    {
-      "gamePk": 849848,
-      "provider": "TickPick",
-      "section": "227B",
-      "price": 212,
-      "faceValue": 127.94,
+      "section": "320C",
+      "price": 219,
+      "faceValue": 131,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "317W",
-      "price": 223,
+      "price": 219,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3589,15 +3421,23 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "320CW",
-      "price": 231,
+      "price": 227,
       "faceValue": 169.42,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
+      "section": "227B",
+      "price": 232,
+      "faceValue": 127.94,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
+    },
+    {
+      "gamePk": 849848,
+      "provider": "TickPick",
       "section": "109W",
-      "price": 239,
+      "price": 235,
       "faceValue": 155.16,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3605,24 +3445,40 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "227A",
+      "price": 253,
+      "faceValue": 240,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
+    },
+    {
+      "gamePk": 849848,
+      "provider": "TickPick",
+      "section": "320A",
       "price": 256,
-      "faceValue": 128,
+      "faceValue": 158.43,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "214A",
-      "price": 262,
+      "price": 268,
       "faceValue": 127.94,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
-      "section": "320C",
-      "price": 262,
-      "faceValue": 163.87,
+      "section": "320B",
+      "price": 272,
+      "faceValue": 206.93,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
+    },
+    {
+      "gamePk": 849848,
+      "provider": "TickPick",
+      "section": "215W",
+      "price": 302,
+      "faceValue": 180.2,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
@@ -3636,40 +3492,24 @@
     {
       "gamePk": 849848,
       "provider": "TickPick",
-      "section": "215W",
-      "price": 307,
-      "faceValue": 180.2,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
-    },
-    {
-      "gamePk": 849848,
-      "provider": "TickPick",
       "section": "127AW",
-      "price": 308,
+      "price": 331,
       "faceValue": 244.88,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
-      "section": "320A",
-      "price": 322,
-      "faceValue": 158.43,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
-    },
-    {
-      "gamePk": 849848,
-      "provider": "TickPick",
-      "section": "320B",
-      "price": 322,
-      "faceValue": 206.93,
+      "section": "233A",
+      "price": 332,
+      "faceValue": 279.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "114AW",
-      "price": 382,
+      "price": 370,
       "faceValue": 244.88,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3677,7 +3517,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "127A",
-      "price": 406,
+      "price": 399,
       "faceValue": 330,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3685,7 +3525,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "114A",
-      "price": 424,
+      "price": 417,
       "faceValue": 316.89,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3693,39 +3533,23 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "114B",
-      "price": 454,
+      "price": 434,
       "faceValue": 234.64,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
-      "section": "233A",
-      "price": 479,
-      "faceValue": 396.75,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
-    },
-    {
-      "gamePk": 849848,
-      "provider": "TickPick",
       "section": "AUDI1",
-      "price": 484,
+      "price": 476,
       "faceValue": 321.21,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
-      "section": "120BS",
-      "price": 484,
-      "faceValue": 419.94,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
-    },
-    {
-      "gamePk": 849848,
-      "provider": "TickPick",
       "section": "118W",
-      "price": 621,
+      "price": 611,
       "faceValue": 335.89,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3733,7 +3557,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "117B",
-      "price": 637,
+      "price": 627,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3741,7 +3565,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "120B",
-      "price": 671,
+      "price": 660,
       "faceValue": 427.71,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3749,7 +3573,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "121B",
-      "price": 700,
+      "price": 688,
       "faceValue": 570,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3757,7 +3581,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "121A",
-      "price": 700,
+      "price": 688,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3765,7 +3589,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "218A",
-      "price": 825,
+      "price": 811,
       "faceValue": 441,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3773,7 +3597,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "117A",
-      "price": 881,
+      "price": 841,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3781,7 +3605,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "218B",
-      "price": 906,
+      "price": 891,
       "faceValue": 174.76,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3789,7 +3613,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "120A",
-      "price": 914,
+      "price": 899,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3797,7 +3621,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "221A",
-      "price": 931,
+      "price": 916,
       "faceValue": 300,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3805,31 +3629,31 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "220B",
-      "price": 932,
+      "price": 917,
       "faceValue": 455.43,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
-      "section": "221B",
-      "price": 995,
-      "faceValue": 619.67,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
-    },
-    {
-      "gamePk": 849848,
-      "provider": "TickPick",
       "section": "028",
-      "price": 1004,
+      "price": 987,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
+      "section": "221B",
+      "price": 1031,
+      "faceValue": 870.55,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
+    },
+    {
+      "gamePk": 849848,
+      "provider": "TickPick",
       "section": "013",
-      "price": 1209,
+      "price": 1189,
       "faceValue": 843.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3837,15 +3661,23 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "027B",
-      "price": 1358,
+      "price": 1336,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
+      "section": "014A",
+      "price": 1457,
+      "faceValue": 370,
+      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
+    },
+    {
+      "gamePk": 849848,
+      "provider": "TickPick",
       "section": "011",
-      "price": 1503,
+      "price": 1478,
       "faceValue": 236.73,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3853,7 +3685,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "029",
-      "price": 1504,
+      "price": 1479,
       "faceValue": 843.28,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3861,23 +3693,15 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "014B",
-      "price": 1705,
+      "price": 1645,
       "faceValue": 364.03,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
-      "section": "014A",
-      "price": 1709,
-      "faceValue": 370,
-      "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
-    },
-    {
-      "gamePk": 849848,
-      "provider": "TickPick",
       "section": "027A",
-      "price": 1713,
+      "price": 1684,
       "faceValue": 500,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3885,7 +3709,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "026",
-      "price": 2132,
+      "price": 2097,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3893,7 +3717,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "220A",
-      "price": 2453,
+      "price": 2412,
       "faceValue": 2000,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3901,7 +3725,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "018",
-      "price": 2453,
+      "price": 2412,
       "faceValue": 2000,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3909,23 +3733,23 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "016",
-      "price": 2526,
+      "price": 2662,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
-      "section": "15B",
-      "price": 2648,
-      "faceValue": null,
+      "section": "019",
+      "price": 2673,
+      "faceValue": 2348,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
     {
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "220C",
-      "price": 2916,
+      "price": 2867,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3933,7 +3757,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "015B",
-      "price": 3434,
+      "price": 3377,
       "faceValue": 2800,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3941,7 +3765,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "017A",
-      "price": 3771,
+      "price": 3591,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3949,7 +3773,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "025",
-      "price": 3818,
+      "price": 3755,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3957,7 +3781,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "015A",
-      "price": 4046,
+      "price": 3979,
       "faceValue": 3300,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     },
@@ -3965,7 +3789,7 @@
       "gamePk": 849848,
       "provider": "TickPick",
       "section": "017B",
-      "price": 5885,
+      "price": 5788,
       "faceValue": 4800,
       "url": "https://www.tickpick.com/buy-al-wild-card-new-york-yankees-vs-boston-red-sox-game-2-tickets-yankee-stadium-9-30-26-3am/8173614/"
     }
