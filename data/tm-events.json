@@ -1,56 +1,26 @@
 {
-  "fetchedAt": "2026-09-29T13:07:45.276Z",
+  "fetchedAt": "2026-10-02T23:34:49.704Z",
   "note": "Keyless TM event map; refreshed by any run that still has a TM key in storage.",
   "entries": [
     [
-      "1D00652CBC28DC2A",
-      "https://www.ticketmaster.com/2026-ny-yankees-v-boston-red-bronx-new-york-09-29-2026/event/1D00652CBC28DC2A",
-      849851
-    ],
-    [
-      "1D00652CADBEB20E",
-      "https://www.ticketmaster.com/2026-ny-yankees-v-boston-red-bronx-new-york-09-29-2026/event/1D00652CADBEB20E",
-      849851
-    ],
-    [
-      "1D00652CB323C208",
-      "https://www.ticketmaster.com/2026-ny-yankees-v-boston-red-bronx-new-york-09-30-2026/event/1D00652CB323C208",
-      849848
-    ],
-    [
-      "1D00652CBD9FE0B3",
-      "https://www.ticketmaster.com/2026-ny-yankees-v-boston-red-bronx-new-york-09-30-2026/event/1D00652CBD9FE0B3",
-      849848
-    ],
-    [
-      "1D00652CB367C2BE",
-      "https://www.ticketmaster.com/2026-ny-yankees-v-boston-red-bronx-new-york-10-01-2026/event/1D00652CB367C2BE",
-      849847
-    ],
-    [
-      "1D00652CBDB3E0FD",
-      "https://www.ticketmaster.com/2026-ny-yankees-v-boston-red-bronx-new-york-10-01-2026/event/1D00652CBDB3E0FD",
-      849847
-    ],
-    [
       "1D00652CB3DCC452",
-      "https://www.ticketmaster.com/2026-ny-yankees-division-series-home-bronx-new-york-10-07-2026/event/1D00652CB3DCC452",
-      "PS-DS1"
+      "https://www.ticketmaster.com/2026-ny-yankees-division-series-game-bronx-new-york-10-07-2026/event/1D00652CB3DCC452",
+      849838
     ],
     [
       "1D00652CBDE8E197",
-      "https://www.ticketmaster.com/2026-ny-yankees-division-series-home-bronx-new-york-10-07-2026/event/1D00652CBDE8E197",
-      "PS-DS1"
+      "https://www.ticketmaster.com/2026-ny-yankees-division-series-game-bronx-new-york-10-07-2026/event/1D00652CBDE8E197",
+      849838
     ],
     [
       "1D00652CBE24E250",
-      "https://www.ticketmaster.com/2026-ny-yankees-division-series-home-bronx-new-york-10-08-2026/event/1D00652CBE24E250",
-      "PS-DS2"
+      "https://www.ticketmaster.com/2026-ny-yankees-division-series-game-bronx-new-york-10-08-2026/event/1D00652CBE24E250",
+      849837
     ],
     [
       "1D00652CB801D045",
-      "https://www.ticketmaster.com/2026-ny-yankees-division-series-home-bronx-new-york-10-08-2026/event/1D00652CB801D045",
-      "PS-DS2"
+      "https://www.ticketmaster.com/2026-ny-yankees-division-series-game-bronx-new-york-10-08-2026/event/1D00652CB801D045",
+      849837
     ]
   ]
 }
