@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-05T19:22:46.160Z",
+  "fetchedAt": "2026-10-05T22:57:28.488Z",
   "mode": "direct-api",
   "result": {
     "qty": 2,
@@ -7,7 +7,7 @@
       {
         "eid": 18343019,
         "status": 200,
-        "n": 183,
+        "n": 176,
         "blocked": false
       },
       {
@@ -19,13 +19,13 @@
       {
         "eid": 18343028,
         "status": 200,
-        "n": 144,
+        "n": 148,
         "blocked": false
       },
       {
         "eid": 18343029,
         "status": 200,
-        "n": 124,
+        "n": 129,
         "blocked": false
       },
       {
@@ -37,7 +37,7 @@
       {
         "eid": 18343033,
         "status": 200,
-        "n": 109,
+        "n": 110,
         "blocked": false
       },
       {
@@ -68,5 +68,5 @@
     "blocked": false
   },
   "games": 10,
-  "quotes": 1183
+  "quotes": 1186
 }
