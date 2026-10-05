@@ -1,67 +1,35 @@
 {
-  "fetchedAt": "2026-10-05T02:20:15Z",
+  "fetchedAt": "2026-10-05T22:43:11Z",
   "quotes": [
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "18",
-      "price": 4521,
-      "faceValue": null,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "20",
-      "price": 3524,
-      "faceValue": null,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "26",
-      "price": 2955,
-      "faceValue": 1100,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "28",
-      "price": 1300,
-      "faceValue": 957,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
       "section": "103",
-      "price": 309,
-      "faceValue": 252,
+      "price": 275,
+      "faceValue": 175,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "104",
-      "price": 412,
-      "faceValue": 341.93,
+      "price": 433,
+      "faceValue": 450,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "105",
-      "price": 264,
-      "faceValue": 123.59,
+      "price": 330,
+      "faceValue": 305.38,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "106",
-      "price": 298,
+      "price": 308,
       "faceValue": 169.93,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -69,15 +37,15 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "107",
-      "price": 235,
-      "faceValue": 149.82,
+      "price": 206,
+      "faceValue": 155.16,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "108",
-      "price": 269,
+      "price": 238,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -85,7 +53,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "109",
-      "price": 243,
+      "price": 241,
       "faceValue": 90.72,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -93,7 +61,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "110",
-      "price": 310,
+      "price": 269,
       "faceValue": 182.66,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -101,7 +69,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "111",
-      "price": 331,
+      "price": 301,
       "faceValue": 200.62,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -109,15 +77,15 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "112",
-      "price": 401,
-      "faceValue": 122.73,
+      "price": 489,
+      "faceValue": 607.41,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "113",
-      "price": 421,
+      "price": 447,
       "faceValue": 162.78,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -125,7 +93,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "115",
-      "price": 865,
+      "price": 806,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -133,7 +101,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "116",
-      "price": 1037,
+      "price": 1009,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -141,7 +109,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "118",
-      "price": 953,
+      "price": 656,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -149,8 +117,8 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "122",
-      "price": 804,
-      "faceValue": null,
+      "price": 866,
+      "faceValue": 684.36,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
@@ -158,22 +126,30 @@
       "provider": "TickPick",
       "section": "123",
       "price": 900,
-      "faceValue": 1310.42,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "124",
-      "price": 774,
-      "faceValue": 316,
+      "price": 601,
+      "faceValue": 550,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "125",
-      "price": 790,
+      "price": 727,
+      "faceValue": null,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "126",
+      "price": 904,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -181,31 +157,31 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "128",
-      "price": 360,
-      "faceValue": 755.69,
+      "price": 386,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "129",
-      "price": 259,
-      "faceValue": 129.47,
+      "price": 265,
+      "faceValue": 200,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "130",
-      "price": 252,
-      "faceValue": 141.34,
+      "price": 230,
+      "faceValue": 217.16,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "131",
-      "price": 292,
+      "price": 280,
       "faceValue": 211.62,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -221,7 +197,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "133",
-      "price": 232,
+      "price": 263,
       "faceValue": 114.88,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -229,7 +205,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "134",
-      "price": 242,
+      "price": 216,
       "faceValue": 114.88,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -237,23 +213,23 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "135",
-      "price": 273,
-      "faceValue": 162.41,
+      "price": 255,
+      "faceValue": 235.75,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "136",
-      "price": 342,
-      "faceValue": 588.62,
+      "price": 423,
+      "faceValue": 434.61,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "202",
-      "price": 197,
+      "price": 165,
       "faceValue": 54.99,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -261,31 +237,31 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "203",
-      "price": 237,
-      "faceValue": 217.5,
+      "price": 282,
+      "faceValue": 230,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "204",
-      "price": 241,
-      "faceValue": 226.5,
+      "price": 282,
+      "faceValue": 230,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "205",
-      "price": 254,
-      "faceValue": 134.75,
+      "price": 228,
+      "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "206",
-      "price": 283,
+      "price": 297,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -301,15 +277,15 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "209",
-      "price": 415,
-      "faceValue": 344.54,
+      "price": 220,
+      "faceValue": 351,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "210",
-      "price": 246,
+      "price": 220,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -317,7 +293,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "211",
-      "price": 231,
+      "price": 200,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -325,15 +301,15 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "212",
-      "price": 254,
-      "faceValue": 86.99,
+      "price": 263,
+      "faceValue": 109.43,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "213",
-      "price": 301,
+      "price": 321,
       "faceValue": 127.94,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -342,22 +318,22 @@
       "provider": "TickPick",
       "section": "215",
       "price": 305,
-      "faceValue": 514.22,
+      "faceValue": 447.15,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "216",
-      "price": 472,
-      "faceValue": 384.75,
+      "price": 479,
+      "faceValue": 480,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "217",
-      "price": 435,
+      "price": 434,
       "faceValue": 174.76,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -373,7 +349,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "222",
-      "price": 880,
+      "price": 811,
       "faceValue": 547.25,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -381,15 +357,15 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "223",
-      "price": 296,
-      "faceValue": 283.63,
+      "price": 358,
+      "faceValue": 261.51,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "224",
-      "price": 284,
+      "price": 331,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -397,47 +373,47 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "225",
-      "price": 392,
-      "faceValue": 319.5,
+      "price": 466,
+      "faceValue": 380,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "228",
-      "price": 279,
-      "faceValue": 292.5,
+      "price": 244,
+      "faceValue": 300,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "229",
-      "price": 264,
-      "faceValue": 220.5,
+      "price": 234,
+      "faceValue": 280,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "230",
-      "price": 351,
+      "price": 188,
       "faceValue": 95.28,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "231",
-      "price": 226,
-      "faceValue": 167.27,
+      "section": "231 (obstructed)",
+      "price": 445,
+      "faceValue": 582,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "234",
-      "price": 222,
+      "price": 283,
       "faceValue": 123.41,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -445,7 +421,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "235",
-      "price": 239,
+      "price": 245,
       "faceValue": 63.7,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -461,7 +437,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "237",
-      "price": 177,
+      "price": 176,
       "faceValue": 63.7,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -469,7 +445,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "238",
-      "price": 221,
+      "price": 210,
       "faceValue": 63.7,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -477,15 +453,15 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "305",
-      "price": 360,
-      "faceValue": 298.86,
+      "price": 250,
+      "faceValue": 207.48,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "306",
-      "price": 181,
+      "price": 175,
       "faceValue": 122.97,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -493,7 +469,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "307",
-      "price": 190,
+      "price": 176,
       "faceValue": 126,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -509,15 +485,15 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "310",
-      "price": 290,
-      "faceValue": 241.43,
+      "price": 271,
+      "faceValue": 224.46,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "311",
-      "price": 195,
+      "price": 221,
       "faceValue": 70.24,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -525,7 +501,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "312",
-      "price": 212,
+      "price": 194,
       "faceValue": 70.24,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -533,7 +509,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "313",
-      "price": 176,
+      "price": 174,
       "faceValue": 89.83,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -541,39 +517,39 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "314",
-      "price": 248,
-      "faceValue": 274.06,
+      "price": 212,
+      "faceValue": 281.89,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "315",
-      "price": 214,
-      "faceValue": 83.08,
+      "price": 242,
+      "faceValue": 206.07,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "316",
-      "price": 194,
-      "faceValue": 317.12,
+      "price": 271,
+      "faceValue": 310.6,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "317",
-      "price": 235,
-      "faceValue": 136,
+      "price": 222,
+      "faceValue": 285.8,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "318",
-      "price": 280,
+      "price": 244,
       "faceValue": 222.7,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -581,7 +557,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "319",
-      "price": 258,
+      "price": 250,
       "faceValue": 194.99,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -589,8 +565,8 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "321",
-      "price": 255,
-      "faceValue": 265.5,
+      "price": 306,
+      "faceValue": 196,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
@@ -605,7 +581,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "323",
-      "price": 310,
+      "price": 372,
       "faceValue": 179,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -613,7 +589,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "324",
-      "price": 260,
+      "price": 231,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -621,31 +597,31 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "325",
-      "price": 193,
-      "faceValue": 107.25,
+      "price": 192,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "326",
-      "price": 184,
-      "faceValue": 411.1,
+      "price": 242,
+      "faceValue": 200.96,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "327",
-      "price": 373,
-      "faceValue": 310.6,
+      "price": 328,
+      "faceValue": 272.76,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "328",
-      "price": 181,
+      "price": 222,
       "faceValue": 70.24,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -653,7 +629,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "329",
-      "price": 177,
+      "price": 175,
       "faceValue": 70.24,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -661,7 +637,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "330",
-      "price": 182,
+      "price": 180,
       "faceValue": 59.35,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -677,8 +653,16 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "333",
-      "price": 210,
+      "price": 177,
       "faceValue": 126,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "334",
+      "price": 169,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
@@ -693,7 +677,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "406",
-      "price": 133,
+      "price": 128,
       "faceValue": 86,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -701,23 +685,23 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "408",
-      "price": 131,
-      "faceValue": 50.64,
+      "price": 128,
+      "faceValue": 91,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "409",
-      "price": 128,
-      "faceValue": 50.64,
+      "price": 152,
+      "faceValue": 112,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "410",
-      "price": 125,
+      "price": 144,
       "faceValue": 56.08,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -725,7 +709,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "411",
-      "price": 125,
+      "price": 144,
       "faceValue": 56.08,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -733,7 +717,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "412",
-      "price": 132,
+      "price": 126,
       "faceValue": 56.08,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -741,7 +725,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "413",
-      "price": 130,
+      "price": 175,
       "faceValue": 56.08,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -757,7 +741,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "415",
-      "price": 144,
+      "price": 153,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -765,7 +749,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "416",
-      "price": 137,
+      "price": 155,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -773,7 +757,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "417",
-      "price": 130,
+      "price": 123,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -781,134 +765,6 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "418",
-      "price": 142,
-      "faceValue": 60.44,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "419",
-      "price": 159,
-      "faceValue": 60.44,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "421",
-      "price": 159,
-      "faceValue": 60.44,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "422",
-      "price": 165,
-      "faceValue": 60.44,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "423",
-      "price": 142,
-      "faceValue": 60.44,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "424",
-      "price": 146,
-      "faceValue": 60.44,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "425",
-      "price": 175,
-      "faceValue": 230.99,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "426",
-      "price": 212,
-      "faceValue": 60.44,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "427",
-      "price": 125,
-      "faceValue": 56.08,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "428",
-      "price": 124,
-      "faceValue": 56.08,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "429",
-      "price": 128,
-      "faceValue": 47.07,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "430",
-      "price": 125,
-      "faceValue": 56.08,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "433",
-      "price": 131,
-      "faceValue": 86,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "434B",
-      "price": 119,
-      "faceValue": 106.34,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "434A",
-      "price": 122,
-      "faceValue": 106.34,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "432A",
-      "price": 131,
-      "faceValue": 86,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "306W",
       "price": 132,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
@@ -916,169 +772,225 @@
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "420B",
-      "price": 137,
+      "section": "419",
+      "price": 157,
       "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "420C",
-      "price": 141,
-      "faceValue": 60.44,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "420A",
-      "price": 150,
-      "faceValue": 60.44,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "431B",
-      "price": 165,
-      "faceValue": 200.96,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "407B",
-      "price": 166,
-      "faceValue": 98,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "234W",
+      "section": "421",
       "price": 172,
-      "faceValue": 70.34,
+      "faceValue": 60.44,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "422",
+      "price": 153,
+      "faceValue": 60.44,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "423",
+      "price": 159,
+      "faceValue": 60.44,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "424",
+      "price": 132,
+      "faceValue": 60.44,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "425",
+      "price": 130,
+      "faceValue": 232.64,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "426",
+      "price": 206,
+      "faceValue": 60.44,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "427",
+      "price": 144,
+      "faceValue": 56.08,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "428",
+      "price": 144,
+      "faceValue": 56.08,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "429",
+      "price": 145,
+      "faceValue": 47.07,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "430",
+      "price": 138,
+      "faceValue": 56.08,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "433",
+      "price": 122,
+      "faceValue": 86,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "407A",
-      "price": 179,
-      "faceValue": 121.85,
+      "price": 121,
+      "faceValue": 76,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "209W",
-      "price": 185,
-      "faceValue": 70,
+      "section": "431B",
+      "price": 145,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "232A",
-      "price": 186,
-      "faceValue": 78.95,
+      "section": "420C",
+      "price": 158,
+      "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "431A",
-      "price": 190,
-      "faceValue": 106.34,
+      "section": "420B",
+      "price": 160,
+      "faceValue": 60.44,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "236W",
-      "price": 191,
-      "faceValue": 156.23,
+      "section": "407B",
+      "price": 160,
+      "faceValue": 98,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "420A",
+      "price": 166,
+      "faceValue": 117.43,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "234W",
+      "price": 171,
+      "faceValue": 106.17,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "317W",
-      "price": 195,
+      "price": 177,
       "faceValue": null,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "332B",
-      "price": 199,
-      "faceValue": 126,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "432B",
-      "price": 202,
-      "faceValue": 168.34,
+      "price": 183,
+      "faceValue": 235.5,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "206W",
-      "price": 220,
-      "faceValue": null,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "132W",
-      "price": 226,
-      "faceValue": 107.45,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "233A",
-      "price": 227,
-      "faceValue": 150.69,
+      "section": "431A",
+      "price": 183,
+      "faceValue": 106.34,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "332A",
-      "price": 234,
+      "price": 191,
       "faceValue": 141,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
+      "section": "332B",
+      "price": 192,
+      "faceValue": 126,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "206W",
+      "price": 204,
+      "faceValue": null,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "233A",
+      "price": 217,
+      "faceValue": 150.69,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "434B",
+      "price": 218,
+      "faceValue": 180.08,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
       "section": "211S",
-      "price": 230,
+      "price": 225,
       "faceValue": 146,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "237W",
-      "price": 239,
-      "faceValue": 156.23,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "228W",
-      "price": 244,
-      "faceValue": 76.12,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
@@ -1092,49 +1004,33 @@
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "227A",
-      "price": 266,
-      "faceValue": 91.12,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
       "section": "320C",
-      "price": 271,
+      "price": 282,
       "faceValue": 151,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "227B",
-      "price": 287,
-      "faceValue": 86.99,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "109W",
-      "price": 298,
-      "faceValue": 155.16,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "320B",
-      "price": 305,
-      "faceValue": 331.49,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
       "section": "233B",
+      "price": 286,
+      "faceValue": 235.5,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "232B",
+      "price": 297,
+      "faceValue": 246.65,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "215S",
       "price": 310,
-      "faceValue": 257.09,
+      "faceValue": 228,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
@@ -1148,81 +1044,145 @@
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "127B",
-      "price": 353,
-      "faceValue": 267.05,
+      "section": "320B",
+      "price": 324,
+      "faceValue": 222.7,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "214A",
-      "price": 359,
+      "section": "227B",
+      "price": 330,
       "faceValue": 127.94,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "127AW",
-      "price": 425,
-      "faceValue": 98.93,
+      "section": "232A",
+      "price": 336,
+      "faceValue": 123.42,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "127A",
-      "price": 430,
-      "faceValue": 369,
+      "section": "214A",
+      "price": 349,
+      "faceValue": 127.94,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "114A",
-      "price": 457,
-      "faceValue": 538.65,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "232B",
-      "price": 531,
-      "faceValue": 442.43,
+      "section": "434A",
+      "price": 374,
+      "faceValue": 293.25,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "214B",
-      "price": 555,
-      "faceValue": 462.01,
+      "price": 390,
+      "faceValue": 324.97,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "114B",
-      "price": 607,
-      "faceValue": 495.9,
+      "section": "127A",
+      "price": 399,
+      "faceValue": 400,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "121BW",
-      "price": 654,
-      "faceValue": 449.89,
+      "section": "127B",
+      "price": 402,
+      "faceValue": 267.05,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "227A",
+      "price": 404,
+      "faceValue": 128,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "216S",
+      "price": 410,
+      "faceValue": 255,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "114A",
+      "price": 515,
+      "faceValue": 401.75,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "CFSB4",
+      "price": 526,
+      "faceValue": 437.21,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "CFSB1",
+      "price": 529,
+      "faceValue": 439.83,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "CFSB2",
+      "price": 585,
+      "faceValue": 486.82,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "120B",
+      "price": 660,
+      "faceValue": 793.32,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "121A",
-      "price": 792,
+      "price": 668,
       "faceValue": 375,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "114B",
+      "price": 729,
+      "faceValue": 690,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "117B",
+      "price": 790,
+      "faceValue": 455.43,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
@@ -1236,32 +1196,16 @@
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "121AW",
-      "price": 804,
-      "faceValue": 455.43,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
       "section": "220B",
-      "price": 879,
+      "price": 844,
       "faceValue": 300,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "117B",
-      "price": 900,
-      "faceValue": 455.43,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
       "section": "120AW",
-      "price": 900,
+      "price": 853,
       "faceValue": 381,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -1269,24 +1213,16 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "221B",
-      "price": 963,
-      "faceValue": 828.78,
+      "price": 902,
+      "faceValue": 1131.56,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "120B",
-      "price": 981,
-      "faceValue": 802.25,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "028",
-      "price": 1052,
-      "faceValue": 954.1,
+      "section": "029",
+      "price": 1013,
+      "faceValue": 1380,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
@@ -1301,7 +1237,7 @@
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "120A",
-      "price": 1096,
+      "price": 1098,
       "faceValue": 316,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -1316,33 +1252,41 @@
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "218A",
-      "price": 1120,
-      "faceValue": 933.2,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
       "section": "121B",
-      "price": 1173,
-      "faceValue": 1440.95,
+      "price": 1115,
+      "faceValue": null,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "221A",
-      "price": 1274,
-      "faceValue": 1062.43,
+      "section": "028",
+      "price": 1126,
+      "faceValue": 954.1,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "218B",
-      "price": 1383,
-      "faceValue": null,
+      "price": 1149,
+      "faceValue": 174.76,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "221A",
+      "price": 1228,
+      "faceValue": 1023.27,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "027B",
+      "price": 1350,
+      "faceValue": 1000,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
@@ -1356,33 +1300,17 @@
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "027B",
-      "price": 1587,
-      "faceValue": 1000,
+      "section": "220A",
+      "price": 1645,
+      "faceValue": 1371.77,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "027A",
-      "price": 1696,
+      "price": 1802,
       "faceValue": 500,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "029",
-      "price": 1820,
-      "faceValue": 1518,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "220A",
-      "price": 1845,
-      "faceValue": 1515.38,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
@@ -1391,6 +1319,14 @@
       "section": "014A",
       "price": 1913,
       "faceValue": 364,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "026",
+      "price": 2025,
+      "faceValue": 1100,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
@@ -1412,56 +1348,48 @@
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "14B",
-      "price": 2696,
-      "faceValue": null,
+      "section": "014B",
+      "price": 2481,
+      "faceValue": 2070,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "015B",
-      "price": 2814,
-      "faceValue": 2303.26,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "015A",
-      "price": 3017,
-      "faceValue": 2469.14,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "014B",
-      "price": 3101,
-      "faceValue": 2587.5,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "021A",
-      "price": 3421,
-      "faceValue": 2800.88,
+      "price": 2933,
+      "faceValue": 4830,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
       "section": "012",
-      "price": 3677,
-      "faceValue": 3067.74,
+      "price": 3306,
+      "faceValue": 2758.62,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "15B",
-      "price": 3894,
+      "section": "020",
+      "price": 3353,
+      "faceValue": 3795,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "025",
+      "price": 3721,
+      "faceValue": 3105,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "018",
+      "price": 3735,
       "faceValue": null,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
@@ -1476,17 +1404,9 @@
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "018",
-      "price": 4458,
-      "faceValue": null,
-      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
-    },
-    {
-      "gamePk": 849838,
-      "provider": "TickPick",
-      "section": "017B",
-      "price": 4953,
-      "faceValue": 4054.6,
+      "section": "015A",
+      "price": 4136,
+      "faceValue": 3450,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     },
     {
@@ -1500,9 +1420,17 @@
     {
       "gamePk": 849838,
       "provider": "TickPick",
-      "section": "203W",
-      "price": 11478,
-      "faceValue": 156.23,
+      "section": "019",
+      "price": 6241,
+      "faceValue": 5208.12,
+      "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
+    },
+    {
+      "gamePk": 849838,
+      "provider": "TickPick",
+      "section": "021A",
+      "price": 6946,
+      "faceValue": 5796,
       "url": "https://www.tickpick.com/buy-american-league-division-series-new-york-yankees-vs-tampa-bay-rays-home-game-1-series-game-3-tickets-yankee-stadium-10-7-26-8pm/8173617/"
     }
   ]
