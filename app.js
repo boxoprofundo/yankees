@@ -172,10 +172,13 @@
 
   async function fetchRemainingHomeGames() {
     const today = fmtISO.format(new Date());
-    const year = new Date().getFullYear();
+    // Rolling ~13-month window so the schedule keeps working in the off-season:
+    // once the regular season ends, "remaining home games" become next year's
+    // (whose schedule and tickets are already published), not an empty list.
+    const endDate = fmtISO.format(new Date(Date.now() + 400 * 864e5));
     const url =
       "https://statsapi.mlb.com/api/v1/schedule?sportId=1" +
-      `&teamId=${TEAM_ID}&startDate=${today}&endDate=${year}-11-15` +
+      `&teamId=${TEAM_ID}&startDate=${today}&endDate=${endDate}` +
       "&gameTypes=R,F,D,L,W";
     const res = await fetch(url);
     if (!res.ok) throw new Error("MLB schedule HTTP " + res.status);

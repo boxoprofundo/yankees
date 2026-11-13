@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NYY Aggregator — Ticketmaster + SeatGeek + StubHub collector
 // @namespace    boxoprofundo.github.io/yankees-tickets
-// @version      3.20.0
+// @version      3.21.0
 // @description  Scrapes Ticketmaster, SeatGeek and StubHub Yankees prices from YOUR real logged-in browser (where they render normally) and publishes them to the aggregator. All three block automated browsers, so this is the only reliable way to get their per-section prices.
 // @author       boxoprofundo
 // @updateURL    https://yankees.mikeboxer.com/collector.user.js
@@ -167,9 +167,11 @@
     if (DYN_SCHED) return DYN_SCHED;
     const dateToPks = {}, gamesByDate = {};
     try {
-      const year = new Date().getFullYear();
+      // Rolling ~13-month window so new games (incl. next season, already on
+      // sale in the off-season) are always covered, not just through Nov 15.
+      const endDate = etISO(new Date(Date.now() + 400 * 864e5));
       const url = "https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=" + NYY_TEAM_ID +
-        "&startDate=" + etISO(new Date()) + "&endDate=" + year + "-11-15&gameTypes=R,F,D,L,W";
+        "&startDate=" + etISO(new Date()) + "&endDate=" + endDate + "&gameTypes=R,F,D,L,W";
       const resp = await new Promise((res, rej) =>
         GM_xmlhttpRequest({ method: "GET", url, onload: res, onerror: rej }));
       const data = safeJson(resp.responseText) || {};
@@ -1756,7 +1758,7 @@
       apikey: key, keyword: "New York Yankees", classificationName: "Baseball",
       size: "199", sort: "date,asc",
       startDateTime: new Date().toISOString().replace(/\.\d{3}Z$/, "Z"),
-      endDateTime: new Date().getFullYear() + "-11-15T23:59:59Z",
+      endDateTime: new Date(Date.now() + 400 * 864e5).toISOString().replace(/\.\d{3}Z$/, "Z"),
     });
     const resp = await new Promise((res, rej) => GM_xmlhttpRequest({
       method: "GET",
