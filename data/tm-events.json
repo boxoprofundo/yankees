@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-17T14:20:39.922Z",
+  "fetchedAt": "2026-11-18T19:57:42.658Z",
   "note": "Keyless TM event map; refreshed by any run that still has a TM key in storage.",
   "entries": [
     [
@@ -201,86 +201,6 @@
       "1D00651B061EB3FC",
       "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-05-05-2027/event/1D00651B061EB3FC",
       852971
-    ],
-    [
-      "1D00651B050AB0A4",
-      "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-05-06-2027/event/1D00651B050AB0A4",
-      852962
-    ],
-    [
-      "1D00651B061FB3FF",
-      "https://www.ticketmaster.com/new-york-yankees-vs-tampa-bay-bronx-new-york-05-06-2027/event/1D00651B061FB3FF",
-      852962
-    ],
-    [
-      "1D00651B050BB0A6",
-      "https://www.ticketmaster.com/new-york-yankees-vs-philadelphia-phillies-bronx-new-york-05-14-2027/event/1D00651B050BB0A6",
-      852969
-    ],
-    [
-      "1D00651B061FB401",
-      "https://www.ticketmaster.com/new-york-yankees-vs-philadelphia-phillies-bronx-new-york-05-14-2027/event/1D00651B061FB401",
-      852969
-    ],
-    [
-      "1D00651B050CB0AB",
-      "https://www.ticketmaster.com/new-york-yankees-vs-philadelphia-phillies-bronx-new-york-05-15-2027/event/1D00651B050CB0AB",
-      852966
-    ],
-    [
-      "1D00651B0620B403",
-      "https://www.ticketmaster.com/new-york-yankees-vs-philadelphia-phillies-bronx-new-york-05-15-2027/event/1D00651B0620B403",
-      852966
-    ],
-    [
-      "1D00651B050DB0AF",
-      "https://www.ticketmaster.com/new-york-yankees-vs-philadelphia-phillies-bronx-new-york-05-16-2027/event/1D00651B050DB0AF",
-      852970
-    ],
-    [
-      "1D00651B0621B406",
-      "https://www.ticketmaster.com/new-york-yankees-vs-philadelphia-phillies-bronx-new-york-05-16-2027/event/1D00651B0621B406",
-      852970
-    ],
-    [
-      "1D00651B050EB0B2",
-      "https://www.ticketmaster.com/new-york-yankees-vs-los-angeles-bronx-new-york-05-18-2027/event/1D00651B050EB0B2",
-      852959
-    ],
-    [
-      "1D00651B0621B408",
-      "https://www.ticketmaster.com/new-york-yankees-vs-los-angeles-bronx-new-york-05-18-2027/event/1D00651B0621B408",
-      852959
-    ],
-    [
-      "1D00651B050FB0B5",
-      "https://www.ticketmaster.com/new-york-yankees-vs-los-angeles-bronx-new-york-05-19-2027/event/1D00651B050FB0B5",
-      852965
-    ],
-    [
-      "1D00651B0622B40A",
-      "https://www.ticketmaster.com/new-york-yankees-vs-los-angeles-bronx-new-york-05-19-2027/event/1D00651B0622B40A",
-      852965
-    ],
-    [
-      "1D00651B0510B0BA",
-      "https://www.ticketmaster.com/new-york-yankees-vs-los-angeles-bronx-new-york-05-20-2027/event/1D00651B0510B0BA",
-      852964
-    ],
-    [
-      "1D00651B0622B40D",
-      "https://www.ticketmaster.com/new-york-yankees-vs-los-angeles-bronx-new-york-05-20-2027/event/1D00651B0622B40D",
-      852964
-    ],
-    [
-      "1D00651B0511B0BC",
-      "https://www.ticketmaster.com/new-york-yankees-vs-san-francisco-bronx-new-york-05-21-2027/event/1D00651B0511B0BC",
-      852958
-    ],
-    [
-      "1D00651B0623B40F",
-      "https://www.ticketmaster.com/new-york-yankees-vs-san-francisco-bronx-new-york-05-21-2027/event/1D00651B0623B40F",
-      852958
     ]
   ]
 }
